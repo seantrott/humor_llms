@@ -80,7 +80,7 @@ df_gpt_critical %>%
             sd_surprisal = sd(surprisal))
 
 m_full = lmer(data = df_gpt_critical,
-              surprisal ~ condition + 
+              surprisal ~ condition +
                 (1 + condition | model) +
                 (1 | final_word),
               REML = FALSE)
