@@ -1,0 +1,132 @@
+---
+title: "GPT-3 analysis of humor surprisals"
+author: "Sean Trott"
+date: "May 16, 2023"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(forcats)
+library(broom)
+library(lme4)
+library(ggridges)
+library(lmerTest)
+```
+
+# Load data
+
+## Load surprisals
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_gpt = read_csv("../../data/processed/results_gpt_with_params.csv")
+
+
+## Exclude Expected
+df_gpt_critical = df_gpt %>%
+  filter(condition != "E")
+```
+
+# Manipulation check: is "expected" more expected?
+
+**Answer**: Yes, much lower surprisal.
+
+```{r}
+df_gpt = df_gpt %>%
+  mutate(expected = condition == "E")
+
+df_gpt %>%
+  group_by(model, expected) %>%
+  summarise(mean_surprisal = mean(surprisal),
+            sd_surprisal = sd(surprisal))
+  
+
+m_full = lmer(data = df_gpt,
+              surprisal ~ expected + 
+                (1 + expected | model) +
+                (1 | final_word),
+              REML = FALSE)
+
+m_reduced = lmer(data = df_gpt,
+              surprisal ~ # expected + 
+                (1 + expected | model) +
+                (1 | final_word),
+              REML = FALSE)
+
+summary(m_full)
+anova(m_full, m_reduced)
+```
+
+
+# Analysis 1: Effect of condition on surprisal?
+
+**Answer**: Yes, surprisal is consistently lower in `S` than `J`.
+
+```{r}
+
+
+df_gpt_critical %>%
+  group_by(model, condition) %>%
+  summarise(mean_surprisal = mean(surprisal),
+            sd_surprisal = sd(surprisal))
+
+m_full = lmer(data = df_gpt_critical,
+              surprisal ~ condition + 
+                (1 + condition | model) +
+                (1 | final_word),
+              REML = FALSE)
+
+m_reduced = lmer(data = df_gpt_critical,
+              surprisal ~ # condition + 
+                (1 + condition | model) +
+                (1 | final_word),
+              REML = FALSE)
+
+summary(m_full)
+anova(m_full, m_reduced)
+```
+
+
+Visualization:
+
+```{r}
+g = df_gpt_critical %>%
+  ggplot(aes(x = surprisal,
+             y = model,
+             fill = condition)) +
+  geom_density_ridges2(aes(height = ..density..), 
+                       color=gray(0.25), 
+                       alpha = 0.5, 
+                       scale=0.85, 
+                       size=.9, 
+                       stat="density") +
+  labs(x = "GPT-3 Surprisal (Final Word)",
+       y = "Model",
+       fill = "Condition") +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  theme_minimal() +
+  # scale_fill_viridis_d() +
+  theme(
+    legend.position = "bottom"
+  ) + 
+  theme(axis.title = element_text(size=rel(1.5)),
+        axis.text = element_text(size = rel(1.5)),
+        legend.text = element_text(size = rel(1.5)),
+        legend.title = element_text(size = rel(1.5)),
+        strip.text.x = element_text(size = rel(1.5)))
+
+g
+
+ggsave("../../Figures/surprisals_density.png", g, dpi = 300)
+
+
+```

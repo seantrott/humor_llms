@@ -1,0 +1,401 @@
+Condition,Exp Code,Sentence,Answer,Correct,First Five Words,Group Number,Same/Different
+J,1017,A committee keeps minutes and takes hours.,Committees are very efficient.,no,a committee keeps minutes and,1,Different
+S,3017,A committee keeps minutes and takes votes.,Committees keep records and make decisions.,yes,a committee keeps minutes and,1,Different
+S,4013,A device for finding furniture in the dark is a candle.,The candle gives off light.,yes,a device for finding furniture,2,Same
+J,2013,A device for finding furniture in the dark is a shin.,People run into furniture when it's dark.,yes,a device for finding furniture,2,Same
+E,6056,A good source of vitamin A is orange vegetables like carrots.,Carrots contain vitamin A.,yes,a good source of vitamin,3,E
+J,1067,A good way to blow your mind is to smoke gunpowder.,An explosion can blow your brains out.,yes,a good way to blow,4,Same
+S,3067,A good way to blow your mind is to smoke heroin.,Heroin will affect your brain.,yes,a good way to blow,4,Same
+J,2141,A man who has lost ninety percent of his brain is called a widower.,His wife wasn't very smart.,no,a man who has lost,5,Same
+S,4141,A man who has lost ninety percent of his brain is called a zombie.,A zombie still has an intact brain.,no,a man who has lost,5,Same
+J,1037,A problem drinker is one who never buys.,One should take turns paying for the drinks.,yes,a problem drinker is one,6,Different
+S,3037,A problem drinker is one who never quits.,Non-stop drinking isn't much of a problem.,no,a problem drinker is one,6,Different
+S,4007,A replacement player hit a home run with my ball.,The player was playing baseball.,yes,a replacement player hit a,7,Same
+J,2007,A replacement player hit a home run with my girl.,Someone else slept with my girlfriend.,yes,a replacement player hit a,7,Same
+J,1003,A thoughtful wife has pork chops ready when her husband comes home from fishing.,She thinks her husband will catch lots of fish.,no,a thoughtful wife has pork,8,Different
+S,3003,A thoughtful wife has pork chops ready when her husband comes home from working.,A nice wife cooks dinner for her husband.,yes,a thoughtful wife has pork,8,Different
+S,3094,A vacation is the shortest distance between two locations.,A trip seems longer when you are on vacation.,no,a vacation is the shortest,9,Different
+J,1094,A vacation is the shortest distance between two paychecks.,Vacations cost a lot of money.,yes,a vacation is the shortest,9,Different
+E,5014,"After Olga tore her red dress, she went to the store for a needle and a spool of red thread.",She planned to throw the dress away.,no,after olga tore her red,10,E
+J,2121,"All roads lead to Rome, and all detours lead to profanity.",People are frustrated by detours.,yes,"all roads lead to rome,",11,Different
+S,4121,"All roads lead to Rome, and all detours lead to somewhere.",Detours never go anywhere.,no,"all roads lead to rome,",11,Different
+E,6072,All the plates were garnished with little sprigs of parsley.,Each plate had some parsley on it.,yes,all the plates were garnished,12,E
+J,1062,Another thing a small boy is constantly outgrowing is his allowance.,Kids always want more money.,yes,another thing a small boy,13,Same
+S,4062,Another thing a small boy is constantly outgrowing is his underwear.,Boys need new clothes often.,yes,another thing a small boy,13,Same
+J,1085,Another thing that has developed by leaps and bounds is the modern dance.,Dancing has changed a lot over the years.,yes,another thing that has developed,14,Different
+S,3085,Another thing that has developed by leaps and bounds is the modern science.,Science has progressed at a snail's pace.,no,another thing that has developed,14,Different
+S,4047,Arguments between couples are healthy; sometimes they even prevent breakups.,It's okay for couples to argue sometimes.,yes,arguments between couples are healthy;,15,Different
+J,2047,Arguments between couples are healthy; sometimes they even prevent marriage.,Marriage is a wonderful thing.,no,arguments between couples are healthy;,15,Different
+J,2120,Autobiography is an unrivaled vehicle for telling the truth about others.,Writing an autobiography can unmask your true self.,no,autobiography is an unrivaled vehicle,16,Same
+S,3120,Autobiography is an unrivaled vehicle for telling the truth about somebody.,Autobiographies don't reveal much about a person.,no,autobiography is an unrivaled vehicle,16,Same
+E,5061,Autumn is a good time to buy some new clothes.,It's good to buy clothes before the winter.,yes,autumn is a good time,17,E
+E,5018,"Because of his diabetes, he had to take daily shots of insulin.",He took insulin once a week.,no,"because of his diabetes, he",18,E
+E,6011,"Before the outdoor concert, he packed a basket with wine and food for a picnic.",He was planning to eat outdoors.,yes,"before the outdoor concert, he",19,E
+E,5005,Bill jumped in the lake and made a big splash.,Bill went for a swim.,yes,bill jumped in the lake,20,E
+J,1055,"By the time Mary had her fourteenth child, she'd run out of names to call her husband.",Mary was happy to have another child.,no,by the time mary had,21,Same
+S,3055,"By the time Mary had her fourteenth child, she'd run out of names to call her offspring.",Mary had no problem naming her new baby.,no,by the time mary had,21,Same
+J,1048,"Charged with statutory rape, he told the judge he didn't know she was a statue.",He was on trial for a sex-related crime.,yes,"charged with statutory rape, he",22,Same
+S,3048,"Charged with statutory rape, he told the judge he didn't know she was a teenager.",He had slept with a young woman.,yes,"charged with statutory rape, he",22,Same
+J,2122,Cocktail lounges are usually half lit to match the patrons.,The people have often had a bit too much to drink.,yes,cocktail lounges are usually half,23,Same
+S,4122,Cocktail lounges are usually half lit to match the setting.,Bright lights can ruin the atmosphere in a cocktail lounge.,yes,cocktail lounges are usually half,23,Same
+J,2059,"Congress taxes our income, our property, and our patience.",We're very happy with Congress.,no,"congress taxes our income, our",24,Same
+S,4059,"Congress taxes our income, our property, and our purchases.",There are very few taxes.,no,"congress taxes our income, our",24,Same
+J,2125,"Diamonds are produced by great pressure, usually provided by a girlfriend.",Some men are reluctant to get engaged.,yes,diamonds are produced by great,25,Same
+S,4125,"Diamonds are produced by great pressure, usually provided by a piston.",Diamonds can be made by machine.,yes,diamonds are produced by great,25,Same
+E,6059,Dogs crack open bones so they can eat the marrow.,Dogs like to eat bone marrow.,yes,dogs crack open bones so,26,E
+E,6003,"During the worst part of the drought, people were encouraged to not always flush the toilet.",Water was in short supply.,yes,during the worst part of,27,E
+E,6051,Eva turned down the heat and left the sauce on the stove to simmer.,Eva was cooking.,yes,eva turned down the heat,28,E
+E,6079,Every introductory sailing class includes learning how to save a man drowning.,Beginning sailing classes emphasize safety.,yes,every introductory sailing class includes,29,E
+S,4110,"Every time I wear my spring coat in the rain, it damages the fabric.",My coat is waterproof.,no,every time i wear my,30,Different
+J,2110,"Every time I wear my spring coat in the rain, it damages the springs.",Water isn't good for my coat.,yes,every time i wear my,30,Different
+S,3112,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little platform.,The platform is for sunbathing.,no,everyone had so much fun,31,Different
+J,1112,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little water.,The pool was empty.,yes,everyone had so much fun,31,Different
+E,6044,"Except for not having a shell, slugs are a lot like snails.",Slugs and snails are similar.,yes,except for not having a,32,E
+J,1132,"Figures don't lie, except on the beaches.",People lie in the sand.,yes,"figures don't lie, except on",33,Different
+S,3132,"Figures don't lie, except on the page.",Statistics are completely reliable.,no,"figures don't lie, except on",33,Different
+J,2063,"For a great vacation, put the kids in the back seat, and take a cruise.",A road trip with the kids can be a lot of fun.,no,"for a great vacation, put",34,Different
+S,4063,"For a great vacation, put the kids in the back seat, and take a freeway.",A road trip can be a fun vacation.,yes,"for a great vacation, put",34,Different
+E,5066,"For his thirtieth birthday, all his friends gathered to celebrate.",There was a party for his birthday.,yes,"for his thirtieth birthday, all",35,E
+E,5013,For lunch he had an apple and a peanut butter sandwich.,He ate a cold lunch.,yes,for lunch he had an,36,E
+J,1089,"Frequent naps prevent old age, especially when taken while driving.",Falling asleep while driving can kill you.,yes,"frequent naps prevent old age,",37,Different
+S,3089,"Frequent naps prevent old age, especially when taken while relaxed.",It's best to nap when you are very stressed.,no,"frequent naps prevent old age,",37,Different
+E,6076,Good Friday commemorates the Last Supper that Jesus had with his twelve disciples.,Good Friday is a religious holiday.,yes,good friday commemorates the last,38,E
+E,5057,Hal wrote her a love letter.,Hal didn't like her very much.,no,hal wrote her a love,39,E
+S,3034,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough change.",We don't have enough money for soup.,yes,he asked if i'd join,40,Different
+J,1034,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough room.",We can't afford the soup.,no,he asked if i'd join,40,Different
+J,1080,He drank so much that he eventually became a beverage.,He gave up drinking.,no,he drank so much that,41,Different
+S,4080,He drank so much that he eventually became a lush.,He became an alcoholic.,yes,he drank so much that,41,Different
+J,2014,He got a medal for bravery on the beach when he rescued a girl from a lifeguard.,He saved the girl from drowning.,no,he got a medal for,42,Different
+S,3014,He got a medal for bravery on the beach when he rescued a girl from a shipwreck.,The girl had been on a ship.,yes,he got a medal for,42,Different
+E,6035,He hung her coat in the closet.,She had been wearing a coat.,yes,he hung her coat in,43,E
+J,2079,He is at the age when all the numbers in his little black book belong to doctors.,He is getting old.,yes,he is at the age,44,Different
+S,4079,He is at the age when all the numbers in his little black book belong to friends.,He is a real playboy.,no,he is at the age,44,Different
+J,1097,"He is probably the best boxer in the country, but he always loses in the city.",He would win in Las Vegas.,no,he is probably the best,45,Same
+S,3097,"He is probably the best boxer in the country, but he always loses in the competition.",He always wins the championship.,no,he is probably the best,45,Same
+J,2137,He likes to make things around the house; this week it's the maid.,He's having an affair with a member of the household staff.,yes,he likes to make things,46,Different
+S,4137,He likes to make things around the house; this week it's the shelves.,He isn't very good with his hands.,no,he likes to make things,46,Different
+J,2011,"He owns stock in a company that pays quarterly dividends, so every three months they send him a quarter.",His dividends are quite large.,no,he owns stock in a,47,Same
+S,4011,"He owns stock in a company that pays quarterly dividends, so every three months they send him a statement.",He never hears from the company.,no,he owns stock in a,47,Same
+J,1083,He says he doesn't like to drink because it makes him feel happy.,Drinking makes him feel depressed.,no,he says he doesn't like,48,Different
+S,3083,He says he doesn't like to drink because it makes him feel sad.,Alcohol depresses him.,yes,he says he doesn't like,48,Different
+E,5041,He spilled some of the quart of oil onto the engine because he didn't have a funnel.,He was pouring oil into the car.,yes,he spilled some of the,49,E
+E,6036,"He thought that he could turn from Grant onto Prince, but the two streets are parallel.",He was at the corner of Grant and Prince.,no,he thought that he could,50,E
+J,1031,"He told her he wasn't himself, and she said she'd noticed the improvement.",She liked him better when he wasn't himself.,yes,he told her he wasn't,51,Different
+S,3031,"He told her he wasn't himself, and she said she'd noticed the problem.",He was behaving normally.,no,he told her he wasn't,51,Different
+J,1020,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a balloon.",He got the tires for free.,no,he told me he just,52,Different
+S,4020,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a truck.",He bought new tires for his truck.,yes,he told me he just,52,Different
+J,2123,"He told me he's not broke, just badly bent.",He's doing quite well.,no,he told me he's not,53,Same
+S,4123,"He told me he's not broke, just badly off.",He has lots of money.,no,he told me he's not,53,Same
+J,1099,He was teaching his girlfriend how to swim when the lifeguard made them move to the lake.,They were in the water.,no,he was teaching his girlfriend,54,Different
+S,3099,He was teaching his girlfriend how to swim when the lifeguard made them move to the shallows.,They were in deep water.,yes,he was teaching his girlfriend,54,Different
+E,6007,He wondered if the storm had done much damage.,It had been a terrible storm.,yes,he wondered if the storm,55,E
+J,1103,"He's never given a girl a present, but he did give a few a pretty good reputation.",He never gets girls into trouble.,no,he's never given a girl,56,Same
+S,3103,"He's never given a girl a present, but he did give a few a pretty good surprise.",He buys his girlfriends lavish gifts.,no,he's never given a girl,56,Same
+J,1076,He's planning an extended vacation: he hopes to spend three weeks on his couch.,He's going to sleep a lot.,yes,he's planning an extended vacation:,57,Same
+S,3076,He's planning an extended vacation: he hopes to spend three weeks on his sailboat.,He's going sailing for three weeks.,yes,he's planning an extended vacation:,57,Same
+J,2028,Her press agent was operated on for an ingrown beeper.,Her press agent needed actual medical surgery.,no,her press agent was operated,58,Different
+S,4028,Her press agent was operated on for an ingrown eyelash.,She needed medical surgery.,yes,her press agent was operated,58,Different
+S,4042,His doctor recommended he stay flat on his back ever since he was hit by a motorist.,He got run over by a car.,yes,his doctor recommended he stay,59,Different
+J,2042,His doctor recommended he stay flat on his back ever since he was hit by a steamroller.,He should get out of bed as soon as possible.,no,his doctor recommended he stay,59,Different
+E,5010,His job was to keep the sidewalk clean.,He was a doctor.,no,his job was to keep,60,E
+E,5001,His sandwich came with chips and a dill pickle.,He was about to eat.,yes,his sandwich came with chips,61,E
+J,1057,His wife sued for divorce and asked for custody of the cash.,She wanted to keep the money.,yes,his wife sued for divorce,62,Same
+S,3057,His wife sued for divorce and asked for custody of the cat.,She was very fond of her pet.,yes,his wife sued for divorce,62,Same
+S,3050,"I appreciate the more expensive things in life: diamonds, caviar, and champagne.","I prefer a simple, country life.",no,i appreciate the more expensive,63,Different
+J,1050,"I appreciate the more expensive things in life: diamonds, caviar, and postage.",It's expensive to mail things nowadays.,yes,i appreciate the more expensive,63,Different
+J,2044,"I asked him if he started out as an editor, and he said that years ago he used to be a boy.",He wasn't an editor when he was young.,yes,i asked him if he,64,Different
+S,4044,"I asked him if he started out as an editor, and he said that years ago he used to be a journalist.",He was never a reporter.,no,i asked him if he,64,Different
+J,2090,"I asked the florist what I should give to my girlfriend, and he suggested his address.",The florist would like to meet the girlfriend.,yes,i asked the florist what,65,Different
+S,3090,"I asked the florist what I should give to my girlfriend, and he suggested his tulips.",The florist thought I should give her roses.,no,i asked the florist what,65,Different
+J,2009,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a dress.",The woman notices what clothes people wear.,yes,i asked the woman at,66,Different
+S,4009,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a name.",She didn't remember my name.,no,i asked the woman at,66,Different
+J,1064,"I can walk on water, but I stagger on alcohol.",I can walk just fine even when I'm drunk.,no,"i can walk on water,",67,Same
+S,4064,"I can walk on water, but I stagger on concrete.",I have no trouble walking on hard surfaces.,no,"i can walk on water,",67,Same
+S,3019,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my pay.",I'm saving money in case I need it later.,yes,i decided to start saving,68,Different
+J,1019,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my umbrella.",I put a lot of money in the bank in case of emergency.,no,i decided to start saving,68,Different
+S,4105,"I got a car for my wife, and I thought it was a good choice.",I thought my wife would like the car.,yes,i got a car for,69,Same
+J,2105,"I got a car for my wife, and I thought it was a good trade.",I like the car more than my wife.,yes,i got a car for,69,Same
+J,2104,"I hope this train stops at Grand Central because if it doesn't, there will be a crash.",Grand Central is the end of the line.,yes,i hope this train stops,70,Same
+S,4104,"I hope this train stops at Grand Central because if it doesn't, there will be a delay.",I'm afraid I will fall behind schedule.,yes,i hope this train stops,70,Same
+J,1004,I knew a streetwalker who was so exclusive she had an unlisted telephone booth.,She was easy to reach by phone.,no,i knew a streetwalker who,71,Same
+S,4004,I knew a streetwalker who was so exclusive she had an unlisted telephone line.,Her phone number was in the telephone book.,no,i knew a streetwalker who,71,Same
+J,1129,I know one couple who got divorced and had to leave the house to the attorney.,The divorce was expensive.,yes,i know one couple who,72,Same
+S,3129,I know one couple who got divorced and had to leave the house to the daughter.,The house stayed in the family.,yes,i know one couple who,72,Same
+J,2107,"I still miss my ex-wife, but I am improving my aim.",I am shooting at my ex-wife.,yes,"i still miss my ex-wife,",73,Same
+S,4107,"I still miss my ex-wife, but I am improving my ego.",I'm starting to feel better about myself.,yes,"i still miss my ex-wife,",73,Same
+S,3053,I went to a place that serves breakfast any time and ordered French toast in the nighttime.,I had breakfast at night.,yes,i went to a place,74,Same
+J,1053,I went to a place that serves breakfast any time and ordered French toast in the Renaissance.,I wanted to eat an unusual breakfast.,yes,i went to a place,74,Same
+S,4128,"I've got Parkinson's disease, and he's got gout.",We have the same disease.,no,"i've got parkinson's disease, and",75,Same
+J,1128,"I've got Parkinson's disease, and he's got mine.",At least one of us is in good health.,no,"i've got parkinson's disease, and",75,Same
+J,2095,"If there's one thing that counts in business, it's bookkeepers.",Bookkeepers keep track of things.,yes,if there's one thing that,76,Same
+S,4095,"If there's one thing that counts in business, it's resources.",It's hard to succeed if you start with nothing.,yes,if there's one thing that,76,Same
+J,2126,"If you're filthy rich, sending your kids to college is a wonderful cleaner.",Colleges are very expensive.,yes,"if you're filthy rich, sending",77,Same
+S,4126,"If you're filthy rich, sending your kids to college is a wonderful luxury.",It's good to be able to afford to send your children to the university.,yes,"if you're filthy rich, sending",77,Same
+S,3012,In some marriages the bride is given away by the family.,It's always the father who gives the bride away.,no,in some marriages the bride,78,Different
+J,2012,In some marriages the bride is given away by the press.,The newspapers reveal something about the bride's past.,yes,in some marriages the bride,78,Different
+S,4119,"In the game of golf, nothing counts as much as your drives.",The most important part of your golf game is your putting.,no,"in the game of golf,",79,Different
+J,2119,"In the game of golf, nothing counts as much as your opponent.",The other guy always keeps track of your score.,yes,"in the game of golf,",79,Different
+E,6012,"In the U.S. the five cent piece is made of nickel, while pennies are mainly made of copper.",Both coins are made from the same metal.,no,in the u.s. the five,80,E
+S,4084,"It was so hot at Playboy, the centerfold took off her bikini.",She had been wearing a swimsuit.,yes,it was so hot at,81,Same
+J,2084,"It was so hot at Playboy, the centerfold took off her staple.",She wasn't wearing any clothes.,yes,it was so hot at,81,Same
+E,5070,It was too hot to sleep in a bed so he strung up a mesh hammock.,He was going to sleep in the hammock.,yes,it was too hot to,82,E
+J,2091,"It's always nicer to give than to receive, especially when it's your opinion.",People like giving advice more than taking it.,yes,it's always nicer to give,83,Same
+S,4091,"It's always nicer to give than to receive, especially when it's your parents.",Giving gifts can be fun.,yes,it's always nicer to give,83,Same
+J,1118,It's extraordinary what fine poker hand you get when you're playing bridge.,You always get the best hand just when you need it.,no,it's extraordinary what fine poker,84,Same
+S,3118,It's extraordinary what fine poker hand you get when you're playing stud.,You never get a decent hand in a poker game.,no,it's extraordinary what fine poker,84,Same
+E,6020,It's hard to admit when one is wrong.,Most people don't mind being wrong.,no,it's hard to admit when,85,E
+S,4065,"It's hard to raise a family nowadays, especially in the country.",It's easy to raise children outside the city.,no,it's hard to raise a,86,Different
+J,2065,"It's hard to raise a family nowadays, especially in the morning.",The kids don't want to get up in the morning.,yes,it's hard to raise a,86,Different
+S,3114,It's not hard to meet expenses; they're affordable.,You should be able to pay all your bills.,yes,it's not hard to meet,87,Different
+J,1114,It's not hard to meet expenses; they're everywhere.,It's easy to pay the bills.,no,it's not hard to meet,87,Different
+S,4008,Last Thanksgiving my wife spent all morning in the kitchen stuffing the bird.,She was preparing the turkey.,yes,last thanksgiving my wife spent,88,Different
+J,1008,Last Thanksgiving my wife spent all morning in the kitchen stuffing the kids.,The kids didn't get enough to eat.,no,last thanksgiving my wife spent,88,Different
+J,1150,"Love has its benefits, and they are usually called alimony.",Divorce can get you some money.,yes,"love has its benefits, and",89,Same
+S,4150,"Love has its benefits, and they are usually called memories.",Being in love leads to good times together.,yes,"love has its benefits, and",89,Same
+J,1113,Many a freshman helps the college of his choice by becoming a dropout.,"When a freshman fails, it always hurts the college.",no,many a freshman helps the,90,Same
+S,3113,Many a freshman helps the college of his choice by becoming a member.,Joining a college doesn't make any difference.,no,many a freshman helps the,90,Same
+J,1016,Many a man's idea of a vacation is to rest quietly in the shade of a blonde.,Men like to vacation alone.,no,many a man's idea of,91,Different
+S,3016,Many a man's idea of a vacation is to rest quietly in the shade of a palm.,Many men like a relaxing vacation in the tropics.,yes,many a man's idea of,91,Different
+J,2156,"Many things run in families, especially noses.",People often catch colds from other family members.,yes,"many things run in families,",92,Different
+S,3156,"Many things run in families, especially strength.",Muscle power comes only from exercise.,no,"many things run in families,",92,Different
+S,3142,Modern science is amazing: garbage is now being made into gasoline.,Fuel can be made from trash.,yes,modern science is amazing: garbage,93,Same
+J,1142,Modern science is amazing: garbage is now being made into movies.,There are a lot of really terrible movies nowadays.,yes,modern science is amazing: garbage,93,Same
+E,6019,Most cats see very well at night.,Cats see well in the dark.,yes,most cats see very well,94,E
+S,3147,Most of the people running for office are not politicians; they're candidates.,You become a politician when you get elected.,yes,most of the people running,95,Same
+J,1147,Most of the people running for office are not politicians; they're commuters.,These people are hurrying to get to work on time.,yes,most of the people running,95,Same
+E,6047,Mrs Martin told the bad student to stand in the corner.,Mrs Martin was unhappy with the student's behavior.,yes,mrs martin told the bad,96,E
+J,2081,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our drinks.,My brother-in-law fixed our plumbing.,no,my brother-in-law enjoys fixing things,97,Different
+S,4081,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our stove.,He's a real handyman.,yes,my brother-in-law enjoys fixing things,97,Different
+S,3138,My church welcomes all denominations but prefers Mormons.,My church is strictly Catholic.,no,my church welcomes all denominations,98,Different
+J,2138,My church welcomes all denominations but prefers twenties.,My church wants money.,yes,my church welcomes all denominations,98,Different
+J,2029,My doctor has never violated his oath: the oath he took years ago to become a millionaire.,My doctor charges a lot of money.,yes,my doctor has never violated,99,Same
+S,4029,My doctor has never violated his oath: the oath he took years ago to become a practitioner.,My doctor is very honorable.,yes,my doctor has never violated,99,Same
+J,1130,My husband took the money we were saving to buy a new car and blew it all at the laundry.,We had saved a lot of money.,no,my husband took the money,100,Different
+S,4130,My husband took the money we were saving to buy a new car and blew it all at the tables.,He gambled away our savings.,yes,my husband took the money,100,Different
+S,4139,"My mechanic couldn't fix my brakes, so he fixed my clutch.",My clutch was also broken.,yes,my mechanic couldn't fix my,101,Same
+J,2139,"My mechanic couldn't fix my brakes, so he fixed my horn.","He figures if I can't stop, I'll have to honk at people.",yes,my mechanic couldn't fix my,101,Same
+S,3054,My wife did natural childbirth: no anesthetic.,She took drugs for the pain.,no,my wife did natural childbirth:,102,Different
+J,2054,My wife did natural childbirth: no makeup.,My wife didn't wear makeup when she had her baby.,yes,my wife did natural childbirth:,102,Different
+S,4102,"Nature has three ways of thinning the herd: drought, famine, and hunting.",Predatory hunting reduces the number of prey.,yes,nature has three ways of,103,Same
+J,2102,"Nature has three ways of thinning the herd: drought, famine, and primaries.",Politics is a lot like nature.,yes,nature has three ways of,103,Same
+J,2041,No patient should leave the hospital until he's strong enough to face the cashier.,Hospital bills are quite expensive.,yes,no patient should leave the,104,Different
+S,4041,No patient should leave the hospital until he's strong enough to face the outside.,Patients should be released as soon as possible.,no,no patient should leave the,104,Different
+E,6032,None of his books made any sense.,His books were hard to understand.,yes,none of his books made,105,E
+S,3087,Nothing ages a woman faster than hardships.,A difficult life can make you look old.,yes,nothing ages a woman faster,106,Same
+J,1087,Nothing ages a woman faster than identification.,Many women lie about their age.,yes,nothing ages a woman faster,106,Same
+J,2010,Nothing in the known universe travels faster than gossip.,Rumors get around quickly.,yes,nothing in the known universe,107,Same
+S,3010,Nothing in the known universe travels faster than radiation.,Radiation travels at great speed.,yes,nothing in the known universe,107,Same
+J,2030,Nothing you put in a banana split is as potentially fattening as the spoon.,Eating banana splits can make you fat.,yes,nothing you put in a,108,Different
+S,3030,Nothing you put in a banana split is as potentially fattening as the syrup.,Syrup has very few calories.,no,nothing you put in a,108,Different
+S,3035,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their careers.",The divorce hadn't affected their work.,no,now that the hollywood couple,109,Same
+J,1035,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their nuptials.",They are already married.,no,now that the hollywood couple,109,Same
+S,4027,"Once a week they hold a bingo game, and all the proceeds go to fight disease.",They are raising money to build a new church.,no,once a week they hold,110,Same
+J,2027,"Once a week they hold a bingo game, and all the proceeds go to fight gambling.",They are raising money to help orphans.,no,once a week they hold,110,Same
+J,2155,One good turn gets most of the blanket.,"If you do nice things, people will give you blankets.",no,one good turn gets most,111,Different
+S,4155,One good turn gets most of the profit.,Doing something good can earn you money.,yes,one good turn gets most,111,Different
+S,3068,One good way to invest in the country is to buy a business.,Buying a business is bad for the economy.,no,one good way to invest,112,Different
+J,2068,One good way to invest in the country is to buy a senator.,Politicians will do favors for money.,yes,one good way to invest,112,Different
+S,3051,One person who sure makes a long story short is my aunt.,My aunt talks a lot.,no,one person who sure makes,113,Different
+J,1051,One person who sure makes a long story short is my editor.,My editor cuts out parts of my stories.,yes,one person who sure makes,113,Different
+J,2075,One thing that makes the world go round is detours.,Detours make people go around.,yes,one thing that makes the,114,Different
+S,4075,One thing that makes the world go round is greed.,Most people don't care about money.,no,one thing that makes the,114,Different
+S,3154,One way to keep pornography away from teenagers is to put it in a cabinet.,Adult magazines should be put where adolescents won't get into them.,yes,one way to keep pornography,115,Different
+J,2154,One way to keep pornography away from teenagers is to put it in a textbook.,Teenagers read their textbooks often.,no,one way to keep pornography,115,Different
+E,5078,Our new green car blocked the narrow driveway.,The car was parked in the garage.,no,our new green car blocked,116,E
+J,1022,Our son brought home a note from school saying they need a written excuse for his presence.,The son does very well in school.,no,our son brought home a,117,Different
+S,4022,Our son brought home a note from school saying they need a written excuse for his tardiness.,He had been late for school.,yes,our son brought home a,117,Different
+S,4078,"Parents support clubs for teenagers, especially when they lack other forms of diversion.",Parents want their teenagers to have appropriate forms of entertainment.,yes,"parents support clubs for teenagers,",118,Same
+J,1078,"Parents support clubs for teenagers, especially when they lack other forms of punishment.",Teenagers may need physical punishment.,yes,"parents support clubs for teenagers,",118,Same
+E,5045,Paul heard a loud grinding noise when someone put a tin can right down the garbage disposal.,Paul broke the garbage disposal.,no,paul heard a loud grinding,119,E
+S,4108,Politicians who are as American as apple pie still want their rewards.,Patriotic politicians don't care about personal glory.,no,politicians who are as american,120,Same
+J,2108,Politicians who are as American as apple pie still want their slice.,Politicians are happy to do something for nothing.,no,politicians who are as american,120,Same
+S,3073,Save the whales; start a coalition.,"To save an endangered species, it's best to act alone.",no,save the whales; start a,121,Same
+J,1073,Save the whales; start a collection.,It's important to protect endangered species in the wild.,no,save the whales; start a,121,Same
+J,2070,She always told girls not to look for a husband but just to date bachelors.,It's better to date a married man.,no,she always told girls not,122,Same
+S,3070,She always told girls not to look for a husband but just to date someone.,She thinks you should wait for the perfect man.,no,she always told girls not,122,Same
+S,4153,"She asked what state he was born in, and he said in the East.",He was a native Californian.,no,she asked what state he,123,Same
+J,2153,"She asked what state he was born in, and he said in the nude.",He said he was born in the North.,no,she asked what state he,123,Same
+E,5034,She bought her father a tasteful tie for his birthday.,She was giving her father a Christmas gift.,no,she bought her father a,124,E
+E,6040,She called her husband at his office.,Her husband worked at home.,no,she called her husband at,125,E
+S,4046,"She is so modest, she pulls down the shade to change her jacket.",She doesn't want people to see her change clothes.,yes,"she is so modest, she",126,Different
+J,1046,"She is so modest, she pulls down the shade to change her mind.",She likes to show off in front of others.,no,"she is so modest, she",126,Different
+J,1082,She puts something behind her ears to attract men; lately she's been using her ankles.,She's very prudish.,no,she puts something behind her,127,Different
+S,4082,She puts something behind her ears to attract men; lately she's been using her vanilla.,She wears vanilla as a perfume.,yes,she puts something behind her,127,Different
+S,4005,She read so much about the bad effects of cigarettes she decided to give up the habit.,She was going to quit smoking.,yes,she read so much about,128,Different
+J,2005,She read so much about the bad effects of cigarettes she decided to give up the reading.,She planned to quit smoking.,no,she read so much about,128,Different
+E,6031,She tied up her hair with a yellow ribbon.,She had very short hair.,no,she tied up her hair,129,E
+J,1021,"She told him he looked like a million, and she meant every century.",She thought he looked quite young and handsome.,no,she told him he looked,130,Different
+S,3021,"She told him he looked like a million, and she meant every syllable.",She thought he looked good.,yes,she told him he looked,130,Different
+E,6060,She used a needle and a tweezers to pull out the splinter.,She needed a scalpel to remove the splinter.,no,she used a needle and,131,E
+E,5033,She was suddenly called back to New York and had to take a cab to the airport.,She was going to take a train.,no,she was suddenly called back,132,E
+S,4002,"She went on a fourteen day diet, but she only lost two ounces.",She didn't lose much weight.,yes,she went on a fourteen,133,Same
+J,1002,"She went on a fourteen day diet, but she only lost two weeks.",She didn't lose any weight.,yes,she went on a fourteen,133,Same
+S,4146,She's happy because she finally has a boyfriend who gets along with her father.,Her father really liked her previous boyfriends.,no,she's happy because she finally,134,Different
+J,1146,She's happy because she finally has a boyfriend who gets along with her fiance.,She is dating more than one man.,yes,she's happy because she finally,134,Different
+J,2093,"Some babies are born to rule, while others are male.",Males are born rulers.,no,some babies are born to,135,Different
+S,4093,"Some babies are born to rule, while others are weak.",Power starts at an early age.,yes,some babies are born to,135,Different
+J,1115,"Some husbands are good providers, but only if you count children.",Some men don't take care of their families.,yes,"some husbands are good providers,",136,Same
+S,3115,"Some husbands are good providers, but only if you count salary.",Some men give their families nothing but money.,yes,"some husbands are good providers,",136,Same
+J,1033,Some people think courtship is the first in a series of steps leading to divorce.,One of those steps is marriage.,yes,some people think courtship is,137,Same
+S,3033,Some people think courtship is the first in a series of steps leading to romance.,Some people still believe in romantic courtship.,yes,some people think courtship is,137,Same
+J,1117,Some people's only culture is bacteria.,Everybody can appreciate the fine arts.,no,some people's only culture is,138,Same
+S,3117,Some people's only culture is radio.,Everyone watches television.,no,some people's only culture is,138,Same
+S,4135,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly blackjack.",Americans like to gamble on card games.,yes,statistics indicate that americans spend,139,Same
+J,2135,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly weddings.",Getting married is a risky thing to do.,yes,statistics indicate that americans spend,139,Same
+J,1006,Sunday is the day we bow our heads and putt.,We go to church on Sunday.,no,sunday is the day we,140,Same
+S,4006,Sunday is the day we bow our heads and rest.,We work hard on Sunday.,no,sunday is the day we,140,Same
+E,5050,The accident injured his spinal cord and his legs are paralyzed.,He can move his legs.,no,the accident injured his spinal,141,E
+S,3116,The art museum just acquired an early Rembrandt; it's done in charcoal.,This early work is an oil painting.,no,the art museum just acquired,142,Different
+J,1116,The art museum just acquired an early Rembrandt; it's done in Crayola.,Rembrandt was a child when he completed the work.,yes,the art museum just acquired,142,Different
+E,5053,The baby cried and upset her mother.,The mother was very calm.,no,the baby cried and upset,143,E
+E,6071,The bartender dropped two olives into the strong martini.,The bartender was preparing a drink.,yes,the bartender dropped two olives,144,E
+J,1152,The best bargain I ever got was when I went to a family garage sale and bought a grandma.,I bought a car at the garage sale.,no,the best bargain i ever,145,Same
+S,4152,The best bargain I ever got was when I went to a family garage sale and bought a toaster.,I got a really good deal on a blender.,no,the best bargain i ever,145,Same
+S,3072,The best gift for the man who has everything is neckties.,A necktie always makes a good gift for a man.,yes,the best gift for the,146,Same
+J,2072,The best gift for the man who has everything is penicillin.,This man has lots of diseases.,yes,the best gift for the,146,Same
+S,4043,The best way to keep the milk from turning sour is to keep it in the cold.,Milk turns sour faster when it's warm.,yes,the best way to keep,147,Different
+J,2043,The best way to keep the milk from turning sour is to keep it in the cow.,Milk stays fresh for a long time.,no,the best way to keep,147,Different
+S,4040,The best way to remove coffee stains from a white blouse is with detergent.,Coffee stains are impossible to wash out.,no,the best way to remove,148,Same
+J,2040,The best way to remove coffee stains from a white blouse is with scissors.,Coffee stains are easy to wash out.,no,the best way to remove,148,Same
+J,1066,The best way to stop an elephant from charging is to cut off its credit.,Elephants should pay in cash.,yes,the best way to stop,149,Different
+S,3066,The best way to stop an elephant from charging is to cut off its toes.,Elephants can run quickly even without toes.,no,the best way to stop,149,Different
+E,5017,The bill was due at the end of the month.,He had to pay by the thirty-first.,yes,the bill was due at,150,E
+J,2109,The book that tells you where you can go on vacation is called a checkbook.,Where you go on vacation depends on how much you can afford.,yes,the book that tells you,151,Different
+S,4109,The book that tells you where you can go on vacation is called a guidebook.,Guidebooks aren't very useful for planning a trip.,no,the book that tells you,151,Different
+E,6028,The children held their hands and formed a circle.,The children were watching television.,no,the children held their hands,152,E
+E,6080,The choir sang hymns while the people listened.,The people joined in the singing.,no,the choir sang hymns while,153,E
+S,3088,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and crack.",The convict had been a drug user.,yes,the convict told his cellmate,154,Same
+J,2088,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and lawyers.",Lawyers are expensive.,yes,the convict told his cellmate,154,Same
+S,4038,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the admission.",The prisoner may have been forced into confessing.,yes,the cops claimed that the,155,Same
+J,2038,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the bathtub.",The prisoner had been dirty and needed to be washed.,yes,the cops claimed that the,155,Same
+J,2023,The curse of heavy drinking is that afterwards you get a huge bartab.,Drinking a lot can be expensive.,yes,the curse of heavy drinking,156,Same
+S,4023,The curse of heavy drinking is that afterwards you get a huge headache.,Drinking alcohol can lead to a hangover.,yes,the curse of heavy drinking,156,Same
+J,1148,The difference between a dog and a fox is about five beers.,Drinking makes women appear more attractive.,yes,the difference between a dog,157,Different
+S,4148,The difference between a dog and a fox is about five degrees.,Dogs and foxes have the same body temperature.,no,the difference between a dog,157,Different
+S,3111,The difference between a good speaker and a bad one is often a nice diction.,It's important to speak clearly.,yes,the difference between a good,158,Same
+J,1111,The difference between a good speaker and a bad one is often a nice nap.,Bad speakers can put you to sleep.,yes,the difference between a good,158,Same
+E,6048,The doctor said he could have a stroke because his arteries were getting narrow and clogged.,He was in excellent health.,no,the doctor said he could,159,E
+E,6008,The doctor told her not to scratch no matter how much it itched.,She had a heart condition.,no,the doctor told her not,160,E
+E,6067,The farmer put a new engine in his old tractor.,The farmer wanted to keep the tractor.,yes,the farmer put a new,161,E
+E,5077,The first thing he does every morning is sit in the lotus position and meditate.,He starts every day with coffee and the morning news.,no,the first thing he does,162,E
+S,3074,The first two hundred story building opened in Chicago; it was a hotel.,Chicago has a skyscraper that's a hotel.,yes,the first two hundred story,163,Same
+J,2074,The first two hundred story building opened in Chicago; it was a library.,This building had lots of books.,yes,the first two hundred story,163,Same
+E,5069,The garment bag kept his suit from getting wrinkled.,His suit needed to be ironed.,no,the garment bag kept his,164,E
+S,3157,The husband who catches his wife in the act is probably on the snoop.,An unfaithful wife can get in trouble if her husband is on the lookout.,yes,the husband who catches his,165,Different
+J,1157,The husband who catches his wife in the act is probably on the trapeze.,His wife is cheating on him.,no,the husband who catches his,165,Different
+S,3136,The last time a guy in a mask took all my money I was in shock.,I had been mugged.,yes,the last time a guy,166,Different
+J,2136,The last time a guy in a mask took all my money I was in surgery.,I had been mugged.,no,the last time a guy,166,Different
+E,5058,The lawyer feared that his client was guilty.,The lawyer was a prosecutor.,no,the lawyer feared that his,167,E
+E,5002,The luggage handler seemed to take great delight in tossing the boxes marked fragile.,The luggage handler was very careful.,no,the luggage handler seemed to,168,E
+E,6055,The mole lived in a hole in the ground.,The mole was kept in the house as a pet.,no,the mole lived in a,169,E
+E,5049,The most popular instrument in a Scottish marching band is the bagpipe.,"In Scottish marching bands, people like bagpipes more than drums.",yes,the most popular instrument in,170,E
+S,3069,The most prevalent form of legalized gambling is betting.,Betting is not very common.,no,the most prevalent form of,171,Different
+J,1069,The most prevalent form of legalized gambling is elections.,People are gambling when they vote for someone.,yes,the most prevalent form of,171,Different
+E,5029,The movers put the sofa on the bare floor.,The house was fully carpeted.,no,the movers put the sofa,172,E
+J,1049,"The new tax forms are more realistic-- where your wife signs, it says: accomplice.",Your wife doesn't need to sign your tax form.,no,the new tax forms are,173,Same
+S,3049,"The new tax forms are more realistic-- where your wife signs, it says: partner.",Tax forms are very old-fashioned.,no,the new tax forms are,173,Same
+E,5073,The newspaper photo was so murky he couldn't figure out who it was until he read the caption.,He could see the person in the photo clearly.,no,the newspaper photo was so,174,E
+E,5037,The nurse gave him detailed instructions about how to clean the wound and put on a fresh bandage.,He had been injured.,yes,the nurse gave him detailed,175,E
+E,6075,The old wealthy family lived in a twelve bedroom mansion.,They lived in a small home.,no,the old wealthy family lived,176,E
+S,3145,The only crop that is grown in America and harvested abroad is the American tobacco.,Very few foreigners smoke American cigarettes.,no,the only crop that is,177,Different
+J,1145,The only crop that is grown in America and harvested abroad is the American tourist.,Tourists spend a lot of money in other countries.,yes,the only crop that is,177,Different
+J,2140,The only fishing through the ice that some men ever do is for the olive.,Some men fish; others just drink martinis.,yes,the only fishing through the,178,Same
+S,3140,The only fishing through the ice that some men ever do is for the trout.,Some ice fishermen only want to catch trout.,yes,the only fishing through the,178,Same
+S,3160,The only ones who want me for my body are losers.,Everybody finds me very attractive.,no,the only ones who want,179,Same
+J,2160,The only ones who want me for my body are mosquitoes.,People find me very sexy.,no,the only ones who want,179,Same
+J,2149,The only person who sticks closer to you in adversity than a friend is a creditor.,People you owe money to don't hang around much.,no,the only person who sticks,180,Same
+S,4149,The only person who sticks closer to you in adversity than a friend is a spouse.,You just can't depend on a husband or wife.,no,the only person who sticks,180,Same
+S,4045,The only place where you can find people who spend all their time minding their own business is the bank.,People at banks are very nosy.,no,the only place where you,181,Different
+J,2045,The only place where you can find people who spend all their time minding their own business is the cemetery.,Everybody is nosy to some extent.,yes,the only place where you,181,Different
+S,4025,The only thing money can't buy is generosity.,Just because you have money doesn't mean you'll share it.,yes,the only thing money can't,182,Same
+J,2025,The only thing money can't buy is poverty.,Money can buy almost anything.,yes,the only thing money can't,182,Same
+S,3052,The only time my father ever raised a hand to his children was in discipline.,My father didn't believe in corporal punishment.,no,the only time my father,183,Same
+J,2052,The only time my father ever raised a hand to his children was in self-defense.,My father beat his children a lot.,no,the only time my father,183,Same
+E,6016,The paint turned out to be the wrong color.,They were putting up wallpaper.,no,the paint turned out to,184,E
+E,6063,The painter used water-based paint for the interior of the house but enamel for the exterior.,He used the same paint both inside and outside the house.,no,the painter used water-based paint,185,E
+J,1131,The penalty for dishonesty is the disgrace of dying rich.,Liars never win.,no,the penalty for dishonesty is,186,Different
+S,3131,The penalty for dishonesty is the disgrace of dying unloved.,People who lie don't have many friends.,yes,the penalty for dishonesty is,186,Different
+S,3133,The perfect companion to a vegetarian dinner is a salad.,A vegetarian meal doesn't need a salad.,no,the perfect companion to a,187,Same
+J,1133,The perfect companion to a vegetarian dinner is a steak.,I don't believe in eating meat.,no,the perfect companion to a,187,Same
+E,5026,The policeman saw him throw the bottle out the window and gave him a ticket for littering.,He got a ticket for speeding.,no,the policeman saw him throw,188,E
+E,6068,The Republican candidate won the election by a landslide.,The election was very close.,no,the republican candidate won the,189,E
+E,6024,The rodeo champion was quite proud of his big silver belt buckle.,The rodeo champion didn't wear a belt.,no,the rodeo champion was quite,190,E
+S,3159,The show had one act that was really offbeat: the clowns.,The clowns were really out of the ordinary.,yes,the show had one act,191,Same
+J,1159,The show had one act that was really offbeat: the singer.,The singer had poor rhythm.,yes,the show had one act,191,Same
+E,5074,The surgeon tried vainly to save his patient.,The patient died.,yes,the surgeon tried vainly to,192,E
+E,6023,The teacher wrote the problem on the board.,The teacher was going to explain the problem.,yes,the teacher wrote the problem,193,E
+E,5065,The terrorists planted a bomb in the airport and four people were killed in the explosion.,The bomb squad was able to defuse the bomb.,no,the terrorists planted a bomb,194,E
+J,2056,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little finding.,Things are hard to find in this area.,yes,the tourist bureau told the,195,Same
+S,4056,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little sightseeing.,There aren't many tourist sights in the area.,yes,the tourist bureau told the,195,Same
+E,5022,The victim was rushed to the hospital in an ambulance.,The victim wasn't hurt in the accident.,no,the victim was rushed to,196,E
+E,5054,The visitor stared at the grandfather clock and seemed almost hypnotized by the swinging of the pendulum.,The visitor could see the clock.,yes,the visitor stared at the,197,E
+E,5025,The whole town came to hear their mayor speak.,The people wanted to hear what the mayor would say.,yes,the whole town came to,198,E
+J,2092,The wind was so strong it blew out three fuses.,The wind affected the electrical system.,yes,the wind was so strong,199,Different
+S,4092,The wind was so strong it blew out three streetlights.,The storm didn't cause any damage.,no,the wind was so strong,199,Different
+E,6064,The woman in the grocery store was handing out free samples.,The samples cost ten cents each.,no,the woman in the grocery,200,E
+J,1060,The woman who has her husband eating out of her hand must save a lot of dishwashing.,The husband washes all the dishes.,no,the woman who has her,201,Different
+S,4060,The woman who has her husband eating out of her hand must save a lot of heartbreak.,She's happy because her husband does what she wants.,yes,the woman who has her,201,Different
+E,5046,There were over a hundred trees in the apple orchard.,It was an extremely small orchard.,no,there were over a hundred,202,E
+E,6052,They planned to dig a tunnel in order to escape.,They were being held prisoner.,yes,they planned to dig a,203,E
+J,1143,They redecorated the bar with new drunks.,The bar has all new furniture.,no,they redecorated the bar with,204,Same
+S,3143,They redecorated the bar with new wood.,The bar is all chrome and glass.,no,they redecorated the bar with,204,Same
+E,5038,They went to Las Vegas and got married in one of those quickie wedding chapels.,They spent months planning a big wedding.,no,they went to las vegas,205,E
+S,3039,This fall two things are turning yellow: trees and bushes.,The leaves are changing color.,yes,this fall two things are,206,Same
+J,1039,This fall two things are turning yellow: trees and investors.,Investors are becoming scared.,yes,this fall two things are,206,Same
+J,1134,"This house comes with a lot of extras, mostly termites.",The house is free of bugs.,no,this house comes with a,207,Different
+S,3134,"This house comes with a lot of extras, mostly upgrades.",The house would be a good purchase.,yes,this house comes with a,207,Different
+S,3158,"This new computer works so quickly, it comes complete with games.","If you use this computer, you'll have time left to play.",yes,this new computer works so,208,Different
+J,2158,"This new computer works so quickly, it comes complete with ulcers.",The computer feels no stress.,no,this new computer works so,208,Different
+J,1032,"Though most people think it's Rome, the world's most beloved capital is actually dollars.",People love money.,yes,though most people think it's,209,Different
+S,3032,"Though most people think it's Rome, the world's most beloved capital is actually Vienna.",Rome is more beloved than Vienna.,no,though most people think it's,209,Different
+E,5042,Three people were killed in a major highway accident.,The accident had not been fatal.,no,three people were killed in,210,E
+E,6043,Tim threw a rock and broke the window.,Tim was playing baseball.,no,tim threw a rock and,211,E
+S,4026,"To clothe one soldier, it takes the wool from two sheep and the hides from three animals.",Military uniforms are made from natural materials.,yes,"to clothe one soldier, it",212,Same
+J,2026,"To clothe one soldier, it takes the wool from two sheep and the hides from three taxpayers.",Military uniforms are expensive.,yes,"to clothe one soldier, it",212,Same
+J,1098,"To get something done, a committee should consist of no more than three people, two of whom are dead.",Groups are more efficient than individuals.,no,"to get something done, a",213,Different
+S,3098,"To get something done, a committee should consist of no more than three people, two of whom are workers.",A committee works best with one leader.,yes,"to get something done, a",213,Different
+E,6004,To keep the dogs out of the yard he put up a fence.,He was worried his pet would escape.,no,to keep the dogs out,214,E
+E,5006,To pay for the car Al simply wrote a check.,Al paid with a credit card.,no,to pay for the car,215,E
+S,3127,Too many girls believe that the chief foundation for true love is a large fortune.,A lot of women marry for money.,yes,too many girls believe that,216,Same
+J,1127,Too many girls believe that the chief foundation for true love is a large stone.,Some girls just want a big diamond ring.,yes,too many girls believe that,216,Same
+S,4124,Two things are essential for success: wealth and fame.,Having money without celebrity is still success.,no,two things are essential for,217,Same
+J,2124,Two things are essential for success: wealth and money.,You don't need much cash to succeed in business.,no,two things are essential for,217,Same
+E,6039,We finally got a decent picture on the TV after an hour of adjusting the antenna.,The TV had poor reception.,yes,we finally got a decent,218,E
+J,2106,We live in a lovely suburb; it's just two miles beyond our income.,We can't afford to live where we do.,yes,we live in a lovely,219,Different
+S,4106,We live in a lovely suburb; it's just two miles beyond our town.,The suburb is far from the city.,no,we live in a lovely,219,Different
+S,3036,"We used to have food on the table as soon as the customer was seated, but our new system requires more effort.",We have to work harder now.,yes,we used to have food,220,Different
+J,1036,"We used to have food on the table as soon as the customer was seated, but our new system requires more plates.",Our service is faster now.,no,we used to have food,220,Different
+S,3071,"When an irresistible force meets an immovable object, you get two very angry entities.","When one thing runs into another, both become unhappy.",yes,when an irresistible force meets,221,Same
+J,1071,"When an irresistible force meets an immovable object, you get two very angry women.",Women can be stubborn.,yes,when an irresistible force meets,221,Same
+E,5021,"When he stepped into the elevator, he knew Jennifer had just been there by the smell of her perfume.",Jennifer wore strong perfume.,yes,when he stepped into the,222,E
+J,1001,"When I asked how long I should cook the noodles, he said at least ten inches.",The noodles should be at least ten inches long.,yes,when i asked how long,223,Different
+S,3001,"When I asked how long I should cook the noodles, he said at least ten seconds.",They had already eaten.,no,when i asked how long,223,Different
+S,3096,"When I asked the bartender for something cold and full of rum, he recommended his daiquiri.",The bartender recommended a drink.,yes,when i asked the bartender,224,Same
+J,1096,"When I asked the bartender for something cold and full of rum, he recommended his wife.",The bartender was married.,yes,when i asked the bartender,224,Same
+J,1101,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the dressmaker.",The dressmaker had a lot of my money.,yes,when i found out how,225,Different
+S,3101,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the mistress.",I had been faithful to my wife.,no,when i found out how,225,Different
+J,2086,"When it comes to keeping warm, nothing beats a thermal brunette.",A down parka is the best way to keep warm.,no,when it comes to keeping,226,Same
+S,4086,"When it comes to keeping warm, nothing beats a thermal parka.",A trenchcoat is the best way to keep warm.,no,when it comes to keeping,226,Same
+S,3015,"When John bought a bulldog, it was no time at all before he had that dog eating out of his fingers.",He trained the dog well.,yes,"when john bought a bulldog,",227,Same
+J,1015,"When John bought a bulldog, it was no time at all before he had that dog eating out of his leg.",The dog was aggressive.,yes,"when john bought a bulldog,",227,Same
+S,4077,"When reviewing your notes for a test, the most important ones will be capitalized.",Pay more attention to the things in small print.,no,when reviewing your notes for,228,Same
+J,2077,"When reviewing your notes for a test, the most important ones will be illegible.",Important notes are written clearly so they stand out.,no,when reviewing your notes for,228,Same
+S,4100,"When the kid came into the store and asked for empty boxes, the owner gave him the crate.",The kid didn't get any boxes.,no,when the kid came into,229,Same
+J,1100,"When the kid came into the store and asked for empty boxes, the owner gave him the register.",The store had made a lot of money.,no,when the kid came into,229,Same
+E,6015,When they were in London they visited Buckingham Palace.,They made a trip to England.,yes,when they were in london,230,E
+J,2151,"When we got divorced, my wife and I split the house; she got the inside.",I got the outside.,yes,"when we got divorced, my",231,Different
+S,4151,"When we got divorced, my wife and I split the house; she got the kitchen.",My wife gave me the kitchen items.,no,"when we got divorced, my",231,Different
+S,3018,"When we watch a sexy movie, my wife leans over and breathes on my collar.",She wants to get me excited.,yes,when we watch a sexy,232,Different
+J,1018,"When we watch a sexy movie, my wife leans over and breathes on my glasses.",She wants me to see the movie.,no,when we watch a sexy,232,Different
+E,5030,"When you go to bed, turn off the lights.",The lights are on.,yes,"when you go to bed,",233,E
+J,2058,"When you own an ice cream business, your favorite flavor is aspirin.",Running an ice cream business can give you a headache.,yes,when you own an ice,234,Same
+S,4058,"When you own an ice cream business, your favorite flavor is everything.",You start to like all the flavors.,yes,when you own an ice,234,Same
+S,4024,"Where I'm from, the two most common elements are hydrogen and nitrogen.",Phosphorus is the most common element in my hometown.,no,"where i'm from, the two",235,Same
+J,2024,"Where I'm from, the two most common elements are hydrogen and stupidity.",People in my hometown are very smart.,no,"where i'm from, the two",235,Same
+J,2061,"Women don't dress to please men; if they did, they'd dress a lot faster.",Women take a long time to get dressed.,yes,women don't dress to please,236,Different
+S,4061,"Women don't dress to please men; if they did, they'd dress a lot scantier.",Men prefer women who wear a lot of clothes.,no,women don't dress to please,236,Different
+E,5062,Women were not allowed to vote until when Congress passed the nineteenth amendment to the constitution.,Women in 1900 could not vote.,yes,women were not allowed to,237,E
+E,6027,Yesterday they canoed down the river.,They spent yesterday outdoors.,yes,yesterday they canoed down the,238,E
+J,2144,You can keep your kids out of hot water with dishes.,Kids like to wash dishes.,no,you can keep your kids,239,Different
+S,4144,You can keep your kids out of hot water with rules.,Clear boundaries help keep kids out of trouble.,yes,you can keep your kids,239,Different
+E,5009,You could tell he had grown up in the South by his accent.,He talked like a Southerner.,yes,you could tell he had,240,E
