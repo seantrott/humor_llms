@@ -1,0 +1,584 @@
+---
+title: "Comparison of human and LLM humor comprehension"
+author: "Drew Walker, Sean Trott, Seana Coulson"
+date: "July 17, 2023"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lmtest)
+library(forcats)
+library(broom)
+library(lme4)
+library(ggridges)
+library(lmerTest)
+```
+
+# Load data
+
+## LLM data
+
+### Load 0-shot probes
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_0s = read_csv("../../data/processed/comprehension_probe_0shot.csv")
+nrow(df_0s)
+
+head(df_0s)
+```
+
+
+### Load 1-shot probes
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_1s = read_csv("../../data/processed/comprehension_probe_1shot.csv")
+nrow(df_1s)
+
+head(df_1s)
+
+```
+
+## Human data
+
+**TODO**: Check on data cleaning procedure (right now just reading in cleaned data).
+
+```{r}
+df_cleaned = read_csv("../../data/processed/human_data/comprehension_cleaned_final.csv")
+nrow(df_cleaned)
+
+head(df_cleaned)
+
+length(unique(df_cleaned$ParticipantID))
+
+```
+
+### Exclusions
+
+No participants failed the catch trials.
+
+```{r}
+table(df_cleaned$StimType)
+
+df_passed_attention = df_cleaned %>%
+  filter(StimType == "catch") %>%
+  group_by(ParticipantID) %>%
+  summarise(accuracy = mean(Match))
+
+nrow(df_passed_attention)
+
+df_cleaned = df_cleaned %>%
+  filter(ParticipantID %in% df_passed_attention$ParticipantID)
+
+nrow(df_cleaned)
+
+```
+
+
+### Remove catch trials
+
+```{r}
+df_critical = df_cleaned %>%
+  filter(StimType != "catch")
+
+table(df_critical$StimType)
+```
+
+
+# Analysis of human data
+
+First, we conduct an analysis of the human data alone.
+
+## Effect of `CorrectAnswer`?
+
+First, we need to establish whether accuracy is higher for "yes" or "no" responses to determine whether to include `CorrectAnswer` in our model as a covariate.
+
+There is no evidence of an interaction between `StimType` and `CorrectAnswer`.
+
+```{r}
+mod_full = glmer(data = df_critical,
+                 Match ~ StimType * CorrectAnswer + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+mod_just_me = glmer(data = df_critical,
+                 Match ~ StimType + CorrectAnswer + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+anova(mod_full, mod_just_me)
+```
+
+The effect of `CorrectAnswer` is trending ($p = .06$).
+
+```{r}
+mod_just_stimtype = glmer(data = df_critical,
+                 Match ~ StimType + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+anova(mod_just_me, mod_just_stimtype)
+```
+
+Accuracy is slightly higher for "no" responses than "yes" responses:
+
+```{r}
+df_critical %>%
+  group_by(CorrectAnswer) %>%
+  summarise(accuracy = mean(Match))
+```
+
+
+## Effect of `StimType`?
+
+Our primary question is whether accuracy is lower for jokes than the other two conditions. 
+
+The model comparison suggests there is.
+
+```{r}
+mod_just_stimtype = glmer(data = df_critical,
+                 Match ~ StimType + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+mod_null = glmer(data = df_critical,
+                 Match ~ (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+anova(mod_just_stimtype, mod_null)
+summary(mod_just_stimtype)
+```
+
+Specifically, accuracy is lower for jokes than expected or straight stimuli.
+
+```{r}
+df_critical %>%
+  group_by(StimType) %>%
+  summarize(accuracy = mean(Match))
+```
+
+
+We can visualize this result:
+
+```{r}
+df_critical %>%
+  ggplot(aes(x = reorder(StimType, Match),
+             y = Match)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Stimulus type",
+       y = "Accuracy") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal() 
+```
+
+
+# Comparing human and LLM data
+
+Now, we compare human and LLM humor comprehension.
+
+We do this with two approaches:
+
+1. In the first approach, we focus on the difference between human and LLM performance, i.e., the `Source` of a given response.  
+2. In the second approach, we ask to what extent human behavior can be explained as a function of LLM behavior.
+
+## Step 1: Merging data
+
+### Merging approach 1
+
+Here, we "stack" the dataframes.
+
+```{r}
+df_llm = df_0s %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  mutate(Sentence = sentence,
+         ComprehensionQuestion = answer,
+         CorrectAnswer = correct
+         ) %>%
+  mutate(Match = case_when(
+    correct == "yes" & lp_ratio > 0 ~ 1,
+    correct == "no" & lp_ratio < 0 ~ 1,
+    correct == "yes" & lp_ratio < 0 ~ 0,
+    correct == "no" & lp_ratio > 0 ~ 0
+  )) %>% 
+  select(Sentence, ComprehensionQuestion, StimType, CorrectAnswer, Match) %>%
+  mutate(Source = "LLM")
+
+df_merged_stacked = df_critical %>%
+  mutate(Sentence = paste(Sentence, ".", sep = "")) %>%
+  mutate(Source = "Human") %>%
+  bind_rows(df_llm)
+
+```
+
+
+### Merging approach 2
+
+Here, we merge the data to include the **log-odds** from GPT-3.
+
+```{r}
+df_llm2 = df_0s %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  mutate(Sentence = sentence,
+         ComprehensionQuestion = answer,
+         CorrectAnswer = correct
+         ) %>%
+  select(Sentence, StimType, CorrectAnswer, condition, lp_ratio)
+
+df_merged_joined = df_critical %>%
+  mutate(Sentence = paste(Sentence, ".", sep = "")) %>%
+  select(Sentence, StimType, CorrectAnswer, Match, Response, ReactionTime, ParticipantID) %>%
+  left_join(df_llm2, by = c("Sentence", "StimType", "CorrectAnswer"))
+
+nrow(df_merged_joined)
+```
+
+## Match ~ Source
+
+Here, we ask whether humans or LLMs are more likely to answer correctly.
+
+```{r}
+mod_just_source = glmer(data = df_merged_stacked,
+                 Match ~ Source +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+mod_no_source = glmer(data = df_merged_stacked,
+                 Match ~ # Source +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+anova(mod_just_source, mod_no_source)
+```
+
+
+There does appear to be a main effect of `Source`:
+
+```{r}
+df_merged_stacked %>%
+  group_by(Source) %>%
+  summarise(accuracy = mean(Match))
+```
+
+We can visualize this by comparing LLM accuracy to the distribution of by-subject accuracies:
+
+```{r}
+df_by_subj = df_critical %>%
+  group_by(ParticipantID) %>%
+  summarise(accuracy = mean(Match))
+
+llm_accuracy = mean(df_llm$Match)
+
+df_by_subj %>%
+  ggplot(aes(x = accuracy)) +
+  geom_histogram(alpha = .5) +
+  geom_vline(xintercept = llm_accuracy, linetype = "dotted") +
+  theme_minimal() +
+  labs(x = "Accuracy",
+       title = "LLM vs. Human Accuracy")
+```
+
+
+## Match ~ Source + IsJoke
+
+```{r}
+df_merged_stacked = df_merged_stacked %>%
+  mutate(IsJoke = StimType == "joke")
+```
+
+
+Yes, `IsJoke` does continue to explain variance even once we account for `Source`.
+
+```{r}
+mod_just_src_isjoke_me = glmer(data = df_merged_stacked,
+                 Match ~ Source + IsJoke +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+anova(mod_just_src_isjoke_me, mod_just_source)
+```
+
+## Match ~ Source x StimType
+
+Moreover, there is an **interaction**: the joke vs. non-joke gulf is bigger for LLMs.
+
+```{r}
+mod_src_stimtype = glmer(data = df_merged_stacked,
+                 Match ~ Source * IsJoke +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+anova(mod_just_src_isjoke_me, mod_src_stimtype)
+summary(mod_src_stimtype)
+```
+
+The descriptive stats are as follows:
+
+```{r}
+df_merged_stacked %>%
+  group_by(IsJoke, Source) %>%
+  summarise(accuracy = mean(Match))
+```
+
+
+We can also visualize the raw data, which suggests a cross-over interaction. LLMs are better for non-jokes, and humans are (relatively) better for jokes. Both LLMs and humans are worse at jokes, however.
+
+```{r}
+df_merged_stacked %>%
+  mutate(is_joke = case_when(
+    IsJoke == TRUE ~ "Joke",
+    IsJoke == FALSE ~ "Non-joke"
+  )) %>%
+  ggplot(aes(x = reorder(is_joke, Match),
+             y = Match,
+             color = Source)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "",
+       y = "Accuracy",
+       color = "Source",
+       title = "Comprehension Accuracy") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom")
+
+
+```
+
+
+## Match ~ Log Odds
+
+Item-level variance in Log-odds does not appear to be related to the probability of humans getting a correct response.
+
+```{r}
+mod_full = glmer(data = df_merged_joined,
+                 Match ~ StimType * CorrectAnswer + lp_ratio +
+                   (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+mod_no_lp = glmer(data = df_merged_joined,
+                 Match ~ StimType * CorrectAnswer + # + lp_ratio +
+                   (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+anova(mod_full, mod_no_lp)
+```
+
+
+# Exploratory analyses
+
+## t-test comparison
+
+Because the mixed models analyzing `Source` could not account for `ParticipantID`, we could not account for that source of non-independence. Here, we run a series of simpler t-tests to ask the same questions.
+
+The one-sample t-tests are consistent with the results above, namely that humans do better on jokes and LLMs do better on non-jokes.
+
+```{r}
+df_summ_humans = df_merged_stacked %>%
+  filter(Source == "Human") %>%
+  group_by(ParticipantID, IsJoke) %>%
+  summarise(accuracy = mean(Match))
+
+llm_joke_accuracy = df_merged_stacked %>%
+  filter(Source == "LLM") %>%
+  filter(IsJoke == TRUE) %>%
+  summarise(accuracy = mean(Match)) %>%
+  pull()
+llm_joke_accuracy
+
+## Yes, t-test comparing human joke accuracy to LLM Joke accuracy is significant
+t.test(filter(df_summ_humans, IsJoke == TRUE)$accuracy, mu = llm_joke_accuracy)
+
+
+llm_nj_accuracy = df_merged_stacked %>%
+  filter(Source == "LLM") %>%
+  filter(IsJoke == FALSE) %>%
+  summarise(accuracy = mean(Match)) %>%
+  pull()
+llm_nj_accuracy
+
+## Yes, t-test comparing human non-joke accuracy to LLM non-joke accuracy is significant
+t.test(filter(df_summ_humans, IsJoke == FALSE)$accuracy, mu = llm_nj_accuracy)
+```
+
+
+## Predicting individual responses with log-odds
+
+Here, rather than predicting human **accuracy**, we ask whether variance in LLM log-odds can predict human **responses**, above and beyond the ground truth correct answer.
+
+We find that it does.
+
+```{r}
+df_merged_joined$Response = factor(df_merged_joined$Response)
+mod_full = glmer(data = df_merged_joined,
+                 Response ~ StimType * CorrectAnswer + lp_ratio +
+                   (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+mod_no_lp = glmer(data = df_merged_joined,
+                 Response ~ StimType * CorrectAnswer + # lp_ratio +
+                   (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+anova(mod_full, mod_no_lp)
+```
+
+
+## Predicting RT with log-odds and `IsJoke`
+
+Now, considering only **correct** human responses, we ask whether humans are slower for some items than others.
+
+```{r}
+### Filter for correct responses
+df_merged_joined_correct = df_merged_joined %>%
+  filter(Match == 1) %>%
+  mutate(IsJoke = StimType == "joke") %>%
+  mutate(log_rt = log10(ReactionTime)) ## log rt
+nrow(df_merged_joined_correct)
+
+df_merged_joined_correct %>%
+  ggplot(aes(x = log_rt)) +
+  geom_histogram() +
+  theme_minimal()
+```
+
+
+### `Log(RT) ~ IsJoke`?
+
+Yes, people are slower for *jokes*.
+
+```{r}
+mod_isjoke = lmer(data = df_merged_joined_correct,
+                log_rt ~ IsJoke +
+                  (1 | ParticipantID) +
+                  (1 | Sentence),
+                REML = FALSE)
+
+mod_null= lmer(data = df_merged_joined_correct,
+                log_rt ~ # IsJoke +
+                  (1 | ParticipantID) +
+                  (1 | Sentence),
+                REML = FALSE)
+
+summary(mod_isjoke)
+anova(mod_isjoke, mod_null)
+
+df_merged_joined_correct %>%
+  ggplot(aes(x = IsJoke,
+             y = log_rt)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(x = "Joke vs. Non-joke",
+       y = "Log(RT)")
+
+df_merged_joined_correct %>%
+  ggplot(aes(x = reorder(IsJoke, log_rt),
+             y = log_rt)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Joke vs. Non-Joke",
+       y = "Log(RT)") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal() 
+```
+
+
+### `Log(RT) ~ abs(Log-odds)`?
+
+We can treat `abs(lp_ratio)` as a rough measure of LLM "confidence": i.e., the further Log-odds is from zero, the more the LLM preferred one response to the other.
+
+Indeed, as `abs(lp_ratio)` increases, RT also decreases.
+
+```{r}
+df_merged_joined_correct = df_merged_joined_correct %>%
+  mutate(abs_lp = abs(lp_ratio))
+
+mod_lp = lmer(data = df_merged_joined_correct,
+                log_rt ~ abs_lp +
+                  (1 | ParticipantID) +
+                  (1 | Sentence),
+                REML = FALSE)
+
+anova(mod_lp, mod_null)
+summary(mod_lp)
+
+```
+
+
+### `Log(RT) ~ abs(Log-odds) + IsJoke`?
+
+Now, we account for each of those covariates in assessing the other. Both explain independent variance.
+
+```{r}
+mod_both = lmer(data = df_merged_joined_correct,
+                log_rt ~ abs_lp + IsJoke +
+                  (1 | ParticipantID) +
+                  (1 | Sentence),
+                REML = FALSE)
+
+anova(mod_both, mod_isjoke)
+anova(mod_both, mod_lp)
+summary(mod_both)
+
+df_merged_joined_correct %>%
+  ggplot(aes(x = abs_lp, 
+      y = log_rt, 
+      color = IsJoke)) +
+  geom_point(alpha = .02) +
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(x = "abs(Log-odds)",
+       y = "Log(RT)")
+
+```
+

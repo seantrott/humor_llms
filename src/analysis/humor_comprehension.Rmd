@@ -1,0 +1,362 @@
+---
+title: "Analysis of GPT-3 Humor Comprehension"
+author: "Drew Walker, Sean Trott, Seana Coulson"
+date: "July 3, 2023"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lmtest)
+library(forcats)
+library(broom)
+library(lme4)
+library(ggridges)
+library(lmerTest)
+library(ggrepel)
+```
+
+# Load data
+
+## Load 0-shot probes
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_0s = read_csv("../../data/processed/comprehension_probe_0shot.csv")
+nrow(df_0s)
+
+head(df_0s)
+```
+
+
+## Load 1-shot probes
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_1s = read_csv("../../data/processed/comprehension_probe_1shot.csv")
+nrow(df_1s)
+
+head(df_1s)
+
+```
+
+
+# Analysis and Visualization
+
+## Log Odds ~ Correct Response
+
+0-shot: 
+
+```{r}
+df_0s %>%
+  group_by(correct) %>%
+  summarise(mean_lp = mean(lp_ratio),
+            sd_lp = sd(lp_ratio))
+
+mod_full = lm(data = df_0s, lp_ratio ~ correct)
+mod_reduced = lm(data = df_0s, lp_ratio ~ 1)
+
+summary(mod_full)
+
+
+lrtest(mod_full, mod_reduced)
+```
+
+
+1-shot: 
+
+```{r}
+df_1s %>%
+  group_by(correct) %>%
+  summarise(mean_lp = mean(lp_ratio),
+            sd_lp = sd(lp_ratio))
+
+mod_full = lm(data = df_1s, lp_ratio ~ correct)
+mod_reduced = lm(data = df_1s, lp_ratio ~ 1)
+
+summary(mod_full)
+
+
+lrtest(mod_full, mod_reduced)
+
+```
+
+## Accuracy ~ Prompting Method
+
+### Merging and aggregating data
+
+```{r}
+df_merged = df_0s %>%
+  bind_rows(df_1s) %>%
+  mutate(few_shot = shots > 0) %>%
+  mutate(few_shot = case_when(
+    few_shot == TRUE ~ "Few-shot",
+    few_shot == FALSE ~ "Zero-shot"
+  )) 
+
+## First show lp ratio
+df_merged %>%
+  ggplot(aes(x = few_shot, y = lp_ratio, fill = correct)) +
+  geom_boxplot() +
+  geom_hline(yintercept = 0, linetype = 0) +
+  theme_minimal() +
+  labs(x = "Prompting Method",
+       fill = "Correct Response",
+       y = "Log Odds (Yes vs. No)")
+
+df_merged %>%
+  ggplot(aes(x = few_shot, y = lp_ratio, fill = condition)) +
+  geom_boxplot() +
+  geom_hline(yintercept = 0, linetype = 0) +
+  theme_minimal() +
+  labs(x = "Prompting Method",
+       fill = "Condition",
+       y = "Log Odds (Yes vs. No)") +
+  facet_wrap(~correct)
+
+## Now calculate accuracy
+df_merged = df_merged %>%
+  mutate(accuracy = case_when(
+    correct == "yes" & lp_ratio > 0 ~ 1,
+    correct == "no" & lp_ratio < 0 ~ 1,
+    correct == "yes" & lp_ratio < 0 ~ 0,
+    correct == "no" & lp_ratio > 0 ~ 0
+  ))
+
+df_merged %>%
+  group_by(few_shot) %>%
+  summarise(accuracy = mean(accuracy))
+
+df_merged %>%
+  ggplot(aes(x = few_shot,
+             y = accuracy)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Prompting Method",
+       y = "Accuracy") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal() 
+
+
+```
+
+### Accuracy is higher for "no" answers
+
+```{r}
+df_merged %>%
+  group_by(correct) %>%
+  summarise(accuracy = mean(accuracy))
+```
+
+
+### Analysis
+
+```{r}
+mod_full = glm(data = df_merged, accuracy ~ few_shot, family = binomial())
+summary(mod_full)
+
+mod_reduced = glm(data = df_merged, accuracy ~ 1, family = binomial())
+
+lrtest(mod_full, mod_reduced)
+```
+
+
+## Accuracy ~ Sentence Type
+
+
+```{r}
+df_merged %>%
+  group_by(condition, few_shot) %>%
+  summarise(mean_accuracy = mean(accuracy))
+
+df_merged %>%
+  group_by(correct) %>%
+  summarise(mean_accuracy = mean(accuracy))
+
+mod_full = glm(data = df_merged, accuracy ~ condition, family = binomial())
+mod_reduced = glm(data = df_merged, accuracy ~ 1, family = binomial())
+
+summary(mod_full)
+
+lrtest(mod_reduced, mod_full)
+
+df_merged %>%
+  ggplot(aes(x = reorder(condition, accuracy),
+             y = accuracy,
+             color = few_shot)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Condition",
+       y = "Accuracy",
+       color = "Prompting Method") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal() +
+  facet_wrap(~correct)
+
+df_merged %>%
+  ggplot(aes(x = reorder(condition, accuracy),
+             y = accuracy,
+             color = few_shot)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Condition",
+       y = "Accuracy",
+       color = "Prompting Method") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal()
+```
+
+
+#### Qualitative examples
+
+```{r}
+df_merged_wrong = df_merged %>%
+  filter(accuracy == 0) %>%
+  filter(condition == "J") 
+
+df_merged_wrong %>%
+  select(sentence, answer, lp_ratio) %>%
+  arrange(lp_ratio) %>%
+  head(20)
+```
+
+
+# Exploratory Analyses
+
+## Scaling analysis
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_scaling = read_csv("../../data/processed/all_models_comprehension_scaling_analysis.csv")
+nrow(df_scaling)
+
+head(df_scaling)
+
+## Now calculate accuracy
+df_scaling = df_scaling %>%
+  mutate(correct_response = case_when(
+    correct == "yes" & lp_ratio > 0 ~ 1,
+    correct == "no" & lp_ratio < 0 ~ 1,
+    correct == "yes" & lp_ratio < 0 ~ 0,
+    correct == "no" & lp_ratio > 0 ~ 0
+  ))
+
+df_scaling %>%
+  group_by(model) %>%
+  summarise(accuracy = mean(correct_response))
+
+
+df_model_params = read_csv("../../data/processed/model_params.csv")
+df_model_params$model_stripped =c("ada", "babbage", "curie", "davinci",
+                     "ada", "babbage", "curie", "davinci")
+
+df_merged_scaling = df_scaling %>%
+  mutate(Model = model) %>%
+  left_join(df_model_params)
+
+df_merged_scaling_summ = df_merged_scaling %>%
+  mutate(Is_Joke = condition == "J") %>%
+  group_by(model_stripped, Model, `Model Type`, Parameters, Is_Joke) %>%
+  summarise(accuracy = mean(correct_response))
+
+
+df_merged_scaling_summ %>%
+  filter(Is_Joke == TRUE) %>%
+  mutate(params_log = log10(Parameters)) %>%
+  ggplot(aes(x = Parameters,
+             y = accuracy,
+             shape = `Model Type`,
+             color = model_stripped
+             )) +
+  geom_point(size = 6,
+             alpha = .4) +
+  geom_hline(yintercept = .85, ### Human accuracy 
+              linetype = "dotted", color = "red",
+             size = 1.2, alpha = .5) +
+  geom_text_repel(aes(label=Model), size=3) +
+  scale_x_log10() +
+  scale_y_continuous(limits = c(0, 1)) +
+  labs(x = "Parameters",
+       y = "Accuracy",
+       title = "Joke Comprehension Accuracy") +
+  theme_minimal() +
+  guides(color="none") +
+  theme(text = element_text(size = 15),
+        legend.position="bottom")
+  
+```
+
+
+## GPT-4 analysis
+
+```{r}
+df_gpt4 = read_csv("../../data/processed/gpt4_comprehension.csv")
+table(df_gpt4$response)
+df_gpt4 = df_gpt4 %>%
+  mutate(accurate = response_lower == correct) %>%
+  mutate(Is_Joke = condition == "J")
+
+
+df_gpt4_summ = df_gpt4 %>%
+  group_by(Is_Joke) %>%
+  summarise(accuracy = mean(accurate)) %>%
+  mutate(model_stripped = "GPT-4",
+         `Model Type` = "RLHF",
+         Model = "GPT-4") %>%
+  mutate(Parameters = 1700000000000)
+
+df_gpt4_summ
+
+df_merged_scaling_summ_with_gpt4 = df_merged_scaling_summ %>%
+  bind_rows(df_gpt4_summ)
+
+df_merged_scaling_summ_with_gpt4 %>%
+  filter(Is_Joke == TRUE) %>%
+  mutate(params_log = log10(Parameters)) %>%
+  ggplot(aes(x = Parameters,
+             y = accuracy,
+             shape = `Model Type`,
+             color = model_stripped
+             )) +
+  geom_point(size = 6,
+             alpha = .4) +
+  geom_hline(yintercept = .85, ### Human accuracy 
+              linetype = "dotted", color = "red",
+             size = 1.2, alpha = .5) +
+  geom_text_repel(aes(label=Model), size=3) +
+  scale_x_log10() +
+  scale_y_continuous(limits = c(0, 1)) +
+  labs(x = "Parameters",
+       y = "Accuracy",
+       title = "Joke Comprehension Accuracy") +
+  theme_minimal() +
+  guides(color="none") +
+  theme(text = element_text(size = 15),
+        legend.position="bottom")
+```
+
+

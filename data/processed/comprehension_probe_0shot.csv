@@ -1,0 +1,401 @@
+model,sentence,answer,shots,condition,correct,yes_lp,no_lp,lp_ratio
+text-davinci-002,A committee keeps minutes and takes hours.,Committees are very efficient.,0,J,no,-5.995596,-0.04993588,-5.94566012
+text-davinci-002,A committee keeps minutes and takes votes.,Committees keep records and make decisions.,0,S,yes,-0.3275809,-6.389618,6.0620370999999995
+text-davinci-002,A device for finding furniture in the dark is a candle.,The candle gives off light.,0,S,yes,-0.6305447,-7.9600163,7.329471600000001
+text-davinci-002,A device for finding furniture in the dark is a shin.,People run into furniture when it's dark.,0,J,yes,-3.0307362,-0.408795,-2.6219412
+text-davinci-002,A good source of vitamin A is orange vegetables like carrots.,Carrots contain vitamin A.,0,E,yes,-0.29538363,-10.074741,9.77935737
+text-davinci-002,A good way to blow your mind is to smoke gunpowder.,An explosion can blow your brains out.,0,J,yes,-1.215735,-1.3984312,0.1826962000000001
+text-davinci-002,A good way to blow your mind is to smoke heroin.,Heroin will affect your brain.,0,S,yes,-0.3052285,-6.3846426,6.0794141
+text-davinci-002,A man who has lost ninety percent of his brain is called a widower.,His wife wasn't very smart.,0,J,no,-5.4593472,-0.2201921,-5.2391551
+text-davinci-002,A man who has lost ninety percent of his brain is called a zombie.,A zombie still has an intact brain.,0,S,no,-8.623028,-0.4114857,-8.2115423
+text-davinci-002,A problem drinker is one who never buys.,One should take turns paying for the drinks.,0,J,yes,-6.867718,-0.26665992,-6.60105808
+text-davinci-002,A problem drinker is one who never quits.,Non-stop drinking isn't much of a problem.,0,S,no,-5.738162,-0.28224993,-5.45591207
+text-davinci-002,A replacement player hit a home run with my ball.,The player was playing baseball.,0,S,yes,-0.41342375,-4.589829,4.17640525
+text-davinci-002,A replacement player hit a home run with my girl.,Someone else slept with my girlfriend.,0,J,yes,-1.0899938,-0.7192349,-0.3707589
+text-davinci-002,A thoughtful wife has pork chops ready when her husband comes home from fishing.,She thinks her husband will catch lots of fish.,0,J,no,-4.9746947,-0.13079481,-4.843899889999999
+text-davinci-002,A thoughtful wife has pork chops ready when her husband comes home from working.,A nice wife cooks dinner for her husband.,0,S,yes,-0.31508878,-7.6638074,7.34871862
+text-davinci-002,A vacation is the shortest distance between two locations.,A trip seems longer when you are on vacation.,0,S,no,-2.1246567,-0.3643751,-1.7602816000000001
+text-davinci-002,A vacation is the shortest distance between two paychecks.,Vacations cost a lot of money.,0,J,yes,-1.7300111,-0.62588626,-1.1041248399999999
+text-davinci-002,"After Olga tore her red dress, she went to the store for a needle and a spool of red thread.",She planned to throw the dress away.,0,E,no,-6.964225,-0.09933338,-6.86489162
+text-davinci-002,"All roads lead to Rome, and all detours lead to profanity.",People are frustrated by detours.,0,J,yes,-1.5758227,-0.76234275,-0.8134799500000001
+text-davinci-002,"All roads lead to Rome, and all detours lead to somewhere.",Detours never go anywhere.,0,S,no,-7.4387155,-0.18637453,-7.25234097
+text-davinci-002,All the plates were garnished with little sprigs of parsley.,Each plate had some parsley on it.,0,E,yes,-0.17611562,-11.056377,10.88026138
+text-davinci-002,Another thing a small boy is constantly outgrowing is his allowance.,Kids always want more money.,0,J,yes,-0.6659989,-4.213408,3.5474091000000003
+text-davinci-002,Another thing a small boy is constantly outgrowing is his underwear.,Boys need new clothes often.,0,S,yes,-0.45311534,-3.3996935,2.94657816
+text-davinci-002,Another thing that has developed by leaps and bounds is the modern dance.,Dancing has changed a lot over the years.,0,J,yes,-0.58822465,-7.0903316,6.50210695
+text-davinci-002,Another thing that has developed by leaps and bounds is the modern science.,Science has progressed at a snail's pace.,0,S,no,-12.219004,-0.38358587,-11.83541813
+text-davinci-002,Arguments between couples are healthy; sometimes they even prevent breakups.,It's okay for couples to argue sometimes.,0,S,yes,-0.2687395,-10.170346,9.9016065
+text-davinci-002,Arguments between couples are healthy; sometimes they even prevent marriage.,Marriage is a wonderful thing.,0,J,no,-7.1542377,-0.39063156,-6.76360614
+text-davinci-002,Autobiography is an unrivaled vehicle for telling the truth about others.,Writing an autobiography can unmask your true self.,0,J,no,-0.7849345,-4.8507576,4.065823099999999
+text-davinci-002,Autobiography is an unrivaled vehicle for telling the truth about somebody.,Autobiographies don't reveal much about a person.,0,S,no,-11.672776,-0.70575756,-10.96701844
+text-davinci-002,Autumn is a good time to buy some new clothes.,It's good to buy clothes before the winter.,0,E,yes,-0.13373718,-7.33752,7.20378282
+text-davinci-002,"Because of his diabetes, he had to take daily shots of insulin.",He took insulin once a week.,0,E,no,-10.850789,-0.06033373,-10.79045527
+text-davinci-002,"Before the outdoor concert, he packed a basket with wine and food for a picnic.",He was planning to eat outdoors.,0,E,yes,-0.15594827,-9.711028,9.555079730000001
+text-davinci-002,Bill jumped in the lake and made a big splash.,Bill went for a swim.,0,E,yes,-0.21698904,-4.9599586,4.742969560000001
+text-davinci-002,"By the time Mary had her fourteenth child, she'd run out of names to call her husband.",Mary was happy to have another child.,0,J,no,-2.0758758,-0.650925,-1.4249508
+text-davinci-002,"By the time Mary had her fourteenth child, she'd run out of names to call her offspring.",Mary had no problem naming her new baby.,0,S,no,-7.299145,-0.61120844,-6.687936560000001
+text-davinci-002,"Charged with statutory rape, he told the judge he didn't know she was a statue.",He was on trial for a sex-related crime.,0,J,yes,-5.3965726,-0.19920406,-5.19736854
+text-davinci-002,"Charged with statutory rape, he told the judge he didn't know she was a teenager.",He had slept with a young woman.,0,S,yes,-0.5770138,-1.2039413,0.6269275000000001
+text-davinci-002,Cocktail lounges are usually half lit to match the patrons.,The people have often had a bit too much to drink.,0,J,yes,-0.36167952,-4.6233597,4.26168018
+text-davinci-002,Cocktail lounges are usually half lit to match the setting.,Bright lights can ruin the atmosphere in a cocktail lounge.,0,S,yes,-0.3848368,-7.363235,6.978398200000001
+text-davinci-002,"Congress taxes our income, our property, and our patience.",We're very happy with Congress.,0,J,no,-12.162879,-0.71712077,-11.445758230000001
+text-davinci-002,"Congress taxes our income, our property, and our purchases.",There are very few taxes.,0,S,no,-10.758912,-0.37910065,-10.37981135
+text-davinci-002,"Diamonds are produced by great pressure, usually provided by a girlfriend.",Some men are reluctant to get engaged.,0,J,yes,-5.7722464,-0.46624008,-5.30600632
+text-davinci-002,"Diamonds are produced by great pressure, usually provided by a piston.",Diamonds can be made by machine.,0,S,yes,-0.2759587,-5.0205007,4.744542
+text-davinci-002,Dogs crack open bones so they can eat the marrow.,Dogs like to eat bone marrow.,0,E,yes,-0.10137387,-9.456755,9.35538113
+text-davinci-002,"During the worst part of the drought, people were encouraged to not always flush the toilet.",Water was in short supply.,0,E,yes,-0.074763864,-8.512825,8.438061136
+text-davinci-002,Eva turned down the heat and left the sauce on the stove to simmer.,Eva was cooking.,0,E,yes,-0.52531254,-5.527382,5.00206946
+text-davinci-002,Every introductory sailing class includes learning how to save a man drowning.,Beginning sailing classes emphasize safety.,0,E,yes,-0.2640342,-5.0401196,4.7760853999999995
+text-davinci-002,"Every time I wear my spring coat in the rain, it damages the fabric.",My coat is waterproof.,0,S,no,-7.1086526,-0.33543888,-6.77321372
+text-davinci-002,"Every time I wear my spring coat in the rain, it damages the springs.",Water isn't good for my coat.,0,J,yes,-0.43044105,-1.6033125,1.17287145
+text-davinci-002,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little platform.,The platform is for sunbathing.,0,S,no,-5.3924484,-0.0729546,-5.3194938
+text-davinci-002,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little water.,The pool was empty.,0,J,yes,-4.4183145,-0.35923883,-4.05907567
+text-davinci-002,"Except for not having a shell, slugs are a lot like snails.",Slugs and snails are similar.,0,E,yes,-0.35702085,-9.231418,8.87439715
+text-davinci-002,"Figures don't lie, except on the beaches.",People lie in the sand.,0,J,yes,-3.6065028,-0.13329929,-3.47320351
+text-davinci-002,"Figures don't lie, except on the page.",Statistics are completely reliable.,0,S,no,-12.307012,-0.31675762,-11.99025438
+text-davinci-002,"For a great vacation, put the kids in the back seat, and take a cruise.",A road trip with the kids can be a lot of fun.,0,J,no,-0.5760832,-4.6052713,4.0291881
+text-davinci-002,"For a great vacation, put the kids in the back seat, and take a freeway.",A road trip can be a fun vacation.,0,S,yes,-0.46795303,-7.2506547,6.78270167
+text-davinci-002,"For his thirtieth birthday, all his friends gathered to celebrate.",There was a party for his birthday.,0,E,yes,-0.24189752,-11.385751,11.14385348
+text-davinci-002,For lunch he had an apple and a peanut butter sandwich.,He ate a cold lunch.,0,E,yes,-0.18055494,-3.277206,3.09665106
+text-davinci-002,"Frequent naps prevent old age, especially when taken while driving.",Falling asleep while driving can kill you.,0,J,yes,-1.7802653,-1.0266174,-0.7536479
+text-davinci-002,"Frequent naps prevent old age, especially when taken while relaxed.",It's best to nap when you are very stressed.,0,S,no,-6.429414,-0.124544434,-6.304869566000001
+text-davinci-002,Good Friday commemorates the Last Supper that Jesus had with his twelve disciples.,Good Friday is a religious holiday.,0,E,yes,-0.19526485,-10.247893,10.05262815
+text-davinci-002,Hal wrote her a love letter.,Hal didn't like her very much.,0,E,no,-12.227118,-0.32606408,-11.90105392
+text-davinci-002,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough change.",We don't have enough money for soup.,0,S,yes,-0.35071078,-3.6041913,3.25348052
+text-davinci-002,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough room.",We can't afford the soup.,0,J,no,-4.595141,-0.08487285,-4.51026815
+text-davinci-002,He drank so much that he eventually became a beverage.,He gave up drinking.,0,J,no,-7.563405,-0.29356575,-7.26983925
+text-davinci-002,He drank so much that he eventually became a lush.,He became an alcoholic.,0,S,yes,-0.30229604,-9.07838,8.77608396
+text-davinci-002,He got a medal for bravery on the beach when he rescued a girl from a lifeguard.,He saved the girl from drowning.,0,J,no,-0.08377178,-9.048751,8.96497922
+text-davinci-002,He got a medal for bravery on the beach when he rescued a girl from a shipwreck.,The girl had been on a ship.,0,S,yes,-0.24185184,-2.999083,2.7572311600000003
+text-davinci-002,He hung her coat in the closet.,She had been wearing a coat.,0,E,yes,-0.11760303,-6.1589875,6.041384470000001
+text-davinci-002,He is at the age when all the numbers in his little black book belong to doctors.,He is getting old.,0,J,yes,-0.320367,-7.2598577,6.9394907
+text-davinci-002,He is at the age when all the numbers in his little black book belong to friends.,He is a real playboy.,0,S,no,-0.44614926,-3.024174,2.57802474
+text-davinci-002,"He is probably the best boxer in the country, but he always loses in the city.",He would win in Las Vegas.,0,J,no,-3.884953,-0.74001896,-3.14493404
+text-davinci-002,"He is probably the best boxer in the country, but he always loses in the competition.",He always wins the championship.,0,S,no,-12.738457,-0.9217434,-11.8167136
+text-davinci-002,He likes to make things around the house; this week it's the maid.,He's having an affair with a member of the household staff.,0,J,yes,-1.45623,-0.58917314,-0.8670568599999999
+text-davinci-002,He likes to make things around the house; this week it's the shelves.,He isn't very good with his hands.,0,S,no,-10.648489,-0.121016674,-10.527472326
+text-davinci-002,"He owns stock in a company that pays quarterly dividends, so every three months they send him a quarter.",His dividends are quite large.,0,J,no,-0.4546353,-3.8131566,3.3585213
+text-davinci-002,"He owns stock in a company that pays quarterly dividends, so every three months they send him a statement.",He never hears from the company.,0,S,no,-8.21736,-0.24088676,-7.976473239999999
+text-davinci-002,He says he doesn't like to drink because it makes him feel happy.,Drinking makes him feel depressed.,0,J,no,-8.164737,-0.49227265,-7.67246435
+text-davinci-002,He says he doesn't like to drink because it makes him feel sad.,Alcohol depresses him.,0,S,yes,-0.24137393,-8.065656,7.824282070000001
+text-davinci-002,He spilled some of the quart of oil onto the engine because he didn't have a funnel.,He was pouring oil into the car.,0,E,yes,-0.29223043,-3.207729,2.91549857
+text-davinci-002,"He thought that he could turn from Grant onto Prince, but the two streets are parallel.",He was at the corner of Grant and Prince.,0,E,no,-2.7942922,-0.3545782,-2.439714
+text-davinci-002,"He told her he wasn't himself, and she said she'd noticed the improvement.",She liked him better when he wasn't himself.,0,J,yes,-1.3487847,-0.9683582,-0.3804265
+text-davinci-002,"He told her he wasn't himself, and she said she'd noticed the problem.",He was behaving normally.,0,S,no,-7.9502773,-0.27024058,-7.6800367199999995
+text-davinci-002,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a balloon.",He got the tires for free.,0,J,no,-4.082605,-0.480142,-3.602463
+text-davinci-002,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a truck.",He bought new tires for his truck.,0,S,yes,-0.21966785,-5.3735013,5.1538334500000005
+text-davinci-002,"He told me he's not broke, just badly bent.",He's doing quite well.,0,J,no,-6.1659985,-0.19126208,-5.974736419999999
+text-davinci-002,"He told me he's not broke, just badly off.",He has lots of money.,0,S,no,-8.986276,-0.30795988,-8.67831612
+text-davinci-002,He was teaching his girlfriend how to swim when the lifeguard made them move to the lake.,They were in the water.,0,J,no,-0.6429371,-7.141608,6.4986709
+text-davinci-002,He was teaching his girlfriend how to swim when the lifeguard made them move to the shallows.,They were in deep water.,0,S,yes,-4.155402,-0.21390961,-3.9414923899999996
+text-davinci-002,He wondered if the storm had done much damage.,It had been a terrible storm.,0,E,yes,-0.35779816,-6.8006177,6.44281954
+text-davinci-002,"He's never given a girl a present, but he did give a few a pretty good reputation.",He never gets girls into trouble.,0,J,no,-5.045522,-0.28694955,-4.75857245
+text-davinci-002,"He's never given a girl a present, but he did give a few a pretty good surprise.",He buys his girlfriends lavish gifts.,0,S,no,-10.780409,-0.65887207,-10.121536930000001
+text-davinci-002,He's planning an extended vacation: he hopes to spend three weeks on his couch.,He's going to sleep a lot.,0,J,yes,-0.2698824,-6.2975984,6.027716
+text-davinci-002,He's planning an extended vacation: he hopes to spend three weeks on his sailboat.,He's going sailing for three weeks.,0,S,yes,-0.15770045,-9.378049,9.22034855
+text-davinci-002,Her press agent was operated on for an ingrown beeper.,Her press agent needed actual medical surgery.,0,J,no,-2.559185,-0.62520474,-1.9339802599999998
+text-davinci-002,Her press agent was operated on for an ingrown eyelash.,She needed medical surgery.,0,S,yes,-1.3756921,-0.70680636,-0.66888574
+text-davinci-002,His doctor recommended he stay flat on his back ever since he was hit by a motorist.,He got run over by a car.,0,S,yes,-0.562045,-1.6216314,1.0595864000000002
+text-davinci-002,His doctor recommended he stay flat on his back ever since he was hit by a steamroller.,He should get out of bed as soon as possible.,0,J,no,-10.293705,-0.13177136,-10.161933639999999
+text-davinci-002,His job was to keep the sidewalk clean.,He was a doctor.,0,E,no,-12.833805,-0.3854448,-12.4483602
+text-davinci-002,His sandwich came with chips and a dill pickle.,He was about to eat.,0,E,yes,-0.2615031,-4.56546,4.3039569
+text-davinci-002,His wife sued for divorce and asked for custody of the cash.,She wanted to keep the money.,0,J,yes,-0.3030485,-8.921771,8.6187225
+text-davinci-002,His wife sued for divorce and asked for custody of the cat.,She was very fond of her pet.,0,S,yes,-0.29313058,-5.518281,5.22515042
+text-davinci-002,"I appreciate the more expensive things in life: diamonds, caviar, and champagne.","I prefer a simple, country life.",0,S,no,-11.738433,-0.488232,-11.250201
+text-davinci-002,"I appreciate the more expensive things in life: diamonds, caviar, and postage.",It's expensive to mail things nowadays.,0,J,yes,-1.7262129,-0.6962244,-1.0299885
+text-davinci-002,"I asked him if he started out as an editor, and he said that years ago he used to be a boy.",He wasn't an editor when he was young.,0,J,yes,-3.7466755,-0.1731792,-3.5734963
+text-davinci-002,"I asked him if he started out as an editor, and he said that years ago he used to be a journalist.",He was never a reporter.,0,S,no,-5.5313454,-0.055542342,-5.475803058
+text-davinci-002,"I asked the florist what I should give to my girlfriend, and he suggested his address.",The florist would like to meet the girlfriend.,0,J,yes,-4.7508755,-0.55798143,-4.19289407
+text-davinci-002,"I asked the florist what I should give to my girlfriend, and he suggested his tulips.",The florist thought I should give her roses.,0,S,no,-3.984214,-0.46511266,-3.51910134
+text-davinci-002,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a dress.",The woman notices what clothes people wear.,0,J,yes,-0.87271905,-5.837701,4.96498195
+text-davinci-002,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a name.",She didn't remember my name.,0,S,no,-7.6811047,-0.17587304,-7.50523166
+text-davinci-002,"I can walk on water, but I stagger on alcohol.",I can walk just fine even when I'm drunk.,0,J,no,-7.4257903,-0.43018413,-6.99560617
+text-davinci-002,"I can walk on water, but I stagger on concrete.",I have no trouble walking on hard surfaces.,0,S,no,-8.967544,-0.8144998,-8.1530442
+text-davinci-002,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my pay.",I'm saving money in case I need it later.,0,S,yes,-0.48249415,-11.993,11.51050585
+text-davinci-002,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my umbrella.",I put a lot of money in the bank in case of emergency.,0,J,no,-2.190048,-0.87357,-1.316478
+text-davinci-002,"I got a car for my wife, and I thought it was a good choice.",I thought my wife would like the car.,0,S,yes,-0.33319837,-9.133424,8.80022563
+text-davinci-002,"I got a car for my wife, and I thought it was a good trade.",I like the car more than my wife.,0,J,yes,-6.5091586,-0.66713464,-5.842023960000001
+text-davinci-002,"I hope this train stops at Grand Central because if it doesn't, there will be a crash.",Grand Central is the end of the line.,0,J,yes,-0.39883524,-5.880596,5.481760759999999
+text-davinci-002,"I hope this train stops at Grand Central because if it doesn't, there will be a delay.",I'm afraid I will fall behind schedule.,0,S,yes,-1.180827,-1.2985747,0.11774770000000001
+text-davinci-002,I knew a streetwalker who was so exclusive she had an unlisted telephone booth.,She was easy to reach by phone.,0,J,no,-4.004029,-0.52253246,-3.48149654
+text-davinci-002,I knew a streetwalker who was so exclusive she had an unlisted telephone line.,Her phone number was in the telephone book.,0,S,no,-8.503136,-0.69043714,-7.812698859999999
+text-davinci-002,I know one couple who got divorced and had to leave the house to the attorney.,The divorce was expensive.,0,J,yes,-0.5808368,-2.9445307,2.3636939
+text-davinci-002,I know one couple who got divorced and had to leave the house to the daughter.,The house stayed in the family.,0,S,yes,-0.30685946,-4.1878705,3.8810110399999997
+text-davinci-002,"I still miss my ex-wife, but I am improving my aim.",I am shooting at my ex-wife.,0,J,yes,-7.3500295,-0.4534074,-6.8966221
+text-davinci-002,"I still miss my ex-wife, but I am improving my ego.",I'm starting to feel better about myself.,0,S,yes,-0.7762527,-4.9121966,4.1359439
+text-davinci-002,I went to a place that serves breakfast any time and ordered French toast in the nighttime.,I had breakfast at night.,0,S,yes,-0.20002227,-6.7197247,6.519702430000001
+text-davinci-002,I went to a place that serves breakfast any time and ordered French toast in the Renaissance.,I wanted to eat an unusual breakfast.,0,J,yes,-3.7798042,-0.25054413,-3.5292600700000003
+text-davinci-002,"I've got Parkinson's disease, and he's got gout.",We have the same disease.,0,S,no,-7.8649464,-0.39286542,-7.47208098
+text-davinci-002,"I've got Parkinson's disease, and he's got mine.",At least one of us is in good health.,0,J,no,-4.613739,-0.3186711,-4.295067899999999
+text-davinci-002,"If there's one thing that counts in business, it's bookkeepers.",Bookkeepers keep track of things.,0,J,yes,-0.5148658,-7.177306,6.6624402
+text-davinci-002,"If there's one thing that counts in business, it's resources.",It's hard to succeed if you start with nothing.,0,S,yes,-0.3216101,-9.05671,8.735099900000002
+text-davinci-002,"If you're filthy rich, sending your kids to college is a wonderful cleaner.",Colleges are very expensive.,0,J,yes,-6.233997,-0.08675179,-6.1472452099999995
+text-davinci-002,"If you're filthy rich, sending your kids to college is a wonderful luxury.",It's good to be able to afford to send your children to the university.,0,S,yes,-0.22691211,-9.938308,9.711395889999999
+text-davinci-002,In some marriages the bride is given away by the family.,It's always the father who gives the bride away.,0,S,no,-0.37707093,-2.9087837,2.53171277
+text-davinci-002,In some marriages the bride is given away by the press.,The newspapers reveal something about the bride's past.,0,J,yes,-3.3477752,-0.20464836,-3.14312684
+text-davinci-002,"In the game of golf, nothing counts as much as your drives.",The most important part of your golf game is your putting.,0,S,no,-13.412248,-0.101148956,-13.311099044
+text-davinci-002,"In the game of golf, nothing counts as much as your opponent.",The other guy always keeps track of your score.,0,J,yes,-0.80201334,-1.5713027,0.7692893599999999
+text-davinci-002,"In the U.S. the five cent piece is made of nickel, while pennies are mainly made of copper.",Both coins are made from the same metal.,0,E,no,-4.8603997,-0.23404466,-4.62635504
+text-davinci-002,"It was so hot at Playboy, the centerfold took off her bikini.",She had been wearing a swimsuit.,0,S,yes,-0.3228653,-3.8657992,3.5429339
+text-davinci-002,"It was so hot at Playboy, the centerfold took off her staple.",She wasn't wearing any clothes.,0,J,yes,-0.45366257,-2.1924644,1.7388018299999999
+text-davinci-002,It was too hot to sleep in a bed so he strung up a mesh hammock.,He was going to sleep in the hammock.,0,E,yes,-0.21627186,-7.6736555,7.45738364
+text-davinci-002,"It's always nicer to give than to receive, especially when it's your opinion.",People like giving advice more than taking it.,0,J,yes,-0.7517613,-4.494358,3.7425967
+text-davinci-002,"It's always nicer to give than to receive, especially when it's your parents.",Giving gifts can be fun.,0,S,yes,-0.47989002,-6.2390933,5.75920328
+text-davinci-002,It's extraordinary what fine poker hand you get when you're playing bridge.,You always get the best hand just when you need it.,0,J,no,-3.249508,-0.7165619,-2.5329461
+text-davinci-002,It's extraordinary what fine poker hand you get when you're playing stud.,You never get a decent hand in a poker game.,0,S,no,-8.037593,-0.8676661,-7.169926899999999
+text-davinci-002,It's hard to admit when one is wrong.,Most people don't mind being wrong.,0,E,no,-11.152202,-0.52912277,-10.62307923
+text-davinci-002,"It's hard to raise a family nowadays, especially in the country.",It's easy to raise children outside the city.,0,S,no,-5.347368,-0.0803556,-5.2670124000000005
+text-davinci-002,"It's hard to raise a family nowadays, especially in the morning.",The kids don't want to get up in the morning.,0,J,yes,-0.30505922,-3.4550238,3.1499645800000002
+text-davinci-002,It's not hard to meet expenses; they're affordable.,You should be able to pay all your bills.,0,S,yes,-0.35906878,-5.5039825,5.14491372
+text-davinci-002,It's not hard to meet expenses; they're everywhere.,It's easy to pay the bills.,0,J,no,-1.1668454,-1.316639,0.14979359999999997
+text-davinci-002,Last Thanksgiving my wife spent all morning in the kitchen stuffing the bird.,She was preparing the turkey.,0,S,yes,-0.24293418,-9.5018015,9.258867319999998
+text-davinci-002,Last Thanksgiving my wife spent all morning in the kitchen stuffing the kids.,The kids didn't get enough to eat.,0,J,no,-4.681103,-0.10115759,-4.5799454100000005
+text-davinci-002,"Love has its benefits, and they are usually called alimony.",Divorce can get you some money.,0,J,yes,-0.79632586,-2.9622173,2.16589144
+text-davinci-002,"Love has its benefits, and they are usually called memories.",Being in love leads to good times together.,0,S,yes,-0.18363084,-4.472718,4.28908716
+text-davinci-002,Many a freshman helps the college of his choice by becoming a dropout.,"When a freshman fails, it always hurts the college.",0,J,no,-4.110258,-0.54020005,-3.57005795
+text-davinci-002,Many a freshman helps the college of his choice by becoming a member.,Joining a college doesn't make any difference.,0,S,no,-9.933673,-0.3171447,-9.6165283
+text-davinci-002,Many a man's idea of a vacation is to rest quietly in the shade of a blonde.,Men like to vacation alone.,0,J,no,-3.8979437,-0.21599048,-3.68195322
+text-davinci-002,Many a man's idea of a vacation is to rest quietly in the shade of a palm.,Many men like a relaxing vacation in the tropics.,0,S,yes,-0.3201625,-10.281307,9.9611445
+text-davinci-002,"Many things run in families, especially noses.",People often catch colds from other family members.,0,J,yes,-0.6647871,-4.4914417,3.8266546000000004
+text-davinci-002,"Many things run in families, especially strength.",Muscle power comes only from exercise.,0,S,no,-8.860252,-0.11322929,-8.74702271
+text-davinci-002,Modern science is amazing: garbage is now being made into gasoline.,Fuel can be made from trash.,0,S,yes,-0.49925852,-9.784119,9.28486048
+text-davinci-002,Modern science is amazing: garbage is now being made into movies.,There are a lot of really terrible movies nowadays.,0,J,yes,-2.494581,-0.59215313,-1.9024278700000001
+text-davinci-002,Most cats see very well at night.,Cats see well in the dark.,0,E,yes,-0.22880495,-9.572148,9.34334305
+text-davinci-002,Most of the people running for office are not politicians; they're candidates.,You become a politician when you get elected.,0,S,yes,-0.24860072,-2.5500634,2.30146268
+text-davinci-002,Most of the people running for office are not politicians; they're commuters.,These people are hurrying to get to work on time.,0,J,yes,-5.49649,-0.23121007,-5.265279929999999
+text-davinci-002,Mrs Martin told the bad student to stand in the corner.,Mrs Martin was unhappy with the student's behavior.,0,E,yes,-0.38031712,-9.68587,9.305552879999999
+text-davinci-002,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our drinks.,My brother-in-law fixed our plumbing.,0,J,no,-8.542308,-0.14887147,-8.39343653
+text-davinci-002,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our stove.,He's a real handyman.,0,S,yes,-0.5073763,-9.506692,8.999315699999999
+text-davinci-002,My church welcomes all denominations but prefers Mormons.,My church is strictly Catholic.,0,S,no,-12.182738,-0.55771583,-11.625022170000001
+text-davinci-002,My church welcomes all denominations but prefers twenties.,My church wants money.,0,J,yes,-1.0301857,-3.7331908,2.7030051
+text-davinci-002,My doctor has never violated his oath: the oath he took years ago to become a millionaire.,My doctor charges a lot of money.,0,J,yes,-0.9261912,-1.550919,0.6247277999999999
+text-davinci-002,My doctor has never violated his oath: the oath he took years ago to become a practitioner.,My doctor is very honorable.,0,S,yes,-0.21717626,-8.871127,8.653950739999999
+text-davinci-002,My husband took the money we were saving to buy a new car and blew it all at the laundry.,We had saved a lot of money.,0,J,no,-4.0672646,-0.17020623,-3.89705837
+text-davinci-002,My husband took the money we were saving to buy a new car and blew it all at the tables.,He gambled away our savings.,0,S,yes,-0.17772917,-11.895305,11.717575830000001
+text-davinci-002,"My mechanic couldn't fix my brakes, so he fixed my clutch.",My clutch was also broken.,0,S,yes,-1.984832,-0.32814837,-1.6566836299999999
+text-davinci-002,"My mechanic couldn't fix my brakes, so he fixed my horn.","He figures if I can't stop, I'll have to honk at people.",0,J,yes,-0.6321841,-2.9368427,2.3046586000000002
+text-davinci-002,My wife did natural childbirth: no anesthetic.,She took drugs for the pain.,0,S,no,-8.825761,-0.34413892,-8.48162208
+text-davinci-002,My wife did natural childbirth: no makeup.,My wife didn't wear makeup when she had her baby.,0,J,yes,-0.29931948,-8.1817,7.882380519999999
+text-davinci-002,"Nature has three ways of thinning the herd: drought, famine, and hunting.",Predatory hunting reduces the number of prey.,0,S,yes,-0.1690823,-8.955773,8.786690700000001
+text-davinci-002,"Nature has three ways of thinning the herd: drought, famine, and primaries.",Politics is a lot like nature.,0,J,yes,-1.5007194,-2.4900799,0.9893605000000001
+text-davinci-002,No patient should leave the hospital until he's strong enough to face the cashier.,Hospital bills are quite expensive.,0,J,yes,-0.824654,-0.8905033,0.0658493
+text-davinci-002,No patient should leave the hospital until he's strong enough to face the outside.,Patients should be released as soon as possible.,0,S,no,-6.3165755,-0.050613005,-6.265962495
+text-davinci-002,None of his books made any sense.,His books were hard to understand.,0,E,yes,-0.14798354,-7.8497286,7.7017450599999995
+text-davinci-002,Nothing ages a woman faster than hardships.,A difficult life can make you look old.,0,S,yes,-0.4224664,-9.925088,9.502621600000001
+text-davinci-002,Nothing ages a woman faster than identification.,Many women lie about their age.,0,J,yes,-2.3433971,-0.59691495,-1.7464821499999998
+text-davinci-002,Nothing in the known universe travels faster than gossip.,Rumors get around quickly.,0,J,yes,-0.31267223,-9.478829,9.166156769999999
+text-davinci-002,Nothing in the known universe travels faster than radiation.,Radiation travels at great speed.,0,S,yes,-0.30113652,-9.5636635,9.26252698
+text-davinci-002,Nothing you put in a banana split is as potentially fattening as the spoon.,Eating banana splits can make you fat.,0,J,yes,-0.69689023,-1.6368523,0.9399620699999999
+text-davinci-002,Nothing you put in a banana split is as potentially fattening as the syrup.,Syrup has very few calories.,0,S,no,-2.2345104,-0.4716817,-1.7628287
+text-davinci-002,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their careers.",The divorce hadn't affected their work.,0,S,no,-5.693795,-0.39825845,-5.29553655
+text-davinci-002,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their nuptials.",They are already married.,0,J,no,-2.6248915,-0.2600375,-2.364854
+text-davinci-002,"Once a week they hold a bingo game, and all the proceeds go to fight disease.",They are raising money to build a new church.,0,S,no,-11.699398,-0.15314741,-11.54625059
+text-davinci-002,"Once a week they hold a bingo game, and all the proceeds go to fight gambling.",They are raising money to help orphans.,0,J,no,-7.316114,-0.2853905,-7.0307235
+text-davinci-002,One good turn gets most of the blanket.,"If you do nice things, people will give you blankets.",0,J,no,-3.342745,-0.314777,-3.027968
+text-davinci-002,One good turn gets most of the profit.,Doing something good can earn you money.,0,S,yes,-0.5037896,-4.9849625,4.4811729
+text-davinci-002,One good way to invest in the country is to buy a business.,Buying a business is bad for the economy.,0,S,no,-11.842093,-0.34004816,-11.50204484
+text-davinci-002,One good way to invest in the country is to buy a senator.,Politicians will do favors for money.,0,J,yes,-0.36661464,-6.2071104,5.8404957600000005
+text-davinci-002,One person who sure makes a long story short is my aunt.,My aunt talks a lot.,0,S,no,-1.3127071,-1.043388,-0.2693190999999999
+text-davinci-002,One person who sure makes a long story short is my editor.,My editor cuts out parts of my stories.,0,J,yes,-0.62521917,-5.0842566,4.4590374299999995
+text-davinci-002,One thing that makes the world go round is detours.,Detours make people go around.,0,J,yes,-0.4252795,-2.981526,2.5562465000000003
+text-davinci-002,One thing that makes the world go round is greed.,Most people don't care about money.,0,S,no,-9.004331,-0.20911698,-8.795214020000001
+text-davinci-002,One way to keep pornography away from teenagers is to put it in a cabinet.,Adult magazines should be put where adolescents won't get into them.,0,S,yes,-0.62014455,-6.749375,6.12923045
+text-davinci-002,One way to keep pornography away from teenagers is to put it in a textbook.,Teenagers read their textbooks often.,0,J,no,-2.4097989,-0.83844393,-1.5713549700000002
+text-davinci-002,Our new green car blocked the narrow driveway.,The car was parked in the garage.,0,E,no,-3.7248156,-0.15041335,-3.57440225
+text-davinci-002,Our son brought home a note from school saying they need a written excuse for his presence.,The son does very well in school.,0,J,no,-6.3394103,-0.12132908,-6.21808122
+text-davinci-002,Our son brought home a note from school saying they need a written excuse for his tardiness.,He had been late for school.,0,S,yes,-0.17700341,-7.3620925,7.18508909
+text-davinci-002,"Parents support clubs for teenagers, especially when they lack other forms of diversion.",Parents want their teenagers to have appropriate forms of entertainment.,0,S,yes,-0.4004666,-9.941937,9.5414704
+text-davinci-002,"Parents support clubs for teenagers, especially when they lack other forms of punishment.",Teenagers may need physical punishment.,0,J,yes,-6.0100527,-1.0081375,-5.0019152
+text-davinci-002,Paul heard a loud grinding noise when someone put a tin can right down the garbage disposal.,Paul broke the garbage disposal.,0,E,no,-3.558023,-0.08836505,-3.4696579499999998
+text-davinci-002,Politicians who are as American as apple pie still want their rewards.,Patriotic politicians don't care about personal glory.,0,S,no,-3.1342816,-0.07152319,-3.06275841
+text-davinci-002,Politicians who are as American as apple pie still want their slice.,Politicians are happy to do something for nothing.,0,J,no,-4.8327527,-0.38132358,-4.45142912
+text-davinci-002,Save the whales; start a coalition.,"To save an endangered species, it's best to act alone.",0,S,no,-10.145048,-0.52931327,-9.61573473
+text-davinci-002,Save the whales; start a collection.,It's important to protect endangered species in the wild.,0,J,no,-3.7815065,-0.2201892,-3.5613173
+text-davinci-002,She always told girls not to look for a husband but just to date bachelors.,It's better to date a married man.,0,J,no,-10.14212,-0.67639464,-9.46572536
+text-davinci-002,She always told girls not to look for a husband but just to date someone.,She thinks you should wait for the perfect man.,0,S,no,-0.21045712,-2.6289864,2.41852928
+text-davinci-002,"She asked what state he was born in, and he said in the East.",He was a native Californian.,0,S,no,-4.4700217,-0.096447654,-4.373574046
+text-davinci-002,"She asked what state he was born in, and he said in the nude.",He said he was born in the North.,0,J,no,-10.119299,-0.10458913,-10.014709869999999
+text-davinci-002,She bought her father a tasteful tie for his birthday.,She was giving her father a Christmas gift.,0,E,no,-2.6886523,-0.36295557,-2.32569673
+text-davinci-002,She called her husband at his office.,Her husband worked at home.,0,E,no,-7.2104053,-0.26213527,-6.94827003
+text-davinci-002,"She is so modest, she pulls down the shade to change her jacket.",She doesn't want people to see her change clothes.,0,S,yes,-0.28069717,-7.323534,7.042836830000001
+text-davinci-002,"She is so modest, she pulls down the shade to change her mind.",She likes to show off in front of others.,0,J,no,-12.036813,-0.58215225,-11.45466075
+text-davinci-002,She puts something behind her ears to attract men; lately she's been using her ankles.,She's very prudish.,0,J,no,-10.01118,-0.40259033,-9.608589669999999
+text-davinci-002,She puts something behind her ears to attract men; lately she's been using her vanilla.,She wears vanilla as a perfume.,0,S,yes,-0.358193,-3.553803,3.19561
+text-davinci-002,She read so much about the bad effects of cigarettes she decided to give up the habit.,She was going to quit smoking.,0,S,yes,-0.35099518,-9.039927,8.68893182
+text-davinci-002,She read so much about the bad effects of cigarettes she decided to give up the reading.,She planned to quit smoking.,0,J,no,-5.3643637,-0.32267937,-5.04168433
+text-davinci-002,She tied up her hair with a yellow ribbon.,She had very short hair.,0,E,no,-9.715607,-0.10759189,-9.60801511
+text-davinci-002,"She told him he looked like a million, and she meant every century.",She thought he looked quite young and handsome.,0,J,no,-1.6163108,-0.53240776,-1.08390304
+text-davinci-002,"She told him he looked like a million, and she meant every syllable.",She thought he looked good.,0,S,yes,-0.16274418,-7.237728,7.07498382
+text-davinci-002,She used a needle and a tweezers to pull out the splinter.,She needed a scalpel to remove the splinter.,0,E,no,-11.245954,-0.22861712,-11.017336879999998
+text-davinci-002,She was suddenly called back to New York and had to take a cab to the airport.,She was going to take a train.,0,E,no,-9.872343,-0.28832906,-9.58401394
+text-davinci-002,"She went on a fourteen day diet, but she only lost two ounces.",She didn't lose much weight.,0,S,yes,-0.34625408,-5.988099,5.6418449200000005
+text-davinci-002,"She went on a fourteen day diet, but she only lost two weeks.",She didn't lose any weight.,0,J,yes,-6.250889,-0.58175606,-5.66913294
+text-davinci-002,She's happy because she finally has a boyfriend who gets along with her father.,Her father really liked her previous boyfriends.,0,S,no,-2.7861795,-0.6308927,-2.1552868
+text-davinci-002,She's happy because she finally has a boyfriend who gets along with her fiance.,She is dating more than one man.,0,J,yes,-3.4141245,-0.2098245,-3.2043
+text-davinci-002,"Some babies are born to rule, while others are male.",Males are born rulers.,0,J,no,-5.7572927,-0.08002423,-5.67726847
+text-davinci-002,"Some babies are born to rule, while others are weak.",Power starts at an early age.,0,S,yes,-0.15274875,-5.1320357,4.9792869500000005
+text-davinci-002,"Some husbands are good providers, but only if you count children.",Some men don't take care of their families.,0,J,yes,-0.9156935,-1.2459077,0.3302142
+text-davinci-002,"Some husbands are good providers, but only if you count salary.",Some men give their families nothing but money.,0,S,yes,-0.97349316,-2.9699466,1.9964534400000002
+text-davinci-002,Some people think courtship is the first in a series of steps leading to divorce.,One of those steps is marriage.,0,J,yes,-0.5600672,-4.0908637,3.5307965
+text-davinci-002,Some people think courtship is the first in a series of steps leading to romance.,Some people still believe in romantic courtship.,0,S,yes,-0.22978401,-9.726744,9.49695999
+text-davinci-002,Some people's only culture is bacteria.,Everybody can appreciate the fine arts.,0,J,no,-11.742671,-0.48497492,-11.257696079999999
+text-davinci-002,Some people's only culture is radio.,Everyone watches television.,0,S,no,-8.850448,-0.90641934,-7.94402866
+text-davinci-002,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly blackjack.",Americans like to gamble on card games.,0,S,yes,-0.28616405,-9.244642,8.95847795
+text-davinci-002,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly weddings.",Getting married is a risky thing to do.,0,J,yes,-2.4502351,-0.20815326,-2.24208184
+text-davinci-002,Sunday is the day we bow our heads and putt.,We go to church on Sunday.,0,J,no,-4.084432,-0.20300536,-3.8814266399999995
+text-davinci-002,Sunday is the day we bow our heads and rest.,We work hard on Sunday.,0,S,no,-11.730407,-0.18933156,-11.54107544
+text-davinci-002,The accident injured his spinal cord and his legs are paralyzed.,He can move his legs.,0,E,no,-11.921167,-0.19032317,-11.730843830000001
+text-davinci-002,The art museum just acquired an early Rembrandt; it's done in charcoal.,This early work is an oil painting.,0,S,no,-11.058525,-0.06857037,-10.98995463
+text-davinci-002,The art museum just acquired an early Rembrandt; it's done in Crayola.,Rembrandt was a child when he completed the work.,0,J,yes,-5.4656935,-0.13196155,-5.333731950000001
+text-davinci-002,The baby cried and upset her mother.,The mother was very calm.,0,E,no,-9.317525,-0.37503546,-8.94248954
+text-davinci-002,The bartender dropped two olives into the strong martini.,The bartender was preparing a drink.,0,E,yes,-0.14811507,-3.675144,3.52702893
+text-davinci-002,The best bargain I ever got was when I went to a family garage sale and bought a grandma.,I bought a car at the garage sale.,0,J,no,-9.312036,-0.2635704,-9.0484656
+text-davinci-002,The best bargain I ever got was when I went to a family garage sale and bought a toaster.,I got a really good deal on a blender.,0,S,no,-2.4753883,-0.5233613,-1.9520270000000002
+text-davinci-002,The best gift for the man who has everything is neckties.,A necktie always makes a good gift for a man.,0,S,yes,-0.3353722,-6.2940216,5.9586494
+text-davinci-002,The best gift for the man who has everything is penicillin.,This man has lots of diseases.,0,J,yes,-5.048928,-0.2059705,-4.8429575
+text-davinci-002,The best way to keep the milk from turning sour is to keep it in the cold.,Milk turns sour faster when it's warm.,0,S,yes,-1.819198,-0.6248092,-1.1943888
+text-davinci-002,The best way to keep the milk from turning sour is to keep it in the cow.,Milk stays fresh for a long time.,0,J,no,-9.674235,-0.19398141,-9.48025359
+text-davinci-002,The best way to remove coffee stains from a white blouse is with detergent.,Coffee stains are impossible to wash out.,0,S,no,-7.216614,-0.3036991,-6.9129149
+text-davinci-002,The best way to remove coffee stains from a white blouse is with scissors.,Coffee stains are easy to wash out.,0,J,no,-11.943952,-0.31582704,-11.62812496
+text-davinci-002,The best way to stop an elephant from charging is to cut off its credit.,Elephants should pay in cash.,0,J,yes,-6.454145,-0.2093297,-6.2448153
+text-davinci-002,The best way to stop an elephant from charging is to cut off its toes.,Elephants can run quickly even without toes.,0,S,no,-8.186695,-0.30000192,-7.886693080000001
+text-davinci-002,The bill was due at the end of the month.,He had to pay by the thirty-first.,0,E,yes,-0.16526473,-10.161993,9.99672827
+text-davinci-002,The book that tells you where you can go on vacation is called a checkbook.,Where you go on vacation depends on how much you can afford.,0,J,yes,-2.1178865,-0.35325015,-1.76463635
+text-davinci-002,The book that tells you where you can go on vacation is called a guidebook.,Guidebooks aren't very useful for planning a trip.,0,S,no,-8.482651,-0.096480936,-8.386170064
+text-davinci-002,The children held their hands and formed a circle.,The children were watching television.,0,E,no,-12.8885355,-0.17132463,-12.717210869999999
+text-davinci-002,The choir sang hymns while the people listened.,The people joined in the singing.,0,E,no,-0.25405246,-4.488726,4.23467354
+text-davinci-002,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and crack.",The convict had been a drug user.,0,S,yes,-1.6985387,-0.6896161,-1.0089226
+text-davinci-002,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and lawyers.",Lawyers are expensive.,0,J,yes,-0.691445,-2.9091666,2.2177216
+text-davinci-002,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the admission.",The prisoner may have been forced into confessing.,0,S,yes,-0.6911702,-9.642398,8.9512278
+text-davinci-002,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the bathtub.",The prisoner had been dirty and needed to be washed.,0,J,yes,-1.3360046,-1.9958508,0.6598461999999998
+text-davinci-002,The curse of heavy drinking is that afterwards you get a huge bartab.,Drinking a lot can be expensive.,0,J,yes,-0.3569567,-5.4984713,5.141514600000001
+text-davinci-002,The curse of heavy drinking is that afterwards you get a huge headache.,Drinking alcohol can lead to a hangover.,0,S,yes,-0.35823753,-10.562974,10.20473647
+text-davinci-002,The difference between a dog and a fox is about five beers.,Drinking makes women appear more attractive.,0,J,yes,-6.962209,-0.3939478,-6.568261199999999
+text-davinci-002,The difference between a dog and a fox is about five degrees.,Dogs and foxes have the same body temperature.,0,S,no,-1.1345409,-0.62554586,-0.50899504
+text-davinci-002,The difference between a good speaker and a bad one is often a nice diction.,It's important to speak clearly.,0,S,yes,-0.15020406,-9.110018,8.95981394
+text-davinci-002,The difference between a good speaker and a bad one is often a nice nap.,Bad speakers can put you to sleep.,0,J,yes,-0.56052136,-6.0095925,5.44907114
+text-davinci-002,The doctor said he could have a stroke because his arteries were getting narrow and clogged.,He was in excellent health.,0,E,no,-11.208206,-0.23754218,-10.97066382
+text-davinci-002,The doctor told her not to scratch no matter how much it itched.,She had a heart condition.,0,E,no,-5.908614,-0.10825996,-5.80035404
+text-davinci-002,The farmer put a new engine in his old tractor.,The farmer wanted to keep the tractor.,0,E,yes,-0.5613477,-6.979367,6.4180193
+text-davinci-002,The first thing he does every morning is sit in the lotus position and meditate.,He starts every day with coffee and the morning news.,0,E,no,-13.540405,-0.41190016,-13.12850484
+text-davinci-002,The first two hundred story building opened in Chicago; it was a hotel.,Chicago has a skyscraper that's a hotel.,0,S,yes,-0.25645098,-10.864639,10.60818802
+text-davinci-002,The first two hundred story building opened in Chicago; it was a library.,This building had lots of books.,0,J,yes,-0.3927643,-7.7523737,7.3596094
+text-davinci-002,The garment bag kept his suit from getting wrinkled.,His suit needed to be ironed.,0,E,no,-3.262757,-0.23114263,-3.0316143700000002
+text-davinci-002,The husband who catches his wife in the act is probably on the snoop.,An unfaithful wife can get in trouble if her husband is on the lookout.,0,S,yes,-0.9256505,-1.3970823,0.47143180000000007
+text-davinci-002,The husband who catches his wife in the act is probably on the trapeze.,His wife is cheating on him.,0,J,no,-1.6550125,-0.378407,-1.2766055
+text-davinci-002,The last time a guy in a mask took all my money I was in shock.,I had been mugged.,0,S,yes,-0.7216938,-6.5754175,5.853723700000001
+text-davinci-002,The last time a guy in a mask took all my money I was in surgery.,I had been mugged.,0,J,no,-0.75099254,-4.2115064,3.4605138600000003
+text-davinci-002,The lawyer feared that his client was guilty.,The lawyer was a prosecutor.,0,E,no,-6.894933,-0.048470575,-6.846462425
+text-davinci-002,The luggage handler seemed to take great delight in tossing the boxes marked fragile.,The luggage handler was very careful.,0,E,no,-11.1915,-0.7355477,-10.4559523
+text-davinci-002,The mole lived in a hole in the ground.,The mole was kept in the house as a pet.,0,E,no,-11.159431,-0.22661696,-10.93281404
+text-davinci-002,The most popular instrument in a Scottish marching band is the bagpipe.,"In Scottish marching bands, people like bagpipes more than drums.",0,E,yes,-0.36749855,-3.5285788,3.16108025
+text-davinci-002,The most prevalent form of legalized gambling is betting.,Betting is not very common.,0,S,no,-10.186742,-0.35044232,-9.83629968
+text-davinci-002,The most prevalent form of legalized gambling is elections.,People are gambling when they vote for someone.,0,J,yes,-0.2955225,-5.718964,5.4234415
+text-davinci-002,The movers put the sofa on the bare floor.,The house was fully carpeted.,0,E,no,-9.10166,-0.098601304,-9.003058696
+text-davinci-002,"The new tax forms are more realistic-- where your wife signs, it says: accomplice.",Your wife doesn't need to sign your tax form.,0,J,no,-7.304256,-0.24270742,-7.061548579999999
+text-davinci-002,"The new tax forms are more realistic-- where your wife signs, it says: partner.",Tax forms are very old-fashioned.,0,S,no,-7.939974,-0.14311107,-7.7968629300000005
+text-davinci-002,The newspaper photo was so murky he couldn't figure out who it was until he read the caption.,He could see the person in the photo clearly.,0,E,no,-11.268766,-0.27589414,-10.99287186
+text-davinci-002,The nurse gave him detailed instructions about how to clean the wound and put on a fresh bandage.,He had been injured.,0,E,yes,-0.34000728,-2.2412603,1.90125302
+text-davinci-002,The old wealthy family lived in a twelve bedroom mansion.,They lived in a small home.,0,E,no,-12.982464,-0.14052169,-12.84194231
+text-davinci-002,The only crop that is grown in America and harvested abroad is the American tobacco.,Very few foreigners smoke American cigarettes.,0,S,no,-3.0830455,-0.2829074,-2.8001381
+text-davinci-002,The only crop that is grown in America and harvested abroad is the American tourist.,Tourists spend a lot of money in other countries.,0,J,yes,-0.9693303,-1.87602,0.9066897
+text-davinci-002,The only fishing through the ice that some men ever do is for the olive.,Some men fish; others just drink martinis.,0,J,yes,-4.911662,-0.47047654,-4.44118546
+text-davinci-002,The only fishing through the ice that some men ever do is for the trout.,Some ice fishermen only want to catch trout.,0,S,yes,-0.31820476,-6.5227137,6.20450894
+text-davinci-002,The only ones who want me for my body are losers.,Everybody finds me very attractive.,0,S,no,-11.569628,-0.2756736,-11.2939544
+text-davinci-002,The only ones who want me for my body are mosquitoes.,People find me very sexy.,0,J,no,-11.480008,-0.35398564,-11.12602236
+text-davinci-002,The only person who sticks closer to you in adversity than a friend is a creditor.,People you owe money to don't hang around much.,0,J,no,-1.174477,-2.9499547,1.7754777000000002
+text-davinci-002,The only person who sticks closer to you in adversity than a friend is a spouse.,You just can't depend on a husband or wife.,0,S,no,-5.288277,-0.20040815,-5.0878688499999996
+text-davinci-002,The only place where you can find people who spend all their time minding their own business is the bank.,People at banks are very nosy.,0,S,no,-9.008048,-0.13884102,-8.869206980000001
+text-davinci-002,The only place where you can find people who spend all their time minding their own business is the cemetery.,Everybody is nosy to some extent.,0,J,yes,-4.785762,-0.13745028,-4.64831172
+text-davinci-002,The only thing money can't buy is generosity.,Just because you have money doesn't mean you'll share it.,0,S,yes,-1.1231586,-0.940324,-0.18283459999999996
+text-davinci-002,The only thing money can't buy is poverty.,Money can buy almost anything.,0,J,yes,-6.1065845,-0.30348465,-5.803099850000001
+text-davinci-002,The only time my father ever raised a hand to his children was in discipline.,My father didn't believe in corporal punishment.,0,S,no,-2.2507145,-0.23999444,-2.01072006
+text-davinci-002,The only time my father ever raised a hand to his children was in self-defense.,My father beat his children a lot.,0,J,no,-12.526577,-0.46288005,-12.063696949999999
+text-davinci-002,The paint turned out to be the wrong color.,They were putting up wallpaper.,0,E,no,-7.2360754,-0.070856735,-7.165218664999999
+text-davinci-002,The painter used water-based paint for the interior of the house but enamel for the exterior.,He used the same paint both inside and outside the house.,0,E,no,-7.9338446,-0.3237466,-7.610098
+text-davinci-002,The penalty for dishonesty is the disgrace of dying rich.,Liars never win.,0,J,no,-2.0023127,-0.522404,-1.4799087000000002
+text-davinci-002,The penalty for dishonesty is the disgrace of dying unloved.,People who lie don't have many friends.,0,S,yes,-1.0712606,-3.8962433,2.8249827
+text-davinci-002,The perfect companion to a vegetarian dinner is a salad.,A vegetarian meal doesn't need a salad.,0,S,no,-8.167894,-0.13465309,-8.03324091
+text-davinci-002,The perfect companion to a vegetarian dinner is a steak.,I don't believe in eating meat.,0,J,no,-12.467926,-0.4702474,-11.9976786
+text-davinci-002,The policeman saw him throw the bottle out the window and gave him a ticket for littering.,He got a ticket for speeding.,0,E,no,-9.0299,-0.33240366,-8.697496339999999
+text-davinci-002,The Republican candidate won the election by a landslide.,The election was very close.,0,E,no,-12.163179,-0.35225603,-11.81092297
+text-davinci-002,The rodeo champion was quite proud of his big silver belt buckle.,The rodeo champion didn't wear a belt.,0,E,no,-11.412241,-0.31189686,-11.10034414
+text-davinci-002,The show had one act that was really offbeat: the clowns.,The clowns were really out of the ordinary.,0,S,yes,-0.4743186,-6.9158206,6.441502
+text-davinci-002,The show had one act that was really offbeat: the singer.,The singer had poor rhythm.,0,J,yes,-0.78468746,-1.3207217,0.53603424
+text-davinci-002,The surgeon tried vainly to save his patient.,The patient died.,0,E,yes,-0.51504374,-8.887205,8.37216126
+text-davinci-002,The teacher wrote the problem on the board.,The teacher was going to explain the problem.,0,E,yes,-0.1670444,-5.316226,5.1491816
+text-davinci-002,The terrorists planted a bomb in the airport and four people were killed in the explosion.,The bomb squad was able to defuse the bomb.,0,E,no,-7.513204,-0.5402702,-6.9729338
+text-davinci-002,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little finding.,Things are hard to find in this area.,0,J,yes,-0.6535749,-2.780054,2.1264791
+text-davinci-002,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little sightseeing.,There aren't many tourist sights in the area.,0,S,yes,-0.46426535,-8.485684,8.02141865
+text-davinci-002,The victim was rushed to the hospital in an ambulance.,The victim wasn't hurt in the accident.,0,E,no,-4.8125896,-0.08421176,-4.72837784
+text-davinci-002,The visitor stared at the grandfather clock and seemed almost hypnotized by the swinging of the pendulum.,The visitor could see the clock.,0,E,yes,-0.3291211,-6.867369,6.5382479
+text-davinci-002,The whole town came to hear their mayor speak.,The people wanted to hear what the mayor would say.,0,E,yes,-0.37826335,-10.400275,10.022011650000001
+text-davinci-002,The wind was so strong it blew out three fuses.,The wind affected the electrical system.,0,J,yes,-0.37153926,-6.9403477,6.568808440000001
+text-davinci-002,The wind was so strong it blew out three streetlights.,The storm didn't cause any damage.,0,S,no,-7.0690384,-0.44645512,-6.622583280000001
+text-davinci-002,The woman in the grocery store was handing out free samples.,The samples cost ten cents each.,0,E,no,-10.475201,-0.10644466,-10.368756340000001
+text-davinci-002,The woman who has her husband eating out of her hand must save a lot of dishwashing.,The husband washes all the dishes.,0,J,no,-2.4646845,-0.5993614,-1.8653231000000001
+text-davinci-002,The woman who has her husband eating out of her hand must save a lot of heartbreak.,She's happy because her husband does what she wants.,0,S,yes,-0.31847298,-5.0852594,4.76678642
+text-davinci-002,There were over a hundred trees in the apple orchard.,It was an extremely small orchard.,0,E,no,-9.3503275,-0.13420093,-9.21612657
+text-davinci-002,They planned to dig a tunnel in order to escape.,They were being held prisoner.,0,E,yes,-0.30609754,-8.327858,8.021760460000001
+text-davinci-002,They redecorated the bar with new drunks.,The bar has all new furniture.,0,J,no,-7.4545484,-0.121700525,-7.332847875000001
+text-davinci-002,They redecorated the bar with new wood.,The bar is all chrome and glass.,0,S,no,-12.120537,-0.1468462,-11.9736908
+text-davinci-002,They went to Las Vegas and got married in one of those quickie wedding chapels.,They spent months planning a big wedding.,0,E,no,-12.135038,-0.5162988,-11.6187392
+text-davinci-002,This fall two things are turning yellow: trees and bushes.,The leaves are changing color.,0,S,yes,-0.7429879,-6.3325486,5.5895607
+text-davinci-002,This fall two things are turning yellow: trees and investors.,Investors are becoming scared.,0,J,yes,-1.4649721,-1.3341613,-0.1308107999999999
+text-davinci-002,"This house comes with a lot of extras, mostly termites.",The house is free of bugs.,0,J,no,-9.610478,-0.20369329,-9.40678471
+text-davinci-002,"This house comes with a lot of extras, mostly upgrades.",The house would be a good purchase.,0,S,yes,-0.64046323,-5.34774,4.70727677
+text-davinci-002,"This new computer works so quickly, it comes complete with games.","If you use this computer, you'll have time left to play.",0,S,yes,-0.9367578,-1.8093129,0.8725550999999999
+text-davinci-002,"This new computer works so quickly, it comes complete with ulcers.",The computer feels no stress.,0,J,no,-7.4688053,-0.20908928,-7.25971602
+text-davinci-002,"Though most people think it's Rome, the world's most beloved capital is actually dollars.",People love money.,0,J,yes,-0.8101177,-1.3258657,0.515748
+text-davinci-002,"Though most people think it's Rome, the world's most beloved capital is actually Vienna.",Rome is more beloved than Vienna.,0,S,no,-5.8753595,-0.32469025,-5.55066925
+text-davinci-002,Three people were killed in a major highway accident.,The accident had not been fatal.,0,E,no,-12.911495,-0.22520281,-12.68629219
+text-davinci-002,Tim threw a rock and broke the window.,Tim was playing baseball.,0,E,no,-4.5084257,-0.1441217,-4.364304
+text-davinci-002,"To clothe one soldier, it takes the wool from two sheep and the hides from three animals.",Military uniforms are made from natural materials.,0,S,yes,-0.44667056,-5.2350435,4.7883729399999995
+text-davinci-002,"To clothe one soldier, it takes the wool from two sheep and the hides from three taxpayers.",Military uniforms are expensive.,0,J,yes,-0.98193353,-3.2976823,2.31574877
+text-davinci-002,"To get something done, a committee should consist of no more than three people, two of whom are dead.",Groups are more efficient than individuals.,0,J,no,-6.5602794,-0.25171137,-6.30856803
+text-davinci-002,"To get something done, a committee should consist of no more than three people, two of whom are workers.",A committee works best with one leader.,0,S,yes,-0.79097474,-1.0870494,0.29607465999999993
+text-davinci-002,To keep the dogs out of the yard he put up a fence.,He was worried his pet would escape.,0,E,no,-0.17283146,-7.2107415,7.03791004
+text-davinci-002,To pay for the car Al simply wrote a check.,Al paid with a credit card.,0,E,no,-6.9982285,-0.19874689,-6.79948161
+text-davinci-002,Too many girls believe that the chief foundation for true love is a large fortune.,A lot of women marry for money.,0,S,yes,-0.38074893,-7.430121,7.0493720699999995
+text-davinci-002,Too many girls believe that the chief foundation for true love is a large stone.,Some girls just want a big diamond ring.,0,J,yes,-2.568675,-2.1246326,-0.44404239999999984
+text-davinci-002,Two things are essential for success: wealth and fame.,Having money without celebrity is still success.,0,S,no,-0.24024574,-4.614534,4.37428826
+text-davinci-002,Two things are essential for success: wealth and money.,You don't need much cash to succeed in business.,0,J,no,-7.2978687,-0.18246283,-7.11540587
+text-davinci-002,We finally got a decent picture on the TV after an hour of adjusting the antenna.,The TV had poor reception.,0,E,yes,-0.30193138,-4.0594482,3.75751682
+text-davinci-002,We live in a lovely suburb; it's just two miles beyond our income.,We can't afford to live where we do.,0,J,yes,-0.45635968,-4.7119355,4.25557582
+text-davinci-002,We live in a lovely suburb; it's just two miles beyond our town.,The suburb is far from the city.,0,S,no,-0.562695,-1.6182994,1.0556044
+text-davinci-002,"We used to have food on the table as soon as the customer was seated, but our new system requires more effort.",We have to work harder now.,0,S,yes,-0.22617072,-8.404329,8.17815828
+text-davinci-002,"We used to have food on the table as soon as the customer was seated, but our new system requires more plates.",Our service is faster now.,0,J,no,-2.3036957,-0.47961268,-1.82408302
+text-davinci-002,"When an irresistible force meets an immovable object, you get two very angry entities.","When one thing runs into another, both become unhappy.",0,S,yes,-0.5467907,-8.409619,7.862828299999999
+text-davinci-002,"When an irresistible force meets an immovable object, you get two very angry women.",Women can be stubborn.,0,J,yes,-0.88073677,-3.5632217,2.68248493
+text-davinci-002,"When he stepped into the elevator, he knew Jennifer had just been there by the smell of her perfume.",Jennifer wore strong perfume.,0,E,yes,-0.46328118,-5.727463,5.26418182
+text-davinci-002,"When I asked how long I should cook the noodles, he said at least ten inches.",The noodles should be at least ten inches long.,0,J,yes,-0.15140565,-3.5303013,3.37889565
+text-davinci-002,"When I asked how long I should cook the noodles, he said at least ten seconds.",They had already eaten.,0,S,no,-6.6597447,-0.15832375,-6.50142095
+text-davinci-002,"When I asked the bartender for something cold and full of rum, he recommended his daiquiri.",The bartender recommended a drink.,0,S,yes,-0.29259,-7.6027765,7.3101865
+text-davinci-002,"When I asked the bartender for something cold and full of rum, he recommended his wife.",The bartender was married.,0,J,yes,-1.3022108,-0.8528494,-0.4493613999999999
+text-davinci-002,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the dressmaker.",The dressmaker had a lot of my money.,0,J,yes,-0.87166965,-1.1664575,0.29478784999999996
+text-davinci-002,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the mistress.",I had been faithful to my wife.,0,S,no,-9.77823,-0.63726795,-9.14096205
+text-davinci-002,"When it comes to keeping warm, nothing beats a thermal brunette.",A down parka is the best way to keep warm.,0,J,no,-7.9813647,-0.31740704,-7.66395766
+text-davinci-002,"When it comes to keeping warm, nothing beats a thermal parka.",A trenchcoat is the best way to keep warm.,0,S,no,-8.689396,-0.1189401,-8.5704559
+text-davinci-002,"When John bought a bulldog, it was no time at all before he had that dog eating out of his fingers.",He trained the dog well.,0,S,yes,-0.1431,-10.508313,10.365212999999999
+text-davinci-002,"When John bought a bulldog, it was no time at all before he had that dog eating out of his leg.",The dog was aggressive.,0,J,yes,-2.7375982,-0.21787518,-2.51972302
+text-davinci-002,"When reviewing your notes for a test, the most important ones will be capitalized.",Pay more attention to the things in small print.,0,S,no,-7.988765,-0.35445067,-7.63431433
+text-davinci-002,"When reviewing your notes for a test, the most important ones will be illegible.",Important notes are written clearly so they stand out.,0,J,no,-9.001751,-0.4131979,-8.5885531
+text-davinci-002,"When the kid came into the store and asked for empty boxes, the owner gave him the crate.",The kid didn't get any boxes.,0,S,no,-4.101205,-0.33186832,-3.7693366800000003
+text-davinci-002,"When the kid came into the store and asked for empty boxes, the owner gave him the register.",The store had made a lot of money.,0,J,no,-7.180323,-0.2854453,-6.894877699999999
+text-davinci-002,When they were in London they visited Buckingham Palace.,They made a trip to England.,0,E,yes,-0.24429975,-4.6974425,4.4531427500000005
+text-davinci-002,"When we got divorced, my wife and I split the house; she got the inside.",I got the outside.,0,J,yes,-0.7082141,-2.1268456,1.4186314999999998
+text-davinci-002,"When we got divorced, my wife and I split the house; she got the kitchen.",My wife gave me the kitchen items.,0,S,no,-3.9529645,-0.3261926,-3.6267719
+text-davinci-002,"When we watch a sexy movie, my wife leans over and breathes on my collar.",She wants to get me excited.,0,S,yes,-0.32956785,-9.269106,8.93953815
+text-davinci-002,"When we watch a sexy movie, my wife leans over and breathes on my glasses.",She wants me to see the movie.,0,J,no,-0.70926476,-2.1404142,1.43114944
+text-davinci-002,"When you go to bed, turn off the lights.",The lights are on.,0,E,yes,-3.4374535,-0.35681856,-3.0806349400000004
+text-davinci-002,"When you own an ice cream business, your favorite flavor is aspirin.",Running an ice cream business can give you a headache.,0,J,yes,-0.9157596,-3.8463783,2.9306187
+text-davinci-002,"When you own an ice cream business, your favorite flavor is everything.",You start to like all the flavors.,0,S,yes,-0.9243414,-5.4107804,4.486439
+text-davinci-002,"Where I'm from, the two most common elements are hydrogen and nitrogen.",Phosphorus is the most common element in my hometown.,0,S,no,-10.529491,-0.3690443,-10.1604467
+text-davinci-002,"Where I'm from, the two most common elements are hydrogen and stupidity.",People in my hometown are very smart.,0,J,no,-12.042651,-0.6126631,-11.429987899999999
+text-davinci-002,"Women don't dress to please men; if they did, they'd dress a lot faster.",Women take a long time to get dressed.,0,J,yes,-2.460243,-0.4478811,-2.0123619
+text-davinci-002,"Women don't dress to please men; if they did, they'd dress a lot scantier.",Men prefer women who wear a lot of clothes.,0,S,no,-7.225187,-0.6438876,-6.5812994
+text-davinci-002,Women were not allowed to vote until when Congress passed the nineteenth amendment to the constitution.,Women in 1900 could not vote.,0,E,yes,-0.14885645,-7.9282694,7.779412949999999
+text-davinci-002,Yesterday they canoed down the river.,They spent yesterday outdoors.,0,E,yes,-0.72888,-7.472926,6.744046
+text-davinci-002,You can keep your kids out of hot water with dishes.,Kids like to wash dishes.,0,J,no,-4.705468,-0.18297388,-4.52249412
+text-davinci-002,You can keep your kids out of hot water with rules.,Clear boundaries help keep kids out of trouble.,0,S,yes,-0.30987245,-12.167352,11.857479549999999
+text-davinci-002,You could tell he had grown up in the South by his accent.,He talked like a Southerner.,0,E,yes,-0.2974069,-11.451518,11.1541111

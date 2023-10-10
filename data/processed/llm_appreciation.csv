@@ -1,0 +1,401 @@
+model,sentence,answer,condition,best_response,best_response_lp,entropy,is_joke
+text-davinci-002,A committee keeps minutes and takes hours.,Committees are very efficient.,J,3,-0.6157637,0.6947640527121827,True
+text-davinci-002,A committee keeps minutes and takes votes.,Committees keep records and make decisions.,S,1,-0.6494447,0.6696040349256758,False
+text-davinci-002,A device for finding furniture in the dark is a candle.,The candle gives off light.,S,3,-0.61351985,0.6409763491102636,False
+text-davinci-002,A device for finding furniture in the dark is a shin.,People run into furniture when it's dark.,J,3,-0.39336234,0.7048908639514327,True
+text-davinci-002,A good source of vitamin A is orange vegetables like carrots.,Carrots contain vitamin A.,E,1,-0.10058887,0.09839396331970957,False
+text-davinci-002,A good way to blow your mind is to smoke gunpowder.,An explosion can blow your brains out.,J,1,-0.15017179,0.28492603532645416,True
+text-davinci-002,A good way to blow your mind is to smoke heroin.,Heroin will affect your brain.,S,1,-0.081383884,0.07691698006610455,False
+text-davinci-002,A man who has lost ninety percent of his brain is called a widower.,His wife wasn't very smart.,J,3,-0.74947536,1.1348599353186528,True
+text-davinci-002,A man who has lost ninety percent of his brain is called a zombie.,A zombie still has an intact brain.,S,3,-0.8071268,1.006434111942245,False
+text-davinci-002,A problem drinker is one who never buys.,One should take turns paying for the drinks.,J,3,-1.241202,0.9183962328878892,True
+text-davinci-002,A problem drinker is one who never quits.,Non-stop drinking isn't much of a problem.,S,3,-0.74773693,0.8378937053315322,False
+text-davinci-002,A replacement player hit a home run with my ball.,The player was playing baseball.,S,3,-0.7457903,0.8800984044402763,False
+text-davinci-002,A replacement player hit a home run with my girl.,Someone else slept with my girlfriend.,J,3,-0.72495884,0.9648146730479568,True
+text-davinci-002,A thoughtful wife has pork chops ready when her husband comes home from fishing.,She thinks her husband will catch lots of fish.,J,3,-0.9834159,1.0227282910452826,True
+text-davinci-002,A thoughtful wife has pork chops ready when her husband comes home from working.,A nice wife cooks dinner for her husband.,S,1,-0.62364143,0.8957402738268943,False
+text-davinci-002,A vacation is the shortest distance between two locations.,A trip seems longer when you are on vacation.,S,3,-0.77379894,0.7017676639346427,False
+text-davinci-002,A vacation is the shortest distance between two paychecks.,Vacations cost a lot of money.,J,3,-0.6673703,0.7193209953801021,True
+text-davinci-002,"After Olga tore her red dress, she went to the store for a needle and a spool of red thread.",She planned to throw the dress away.,E,2,-0.78515035,0.8492416337851281,False
+text-davinci-002,"All roads lead to Rome, and all detours lead to profanity.",People are frustrated by detours.,J,3,-1.0583643,0.9814015321172485,True
+text-davinci-002,"All roads lead to Rome, and all detours lead to somewhere.",Detours never go anywhere.,S,3,-0.4436282,0.5998929943821298,False
+text-davinci-002,All the plates were garnished with little sprigs of parsley.,Each plate had some parsley on it.,E,1,-0.07117131,0.08416361844889356,False
+text-davinci-002,Another thing a small boy is constantly outgrowing is his allowance.,Kids always want more money.,J,3,-0.7569477,0.7984055836306942,True
+text-davinci-002,Another thing a small boy is constantly outgrowing is his underwear.,Boys need new clothes often.,S,3,-0.9338644,0.8767888803622975,False
+text-davinci-002,Another thing that has developed by leaps and bounds is the modern dance.,Dancing has changed a lot over the years.,J,1,-0.5398674,0.7148954246096123,True
+text-davinci-002,Another thing that has developed by leaps and bounds is the modern science.,Science has progressed at a snail's pace.,S,1,-0.10019229,0.11213022184598744,False
+text-davinci-002,Arguments between couples are healthy; sometimes they even prevent breakups.,It's okay for couples to argue sometimes.,S,2,-1.17846,1.0571521286683252,False
+text-davinci-002,Arguments between couples are healthy; sometimes they even prevent marriage.,Marriage is a wonderful thing.,J,3,-0.79267013,0.849370111902903,True
+text-davinci-002,Autobiography is an unrivaled vehicle for telling the truth about others.,Writing an autobiography can unmask your true self.,J,3,-0.6167753,0.8604024578624655,True
+text-davinci-002,Autobiography is an unrivaled vehicle for telling the truth about somebody.,Autobiographies don't reveal much about a person.,S,3,-0.7681052,0.9328734206586817,False
+text-davinci-002,Autumn is a good time to buy some new clothes.,It's good to buy clothes before the winter.,E,1,-0.06696625,0.06333489026863519,False
+text-davinci-002,"Because of his diabetes, he had to take daily shots of insulin.",He took insulin once a week.,E,1,-0.23903625,0.5211751720766271,False
+text-davinci-002,"Before the outdoor concert, he packed a basket with wine and food for a picnic.",He was planning to eat outdoors.,E,1,-0.5358793,0.7616858896851393,False
+text-davinci-002,Bill jumped in the lake and made a big splash.,Bill went for a swim.,E,3,-0.26701134,0.5511916893970044,False
+text-davinci-002,"By the time Mary had her fourteenth child, she'd run out of names to call her husband.",Mary was happy to have another child.,J,3,-0.7151486,0.8879638180029061,True
+text-davinci-002,"By the time Mary had her fourteenth child, she'd run out of names to call her offspring.",Mary had no problem naming her new baby.,S,3,-0.7769219,0.9416976126542704,False
+text-davinci-002,"Charged with statutory rape, he told the judge he didn't know she was a statue.",He was on trial for a sex-related crime.,J,5,-1.0260051,1.0605595017454421,True
+text-davinci-002,"Charged with statutory rape, he told the judge he didn't know she was a teenager.",He had slept with a young woman.,S,3,-1.1034961,0.9494623744597942,False
+text-davinci-002,Cocktail lounges are usually half lit to match the patrons.,The people have often had a bit too much to drink.,J,3,-0.7910667,0.6181406895125655,True
+text-davinci-002,Cocktail lounges are usually half lit to match the setting.,Bright lights can ruin the atmosphere in a cocktail lounge.,S,3,-1.4408906,0.9329138121039476,False
+text-davinci-002,"Congress taxes our income, our property, and our patience.",We're very happy with Congress.,J,1,-1.0506095,1.0184565042034803,True
+text-davinci-002,"Congress taxes our income, our property, and our purchases.",There are very few taxes.,S,1,-0.18582602,0.20179031312989026,False
+text-davinci-002,"Diamonds are produced by great pressure, usually provided by a girlfriend.",Some men are reluctant to get engaged.,J,3,-0.94404083,0.8501877086358045,True
+text-davinci-002,"Diamonds are produced by great pressure, usually provided by a piston.",Diamonds can be made by machine.,S,1,-0.10160253,0.17061054556919464,False
+text-davinci-002,Dogs crack open bones so they can eat the marrow.,Dogs like to eat bone marrow.,E,3,-1.2756139,1.0223084449240107,False
+text-davinci-002,"During the worst part of the drought, people were encouraged to not always flush the toilet.",Water was in short supply.,E,3,-0.7798114,0.9709757167913953,False
+text-davinci-002,Eva turned down the heat and left the sauce on the stove to simmer.,Eva was cooking.,E,1,-0.1650751,0.17380459113157545,False
+text-davinci-002,Every introductory sailing class includes learning how to save a man drowning.,Beginning sailing classes emphasize safety.,E,3,-0.75674343,0.8760938239322495,False
+text-davinci-002,"Every time I wear my spring coat in the rain, it damages the fabric.",My coat is waterproof.,S,1,-0.13234876,0.22261309145705802,False
+text-davinci-002,"Every time I wear my spring coat in the rain, it damages the springs.",Water isn't good for my coat.,J,3,-0.4816959,0.7472999183062886,True
+text-davinci-002,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little platform.,The platform is for sunbathing.,S,3,-0.36442593,0.7283289339174319,False
+text-davinci-002,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little water.,The pool was empty.,J,3,-0.44071913,0.8586324646961917,True
+text-davinci-002,"Except for not having a shell, slugs are a lot like snails.",Slugs and snails are similar.,E,3,-1.0370563,1.0088099526171148,False
+text-davinci-002,"Figures don't lie, except on the beaches.",People lie in the sand.,J,3,-0.6700512,0.8902304140150094,True
+text-davinci-002,"Figures don't lie, except on the page.",Statistics are completely reliable.,S,3,-0.8724521,0.8754777472772629,False
+text-davinci-002,"For a great vacation, put the kids in the back seat, and take a cruise.",A road trip with the kids can be a lot of fun.,J,3,-1.0827664,1.1534812664201666,True
+text-davinci-002,"For a great vacation, put the kids in the back seat, and take a freeway.",A road trip can be a fun vacation.,S,3,-0.81197315,1.0936721472553206,False
+text-davinci-002,"For his thirtieth birthday, all his friends gathered to celebrate.",There was a party for his birthday.,E,3,-0.87435335,1.0238108261203016,False
+text-davinci-002,For lunch he had an apple and a peanut butter sandwich.,He ate a cold lunch.,E,1,-0.05839523,0.07864638392816248,False
+text-davinci-002,"Frequent naps prevent old age, especially when taken while driving.",Falling asleep while driving can kill you.,J,3,-0.6647166,0.7724582114257905,True
+text-davinci-002,"Frequent naps prevent old age, especially when taken while relaxed.",It's best to nap when you are very stressed.,S,3,-0.58815247,0.7532441266770166,False
+text-davinci-002,Good Friday commemorates the Last Supper that Jesus had with his twelve disciples.,Good Friday is a religious holiday.,E,1,-0.031992964,0.06836515777078919,False
+text-davinci-002,Hal wrote her a love letter.,Hal didn't like her very much.,E,1,-0.3468349,0.5734712007693176,False
+text-davinci-002,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough change.",We don't have enough money for soup.,S,3,-0.6244923,0.7876340169250875,False
+text-davinci-002,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough room.",We can't afford the soup.,J,3,-0.6112867,0.7465300883278644,True
+text-davinci-002,He drank so much that he eventually became a beverage.,He gave up drinking.,J,3,-0.83255535,0.9383111186647561,True
+text-davinci-002,He drank so much that he eventually became a lush.,He became an alcoholic.,S,3,-0.8099321,1.0297155225161132,False
+text-davinci-002,He got a medal for bravery on the beach when he rescued a girl from a lifeguard.,He saved the girl from drowning.,J,3,-0.8176551,1.1111973090795302,True
+text-davinci-002,He got a medal for bravery on the beach when he rescued a girl from a shipwreck.,The girl had been on a ship.,S,2,-1.0821517,1.0514086843690922,False
+text-davinci-002,He hung her coat in the closet.,She had been wearing a coat.,E,1,-0.098257855,0.09736819969548487,False
+text-davinci-002,He is at the age when all the numbers in his little black book belong to doctors.,He is getting old.,J,3,-1.2284188,0.897921186299466,True
+text-davinci-002,He is at the age when all the numbers in his little black book belong to friends.,He is a real playboy.,S,3,-1.0459917,0.9349854192455951,False
+text-davinci-002,"He is probably the best boxer in the country, but he always loses in the city.",He would win in Las Vegas.,J,3,-0.96649945,0.7981807020944407,True
+text-davinci-002,"He is probably the best boxer in the country, but he always loses in the competition.",He always wins the championship.,S,2,-1.1780263,0.9549507628806467,False
+text-davinci-002,He likes to make things around the house; this week it's the maid.,He's having an affair with a member of the household staff.,J,3,-0.90677404,0.9519329996995165,True
+text-davinci-002,He likes to make things around the house; this week it's the shelves.,He isn't very good with his hands.,S,3,-0.63995713,0.7797698232141227,False
+text-davinci-002,"He owns stock in a company that pays quarterly dividends, so every three months they send him a quarter.",His dividends are quite large.,J,3,-0.9928403,0.9093155982880986,True
+text-davinci-002,"He owns stock in a company that pays quarterly dividends, so every three months they send him a statement.",He never hears from the company.,S,3,-0.8877802,0.8658924904965658,False
+text-davinci-002,He says he doesn't like to drink because it makes him feel happy.,Drinking makes him feel depressed.,J,3,-0.6935532,0.8638606737366977,True
+text-davinci-002,He says he doesn't like to drink because it makes him feel sad.,Alcohol depresses him.,S,3,-0.97756845,1.0046618770845632,False
+text-davinci-002,He spilled some of the quart of oil onto the engine because he didn't have a funnel.,He was pouring oil into the car.,E,3,-0.9546631,0.8214180765439981,False
+text-davinci-002,"He thought that he could turn from Grant onto Prince, but the two streets are parallel.",He was at the corner of Grant and Prince.,E,1,-0.9688347,0.9078728801810637,False
+text-davinci-002,"He told her he wasn't himself, and she said she'd noticed the improvement.",She liked him better when he wasn't himself.,J,3,-1.1441443,0.9617404270385601,True
+text-davinci-002,"He told her he wasn't himself, and she said she'd noticed the problem.",He was behaving normally.,S,3,-1.0871435,0.7068728429837616,False
+text-davinci-002,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a balloon.",He got the tires for free.,J,3,-0.72011787,0.8037166202093402,True
+text-davinci-002,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a truck.",He bought new tires for his truck.,S,3,-0.8475371,0.7705220117893745,False
+text-davinci-002,"He told me he's not broke, just badly bent.",He's doing quite well.,J,3,-1.1461186,0.740540312599993,True
+text-davinci-002,"He told me he's not broke, just badly off.",He has lots of money.,S,3,-0.6720858,0.7199585396705668,False
+text-davinci-002,He was teaching his girlfriend how to swim when the lifeguard made them move to the lake.,They were in the water.,J,3,-0.7456116,0.7541911087356363,True
+text-davinci-002,He was teaching his girlfriend how to swim when the lifeguard made them move to the shallows.,They were in deep water.,S,3,-0.8218413,0.6823541309818846,False
+text-davinci-002,He wondered if the storm had done much damage.,It had been a terrible storm.,E,1,-0.172799,0.146671959555802,False
+text-davinci-002,"He's never given a girl a present, but he did give a few a pretty good reputation.",He never gets girls into trouble.,J,3,-1.1545429,0.8323531657904683,True
+text-davinci-002,"He's never given a girl a present, but he did give a few a pretty good surprise.",He buys his girlfriends lavish gifts.,S,3,-1.0972384,0.6956893824461703,False
+text-davinci-002,He's planning an extended vacation: he hopes to spend three weeks on his couch.,He's going to sleep a lot.,J,3,-0.5885935,0.8820157540835557,True
+text-davinci-002,He's planning an extended vacation: he hopes to spend three weeks on his sailboat.,He's going sailing for three weeks.,S,3,-1.2923086,1.0454180311716836,False
+text-davinci-002,Her press agent was operated on for an ingrown beeper.,Her press agent needed actual medical surgery.,J,3,-0.54849875,0.8421312356329412,True
+text-davinci-002,Her press agent was operated on for an ingrown eyelash.,She needed medical surgery.,S,3,-0.7290478,0.9197519487108627,False
+text-davinci-002,His doctor recommended he stay flat on his back ever since he was hit by a motorist.,He got run over by a car.,S,3,-1.3481565,0.9931324025971847,False
+text-davinci-002,His doctor recommended he stay flat on his back ever since he was hit by a steamroller.,He should get out of bed as soon as possible.,J,3,-0.94293493,1.0595571356291604,True
+text-davinci-002,His job was to keep the sidewalk clean.,He was a doctor.,E,1,-0.12432127,0.2626481827593302,False
+text-davinci-002,His sandwich came with chips and a dill pickle.,He was about to eat.,E,1,-0.31366265,0.47935640086619175,False
+text-davinci-002,His wife sued for divorce and asked for custody of the cash.,She wanted to keep the money.,J,3,-1.343056,0.8633913103847941,True
+text-davinci-002,His wife sued for divorce and asked for custody of the cat.,She was very fond of her pet.,S,3,-1.0219911,0.790993800221885,False
+text-davinci-002,"I appreciate the more expensive things in life: diamonds, caviar, and champagne.","I prefer a simple, country life.",S,1,-0.37999326,0.4676266053939162,False
+text-davinci-002,"I appreciate the more expensive things in life: diamonds, caviar, and postage.",It's expensive to mail things nowadays.,J,3,-0.46475264,0.6977532072979845,True
+text-davinci-002,"I asked him if he started out as an editor, and he said that years ago he used to be a boy.",He wasn't an editor when he was young.,J,3,-0.75205463,1.0722057714475672,True
+text-davinci-002,"I asked him if he started out as an editor, and he said that years ago he used to be a journalist.",He was never a reporter.,S,2,-1.1016018,1.017991550801549,False
+text-davinci-002,"I asked the florist what I should give to my girlfriend, and he suggested his address.",The florist would like to meet the girlfriend.,J,3,-0.8355399,1.195788306685004,True
+text-davinci-002,"I asked the florist what I should give to my girlfriend, and he suggested his tulips.",The florist thought I should give her roses.,S,3,-0.6476139,0.8740688233139906,False
+text-davinci-002,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a dress.",The woman notices what clothes people wear.,J,3,-0.8088055,0.7919364619388181,True
+text-davinci-002,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a name.",She didn't remember my name.,S,3,-1.0224161,0.7133967458409983,False
+text-davinci-002,"I can walk on water, but I stagger on alcohol.",I can walk just fine even when I'm drunk.,J,3,-0.9584465,0.7063276718978513,True
+text-davinci-002,"I can walk on water, but I stagger on concrete.",I have no trouble walking on hard surfaces.,S,3,-0.4962453,0.6143417506422573,False
+text-davinci-002,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my pay.",I'm saving money in case I need it later.,S,3,-0.61293626,0.7622116604188259,False
+text-davinci-002,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my umbrella.",I put a lot of money in the bank in case of emergency.,J,3,-0.61525786,0.7699048025569264,True
+text-davinci-002,"I got a car for my wife, and I thought it was a good choice.",I thought my wife would like the car.,S,1,-0.40614346,0.5710397633535065,False
+text-davinci-002,"I got a car for my wife, and I thought it was a good trade.",I like the car more than my wife.,J,3,-0.5203956,0.5777071702411813,True
+text-davinci-002,"I hope this train stops at Grand Central because if it doesn't, there will be a crash.",Grand Central is the end of the line.,J,3,-1.0390724,0.9988367575982978,True
+text-davinci-002,"I hope this train stops at Grand Central because if it doesn't, there will be a delay.",I'm afraid I will fall behind schedule.,S,3,-0.8142033,0.9208621935899982,False
+text-davinci-002,I knew a streetwalker who was so exclusive she had an unlisted telephone booth.,She was easy to reach by phone.,J,3,-0.95190513,0.8096962394950878,True
+text-davinci-002,I knew a streetwalker who was so exclusive she had an unlisted telephone line.,Her phone number was in the telephone book.,S,3,-1.0367488,0.7740125171313686,False
+text-davinci-002,I know one couple who got divorced and had to leave the house to the attorney.,The divorce was expensive.,J,3,-0.8784432,0.8204463701462534,True
+text-davinci-002,I know one couple who got divorced and had to leave the house to the daughter.,The house stayed in the family.,S,3,-0.6242321,0.7346019797260718,False
+text-davinci-002,"I still miss my ex-wife, but I am improving my aim.",I am shooting at my ex-wife.,J,3,-0.6069863,0.8405715620435608,True
+text-davinci-002,"I still miss my ex-wife, but I am improving my ego.",I'm starting to feel better about myself.,S,3,-0.74391687,0.900742144858185,False
+text-davinci-002,I went to a place that serves breakfast any time and ordered French toast in the nighttime.,I had breakfast at night.,S,3,-0.58511084,0.6591154348315326,False
+text-davinci-002,I went to a place that serves breakfast any time and ordered French toast in the Renaissance.,I wanted to eat an unusual breakfast.,J,3,-0.53716886,0.7254135862912613,True
+text-davinci-002,"I've got Parkinson's disease, and he's got gout.",We have the same disease.,S,3,-0.7705482,0.8339157315309155,False
+text-davinci-002,"I've got Parkinson's disease, and he's got mine.",At least one of us is in good health.,J,3,-0.81946015,1.1101386641038467,True
+text-davinci-002,"If there's one thing that counts in business, it's bookkeepers.",Bookkeepers keep track of things.,J,3,-0.7969647,0.9648642680033069,True
+text-davinci-002,"If there's one thing that counts in business, it's resources.",It's hard to succeed if you start with nothing.,S,1,-0.1793058,0.3893655794468324,False
+text-davinci-002,"If you're filthy rich, sending your kids to college is a wonderful cleaner.",Colleges are very expensive.,J,3,-0.42078486,0.8386709473473157,True
+text-davinci-002,"If you're filthy rich, sending your kids to college is a wonderful luxury.",It's good to be able to afford to send your children to the university.,S,1,-0.25884268,0.5800486652209407,False
+text-davinci-002,In some marriages the bride is given away by the family.,It's always the father who gives the bride away.,S,3,-0.8413801,0.7055252453824186,False
+text-davinci-002,In some marriages the bride is given away by the press.,The newspapers reveal something about the bride's past.,J,3,-0.8536864,0.6086784653412156,True
+text-davinci-002,"In the game of golf, nothing counts as much as your drives.",The most important part of your golf game is your putting.,S,3,-0.65349424,0.8554121479966206,False
+text-davinci-002,"In the game of golf, nothing counts as much as your opponent.",The other guy always keeps track of your score.,J,3,-0.5908939,0.6661071149758298,True
+text-davinci-002,"In the U.S. the five cent piece is made of nickel, while pennies are mainly made of copper.",Both coins are made from the same metal.,E,1,-0.71077794,0.9227032591883889,False
+text-davinci-002,"It was so hot at Playboy, the centerfold took off her bikini.",She had been wearing a swimsuit.,S,3,-1.0457189,0.8839513734491876,False
+text-davinci-002,"It was so hot at Playboy, the centerfold took off her staple.",She wasn't wearing any clothes.,J,3,-0.79318035,0.8247212165274829,True
+text-davinci-002,It was too hot to sleep in a bed so he strung up a mesh hammock.,He was going to sleep in the hammock.,E,3,-0.9177493,0.896707480893006,False
+text-davinci-002,"It's always nicer to give than to receive, especially when it's your opinion.",People like giving advice more than taking it.,J,3,-0.53938574,0.9925083021273965,True
+text-davinci-002,"It's always nicer to give than to receive, especially when it's your parents.",Giving gifts can be fun.,S,1,-1.1040057,1.0407426440538448,False
+text-davinci-002,It's extraordinary what fine poker hand you get when you're playing bridge.,You always get the best hand just when you need it.,J,1,-1.1065533,0.9577297287938871,True
+text-davinci-002,It's extraordinary what fine poker hand you get when you're playing stud.,You never get a decent hand in a poker game.,S,1,-0.77024454,0.9249536838780635,False
+text-davinci-002,It's hard to admit when one is wrong.,Most people don't mind being wrong.,E,1,-0.5207434,0.7567913995861061,False
+text-davinci-002,"It's hard to raise a family nowadays, especially in the country.",It's easy to raise children outside the city.,S,2,-0.8136042,0.9581702219275938,False
+text-davinci-002,"It's hard to raise a family nowadays, especially in the morning.",The kids don't want to get up in the morning.,J,3,-1.0000303,1.035785210735311,True
+text-davinci-002,It's not hard to meet expenses; they're affordable.,You should be able to pay all your bills.,S,1,-0.35746294,0.42334085146420136,False
+text-davinci-002,It's not hard to meet expenses; they're everywhere.,It's easy to pay the bills.,J,3,-0.5500388,0.7601656617614607,True
+text-davinci-002,Last Thanksgiving my wife spent all morning in the kitchen stuffing the bird.,She was preparing the turkey.,S,3,-0.9921109,0.8727151462231753,False
+text-davinci-002,Last Thanksgiving my wife spent all morning in the kitchen stuffing the kids.,The kids didn't get enough to eat.,J,3,-0.8087659,0.9766152786428273,True
+text-davinci-002,"Love has its benefits, and they are usually called alimony.",Divorce can get you some money.,J,3,-0.97984195,0.9197585708816179,True
+text-davinci-002,"Love has its benefits, and they are usually called memories.",Being in love leads to good times together.,S,3,-0.86713874,0.857574182742781,False
+text-davinci-002,Many a freshman helps the college of his choice by becoming a dropout.,"When a freshman fails, it always hurts the college.",J,3,-0.80664057,1.0177993176874613,True
+text-davinci-002,Many a freshman helps the college of his choice by becoming a member.,Joining a college doesn't make any difference.,S,1,-0.7236947,0.8653211064707964,False
+text-davinci-002,Many a man's idea of a vacation is to rest quietly in the shade of a blonde.,Men like to vacation alone.,J,3,-1.0644215,0.943010199459806,True
+text-davinci-002,Many a man's idea of a vacation is to rest quietly in the shade of a palm.,Many men like a relaxing vacation in the tropics.,S,1,-0.117617905,0.18466366225954364,False
+text-davinci-002,"Many things run in families, especially noses.",People often catch colds from other family members.,J,3,-0.54579,0.5719044973440202,True
+text-davinci-002,"Many things run in families, especially strength.",Muscle power comes only from exercise.,S,3,-0.55586267,0.6308518468622201,False
+text-davinci-002,Modern science is amazing: garbage is now being made into gasoline.,Fuel can be made from trash.,S,3,-0.4809886,0.5454919182036668,False
+text-davinci-002,Modern science is amazing: garbage is now being made into movies.,There are a lot of really terrible movies nowadays.,J,3,-0.2902404,0.5675169378286941,True
+text-davinci-002,Most cats see very well at night.,Cats see well in the dark.,E,1,-0.19622745,0.2734285433010985,False
+text-davinci-002,Most of the people running for office are not politicians; they're candidates.,You become a politician when you get elected.,S,3,-0.8833965,0.7085112319883354,False
+text-davinci-002,Most of the people running for office are not politicians; they're commuters.,These people are hurrying to get to work on time.,J,3,-0.7776361,0.7624830636547938,True
+text-davinci-002,Mrs Martin told the bad student to stand in the corner.,Mrs Martin was unhappy with the student's behavior.,E,1,-0.22590403,0.3598789999925799,False
+text-davinci-002,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our drinks.,My brother-in-law fixed our plumbing.,J,3,-1.0016917,0.711627652476938,True
+text-davinci-002,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our stove.,He's a real handyman.,S,3,-0.81737834,0.83894914743886,False
+text-davinci-002,My church welcomes all denominations but prefers Mormons.,My church is strictly Catholic.,S,3,-0.3885666,0.7241032187264708,False
+text-davinci-002,My church welcomes all denominations but prefers twenties.,My church wants money.,J,3,-0.66485226,1.0537436186111437,True
+text-davinci-002,My doctor has never violated his oath: the oath he took years ago to become a millionaire.,My doctor charges a lot of money.,J,3,-0.74253464,1.0432708273309081,True
+text-davinci-002,My doctor has never violated his oath: the oath he took years ago to become a practitioner.,My doctor is very honorable.,S,3,-0.7364382,0.9617758084622836,False
+text-davinci-002,My husband took the money we were saving to buy a new car and blew it all at the laundry.,We had saved a lot of money.,J,3,-0.9915769,1.009051450411575,True
+text-davinci-002,My husband took the money we were saving to buy a new car and blew it all at the tables.,He gambled away our savings.,S,1,-0.92841905,0.772696872702227,False
+text-davinci-002,"My mechanic couldn't fix my brakes, so he fixed my clutch.",My clutch was also broken.,S,3,-0.9956184,0.7687561627953768,False
+text-davinci-002,"My mechanic couldn't fix my brakes, so he fixed my horn.","He figures if I can't stop, I'll have to honk at people.",J,3,-1.009301,0.7301290455024089,True
+text-davinci-002,My wife did natural childbirth: no anesthetic.,She took drugs for the pain.,S,3,-0.92925984,1.155332625925113,False
+text-davinci-002,My wife did natural childbirth: no makeup.,My wife didn't wear makeup when she had her baby.,J,3,-0.5118403,0.7980338235452926,True
+text-davinci-002,"Nature has three ways of thinning the herd: drought, famine, and hunting.",Predatory hunting reduces the number of prey.,S,1,-0.5837814,0.8835452098967159,False
+text-davinci-002,"Nature has three ways of thinning the herd: drought, famine, and primaries.",Politics is a lot like nature.,J,3,-0.8588823,0.7322745735520503,True
+text-davinci-002,No patient should leave the hospital until he's strong enough to face the cashier.,Hospital bills are quite expensive.,J,3,-0.5801087,0.8122016970890906,True
+text-davinci-002,No patient should leave the hospital until he's strong enough to face the outside.,Patients should be released as soon as possible.,S,3,-0.9817774,1.0358090531950885,False
+text-davinci-002,None of his books made any sense.,His books were hard to understand.,E,1,-0.06409609,0.07681760901153856,False
+text-davinci-002,Nothing ages a woman faster than hardships.,A difficult life can make you look old.,S,1,-0.736297,0.8467658023841736,False
+text-davinci-002,Nothing ages a woman faster than identification.,Many women lie about their age.,J,3,-1.2294449,0.9156810410099524,True
+text-davinci-002,Nothing in the known universe travels faster than gossip.,Rumors get around quickly.,J,3,-1.3164424,0.8266312288096929,True
+text-davinci-002,Nothing in the known universe travels faster than radiation.,Radiation travels at great speed.,S,1,-0.27759358,0.45887778247390604,False
+text-davinci-002,Nothing you put in a banana split is as potentially fattening as the spoon.,Eating banana splits can make you fat.,J,3,-0.9119357,0.9019967855570011,True
+text-davinci-002,Nothing you put in a banana split is as potentially fattening as the syrup.,Syrup has very few calories.,S,3,-0.9888826,0.9231000850017909,False
+text-davinci-002,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their careers.",The divorce hadn't affected their work.,S,1,-0.4153225,0.5784858837838701,False
+text-davinci-002,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their nuptials.",They are already married.,J,1,-0.6268531,0.8104399890242115,True
+text-davinci-002,"Once a week they hold a bingo game, and all the proceeds go to fight disease.",They are raising money to build a new church.,S,1,-1.0037596,1.0570968209401204,False
+text-davinci-002,"Once a week they hold a bingo game, and all the proceeds go to fight gambling.",They are raising money to help orphans.,J,3,-0.68411654,0.9473908057964034,True
+text-davinci-002,One good turn gets most of the blanket.,"If you do nice things, people will give you blankets.",J,3,-0.42105517,0.7103517121600084,True
+text-davinci-002,One good turn gets most of the profit.,Doing something good can earn you money.,S,3,-0.3621932,0.6250212322225875,False
+text-davinci-002,One good way to invest in the country is to buy a business.,Buying a business is bad for the economy.,S,1,-0.07803022,0.09769817480254483,False
+text-davinci-002,One good way to invest in the country is to buy a senator.,Politicians will do favors for money.,J,3,-0.8331055,0.9932098162236689,True
+text-davinci-002,One person who sure makes a long story short is my aunt.,My aunt talks a lot.,S,3,-0.69564724,0.738388681904402,False
+text-davinci-002,One person who sure makes a long story short is my editor.,My editor cuts out parts of my stories.,J,3,-0.7591718,0.6691912243172655,True
+text-davinci-002,One thing that makes the world go round is detours.,Detours make people go around.,J,3,-0.30031356,0.4938062327820869,True
+text-davinci-002,One thing that makes the world go round is greed.,Most people don't care about money.,S,1,-0.36585855,0.5598621435999681,False
+text-davinci-002,One way to keep pornography away from teenagers is to put it in a cabinet.,Adult magazines should be put where adolescents won't get into them.,S,3,-0.41643438,0.8865852535548687,False
+text-davinci-002,One way to keep pornography away from teenagers is to put it in a textbook.,Teenagers read their textbooks often.,J,3,-0.5502582,0.9624271320467144,True
+text-davinci-002,Our new green car blocked the narrow driveway.,The car was parked in the garage.,E,1,-0.32182556,0.511511354997265,False
+text-davinci-002,Our son brought home a note from school saying they need a written excuse for his presence.,The son does very well in school.,J,3,-1.0699606,0.8818753734636944,True
+text-davinci-002,Our son brought home a note from school saying they need a written excuse for his tardiness.,He had been late for school.,S,3,-1.415804,0.8527703840786242,False
+text-davinci-002,"Parents support clubs for teenagers, especially when they lack other forms of diversion.",Parents want their teenagers to have appropriate forms of entertainment.,S,1,-0.22112854,0.3097280928295661,False
+text-davinci-002,"Parents support clubs for teenagers, especially when they lack other forms of punishment.",Teenagers may need physical punishment.,J,3,-0.8186008,0.936723320703204,True
+text-davinci-002,Paul heard a loud grinding noise when someone put a tin can right down the garbage disposal.,Paul broke the garbage disposal.,E,1,-1.0714917,0.9140022247281091,False
+text-davinci-002,Politicians who are as American as apple pie still want their rewards.,Patriotic politicians don't care about personal glory.,S,3,-0.87902606,0.7509037620054577,False
+text-davinci-002,Politicians who are as American as apple pie still want their slice.,Politicians are happy to do something for nothing.,J,3,-0.7683582,0.6204311964179954,True
+text-davinci-002,Save the whales; start a coalition.,"To save an endangered species, it's best to act alone.",S,1,-0.42790028,0.7320986179748279,False
+text-davinci-002,Save the whales; start a collection.,It's important to protect endangered species in the wild.,J,3,-0.5839557,0.9992140259319299,True
+text-davinci-002,She always told girls not to look for a husband but just to date bachelors.,It's better to date a married man.,J,3,-1.0087217,0.9598637731960245,True
+text-davinci-002,She always told girls not to look for a husband but just to date someone.,She thinks you should wait for the perfect man.,S,3,-0.66721225,0.8787829247697353,False
+text-davinci-002,"She asked what state he was born in, and he said in the East.",He was a native Californian.,S,3,-0.5095571,0.7964245759833203,False
+text-davinci-002,"She asked what state he was born in, and he said in the nude.",He said he was born in the North.,J,3,-1.1111847,0.991618052920417,True
+text-davinci-002,She bought her father a tasteful tie for his birthday.,She was giving her father a Christmas gift.,E,1,-0.1410934,0.14134977713567717,False
+text-davinci-002,She called her husband at his office.,Her husband worked at home.,E,2,-0.98204815,1.0307087526712742,False
+text-davinci-002,"She is so modest, she pulls down the shade to change her jacket.",She doesn't want people to see her change clothes.,S,3,-0.84647804,0.8756624815192269,False
+text-davinci-002,"She is so modest, she pulls down the shade to change her mind.",She likes to show off in front of others.,J,3,-0.81279993,0.8490980652846488,True
+text-davinci-002,She puts something behind her ears to attract men; lately she's been using her ankles.,She's very prudish.,J,3,-1.0621728,1.0278138482628614,True
+text-davinci-002,She puts something behind her ears to attract men; lately she's been using her vanilla.,She wears vanilla as a perfume.,S,3,-0.9495471,1.1042481057278004,False
+text-davinci-002,She read so much about the bad effects of cigarettes she decided to give up the habit.,She was going to quit smoking.,S,1,-1.0905627,1.0105645056710235,False
+text-davinci-002,She read so much about the bad effects of cigarettes she decided to give up the reading.,She planned to quit smoking.,J,3,-0.6392872,0.8920673608392861,True
+text-davinci-002,She tied up her hair with a yellow ribbon.,She had very short hair.,E,1,-0.20163918,0.18330694069674264,False
+text-davinci-002,"She told him he looked like a million, and she meant every century.",She thought he looked quite young and handsome.,J,3,-0.700122,1.0220499572398911,True
+text-davinci-002,"She told him he looked like a million, and she meant every syllable.",She thought he looked good.,S,3,-0.88766897,1.0100138482555752,False
+text-davinci-002,She used a needle and a tweezers to pull out the splinter.,She needed a scalpel to remove the splinter.,E,1,-0.44107383,0.7285629741843428,False
+text-davinci-002,She was suddenly called back to New York and had to take a cab to the airport.,She was going to take a train.,E,1,-0.3436455,0.545918102157879,False
+text-davinci-002,"She went on a fourteen day diet, but she only lost two ounces.",She didn't lose much weight.,S,3,-0.90790254,0.75764139244237,False
+text-davinci-002,"She went on a fourteen day diet, but she only lost two weeks.",She didn't lose any weight.,J,3,-1.1201801,0.9766842496016481,True
+text-davinci-002,She's happy because she finally has a boyfriend who gets along with her father.,Her father really liked her previous boyfriends.,S,2,-0.7409241,0.9144361543850386,False
+text-davinci-002,She's happy because she finally has a boyfriend who gets along with her fiance.,She is dating more than one man.,J,3,-0.794977,1.0473030969970933,True
+text-davinci-002,"Some babies are born to rule, while others are male.",Males are born rulers.,J,3,-0.47784597,0.9125702881018213,True
+text-davinci-002,"Some babies are born to rule, while others are weak.",Power starts at an early age.,S,3,-0.5102795,0.8020049261047295,False
+text-davinci-002,"Some husbands are good providers, but only if you count children.",Some men don't take care of their families.,J,3,-0.6631503,0.8422602750863128,True
+text-davinci-002,"Some husbands are good providers, but only if you count salary.",Some men give their families nothing but money.,S,3,-0.7489132,0.8005261953781329,False
+text-davinci-002,Some people think courtship is the first in a series of steps leading to divorce.,One of those steps is marriage.,J,3,-0.59206796,0.8663336235829324,True
+text-davinci-002,Some people think courtship is the first in a series of steps leading to romance.,Some people still believe in romantic courtship.,S,3,-0.8594889,0.9315958041971559,False
+text-davinci-002,Some people's only culture is bacteria.,Everybody can appreciate the fine arts.,J,3,-0.5408595,0.7964132183331303,True
+text-davinci-002,Some people's only culture is radio.,Everyone watches television.,S,3,-0.45559204,0.6479972509889869,False
+text-davinci-002,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly blackjack.",Americans like to gamble on card games.,S,1,-0.22860214,0.39385460055324334,False
+text-davinci-002,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly weddings.",Getting married is a risky thing to do.,J,3,-1.304084,0.9291113151272843,True
+text-davinci-002,Sunday is the day we bow our heads and putt.,We go to church on Sunday.,J,3,-0.21772468,0.49677394999725266,True
+text-davinci-002,Sunday is the day we bow our heads and rest.,We work hard on Sunday.,S,1,-0.1996316,0.21078768846437604,False
+text-davinci-002,The accident injured his spinal cord and his legs are paralyzed.,He can move his legs.,E,1,-0.15553275,0.1357317690334969,False
+text-davinci-002,The art museum just acquired an early Rembrandt; it's done in charcoal.,This early work is an oil painting.,S,3,-0.775924,0.8966834963846986,False
+text-davinci-002,The art museum just acquired an early Rembrandt; it's done in Crayola.,Rembrandt was a child when he completed the work.,J,3,-0.5084603,0.8247912211629371,True
+text-davinci-002,The baby cried and upset her mother.,The mother was very calm.,E,1,-0.1406263,0.12285007670602303,False
+text-davinci-002,The bartender dropped two olives into the strong martini.,The bartender was preparing a drink.,E,3,-0.9754698,0.9724709365274351,False
+text-davinci-002,The best bargain I ever got was when I went to a family garage sale and bought a grandma.,I bought a car at the garage sale.,J,3,-0.72878236,0.9297021023705492,True
+text-davinci-002,The best bargain I ever got was when I went to a family garage sale and bought a toaster.,I got a really good deal on a blender.,S,1,-0.72378707,0.9727670884905236,False
+text-davinci-002,The best gift for the man who has everything is neckties.,A necktie always makes a good gift for a man.,S,1,-0.91619164,0.9787290667645815,False
+text-davinci-002,The best gift for the man who has everything is penicillin.,This man has lots of diseases.,J,3,-0.99464154,0.9225234712387416,True
+text-davinci-002,The best way to keep the milk from turning sour is to keep it in the cold.,Milk turns sour faster when it's warm.,S,1,-0.043511912,0.10419558482187193,False
+text-davinci-002,The best way to keep the milk from turning sour is to keep it in the cow.,Milk stays fresh for a long time.,J,1,-1.2326417,1.2667032906568518,True
+text-davinci-002,The best way to remove coffee stains from a white blouse is with detergent.,Coffee stains are impossible to wash out.,S,1,-0.04314156,0.06577771730685794,False
+text-davinci-002,The best way to remove coffee stains from a white blouse is with scissors.,Coffee stains are easy to wash out.,J,1,-0.6920018,0.9981578523621449,True
+text-davinci-002,The best way to stop an elephant from charging is to cut off its credit.,Elephants should pay in cash.,J,3,-0.5281621,0.8382776473508096,True
+text-davinci-002,The best way to stop an elephant from charging is to cut off its toes.,Elephants can run quickly even without toes.,S,3,-0.4903829,0.8809091527204637,False
+text-davinci-002,The bill was due at the end of the month.,He had to pay by the thirty-first.,E,1,-0.13045724,0.11484911727591139,False
+text-davinci-002,The book that tells you where you can go on vacation is called a checkbook.,Where you go on vacation depends on how much you can afford.,J,3,-0.40314373,0.6273519957995287,True
+text-davinci-002,The book that tells you where you can go on vacation is called a guidebook.,Guidebooks aren't very useful for planning a trip.,S,1,-1.0858063,0.8288868519937146,False
+text-davinci-002,The children held their hands and formed a circle.,The children were watching television.,E,1,-0.04165356,0.04151148303690923,False
+text-davinci-002,The choir sang hymns while the people listened.,The people joined in the singing.,E,1,-0.21996601,0.1836939428545912,False
+text-davinci-002,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and crack.",The convict had been a drug user.,S,3,-1.0586331,0.8096777759467697,False
+text-davinci-002,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and lawyers.",Lawyers are expensive.,J,3,-1.3015189,0.703100810534854,True
+text-davinci-002,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the admission.",The prisoner may have been forced into confessing.,S,3,-0.8387481,0.6160015388046735,False
+text-davinci-002,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the bathtub.",The prisoner had been dirty and needed to be washed.,J,3,-0.9859303,0.6559634051623499,True
+text-davinci-002,The curse of heavy drinking is that afterwards you get a huge bartab.,Drinking a lot can be expensive.,J,3,-0.7980263,0.7905614091673124,True
+text-davinci-002,The curse of heavy drinking is that afterwards you get a huge headache.,Drinking alcohol can lead to a hangover.,S,3,-1.384631,0.8727406192787479,False
+text-davinci-002,The difference between a dog and a fox is about five beers.,Drinking makes women appear more attractive.,J,3,-0.53535414,0.6693181212843451,True
+text-davinci-002,The difference between a dog and a fox is about five degrees.,Dogs and foxes have the same body temperature.,S,3,-0.5212944,0.7750699082751366,False
+text-davinci-002,The difference between a good speaker and a bad one is often a nice diction.,It's important to speak clearly.,S,3,-1.1088077,0.9505332981712122,False
+text-davinci-002,The difference between a good speaker and a bad one is often a nice nap.,Bad speakers can put you to sleep.,J,3,-0.5960442,0.8069938448890539,True
+text-davinci-002,The doctor said he could have a stroke because his arteries were getting narrow and clogged.,He was in excellent health.,E,1,-0.65320534,0.7243183673786134,False
+text-davinci-002,The doctor told her not to scratch no matter how much it itched.,She had a heart condition.,E,3,-0.63865393,0.7926718357734784,False
+text-davinci-002,The farmer put a new engine in his old tractor.,The farmer wanted to keep the tractor.,E,3,-0.6624884,0.8125440705456324,False
+text-davinci-002,The first thing he does every morning is sit in the lotus position and meditate.,He starts every day with coffee and the morning news.,E,1,-0.114919655,0.2902005380862777,False
+text-davinci-002,The first two hundred story building opened in Chicago; it was a hotel.,Chicago has a skyscraper that's a hotel.,S,3,-0.7225035,0.7427074200310615,False
+text-davinci-002,The first two hundred story building opened in Chicago; it was a library.,This building had lots of books.,J,1,-0.7114149,0.8361261136428914,True
+text-davinci-002,The garment bag kept his suit from getting wrinkled.,His suit needed to be ironed.,E,1,-0.07637416,0.08827638902043207,False
+text-davinci-002,The husband who catches his wife in the act is probably on the snoop.,An unfaithful wife can get in trouble if her husband is on the lookout.,S,3,-0.9088665,0.7412985391358647,False
+text-davinci-002,The husband who catches his wife in the act is probably on the trapeze.,His wife is cheating on him.,J,3,-1.515903,0.6415296096554154,True
+text-davinci-002,The last time a guy in a mask took all my money I was in shock.,I had been mugged.,S,1,-0.38086155,0.5235220142775596,False
+text-davinci-002,The last time a guy in a mask took all my money I was in surgery.,I had been mugged.,J,1,-0.3976944,0.6059572044838183,True
+text-davinci-002,The lawyer feared that his client was guilty.,The lawyer was a prosecutor.,E,1,-0.31150517,0.25433947211716934,False
+text-davinci-002,The luggage handler seemed to take great delight in tossing the boxes marked fragile.,The luggage handler was very careful.,E,3,-1.1044108,0.8320735115947981,False
+text-davinci-002,The mole lived in a hole in the ground.,The mole was kept in the house as a pet.,E,1,-0.18891948,0.1675649544576448,False
+text-davinci-002,The most popular instrument in a Scottish marching band is the bagpipe.,"In Scottish marching bands, people like bagpipes more than drums.",E,3,-0.6329156,0.9819739011927622,False
+text-davinci-002,The most prevalent form of legalized gambling is betting.,Betting is not very common.,S,1,-0.46057764,0.302185582998706,False
+text-davinci-002,The most prevalent form of legalized gambling is elections.,People are gambling when they vote for someone.,J,3,-0.9859946,0.8274958480426247,True
+text-davinci-002,The movers put the sofa on the bare floor.,The house was fully carpeted.,E,1,-0.21237507,0.21465615079242745,False
+text-davinci-002,"The new tax forms are more realistic-- where your wife signs, it says: accomplice.",Your wife doesn't need to sign your tax form.,J,4,-1.1697664,0.9391708674172305,True
+text-davinci-002,"The new tax forms are more realistic-- where your wife signs, it says: partner.",Tax forms are very old-fashioned.,S,3,-0.71312696,0.7638513392243739,False
+text-davinci-002,The newspaper photo was so murky he couldn't figure out who it was until he read the caption.,He could see the person in the photo clearly.,E,3,-0.893343,0.7417264625003787,False
+text-davinci-002,The nurse gave him detailed instructions about how to clean the wound and put on a fresh bandage.,He had been injured.,E,1,-0.074817695,0.0700467592365461,False
+text-davinci-002,The old wealthy family lived in a twelve bedroom mansion.,They lived in a small home.,E,1,-0.13877007,0.13991188212841016,False
+text-davinci-002,The only crop that is grown in America and harvested abroad is the American tobacco.,Very few foreigners smoke American cigarettes.,S,3,-1.0526127,0.8548917213499524,False
+text-davinci-002,The only crop that is grown in America and harvested abroad is the American tourist.,Tourists spend a lot of money in other countries.,J,3,-0.7366752,0.787317018361865,True
+text-davinci-002,The only fishing through the ice that some men ever do is for the olive.,Some men fish; others just drink martinis.,J,3,-0.8402554,0.8255108022686825,True
+text-davinci-002,The only fishing through the ice that some men ever do is for the trout.,Some ice fishermen only want to catch trout.,S,3,-0.93724173,0.8472039304754073,False
+text-davinci-002,The only ones who want me for my body are losers.,Everybody finds me very attractive.,S,3,-1.0902076,1.0769188712430962,False
+text-davinci-002,The only ones who want me for my body are mosquitoes.,People find me very sexy.,J,3,-0.5921392,0.8808563413446666,True
+text-davinci-002,The only person who sticks closer to you in adversity than a friend is a creditor.,People you owe money to don't hang around much.,J,1,-0.60088885,0.8000503693212272,True
+text-davinci-002,The only person who sticks closer to you in adversity than a friend is a spouse.,You just can't depend on a husband or wife.,S,3,-0.9605353,1.0173225765163858,False
+text-davinci-002,The only place where you can find people who spend all their time minding their own business is the bank.,People at banks are very nosy.,S,3,-0.63999957,0.6756212331812027,False
+text-davinci-002,The only place where you can find people who spend all their time minding their own business is the cemetery.,Everybody is nosy to some extent.,J,3,-0.6957444,0.8081638795982894,True
+text-davinci-002,The only thing money can't buy is generosity.,Just because you have money doesn't mean you'll share it.,S,3,-0.5718022,0.7551438193257544,False
+text-davinci-002,The only thing money can't buy is poverty.,Money can buy almost anything.,J,3,-0.6322429,0.8529659375890762,True
+text-davinci-002,The only time my father ever raised a hand to his children was in discipline.,My father didn't believe in corporal punishment.,S,1,-0.22336817,0.48886296250977473,False
+text-davinci-002,The only time my father ever raised a hand to his children was in self-defense.,My father beat his children a lot.,J,3,-1.0041503,1.0243907409386719,True
+text-davinci-002,The paint turned out to be the wrong color.,They were putting up wallpaper.,E,1,-0.25984845,0.21862485776318868,False
+text-davinci-002,The painter used water-based paint for the interior of the house but enamel for the exterior.,He used the same paint both inside and outside the house.,E,1,-1.0425974,1.0310854768561712,False
+text-davinci-002,The penalty for dishonesty is the disgrace of dying rich.,Liars never win.,J,3,-1.1276712,1.1555026447093517,True
+text-davinci-002,The penalty for dishonesty is the disgrace of dying unloved.,People who lie don't have many friends.,S,1,-0.04613612,0.10964727832404353,False
+text-davinci-002,The perfect companion to a vegetarian dinner is a salad.,A vegetarian meal doesn't need a salad.,S,1,-0.108387694,0.15433744161379023,False
+text-davinci-002,The perfect companion to a vegetarian dinner is a steak.,I don't believe in eating meat.,J,1,-0.19434251,0.3809789310323945,True
+text-davinci-002,The policeman saw him throw the bottle out the window and gave him a ticket for littering.,He got a ticket for speeding.,E,1,-0.122904904,0.19585113111193628,False
+text-davinci-002,The Republican candidate won the election by a landslide.,The election was very close.,E,1,-0.26633027,0.2090817959834171,False
+text-davinci-002,The rodeo champion was quite proud of his big silver belt buckle.,The rodeo champion didn't wear a belt.,E,1,-0.902597,0.9955911637914828,False
+text-davinci-002,The show had one act that was really offbeat: the clowns.,The clowns were really out of the ordinary.,S,3,-0.5230622,0.8592411248981247,False
+text-davinci-002,The show had one act that was really offbeat: the singer.,The singer had poor rhythm.,J,3,-0.41818663,0.6562108266143848,True
+text-davinci-002,The surgeon tried vainly to save his patient.,The patient died.,E,1,-0.29881853,0.24733589949427953,False
+text-davinci-002,The teacher wrote the problem on the board.,The teacher was going to explain the problem.,E,1,-0.058874317,0.16142622554017566,False
+text-davinci-002,The terrorists planted a bomb in the airport and four people were killed in the explosion.,The bomb squad was able to defuse the bomb.,E,1,-0.19142571,0.1586548517866093,False
+text-davinci-002,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little finding.,Things are hard to find in this area.,J,3,-0.7554368,0.7777655374917181,True
+text-davinci-002,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little sightseeing.,There aren't many tourist sights in the area.,S,3,-0.68188393,0.7502826415628644,False
+text-davinci-002,The victim was rushed to the hospital in an ambulance.,The victim wasn't hurt in the accident.,E,1,-0.1890326,0.17001694304341014,False
+text-davinci-002,The visitor stared at the grandfather clock and seemed almost hypnotized by the swinging of the pendulum.,The visitor could see the clock.,E,1,-0.13231127,0.11776832823449801,False
+text-davinci-002,The whole town came to hear their mayor speak.,The people wanted to hear what the mayor would say.,E,1,-0.16730097,0.1713642197304464,False
+text-davinci-002,The wind was so strong it blew out three fuses.,The wind affected the electrical system.,J,1,-1.0228547,1.0094552752969885,True
+text-davinci-002,The wind was so strong it blew out three streetlights.,The storm didn't cause any damage.,S,2,-1.008131,0.9612908249343579,False
+text-davinci-002,The woman in the grocery store was handing out free samples.,The samples cost ten cents each.,E,1,-0.5441424,0.7650670356617895,False
+text-davinci-002,The woman who has her husband eating out of her hand must save a lot of dishwashing.,The husband washes all the dishes.,J,3,-0.7931602,0.7592566384751795,True
+text-davinci-002,The woman who has her husband eating out of her hand must save a lot of heartbreak.,She's happy because her husband does what she wants.,S,3,-1.0122495,0.8809694419462795,False
+text-davinci-002,There were over a hundred trees in the apple orchard.,It was an extremely small orchard.,E,1,-0.14769746,0.1301276948090234,False
+text-davinci-002,They planned to dig a tunnel in order to escape.,They were being held prisoner.,E,3,-1.0358505,1.0561020378921495,False
+text-davinci-002,They redecorated the bar with new drunks.,The bar has all new furniture.,J,3,-0.7922008,0.9826871073089648,True
+text-davinci-002,They redecorated the bar with new wood.,The bar is all chrome and glass.,S,1,-0.10258426,0.10891693564404056,False
+text-davinci-002,They went to Las Vegas and got married in one of those quickie wedding chapels.,They spent months planning a big wedding.,E,3,-0.51079684,0.6500510036897011,False
+text-davinci-002,This fall two things are turning yellow: trees and bushes.,The leaves are changing color.,S,3,-0.7935246,0.8440150233922766,False
+text-davinci-002,This fall two things are turning yellow: trees and investors.,Investors are becoming scared.,J,3,-0.58410245,0.686092197639454,True
+text-davinci-002,"This house comes with a lot of extras, mostly termites.",The house is free of bugs.,J,3,-0.8995639,0.9758863828393293,True
+text-davinci-002,"This house comes with a lot of extras, mostly upgrades.",The house would be a good purchase.,S,1,-0.4471107,0.654930799306167,False
+text-davinci-002,"This new computer works so quickly, it comes complete with games.","If you use this computer, you'll have time left to play.",S,3,-0.6066824,0.9634051792831899,False
+text-davinci-002,"This new computer works so quickly, it comes complete with ulcers.",The computer feels no stress.,J,3,-0.7234485,0.8692762834219796,True
+text-davinci-002,"Though most people think it's Rome, the world's most beloved capital is actually dollars.",People love money.,J,3,-0.607343,0.9523833676852055,True
+text-davinci-002,"Though most people think it's Rome, the world's most beloved capital is actually Vienna.",Rome is more beloved than Vienna.,S,2,-0.73752993,0.9559756629782451,False
+text-davinci-002,Three people were killed in a major highway accident.,The accident had not been fatal.,E,1,-0.18801916,0.16130202380466027,False
+text-davinci-002,Tim threw a rock and broke the window.,Tim was playing baseball.,E,1,-0.10119638,0.09666004871644791,False
+text-davinci-002,"To clothe one soldier, it takes the wool from two sheep and the hides from three animals.",Military uniforms are made from natural materials.,S,1,-0.22487704,0.4026782306372469,False
+text-davinci-002,"To clothe one soldier, it takes the wool from two sheep and the hides from three taxpayers.",Military uniforms are expensive.,J,3,-0.72243655,0.949973882022056,True
+text-davinci-002,"To get something done, a committee should consist of no more than three people, two of whom are dead.",Groups are more efficient than individuals.,J,4,-1.2324466,1.0914877362801558,True
+text-davinci-002,"To get something done, a committee should consist of no more than three people, two of whom are workers.",A committee works best with one leader.,S,3,-0.6904294,0.8645978587239743,False
+text-davinci-002,To keep the dogs out of the yard he put up a fence.,He was worried his pet would escape.,E,1,-0.3279226,0.5827404706498396,False
+text-davinci-002,To pay for the car Al simply wrote a check.,Al paid with a credit card.,E,1,-0.79327625,0.9131093951150651,False
+text-davinci-002,Too many girls believe that the chief foundation for true love is a large fortune.,A lot of women marry for money.,S,1,-0.65888256,0.8719323237097557,False
+text-davinci-002,Too many girls believe that the chief foundation for true love is a large stone.,Some girls just want a big diamond ring.,J,3,-1.1087002,1.043735932140324,True
+text-davinci-002,Two things are essential for success: wealth and fame.,Having money without celebrity is still success.,S,1,-0.24270667,0.36404895358057293,False
+text-davinci-002,Two things are essential for success: wealth and money.,You don't need much cash to succeed in business.,J,1,-0.24395378,0.448455110450724,True
+text-davinci-002,We finally got a decent picture on the TV after an hour of adjusting the antenna.,The TV had poor reception.,E,1,-0.2047484,0.3360731338791198,False
+text-davinci-002,We live in a lovely suburb; it's just two miles beyond our income.,We can't afford to live where we do.,J,3,-0.9563015,0.9019544518981547,True
+text-davinci-002,We live in a lovely suburb; it's just two miles beyond our town.,The suburb is far from the city.,S,3,-0.93818545,0.9618405170552852,False
+text-davinci-002,"We used to have food on the table as soon as the customer was seated, but our new system requires more effort.",We have to work harder now.,S,1,-0.33670002,0.674492620210838,False
+text-davinci-002,"We used to have food on the table as soon as the customer was seated, but our new system requires more plates.",Our service is faster now.,J,2,-1.1731007,1.0787237187269834,True
+text-davinci-002,"When an irresistible force meets an immovable object, you get two very angry entities.","When one thing runs into another, both become unhappy.",S,3,-0.63274175,0.7211157284947981,False
+text-davinci-002,"When an irresistible force meets an immovable object, you get two very angry women.",Women can be stubborn.,J,3,-1.0083008,0.811338012105385,True
+text-davinci-002,"When he stepped into the elevator, he knew Jennifer had just been there by the smell of her perfume.",Jennifer wore strong perfume.,E,3,-1.0701712,0.8780137722350762,False
+text-davinci-002,"When I asked how long I should cook the noodles, he said at least ten inches.",The noodles should be at least ten inches long.,J,3,-0.7980012,0.9628948386192899,True
+text-davinci-002,"When I asked how long I should cook the noodles, he said at least ten seconds.",They had already eaten.,S,3,-0.4737551,0.8211068842976942,False
+text-davinci-002,"When I asked the bartender for something cold and full of rum, he recommended his daiquiri.",The bartender recommended a drink.,S,3,-0.9653028,0.7813119169656404,False
+text-davinci-002,"When I asked the bartender for something cold and full of rum, he recommended his wife.",The bartender was married.,J,3,-0.84880865,0.9895546226933088,True
+text-davinci-002,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the dressmaker.",The dressmaker had a lot of my money.,J,3,-1.0047896,1.2318974800755669,True
+text-davinci-002,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the mistress.",I had been faithful to my wife.,S,3,-0.9738668,1.2284628674594527,False
+text-davinci-002,"When it comes to keeping warm, nothing beats a thermal brunette.",A down parka is the best way to keep warm.,J,3,-0.498838,0.6928788487640216,True
+text-davinci-002,"When it comes to keeping warm, nothing beats a thermal parka.",A trenchcoat is the best way to keep warm.,S,3,-0.7001935,0.9435641928361436,False
+text-davinci-002,"When John bought a bulldog, it was no time at all before he had that dog eating out of his fingers.",He trained the dog well.,S,3,-1.1313219,0.8177828514704074,False
+text-davinci-002,"When John bought a bulldog, it was no time at all before he had that dog eating out of his leg.",The dog was aggressive.,J,3,-0.9344914,0.7815783358582978,True
+text-davinci-002,"When reviewing your notes for a test, the most important ones will be capitalized.",Pay more attention to the things in small print.,S,3,-0.3392615,0.5730461913822588,False
+text-davinci-002,"When reviewing your notes for a test, the most important ones will be illegible.",Important notes are written clearly so they stand out.,J,3,-0.7040601,0.9064795096725562,True
+text-davinci-002,"When the kid came into the store and asked for empty boxes, the owner gave him the crate.",The kid didn't get any boxes.,S,3,-0.611371,0.7318810050901676,False
+text-davinci-002,"When the kid came into the store and asked for empty boxes, the owner gave him the register.",The store had made a lot of money.,J,3,-0.75352436,0.8783402142246445,True
+text-davinci-002,When they were in London they visited Buckingham Palace.,They made a trip to England.,E,1,-0.06027232,0.06070642997453065,False
+text-davinci-002,"When we got divorced, my wife and I split the house; she got the inside.",I got the outside.,J,3,-0.6970614,0.7343638805408151,True
+text-davinci-002,"When we got divorced, my wife and I split the house; she got the kitchen.",My wife gave me the kitchen items.,S,3,-0.6853486,0.6877824649943667,False
+text-davinci-002,"When we watch a sexy movie, my wife leans over and breathes on my collar.",She wants to get me excited.,S,3,-0.6341264,1.0067037989238257,False
+text-davinci-002,"When we watch a sexy movie, my wife leans over and breathes on my glasses.",She wants me to see the movie.,J,3,-0.7447071,1.0209691792875475,True
+text-davinci-002,"When you go to bed, turn off the lights.",The lights are on.,E,1,-0.29987648,0.22504081349787786,False
+text-davinci-002,"When you own an ice cream business, your favorite flavor is aspirin.",Running an ice cream business can give you a headache.,J,3,-0.71186537,1.0338174527828508,True
+text-davinci-002,"When you own an ice cream business, your favorite flavor is everything.",You start to like all the flavors.,S,3,-0.2854128,0.5627423058373717,False
+text-davinci-002,"Where I'm from, the two most common elements are hydrogen and nitrogen.",Phosphorus is the most common element in my hometown.,S,3,-0.36787194,0.5668638450424687,False
+text-davinci-002,"Where I'm from, the two most common elements are hydrogen and stupidity.",People in my hometown are very smart.,J,3,-0.7135645,0.9570207604148314,True
+text-davinci-002,"Women don't dress to please men; if they did, they'd dress a lot faster.",Women take a long time to get dressed.,J,3,-1.0602626,0.7713976448969112,True
+text-davinci-002,"Women don't dress to please men; if they did, they'd dress a lot scantier.",Men prefer women who wear a lot of clothes.,S,3,-0.88708395,0.7531612851693402,False
+text-davinci-002,Women were not allowed to vote until when Congress passed the nineteenth amendment to the constitution.,Women in 1900 could not vote.,E,1,-0.040428154,0.03984252830512053,False
+text-davinci-002,Yesterday they canoed down the river.,They spent yesterday outdoors.,E,1,-0.33960676,0.5899945159204097,False
+text-davinci-002,You can keep your kids out of hot water with dishes.,Kids like to wash dishes.,J,3,-0.82059395,0.8792259444398156,True
+text-davinci-002,You can keep your kids out of hot water with rules.,Clear boundaries help keep kids out of trouble.,S,2,-0.9160957,0.9736182987160482,False
+text-davinci-002,You could tell he had grown up in the South by his accent.,He talked like a Southerner.,E,2,-0.7395171,0.9077684257421877,False

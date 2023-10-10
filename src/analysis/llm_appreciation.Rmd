@@ -1,0 +1,261 @@
+---
+title: "Analysis of GPT-3 Humor Appreciation"
+author: "Drew Walker, Sean Trott, Seana Coulson"
+date: "July 19, 2023"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lmtest)
+library(forcats)
+library(broom)
+library(lme4)
+library(ggridges)
+library(lmerTest)
+```
+
+# Load data
+
+## Load classification task
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_class = read_csv("../../data/processed/llm_classification.csv")
+nrow(df_class)
+
+head(df_class)
+```
+
+
+## Load appreciation task
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_app = read_csv("../../data/processed/llm_appreciation.csv")
+nrow(df_app)
+
+head(df_app)
+
+```
+
+
+## Load surprisals
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_surprisals = read_csv("../../data/processed/results_gpt.csv")
+df_surprisals_td02 = df_surprisals %>%
+  filter(model == "text-davinci-002")
+```
+
+
+# Classification task
+
+## Merge with surprisals
+
+```{r}
+df_class_merged = df_class %>%
+  inner_join(df_surprisals)
+
+nrow(df_class_merged)
+```
+
+
+## `Log Odds ~ Is Joke`
+
+Overall, there is a very clear effect: GPT-3 assigns higher probability to the "yes" answer (as in, *yes*, this is a joke) for jokes than non-jokes.
+
+```{r}
+mod_full = lm(data = df_class_merged, lp_ratio ~ is_joke)
+summary(mod_full)
+```
+
+Though interestingly, GPT-3 seems biased towards a *no* response (i.e., log-odds is generally negative):
+
+```{r}
+df_class_merged %>%
+  group_by(is_joke) %>%
+  summarise(m = mean(lp_ratio),
+            sd = sd(lp_ratio))
+```
+
+
+We can also visualize this:
+
+```{r}
+df_class_merged %>%
+  ggplot(aes(x = lp_ratio,
+             y = is_joke,
+             fill = is_joke)) +
+  geom_density_ridges2(aes(height = ..density..), 
+                       color=gray(0.25), 
+                       alpha = 0.5, 
+                       scale=0.85, 
+                       size=.9, 
+                       stat="density") +
+  labs(x = "GPT-3 Log-odds (yes vs. no)",
+       y = "Joke vs. Non-Joke",
+       fill = "Joke vs. Non-Joke") +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  theme_minimal() +
+  # scale_fill_viridis_d() +
+  theme(
+    legend.position = "bottom"
+  ) + 
+  theme(axis.title = element_text(size=rel(2)),
+        axis.text = element_text(size = rel(2)),
+        legend.text = element_text(size = rel(2)),
+        legend.title = element_text(size = rel(2)),
+        strip.text.x = element_text(size = rel(2)))
+
+
+df_class_merged %>%
+  ggplot(aes(x = is_joke,
+             y = lp_ratio)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Joke vs. Non-joke",
+       y = "Log Odds (Yes vs. No)") +
+  theme_minimal() 
+
+```
+
+
+# Appreciation task
+
+## Merge with surprisals
+
+```{r}
+df_app_merged = df_app %>%
+  inner_join(df_surprisals)
+
+nrow(df_app_merged)
+```
+
+
+```{r}
+mean(df_app_merged$best_response)
+df_app_merged %>%
+  ggplot(aes(x = best_response)) +
+  geom_histogram(bins = 5, alpha = .5) +
+  theme_minimal() +
+  labs(x = "Response") 
+```
+
+
+
+## `Funniness ~ Is Joke + Surprisal`
+
+```{r}
+mod_full = lm(data = df_app_merged, best_response ~ is_joke + surprisal)
+summary(mod_full)
+```
+
+Both factors explain variance.
+
+```{r}
+df_app_merged %>%
+  group_by(is_joke) %>%
+  summarise(m = mean(best_response),
+            sd = sd(best_response))
+
+df_app_merged %>%
+  ggplot(aes(x = is_joke,
+             y = best_response)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Joke vs. Non-joke",
+       y = "Funniness Rating (GPT-3)") +
+  theme_minimal() 
+
+df_app_merged %>%
+  ggplot(aes(x = best_response,
+             y = surprisal,
+             color = is_joke)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                # position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  labs(x = "Funniness Rating (GPT-3)",
+       y = "Surprisal",
+       color = "Joke vs. Non-joke") +
+  theme_minimal() 
+
+
+```
+
+
+# Exploratory
+
+## Classification
+
+```{r}
+mod_full = lm(data = df_class_merged, lp_ratio ~ is_joke * surprisal)
+summary(mod_full)
+
+
+df_class_merged %>%
+  ggplot(aes(x = surprisal, y = lp_ratio, color = is_joke)) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(x = "Surprisal",
+       y = "Log Odds (Yes vs. No)",
+       title = "Joke Classification") +
+  facet_wrap(~is_joke)
+```
+
+
+## `Entropy ~ Is Joke + Surprisal`
+
+```{r}
+mod_full = lm(data = df_app_merged, entropy ~ is_joke * surprisal)
+summary(mod_full)
+
+
+df_app_merged %>%
+  ggplot(aes(x = surprisal, y = entropy, color = is_joke)) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(x = "Surprisal",
+       y = "Entropy over Funniness Responses",
+       title = "Funniness Responses") +
+  facet_wrap(~is_joke)
+
+```
+
+
+## Select items
+
+For joke detection (LLMs):
+
+```{r}
+df_class_merged %>%
+  filter(is_joke == FALSE) %>%
+  filter(lp_ratio > 0) %>%
+  select(sentence, condition, lp_ratio, surprisal)
+```
+
+
+

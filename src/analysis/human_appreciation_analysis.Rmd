@@ -1,0 +1,764 @@
+---
+title: "Comparison of human and LLM humor appreciation"
+author: "Drew Walker, Sean Trott, Seana Coulson"
+date: "September 7, 2023"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lmtest)
+library(forcats)
+library(broom)
+library(lme4)
+library(ggridges)
+library(lmerTest)
+```
+
+# Load data
+
+## LLM data
+
+
+### Load classification task
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_class = read_csv("../../data/processed/llm_classification.csv")
+nrow(df_class)
+
+head(df_class)
+```
+
+
+### Load appreciation task
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_app = read_csv("../../data/processed/llm_appreciation.csv")
+nrow(df_app)
+
+head(df_app)
+
+```
+
+
+
+### Load surprisals
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_surprisals = read_csv("../../data/processed/results_gpt.csv")
+df_surprisals_td02 = df_surprisals %>%
+  filter(model == "text-davinci-002")
+
+### clean up
+df_surprisals_td02 = df_surprisals_td02 %>%
+  mutate(Sentence = sentence) %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  select(Sentence, StimType, log_prob, surprisal, num_tokens)
+```
+
+
+## Human data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+df_cleaned = read_csv("../../data/processed/human_data_appreciation/JokeFunniness_data_153Subs.csv")
+nrow(df_cleaned)
+
+head(df_cleaned)
+
+length(unique(df_cleaned$ParticipantID))
+
+```
+
+### Merge with LLM surprisal
+
+```{r}
+df_merged_surprisal = df_cleaned %>%
+  left_join(df_surprisals_td02)
+nrow(df_merged_surprisal)
+
+cor.test(df_merged_surprisal$Spreadsheet..Surprisal, df_merged_surprisal$surprisal)
+```
+
+
+### Exclusions
+
+Exclusion criteria have already been applied.
+
+
+# Analysis of human data
+
+First, we conduct an analysis of the human data.
+
+## Classification: `ResponseJoke ~ Is_Joke`
+
+First, we ask whether humans correctly identify jokes as jokes, and vice versa.
+
+
+```{r}
+mod_full = glmer(data = df_cleaned,
+                 ResponseJoke ~ Is_Joke + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+mod_reduced = glmer(data = df_cleaned,
+                 ResponseJoke ~  (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+summary(mod_full)
+anova(mod_full, mod_reduced)
+```
+
+The answer is **yes**: in general people are very accurate.
+
+```{r}
+df_cleaned = df_cleaned %>%
+  mutate(correct_isjoke = ResponseJoke == Is_Joke)
+
+mean(df_cleaned$correct_isjoke)
+
+df_cleaned %>%
+  group_by(Is_Joke) %>%
+  summarize(accuracy = mean(correct_isjoke))
+```
+
+## Adding `Surprisal`
+
+
+### `Response ~ Surprisal + Is_Joke`
+
+Does surprisal of the final word influence responses, above and beyond `Is_Joke`? And vice versa?
+
+```{r}
+mod_full = glmer(data = df_merged_surprisal,
+                 ResponseJoke ~ Is_Joke + surprisal + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+mod_isjoke = glmer(data = df_merged_surprisal,
+                 ResponseJoke ~  Is_Joke + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+mod_surprisal = glmer(data = df_merged_surprisal,
+                 ResponseJoke ~  surprisal + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+summary(mod_full)
+anova(mod_full, mod_isjoke)
+anova(mod_full, mod_surprisal)
+```
+
+Again, the answer is **yes**: both variables *independently predict* classification of something as a joke.
+
+
+### `Funniness ~ Is_Joke * Surprisal`
+
+Now we ask: does the surprisal of the final word influence **funniness ratings**, above and beyond `Is_Joke`? And vice versa? And is there an interaction?
+
+```{r}
+mod_interaction = lmer(data = df_merged_surprisal,
+                 ResponseFunny ~ Is_Joke * surprisal + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+mod_me = lmer(data = df_merged_surprisal,
+                 ResponseFunny ~ Is_Joke + surprisal + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+mod_isjoke = lmer(data = df_merged_surprisal,
+                 ResponseFunny ~  Is_Joke + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+mod_surprisal = lmer(data = df_merged_surprisal,
+                 ResponseFunny ~  surprisal + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+summary(mod_interaction)
+anova(mod_me, mod_interaction)
+anova(mod_me, mod_isjoke)
+anova(mod_me, mod_surprisal)
+```
+
+Once again, the answer is **yes**. 
+
+- Funniness ratings increase for higher-surprisal sentences.
+- Funniness ratings increase for jokes.  
+- As depicted below, the effect of `surprisal` seems much stronger for jokes: i.e., sentence-final surprisal predicts funniness ratings for non-jokes, but less so for jokes.
+
+
+```{r}
+df_merged_surprisal %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  ggplot(aes(x = surprisal_binned,
+             y = ResponseFunny,
+             color = factor(Is_Joke))) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  labs(x = "Binned Surprisal",
+       y = "Human Funniness Rating",
+       color = "Is Joke")
+  
+```
+
+
+# Comparison of human and LLM performance
+
+## Approach 1
+
+In this first analysis, we directly compare LLM and human accuracy.
+
+### Merging data
+
+#### Classification data
+
+```{r}
+
+df_class_cleaned_direct = df_class %>%
+  mutate(Sentence = sentence) %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  mutate(ResponseJoke = case_when(
+    lp_ratio > 0 ~ 1,
+    lp_ratio <= 0 ~ 0
+  )) %>%
+  mutate(Is_Joke = case_when(
+    is_joke == TRUE ~ 1,
+    is_joke == FALSE ~ 0
+  )) %>%
+  mutate(IsJokeResponseCorrect = Is_Joke == ResponseJoke) %>%
+  select(Sentence, StimType, Is_Joke, ResponseJoke, IsJokeResponseCorrect, lp_ratio) %>%
+  mutate(Source = "LLM") %>%
+  inner_join(df_surprisals_td02)
+
+mean(df_class_cleaned_direct$ResponseJoke)
+mean(df_class_cleaned_direct$IsJokeResponseCorrect)
+
+df_merged_class_stacked = df_merged_surprisal %>%
+  # mutate(Sentence = paste(Sentence, ".", sep = "")) %>%
+  mutate(Source = "Human") %>%
+  bind_rows(df_class_cleaned_direct)
+
+nrow(df_merged_class_stacked)
+```
+
+#### Appreciation data
+
+```{r}
+
+df_app_cleaned_direct = df_app %>%
+  mutate(Sentence = sentence) %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  mutate(ResponseFunny = best_response) %>%
+  mutate(Is_Joke = case_when(
+    is_joke == TRUE ~ 1,
+    is_joke == FALSE ~ 0
+  )) %>%
+  select(Sentence, StimType, Is_Joke, ResponseFunny) %>%
+  mutate(Source = "LLM") %>%
+  inner_join(df_surprisals_td02)
+
+
+df_merged_app_stacked = df_merged_surprisal %>%
+  # mutate(Sentence = paste(Sentence, ".", sep = "")) %>%
+  mutate(Source = "Human") %>%
+  bind_rows(df_app_cleaned_direct)
+
+nrow(df_merged_app_stacked)
+```
+
+### Humans vs. LLMs: humor detection
+
+#### `Correct Response ~ Source`
+
+Both humans and LLMs show sensitivity to whether something is a joke, but td-002 is biased towards assigning lower probability towards something being a joke in general. Thus, overall, humans are considerably more accurate (especially for jokes).
+
+```{r}
+mod_just_source = glmer(data = df_merged_class_stacked,
+                 IsJokeResponseCorrect ~ Source + 
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+mod_no_source = glmer(data = df_merged_class_stacked,
+                 IsJokeResponseCorrect ~ # Source +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+summary(mod_just_source)
+anova(mod_just_source, mod_no_source)
+
+
+```
+
+We can describe and visualize this in a few ways.
+
+First, the overall descriptive statistics:
+
+```{r}
+
+df_merged_class_stacked %>%
+  group_by(Source) %>%
+  summarise(accuracy = mean(IsJokeResponseCorrect))
+
+df_merged_class_stacked %>%
+  group_by(Source, Is_Joke) %>%
+  summarise(accuracy = mean(IsJokeResponseCorrect))
+```
+
+Then, comparing LLM accuracy to human distribution of accuracy:
+
+```{r}
+df_by_subj = df_merged_surprisal %>%
+  group_by(ParticipantID) %>%
+  summarise(accuracy = mean(IsJokeResponseCorrect))
+
+llm_accuracy = mean(df_class_cleaned_direct$IsJokeResponseCorrect)
+
+df_by_subj %>%
+  ggplot(aes(x = accuracy)) +
+  geom_histogram(alpha = .5) +
+  geom_vline(xintercept = llm_accuracy, linetype = "dotted") +
+  theme_minimal() +
+  labs(x = "Accuracy: Humor Detection",
+       title = "LLM vs. Human Accuracy")
+```
+
+And finally, exhibiting the **bias** LLMs have towards "no" responses overall.
+
+```{r}
+df_merged_class_stacked %>%
+  ggplot(aes(x = Source,
+             y = ResponseJoke,
+             color = factor(Is_Joke))) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted") +
+  labs(x = "Source",
+       y = "P(Joke)",
+       color = "Is Joke")
+```
+
+#### `ResponseJoke ~ Source * surprisal`
+
+Are human or LLM responses more influenced by final-word surprisal? Somewhat surprisingly, it appears the positive effect of `surprisal` is *mildly but significantly attenuated* for LLMs. That is, the model with interactions detects the following effects:
+
+- LLMs are less likely to classify things as jokes.  
+- Sentence-final `surprisal` is positively correlated with `p(joke)`.  
+- But for LLMs, sentence-final `surprisal` is less predictive of `p(joke)`. 
+
+```{r}
+mod_interaction = glmer(data = df_merged_class_stacked,
+                 ResponseJoke ~ Source * surprisal +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+mod_just_fe = glmer(data = df_merged_class_stacked,
+                 ResponseJoke ~ Source + surprisal +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+summary(mod_interaction)
+anova(mod_interaction, mod_just_fe)
+
+```
+
+
+This point can be illustrated by *binning surprisal*, then plotting `p(joke)` for both humans and LLMs. We see that:
+
+- For jokes, humans are unaffected by sentence-final surprisal.  
+- For non-jokes, humans are positively affected, i.e., `p(joke)` goes up.  
+- There is no significant difference in `p(joke)` for LLMs as a function of surprisal.
+
+
+```{r}
+df_merged_class_stacked %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  ggplot(aes(x = surprisal_binned,
+             y = ResponseJoke,
+             color = factor(Is_Joke))) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  labs(x = "Binned Surprisal",
+       y = "P(Joke)",
+       color = "Is Joke") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted") +
+  facet_wrap(~Source)
+```
+
+It's even clearer if we ignore `Is_Joke` and just look at `surprisal` and `p(joke)`. 
+
+```{r}
+
+df_merged_class_stacked %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  ggplot(aes(x = Source,
+             y = ResponseJoke,
+             color = factor(surprisal_binned))) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  labs(x = "Source",
+       y = "P(Joke)",
+       color = "Binned Surprisal") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted")
+```
+
+
+### Humans vs. LLMs: humor appreciation
+
+#### `Funniness ~ Source * Surprisal`
+
+Are LLM funniness ratings more related to sentence-final surprisal? 
+
+It *does* appear there is an interaction. The full model has the following effects:
+
+- LLMs have higher funniness ratings on average.  
+- `surprisal` is positively correlated with funniness.  
+- The effect of `surprisal` is even more positive for LLMs.
+
+```{r}
+mod_interaction = lmer(data = df_merged_app_stacked,
+                 ResponseFunny ~ Source * surprisal + 
+                   (1 | Sentence),
+                 REML = FALSE)
+
+mod_just_fe = lmer(data = df_merged_app_stacked,
+                 ResponseFunny ~ Source + surprisal + 
+                   (1 | Sentence),
+                 REML = FALSE)
+
+summary(mod_interaction)
+anova(mod_interaction, mod_just_fe)
+```
+
+One way to illustrate this is to bin surprisal and visualize funniness by binned surprisal and `Source`. Here, the effect doesn't look all that big, but it is significant.
+
+```{r}
+
+df_merged_app_stacked %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  ggplot(aes(x = Source,
+             y = ResponseFunny,
+             color = factor(surprisal_binned))) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  # scale_y_continuous(limits = c(1, 5)) +
+  labs(x = "Source",
+       y = "Funniness Ratings",
+       color = "Binned Surprisal")
+```
+
+
+We can also add `Is_Joke` to the mix. Here, it becomes a little clearer that the effect of `surprisal` is:
+
+- Driven primarily by *non-jokes* (for both humans and LLMs).  
+- Larger for LLMs (again, for *non-jokes* in particular). 
+
+```{r}
+df_merged_app_stacked %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  ggplot(aes(x = Source,
+             y = ResponseFunny,
+             color = factor(surprisal_binned))) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  # scale_y_continuous(limits = c(1, 5)) +
+  labs(x = "Source",
+       y = "Funniness Ratings",
+       color = "Binned Surprisal") +
+  facet_wrap(~Is_Joke)
+```
+
+
+## Approach 2
+
+### Merging data
+
+#### Merging with classification data
+
+```{r}
+df_class_cleaned = df_class %>%
+  mutate(Sentence = sentence) %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  select(Sentence, StimType, lp_ratio, yes_lp, no_lp)
+
+df_merged_class = df_merged_surprisal %>%
+  left_join(df_class_cleaned)
+nrow(df_merged_class)
+```
+
+#### Merging with appreciation data
+
+```{r}
+df_app_cleaned = df_app %>%
+  mutate(Sentence = sentence) %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  select(Sentence, StimType, best_response, best_response_lp, entropy)
+
+df_merged_app = df_merged_surprisal %>%
+  left_join(df_app_cleaned)
+nrow(df_merged_app)
+```
+
+
+
+
+### `Response_joke ~ Is_joke + LLM_response`
+
+Here, we ask whether LLM responses can *explain away* the effect of recognizing things as jokes.
+
+We find independent effects of the probability an LLM assigns to something being a joke, and the factor of whether something *is* actually being a joke.
+
+
+```{r}
+mod_full = glmer(data = df_merged_class,
+                 ResponseJoke ~ Is_Joke + lp_ratio + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+mod_isjoke = glmer(data = df_merged_class,
+                 ResponseJoke ~  Is_Joke + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+mod_surprisal = glmer(data = df_merged_class,
+                 ResponseJoke ~  lp_ratio + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+summary(mod_full)
+anova(mod_full, mod_isjoke)
+anova(mod_full, mod_surprisal)
+```
+
+
+### `Human Funniness Rating ~ LLM Funniness Rating`
+
+Here, we ask whether LLM funniness ratings are correlated with human funniness ratings in general.
+
+The answer is **yes**: items that LLMs rate as funnier are also rated as funnier by humans.
+
+```{r}
+mod_basic = lmer(data = df_merged_app,
+                 ResponseFunny ~ best_response + (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+mod_null = lmer(data = df_merged_app,
+                 ResponseFunny ~ (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+summary(mod_basic)
+anova(mod_basic, mod_null)
+
+```
+
+We can visualize this below:
+
+```{r}
+df_merged_app %>%
+  ggplot(aes(x = best_response,
+             y = ResponseFunny)) +
+  stat_summary (fun = function(x){mean(x)},
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                geom= 'pointrange', 
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .5) +
+  theme_minimal() +
+  labs(x = "GPT-3 Funniness Rating",
+       y = "Human Funniness Rating")
+```
+
+
+# Exploratory analyses
+
+## Correlation between funniness ratings
+
+A more direct comparison is to compare the *averaged* funniness ratings by item for humans to LLM ratings.
+
+```{r}
+df_merged_app_summ = df_merged_app %>%
+  group_by(Sentence, Is_Joke) %>%
+  summarise(mean_funniness = mean(ResponseFunny),
+            llm_response = mean(best_response))
+
+cor.test(df_merged_app_summ$mean_funniness, df_merged_app_summ$llm_response)
+```
+
+
+## `Response_joke ~ Is_joke + LLM_response + surprisal`
+
+Here, I'm curious whether LLM responses about whether something is a joke explain independent variance from sentence-final surprisal. It appears that they *do*.
+
+
+```{r}
+mod_full = glmer(data = df_merged_class,
+                 ResponseJoke ~ Is_Joke + lp_ratio + surprisal +(1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial())
+
+summary(mod_full)
+```
+
+
+## `Human Funniness Rating ~ LLM Funniness Rating * Is_Joke + surprisal * Is_joke`
+
+Here, I'm curious whether LLM funniness ratings explain independent variance from whether something is a joke and `surprisal`. It appears that they *do*, and that there is no interaction between `LLM rating * is_joke`. 
+
+That is:
+
+- Jokes are rated as funnier by humans.  
+- LLM funniness ratings are positively correlated with human funniness ratings.  
+- There is no interaction between these factors. 
+- Sentence-final `surprisal` does explain additional variance. 
+- As already shown in the pre-registered analysis, the effect of `surprisal` is stronger for non-jokes.
+
+
+```{r}
+mod_full = lmer(data = df_merged_app,
+                 ResponseFunny ~ best_response * Is_Joke + surprisal * Is_Joke+ (1 | ParticipantID) +
+                   (1 | Sentence),
+                 REML = FALSE)
+
+summary(mod_full)
+
+```
+
+## Select items
+
+
+Detection:
+
+```{r}
+df_subset_detection = df_merged_class %>%
+  # filter(Is_Joke == FALSE) %>%
+  # filter(ResponseJoke == TRUE) %>%
+  group_by(Sentence, Is_Joke) %>%
+  summarise(prop_joke = mean(ResponseJoke),
+            mean_surprisal = mean(surprisal),
+            mean_lp = mean(lp_ratio))
+
+df_subset_detection %>%
+  ggplot(aes(x = mean_surprisal,
+             y = prop_joke)) +
+  geom_point(alpha = .5) +
+  geom_smooth(method = "lm") +
+  theme_minimal()
+
+df_subset_detection %>%
+  ggplot(aes(x = mean_surprisal,
+             y = mean_lp)) +
+  geom_point(alpha = .5) +
+  geom_smooth(method = "lm") +
+  theme_minimal()
+
+cor.test(df_subset_detection$mean_surprisal, df_subset_detection$prop_joke)
+cor.test(df_subset_detection$mean_surprisal, df_subset_detection$mean_lp)
+
+```
+
+
+Appreciation:
+
+```{r}
+df_subset_appreciation = df_merged_app %>%
+  filter(Is_Joke == FALSE) %>%
+  # filter(ResponseJoke == TRUE) %>%
+  group_by(Sentence) %>%
+  summarise(mean_rating = mean(ResponseFunny),
+            mean_surprisal = mean(surprisal),
+            mean_rating_llm = mean(best_response))
+
+df_subset_appreciation %>%
+  ggplot(aes(x = mean_surprisal,
+             y = mean_rating)) +
+  geom_point(alpha = .5) +
+  geom_smooth(method = "lm") +
+  theme_minimal()
+
+df_subset_appreciation %>%
+  ggplot(aes(x = mean_surprisal,
+             y = mean_rating_llm)) +
+  geom_point(alpha = .5) +
+  geom_smooth(method = "lm") +
+  theme_minimal()
+
+cor.test(df_subset_appreciation$mean_surprisal, df_subset_appreciation$mean_rating)
+cor.test(df_subset_appreciation$mean_surprisal, df_subset_appreciation$mean_rating_llm)
+
+```
+
