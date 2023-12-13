@@ -3,10 +3,14 @@ title: "Comparison of human and LLM humor appreciation"
 author: "Drew Walker, Sean Trott, Seana Coulson"
 date: "September 7, 2023"
 output:
-  html_document:
-    keep_md: yes
-    toc: yes
-    toc_float: yes
+  pdf_document: 
+      fig_caption: yes
+      keep_md: yes
+      keep_tex: yes
+  # html_document:
+  #   keep_md: yes
+  #   toc: yes
+  #  toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -22,6 +26,7 @@ library(broom)
 library(lme4)
 library(ggridges)
 library(lmerTest)
+library(viridis)
 ```
 
 # Load data
@@ -92,8 +97,6 @@ length(unique(df_cleaned$ParticipantID))
 df_merged_surprisal = df_cleaned %>%
   left_join(df_surprisals_td02)
 nrow(df_merged_surprisal)
-
-cor.test(df_merged_surprisal$Spreadsheet..Surprisal, df_merged_surprisal$surprisal)
 ```
 
 
@@ -210,7 +213,8 @@ Once again, the answer is **yes**.
 
 ```{r}
 df_merged_surprisal %>%
-  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "Low", "High")) %>%
+  mutate(surprisal_binned = fct_relevel(surprisal_binned, "Low")) %>%
   ggplot(aes(x = surprisal_binned,
              y = ResponseFunny,
              color = factor(Is_Joke))) +
@@ -358,26 +362,42 @@ df_by_subj %>%
        title = "LLM vs. Human Accuracy")
 ```
 
-And finally, exhibiting the **bias** LLMs have towards "no" responses overall.
+Comparing to humans in a plot:
 
-```{r}
+```{r 2b}
+df_merged_class_stacked = df_merged_class_stacked %>%
+  mutate(is_joke = case_when(
+    Is_Joke == 1 ~ "Joke",
+    Is_Joke == 0 ~ "Non-joke"
+  ))
+df_merged_class_stacked$is_joke = factor(df_merged_class_stacked$is_joke, levels=c("Non-joke", "Joke"))
+
 df_merged_class_stacked %>%
-  ggplot(aes(x = Source,
-             y = ResponseJoke,
-             color = factor(Is_Joke))) +
+  ggplot(aes(x = is_joke,
+             y = IsJokeResponseCorrect,
+             fill = Source)) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  theme_minimal() +
-  scale_y_continuous(limits = c(0, 1)) +
-  geom_hline(yintercept = .5, linetype = "dotted") +
-  labs(x = "Source",
-       y = "P(Joke)",
-       color = "Is Joke")
+                width = .2, alpha = .7) +
+  labs(x = "",
+       y = "Accuracy",
+       fill = "",
+       title = "Detection Accuracy") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
 ```
+
 
 #### `ResponseJoke ~ Source * surprisal`
 
@@ -418,44 +438,61 @@ df_merged_class_stacked %>%
   mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
   ggplot(aes(x = surprisal_binned,
              y = ResponseJoke,
-             color = factor(Is_Joke))) +
+             fill = factor(Is_Joke))) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  theme_minimal() +
-  labs(x = "Binned Surprisal",
-       y = "P(Joke)",
-       color = "Is Joke") +
-  scale_y_continuous(limits = c(0, 1)) +
-  geom_hline(yintercept = .5, linetype = "dotted") +
+                width = .2, alpha = .7) +
+  labs(x = "",
+       y = "Proportion of Joke Interpretations",
+       fill = "Is Joke") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE) +
   facet_wrap(~Source)
 ```
 
 It's even clearer if we ignore `Is_Joke` and just look at `surprisal` and `p(joke)`. 
 
-```{r}
+```{r 3a}
 
 df_merged_class_stacked %>%
-  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
-  ggplot(aes(x = Source,
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "Low", "High")) %>%
+  mutate(surprisal_binned = fct_relevel(surprisal_binned, "Low")) %>%
+  ggplot(aes(x = factor(surprisal_binned),
              y = ResponseJoke,
-             color = factor(surprisal_binned))) +
+             fill = Source)) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .8) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  theme_minimal() +
-  labs(x = "Source",
+                width = .2, alpha = .7) +
+  labs(fill = "Source",
        y = "P(Joke)",
-       color = "Binned Surprisal") +
-  scale_y_continuous(limits = c(0, 1)) +
-  geom_hline(yintercept = .5, linetype = "dotted")
+       x = "Surprisal") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE) +
+  facet_wrap(~is_joke)
 ```
+
 
 
 ### Humans vs. LLMs: humor appreciation
@@ -490,21 +527,33 @@ One way to illustrate this is to bin surprisal and visualize funniness by binned
 ```{r}
 
 df_merged_app_stacked %>%
-  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "Low", "High")) %>%
   ggplot(aes(x = Source,
              y = ResponseFunny,
-             color = factor(surprisal_binned))) +
+             fill = factor(surprisal_binned))) +
+ stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  theme_minimal() +
-  # scale_y_continuous(limits = c(1, 5)) +
-  labs(x = "Source",
-       y = "Funniness Ratings",
-       color = "Binned Surprisal")
+                width = .2, alpha = .7) +
+  labs(x = "",
+       y = "Funniness Rating",
+       fill = "Binned Surprisal") +
+  scale_y_continuous(breaks = c(1, 2, 3, 4, 5),
+                        labels = c("Not Funny", "Somewhat Funny", 
+                                   "Moderately Funny", "Funny", "Very Funny"),
+                     limits = c(0, 5)) +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE) 
 ```
 
 
@@ -513,24 +562,44 @@ We can also add `Is_Joke` to the mix. Here, it becomes a little clearer that the
 - Driven primarily by *non-jokes* (for both humans and LLMs).  
 - Larger for LLMs (again, for *non-jokes* in particular). 
 
-```{r}
+```{r 3b}
+df_merged_app_stacked = df_merged_app_stacked %>%
+  mutate(is_joke = case_when(
+    Is_Joke == 1 ~ "Joke",
+    Is_Joke == 0 ~ "Non-joke"
+  ))
+df_merged_app_stacked$is_joke = factor(df_merged_app_stacked$is_joke, levels=c("Non-joke", "Joke"))
+
 df_merged_app_stacked %>%
-  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "low", "high")) %>%
-  ggplot(aes(x = Source,
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "Low", "High")) %>%
+  mutate(surprisal_binned = fct_relevel(surprisal_binned, "Low")) %>%
+  ggplot(aes(x = factor(surprisal_binned),
              y = ResponseFunny,
-             color = factor(surprisal_binned))) +
+             fill = Source)) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  theme_minimal() +
-  # scale_y_continuous(limits = c(1, 5)) +
-  labs(x = "Source",
-       y = "Funniness Ratings",
-       color = "Binned Surprisal") +
-  facet_wrap(~Is_Joke)
+                width = .2, alpha = .7) +
+  scale_y_continuous(breaks = c(1, 2, 3, 4, 5),
+                        labels = c("Not Funny", "Somewhat Funny", 
+                                   "Moderately Funny", "Funny", "Very Funny"),
+                     limits = c(0, 5)) +
+  labs(fill = "Source",
+       y = "",
+       x = "Surprisal") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE) +
+  facet_wrap(~is_joke)
 ```
 
 
@@ -629,18 +698,42 @@ anova(mod_basic, mod_null)
 We can visualize this below:
 
 ```{r}
+df_merged_app = df_merged_app %>%
+  mutate(is_joke = case_when(
+    Is_Joke == 1 ~ "Joke",
+    Is_Joke == 0 ~ "Non-joke"
+  ))
+df_merged_app$is_joke = factor(df_merged_app$is_joke, levels=c("Non-joke", "Joke"))
+
 df_merged_app %>%
   ggplot(aes(x = best_response,
              y = ResponseFunny)) +
+ stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  theme_minimal() +
-  labs(x = "GPT-3 Funniness Rating",
-       y = "Human Funniness Rating")
+                width = .2, alpha = .7) +
+  labs(x = "GPT-3 Rating",
+       y = "Human Rating",
+       fill = "Binned Surprisal") +
+  scale_y_continuous(breaks = c(1, 2, 3, 4, 5),
+                        labels = c("Not Funny", "Somewhat Funny", 
+                                   "Moderately Funny", "Funny", "Very Funny"),
+                     limits = c(0, 5)) +
+  scale_x_continuous(breaks = c(1, 2, 3, 4, 5),
+                        labels = c("Not Funny", "Somewhat Funny", 
+                                   "Moderately Funny", "Funny", "Very Funny")) +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
 ```
 
 
@@ -657,6 +750,7 @@ df_merged_app_summ = df_merged_app %>%
             llm_response = mean(best_response))
 
 cor.test(df_merged_app_summ$mean_funniness, df_merged_app_summ$llm_response)
+cor.test(df_merged_app_summ$mean_funniness, df_merged_app_summ$llm_response, method = "spearman")
 ```
 
 

@@ -3,10 +3,14 @@ title: "Comparison of human and LLM humor comprehension"
 author: "Drew Walker, Sean Trott, Seana Coulson"
 date: "July 17, 2023"
 output:
+  # pdf_document: 
+  #    fig_caption: yes
+  #    keep_md: yes
+  #    keep_tex: yes
   html_document:
-    keep_md: yes
-    toc: yes
-    toc_float: yes
+     keep_md: yes
+     toc: yes
+     toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -22,6 +26,7 @@ library(broom)
 library(lme4)
 library(ggridges)
 library(lmerTest)
+library(viridis)
 ```
 
 # Load data
@@ -52,7 +57,6 @@ head(df_1s)
 
 ## Human data
 
-**TODO**: Check on data cleaning procedure (right now just reading in cleaned data).
 
 ```{r}
 df_cleaned = read_csv("../../data/processed/human_data/comprehension_cleaned_final.csv")
@@ -354,30 +358,41 @@ df_merged_stacked %>%
 
 We can also visualize the raw data, which suggests a cross-over interaction. LLMs are better for non-jokes, and humans are (relatively) better for jokes. Both LLMs and humans are worse at jokes, however.
 
-```{r}
-df_merged_stacked %>%
+```{r 2a}
+
+df_merged_stacked = df_merged_stacked %>%
   mutate(is_joke = case_when(
     IsJoke == TRUE ~ "Joke",
     IsJoke == FALSE ~ "Non-joke"
-  )) %>%
-  ggplot(aes(x = reorder(is_joke, Match),
+  ))
+df_merged_stacked$is_joke = factor(df_merged_stacked$is_joke, levels=c("Non-joke", "Joke"))
+
+df_merged_stacked %>%
+  ggplot(aes(x = is_joke,
              y = Match,
-             color = Source)) +
+             fill = Source)) +
   stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
                 fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
                 fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
                 position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
+                width = .2, alpha = .7) +
   labs(x = "",
        y = "Accuracy",
-       color = "Source",
+       fill = "",
        title = "Comprehension Accuracy") +
   # scale_y_continuous(limits = c(0, 1)) +
   # geom_hline(yintercept = .5, linetype = "dotted") +
     theme_minimal() +
   theme(text = element_text(size = 15),
-        legend.position="bottom")
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
+
+
 
 
 ```

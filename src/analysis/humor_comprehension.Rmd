@@ -359,4 +359,51 @@ df_merged_scaling_summ_with_gpt4 %>%
         legend.position="bottom")
 ```
 
+## Correlation with funniness
+
+```{r}
+df_human_averages = read_csv("../../data/processed/human_item_averages.csv")
+
+df_merged_funniness = df_merged %>%
+  mutate(is_joke = condition == "J") %>%
+  mutate(is_joke = case_when(
+    is_joke == TRUE ~ "Joke",
+    is_joke == FALSE ~ "Non-joke"
+  )) %>%
+  select(sentence, lp_ratio, is_joke, accuracy, correct) %>%
+  mutate(Sentence = sentence) %>%
+  left_join(df_human_averages)
+df_merged_funniness$is_joke = factor(df_merged_funniness$is_joke, levels=c("Non-joke", "Joke"))
+
+
+df_merged_funniness %>%
+  ggplot(aes(x = accuracy,
+             y = ResponseFunny,
+             fill = is_joke)) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                position=position_dodge(width=0.95),
+                width = .2, alpha = .7) +
+  labs(x = "",
+       y = "Funniness Ratings",
+       fill = "",
+       title = "") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
+
+mod = glm(data = df_merged_funniness,
+          accuracy ~ ResponseFunny + is_joke, family = binomial())
+summary(mod)
+
+```
 

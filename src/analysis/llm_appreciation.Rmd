@@ -20,8 +20,12 @@ library(lmtest)
 library(forcats)
 library(broom)
 library(lme4)
+library(viridis)
 library(ggridges)
 library(lmerTest)
+
+all_colors <- viridis::viridis(10, option = "mako")
+my_colors <- all_colors[c(3, 5, 7)]  # Selecting specific colors from the palette
 ```
 
 # Load data
@@ -93,22 +97,24 @@ df_class_merged %>%
 We can also visualize this:
 
 ```{r}
+
+df_class_merged = df_class_merged %>%
+  mutate(is_joke = case_when(
+    is_joke == TRUE ~ "Joke",
+    is_joke == FALSE ~ "Non-joke"
+  ))
+df_class_merged$is_joke = factor(df_class_merged$is_joke, levels=c("Non-joke", "Joke"))
+
 df_class_merged %>%
   ggplot(aes(x = lp_ratio,
-             y = is_joke,
+             # y = is_joke,
              fill = is_joke)) +
-  geom_density_ridges2(aes(height = ..density..), 
-                       color=gray(0.25), 
-                       alpha = 0.5, 
-                       scale=0.85, 
-                       size=.9, 
-                       stat="density") +
+  geom_density(alpha = .5, size = 2) +
   labs(x = "GPT-3 Log-odds (yes vs. no)",
-       y = "Joke vs. Non-Joke",
-       fill = "Joke vs. Non-Joke") +
+       y = "",
+       fill = "") +
   geom_vline(xintercept = 0, linetype = "dotted") +
   theme_minimal() +
-  # scale_fill_viridis_d() +
   theme(
     legend.position = "bottom"
   ) + 
@@ -116,21 +122,9 @@ df_class_merged %>%
         axis.text = element_text(size = rel(2)),
         legend.text = element_text(size = rel(2)),
         legend.title = element_text(size = rel(2)),
-        strip.text.x = element_text(size = rel(2)))
+        strip.text.x = element_text(size = rel(2))) +
+  scale_fill_viridis(option = "turbo", discrete=TRUE)
 
-
-df_class_merged %>%
-  ggplot(aes(x = is_joke,
-             y = lp_ratio)) +
-  stat_summary (fun = function(x){mean(x)},
-                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
-                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
-                geom= 'pointrange', 
-                position=position_dodge(width=0.95),
-                size = .5, alpha = .5) +
-  labs(x = "Joke vs. Non-joke",
-       y = "Log Odds (Yes vs. No)") +
-  theme_minimal() 
 
 ```
 
@@ -216,13 +210,16 @@ summary(mod_full)
 
 df_class_merged %>%
   ggplot(aes(x = surprisal, y = lp_ratio, color = is_joke)) +
-  geom_point(alpha = .3) +
+  geom_point(alpha = .9) +
   geom_smooth(method = "lm") +
   theme_minimal() +
   labs(x = "Surprisal",
        y = "Log Odds (Yes vs. No)",
        title = "Joke Classification") +
-  facet_wrap(~is_joke)
+  facet_wrap(~is_joke) +
+  theme(text = element_text(size = 15),
+        legend.position="none") +
+  scale_color_viridis(option = "mako", discrete=TRUE)
 ```
 
 
@@ -232,17 +229,58 @@ df_class_merged %>%
 mod_full = lm(data = df_app_merged, entropy ~ is_joke * surprisal)
 summary(mod_full)
 
+df_app_merged = df_app_merged %>%
+  mutate(is_joke = case_when(
+    is_joke == TRUE ~ "Joke",
+    is_joke == FALSE ~ "Non-joke"
+  ))
+df_app_merged$is_joke = factor(df_app_merged$is_joke, levels=c("Non-joke", "Joke"))
+
 
 df_app_merged %>%
   ggplot(aes(x = surprisal, y = entropy, color = is_joke)) +
-  geom_point(alpha = .3) +
+  geom_point(alpha = .8) +
   geom_smooth(method = "lm") +
   theme_minimal() +
   labs(x = "Surprisal",
-       y = "Entropy over Funniness Responses",
-       title = "Funniness Responses") +
-  facet_wrap(~is_joke)
+       y = "Entropy") +
+  facet_wrap(~is_joke) +
+  theme(text = element_text(size = 15),
+        legend.position="none") +
+  scale_color_viridis(option = "mako", discrete=TRUE)
 
+
+```
+
+## Comparison to humans
+
+```{r supplementary_entropy}
+
+df_human_averages = read_csv("../../data/processed/human_item_averages.csv")
+
+df_merged = df_app_merged %>%
+  select(sentence, entropy, best_response, surprisal, is_joke) %>%
+  mutate(Sentence = sentence) %>% 
+  left_join(df_human_averages) %>%
+  mutate(diff = ResponseFunny - best_response,
+         abs_diff = abs(diff))
+
+df_merged %>%
+  ggplot(aes(x = entropy, y = abs_diff, color = is_joke)) +
+  geom_point(alpha = .8) +
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(x = "Entropy",
+       y = "Absolute Difference") +
+  facet_wrap(~is_joke) +
+  theme(text = element_text(size = 15),
+        legend.position="none") +
+  scale_color_viridis(option = "mako", discrete=TRUE)
+
+
+mod = lm(data = df_merged, abs_diff ~ entropy * is_joke + surprisal * is_joke)
+summary(mod)
+  
 ```
 
 
