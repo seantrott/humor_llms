@@ -1,0 +1,401 @@
+sentence,answer,model,condition,correct,cosine_similarity,n_params
+A committee keeps minutes and takes hours.,Committees are very efficient.,bert-large-uncased,J,no,0.8847142457962036,335141888
+A committee keeps minutes and takes votes.,Committees keep records and make decisions.,bert-large-uncased,S,yes,0.9310524463653564,335141888
+A device for finding furniture in the dark is a candle.,The candle gives off light.,bert-large-uncased,S,yes,0.6091827750205994,335141888
+A device for finding furniture in the dark is a shin.,People run into furniture when it's dark.,bert-large-uncased,J,yes,0.6438056826591492,335141888
+A good source of vitamin A is orange vegetables like carrots.,Carrots contain vitamin A.,bert-large-uncased,E,yes,0.7029588222503662,335141888
+A good way to blow your mind is to smoke gunpowder.,An explosion can blow your brains out.,bert-large-uncased,J,yes,0.7526288032531738,335141888
+A good way to blow your mind is to smoke heroin.,Heroin will affect your brain.,bert-large-uncased,S,yes,0.793472409248352,335141888
+A man who has lost ninety percent of his brain is called a widower.,His wife wasn't very smart.,bert-large-uncased,J,no,0.48067259788513184,335141888
+A man who has lost ninety percent of his brain is called a zombie.,A zombie still has an intact brain.,bert-large-uncased,S,no,0.7879855632781982,335141888
+A problem drinker is one who never buys.,One should take turns paying for the drinks.,bert-large-uncased,J,yes,0.7613149881362915,335141888
+A problem drinker is one who never quits.,Non-stop drinking isn't much of a problem.,bert-large-uncased,S,no,0.7594054937362671,335141888
+A replacement player hit a home run with my ball.,The player was playing baseball.,bert-large-uncased,S,yes,0.6536781191825867,335141888
+A replacement player hit a home run with my girl.,Someone else slept with my girlfriend.,bert-large-uncased,J,yes,0.7916309237480164,335141888
+A thoughtful wife has pork chops ready when her husband comes home from fishing.,She thinks her husband will catch lots of fish.,bert-large-uncased,J,no,0.8022393584251404,335141888
+A thoughtful wife has pork chops ready when her husband comes home from working.,A nice wife cooks dinner for her husband.,bert-large-uncased,S,yes,0.8665269017219543,335141888
+A vacation is the shortest distance between two locations.,A trip seems longer when you are on vacation.,bert-large-uncased,S,no,0.8063594102859497,335141888
+A vacation is the shortest distance between two paychecks.,Vacations cost a lot of money.,bert-large-uncased,J,yes,0.6329986453056335,335141888
+"After Olga tore her red dress, she went to the store for a needle and a spool of red thread.",She planned to throw the dress away.,bert-large-uncased,E,no,0.7330212593078613,335141888
+"All roads lead to Rome, and all detours lead to profanity.",People are frustrated by detours.,bert-large-uncased,J,yes,0.857375979423523,335141888
+"All roads lead to Rome, and all detours lead to somewhere.",Detours never go anywhere.,bert-large-uncased,S,no,0.8594924211502075,335141888
+All the plates were garnished with little sprigs of parsley.,Each plate had some parsley on it.,bert-large-uncased,E,yes,0.8149139881134033,335141888
+Another thing a small boy is constantly outgrowing is his allowance.,Kids always want more money.,bert-large-uncased,J,yes,0.803704023361206,335141888
+Another thing a small boy is constantly outgrowing is his underwear.,Boys need new clothes often.,bert-large-uncased,S,yes,0.7793735265731812,335141888
+Another thing that has developed by leaps and bounds is the modern dance.,Dancing has changed a lot over the years.,bert-large-uncased,J,yes,0.49408888816833496,335141888
+Another thing that has developed by leaps and bounds is the modern science.,Science has progressed at a snail's pace.,bert-large-uncased,S,no,0.7026883959770203,335141888
+Arguments between couples are healthy; sometimes they even prevent breakups.,It's okay for couples to argue sometimes.,bert-large-uncased,S,yes,0.7262916564941406,335141888
+Arguments between couples are healthy; sometimes they even prevent marriage.,Marriage is a wonderful thing.,bert-large-uncased,J,no,0.594824492931366,335141888
+Autobiography is an unrivaled vehicle for telling the truth about others.,Writing an autobiography can unmask your true self.,bert-large-uncased,J,no,0.8810878396034241,335141888
+Autobiography is an unrivaled vehicle for telling the truth about somebody.,Autobiographies don't reveal much about a person.,bert-large-uncased,S,no,0.7808763980865479,335141888
+Autumn is a good time to buy some new clothes.,It's good to buy clothes before the winter.,bert-large-uncased,E,yes,0.8566901683807373,335141888
+"Because of his diabetes, he had to take daily shots of insulin.",He took insulin once a week.,bert-large-uncased,E,no,0.7666082978248596,335141888
+"Before the outdoor concert, he packed a basket with wine and food for a picnic.",He was planning to eat outdoors.,bert-large-uncased,E,yes,0.7167923450469971,335141888
+Bill jumped in the lake and made a big splash.,Bill went for a swim.,bert-large-uncased,E,yes,0.7853031158447266,335141888
+"By the time Mary had her fourteenth child, she'd run out of names to call her husband.",Mary was happy to have another child.,bert-large-uncased,J,no,0.7110388875007629,335141888
+"By the time Mary had her fourteenth child, she'd run out of names to call her offspring.",Mary had no problem naming her new baby.,bert-large-uncased,S,no,0.8192895650863647,335141888
+"Charged with statutory rape, he told the judge he didn't know she was a statue.",He was on trial for a sex-related crime.,bert-large-uncased,J,yes,0.7021291255950928,335141888
+"Charged with statutory rape, he told the judge he didn't know she was a teenager.",He had slept with a young woman.,bert-large-uncased,S,yes,0.7117707133293152,335141888
+Cocktail lounges are usually half lit to match the patrons.,The people have often had a bit too much to drink.,bert-large-uncased,J,yes,0.4889242947101593,335141888
+Cocktail lounges are usually half lit to match the setting.,Bright lights can ruin the atmosphere in a cocktail lounge.,bert-large-uncased,S,yes,0.8617956042289734,335141888
+"Congress taxes our income, our property, and our patience.",We're very happy with Congress.,bert-large-uncased,J,no,0.8795022368431091,335141888
+"Congress taxes our income, our property, and our purchases.",There are very few taxes.,bert-large-uncased,S,no,0.8467159271240234,335141888
+"Diamonds are produced by great pressure, usually provided by a girlfriend.",Some men are reluctant to get engaged.,bert-large-uncased,J,yes,0.7573474049568176,335141888
+"Diamonds are produced by great pressure, usually provided by a piston.",Diamonds can be made by machine.,bert-large-uncased,S,yes,0.7644617557525635,335141888
+Dogs crack open bones so they can eat the marrow.,Dogs like to eat bone marrow.,bert-large-uncased,E,yes,0.8457815647125244,335141888
+"During the worst part of the drought, people were encouraged to not always flush the toilet.",Water was in short supply.,bert-large-uncased,E,yes,0.7634574770927429,335141888
+Eva turned down the heat and left the sauce on the stove to simmer.,Eva was cooking.,bert-large-uncased,E,yes,0.3445766568183899,335141888
+Every introductory sailing class includes learning how to save a man drowning.,Beginning sailing classes emphasize safety.,bert-large-uncased,E,yes,0.9337824583053589,335141888
+"Every time I wear my spring coat in the rain, it damages the fabric.",My coat is waterproof.,bert-large-uncased,S,no,0.8560373187065125,335141888
+"Every time I wear my spring coat in the rain, it damages the springs.",Water isn't good for my coat.,bert-large-uncased,J,yes,0.791926383972168,335141888
+Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little platform.,The platform is for sunbathing.,bert-large-uncased,S,no,0.574578046798706,335141888
+Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little water.,The pool was empty.,bert-large-uncased,J,yes,0.6322121620178223,335141888
+"Except for not having a shell, slugs are a lot like snails.",Slugs and snails are similar.,bert-large-uncased,E,yes,0.7237546443939209,335141888
+"Figures don't lie, except on the beaches.",People lie in the sand.,bert-large-uncased,J,yes,0.6622826457023621,335141888
+"Figures don't lie, except on the page.",Statistics are completely reliable.,bert-large-uncased,S,no,0.537326991558075,335141888
+"For a great vacation, put the kids in the back seat, and take a cruise.",A road trip with the kids can be a lot of fun.,bert-large-uncased,J,no,0.7495650053024292,335141888
+"For a great vacation, put the kids in the back seat, and take a freeway.",A road trip can be a fun vacation.,bert-large-uncased,S,yes,0.7242296934127808,335141888
+"For his thirtieth birthday, all his friends gathered to celebrate.",There was a party for his birthday.,bert-large-uncased,E,yes,0.6240549087524414,335141888
+For lunch he had an apple and a peanut butter sandwich.,He ate a cold lunch.,bert-large-uncased,E,yes,0.783484697341919,335141888
+"Frequent naps prevent old age, especially when taken while driving.",Falling asleep while driving can kill you.,bert-large-uncased,J,yes,0.6233845949172974,335141888
+"Frequent naps prevent old age, especially when taken while relaxed.",It's best to nap when you are very stressed.,bert-large-uncased,S,no,0.5953222513198853,335141888
+Good Friday commemorates the Last Supper that Jesus had with his twelve disciples.,Good Friday is a religious holiday.,bert-large-uncased,E,yes,0.8622673153877258,335141888
+Hal wrote her a love letter.,Hal didn't like her very much.,bert-large-uncased,E,no,0.5665026307106018,335141888
+"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough change.",We don't have enough money for soup.,bert-large-uncased,S,yes,0.752126932144165,335141888
+"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough room.",We can't afford the soup.,bert-large-uncased,J,no,0.6846122741699219,335141888
+He drank so much that he eventually became a beverage.,He gave up drinking.,bert-large-uncased,J,no,0.3215949535369873,335141888
+He drank so much that he eventually became a lush.,He became an alcoholic.,bert-large-uncased,S,yes,0.8625845909118652,335141888
+He got a medal for bravery on the beach when he rescued a girl from a lifeguard.,He saved the girl from drowning.,bert-large-uncased,J,no,0.8250758051872253,335141888
+He got a medal for bravery on the beach when he rescued a girl from a shipwreck.,The girl had been on a ship.,bert-large-uncased,S,yes,0.6993762850761414,335141888
+He hung her coat in the closet.,She had been wearing a coat.,bert-large-uncased,E,yes,0.6178128719329834,335141888
+He is at the age when all the numbers in his little black book belong to doctors.,He is getting old.,bert-large-uncased,J,yes,0.8035986423492432,335141888
+He is at the age when all the numbers in his little black book belong to friends.,He is a real playboy.,bert-large-uncased,S,no,0.6338847875595093,335141888
+"He is probably the best boxer in the country, but he always loses in the city.",He would win in Las Vegas.,bert-large-uncased,J,no,0.43951162695884705,335141888
+"He is probably the best boxer in the country, but he always loses in the competition.",He always wins the championship.,bert-large-uncased,S,no,0.871466875076294,335141888
+He likes to make things around the house; this week it's the maid.,He's having an affair with a member of the household staff.,bert-large-uncased,J,yes,0.8029325008392334,335141888
+He likes to make things around the house; this week it's the shelves.,He isn't very good with his hands.,bert-large-uncased,S,no,0.7781546115875244,335141888
+"He owns stock in a company that pays quarterly dividends, so every three months they send him a quarter.",His dividends are quite large.,bert-large-uncased,J,no,0.8302263617515564,335141888
+"He owns stock in a company that pays quarterly dividends, so every three months they send him a statement.",He never hears from the company.,bert-large-uncased,S,no,0.6817752122879028,335141888
+He says he doesn't like to drink because it makes him feel happy.,Drinking makes him feel depressed.,bert-large-uncased,J,no,0.8346725702285767,335141888
+He says he doesn't like to drink because it makes him feel sad.,Alcohol depresses him.,bert-large-uncased,S,yes,0.6699337959289551,335141888
+He spilled some of the quart of oil onto the engine because he didn't have a funnel.,He was pouring oil into the car.,bert-large-uncased,E,yes,0.7751002311706543,335141888
+"He thought that he could turn from Grant onto Prince, but the two streets are parallel.",He was at the corner of Grant and Prince.,bert-large-uncased,E,no,0.7016233205795288,335141888
+"He told her he wasn't himself, and she said she'd noticed the improvement.",She liked him better when he wasn't himself.,bert-large-uncased,J,yes,0.7163460850715637,335141888
+"He told her he wasn't himself, and she said she'd noticed the problem.",He was behaving normally.,bert-large-uncased,S,no,0.5922083854675293,335141888
+"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a balloon.",He got the tires for free.,bert-large-uncased,J,no,0.659110963344574,335141888
+"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a truck.",He bought new tires for his truck.,bert-large-uncased,S,yes,0.6944335699081421,335141888
+"He told me he's not broke, just badly bent.",He's doing quite well.,bert-large-uncased,J,no,0.6863953471183777,335141888
+"He told me he's not broke, just badly off.",He has lots of money.,bert-large-uncased,S,no,0.6527847647666931,335141888
+He was teaching his girlfriend how to swim when the lifeguard made them move to the lake.,They were in the water.,bert-large-uncased,J,no,0.7491486072540283,335141888
+He was teaching his girlfriend how to swim when the lifeguard made them move to the shallows.,They were in deep water.,bert-large-uncased,S,yes,0.6976639032363892,335141888
+He wondered if the storm had done much damage.,It had been a terrible storm.,bert-large-uncased,E,yes,0.6723860502243042,335141888
+"He's never given a girl a present, but he did give a few a pretty good reputation.",He never gets girls into trouble.,bert-large-uncased,J,no,0.7731726169586182,335141888
+"He's never given a girl a present, but he did give a few a pretty good surprise.",He buys his girlfriends lavish gifts.,bert-large-uncased,S,no,0.7295826077461243,335141888
+He's planning an extended vacation: he hopes to spend three weeks on his couch.,He's going to sleep a lot.,bert-large-uncased,J,yes,0.6808384656906128,335141888
+He's planning an extended vacation: he hopes to spend three weeks on his sailboat.,He's going sailing for three weeks.,bert-large-uncased,S,yes,0.8330927491188049,335141888
+Her press agent was operated on for an ingrown beeper.,Her press agent needed actual medical surgery.,bert-large-uncased,J,no,0.8394959568977356,335141888
+Her press agent was operated on for an ingrown eyelash.,She needed medical surgery.,bert-large-uncased,S,yes,0.7219603061676025,335141888
+His doctor recommended he stay flat on his back ever since he was hit by a motorist.,He got run over by a car.,bert-large-uncased,S,yes,0.7189793586730957,335141888
+His doctor recommended he stay flat on his back ever since he was hit by a steamroller.,He should get out of bed as soon as possible.,bert-large-uncased,J,no,0.6262399554252625,335141888
+His job was to keep the sidewalk clean.,He was a doctor.,bert-large-uncased,E,no,0.7573248744010925,335141888
+His sandwich came with chips and a dill pickle.,He was about to eat.,bert-large-uncased,E,yes,0.6770617961883545,335141888
+His wife sued for divorce and asked for custody of the cash.,She wanted to keep the money.,bert-large-uncased,J,yes,0.7140231132507324,335141888
+His wife sued for divorce and asked for custody of the cat.,She was very fond of her pet.,bert-large-uncased,S,yes,0.49667319655418396,335141888
+"I appreciate the more expensive things in life: diamonds, caviar, and champagne.","I prefer a simple, country life.",bert-large-uncased,S,no,0.8080514669418335,335141888
+"I appreciate the more expensive things in life: diamonds, caviar, and postage.",It's expensive to mail things nowadays.,bert-large-uncased,J,yes,0.8785250782966614,335141888
+"I asked him if he started out as an editor, and he said that years ago he used to be a boy.",He wasn't an editor when he was young.,bert-large-uncased,J,yes,0.6662623882293701,335141888
+"I asked him if he started out as an editor, and he said that years ago he used to be a journalist.",He was never a reporter.,bert-large-uncased,S,no,0.719275951385498,335141888
+"I asked the florist what I should give to my girlfriend, and he suggested his address.",The florist would like to meet the girlfriend.,bert-large-uncased,J,yes,0.7779707908630371,335141888
+"I asked the florist what I should give to my girlfriend, and he suggested his tulips.",The florist thought I should give her roses.,bert-large-uncased,S,no,0.8565297722816467,335141888
+"I asked the woman at the party if she remembered me from last year, and she said she never forgets a dress.",The woman notices what clothes people wear.,bert-large-uncased,J,yes,0.7338096499443054,335141888
+"I asked the woman at the party if she remembered me from last year, and she said she never forgets a name.",She didn't remember my name.,bert-large-uncased,S,no,0.7546467185020447,335141888
+"I can walk on water, but I stagger on alcohol.",I can walk just fine even when I'm drunk.,bert-large-uncased,J,no,0.63668292760849,335141888
+"I can walk on water, but I stagger on concrete.",I have no trouble walking on hard surfaces.,bert-large-uncased,S,no,0.8545205593109131,335141888
+"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my pay.",I'm saving money in case I need it later.,bert-large-uncased,S,yes,0.707190752029419,335141888
+"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my umbrella.",I put a lot of money in the bank in case of emergency.,bert-large-uncased,J,no,0.7252470254898071,335141888
+"I got a car for my wife, and I thought it was a good choice.",I thought my wife would like the car.,bert-large-uncased,S,yes,0.7617530822753906,335141888
+"I got a car for my wife, and I thought it was a good trade.",I like the car more than my wife.,bert-large-uncased,J,yes,0.696121871471405,335141888
+"I hope this train stops at Grand Central because if it doesn't, there will be a crash.",Grand Central is the end of the line.,bert-large-uncased,J,yes,0.7535719871520996,335141888
+"I hope this train stops at Grand Central because if it doesn't, there will be a delay.",I'm afraid I will fall behind schedule.,bert-large-uncased,S,yes,0.6475367546081543,335141888
+I knew a streetwalker who was so exclusive she had an unlisted telephone booth.,She was easy to reach by phone.,bert-large-uncased,J,no,0.716823935508728,335141888
+I knew a streetwalker who was so exclusive she had an unlisted telephone line.,Her phone number was in the telephone book.,bert-large-uncased,S,no,0.7777544260025024,335141888
+I know one couple who got divorced and had to leave the house to the attorney.,The divorce was expensive.,bert-large-uncased,J,yes,0.7178908586502075,335141888
+I know one couple who got divorced and had to leave the house to the daughter.,The house stayed in the family.,bert-large-uncased,S,yes,0.662656307220459,335141888
+"I still miss my ex-wife, but I am improving my aim.",I am shooting at my ex-wife.,bert-large-uncased,J,yes,0.7132165431976318,335141888
+"I still miss my ex-wife, but I am improving my ego.",I'm starting to feel better about myself.,bert-large-uncased,S,yes,0.7118757963180542,335141888
+I went to a place that serves breakfast any time and ordered French toast in the nighttime.,I had breakfast at night.,bert-large-uncased,S,yes,0.737953245639801,335141888
+I went to a place that serves breakfast any time and ordered French toast in the Renaissance.,I wanted to eat an unusual breakfast.,bert-large-uncased,J,yes,0.6827239394187927,335141888
+"I've got Parkinson's disease, and he's got gout.",We have the same disease.,bert-large-uncased,S,no,0.816374659538269,335141888
+"I've got Parkinson's disease, and he's got mine.",At least one of us is in good health.,bert-large-uncased,J,no,0.6787609457969666,335141888
+"If there's one thing that counts in business, it's bookkeepers.",Bookkeepers keep track of things.,bert-large-uncased,J,yes,0.7675175666809082,335141888
+"If there's one thing that counts in business, it's resources.",It's hard to succeed if you start with nothing.,bert-large-uncased,S,yes,0.8025973439216614,335141888
+"If you're filthy rich, sending your kids to college is a wonderful cleaner.",Colleges are very expensive.,bert-large-uncased,J,yes,0.7261043787002563,335141888
+"If you're filthy rich, sending your kids to college is a wonderful luxury.",It's good to be able to afford to send your children to the university.,bert-large-uncased,S,yes,0.8430809378623962,335141888
+In some marriages the bride is given away by the family.,It's always the father who gives the bride away.,bert-large-uncased,S,no,0.7818260192871094,335141888
+In some marriages the bride is given away by the press.,The newspapers reveal something about the bride's past.,bert-large-uncased,J,yes,0.7781563997268677,335141888
+"In the game of golf, nothing counts as much as your drives.",The most important part of your golf game is your putting.,bert-large-uncased,S,no,0.9439459443092346,335141888
+"In the game of golf, nothing counts as much as your opponent.",The other guy always keeps track of your score.,bert-large-uncased,J,yes,0.6243312358856201,335141888
+"In the U.S. the five cent piece is made of nickel, while pennies are mainly made of copper.",Both coins are made from the same metal.,bert-large-uncased,E,no,0.6107426285743713,335141888
+"It was so hot at Playboy, the centerfold took off her bikini.",She had been wearing a swimsuit.,bert-large-uncased,S,yes,0.5610395073890686,335141888
+"It was so hot at Playboy, the centerfold took off her staple.",She wasn't wearing any clothes.,bert-large-uncased,J,yes,0.6206904053688049,335141888
+It was too hot to sleep in a bed so he strung up a mesh hammock.,He was going to sleep in the hammock.,bert-large-uncased,E,yes,0.7120144963264465,335141888
+"It's always nicer to give than to receive, especially when it's your opinion.",People like giving advice more than taking it.,bert-large-uncased,J,yes,0.8554458618164062,335141888
+"It's always nicer to give than to receive, especially when it's your parents.",Giving gifts can be fun.,bert-large-uncased,S,yes,0.7532484531402588,335141888
+It's extraordinary what fine poker hand you get when you're playing bridge.,You always get the best hand just when you need it.,bert-large-uncased,J,no,0.7312074303627014,335141888
+It's extraordinary what fine poker hand you get when you're playing stud.,You never get a decent hand in a poker game.,bert-large-uncased,S,no,0.8248855471611023,335141888
+It's hard to admit when one is wrong.,Most people don't mind being wrong.,bert-large-uncased,E,no,0.7901709079742432,335141888
+"It's hard to raise a family nowadays, especially in the country.",It's easy to raise children outside the city.,bert-large-uncased,S,no,0.7465204000473022,335141888
+"It's hard to raise a family nowadays, especially in the morning.",The kids don't want to get up in the morning.,bert-large-uncased,J,yes,0.7387866973876953,335141888
+It's not hard to meet expenses; they're affordable.,You should be able to pay all your bills.,bert-large-uncased,S,yes,0.7611149549484253,335141888
+It's not hard to meet expenses; they're everywhere.,It's easy to pay the bills.,bert-large-uncased,J,no,0.8910403847694397,335141888
+Last Thanksgiving my wife spent all morning in the kitchen stuffing the bird.,She was preparing the turkey.,bert-large-uncased,S,yes,0.4383429288864136,335141888
+Last Thanksgiving my wife spent all morning in the kitchen stuffing the kids.,The kids didn't get enough to eat.,bert-large-uncased,J,no,0.5236572623252869,335141888
+"Love has its benefits, and they are usually called alimony.",Divorce can get you some money.,bert-large-uncased,J,yes,0.754933774471283,335141888
+"Love has its benefits, and they are usually called memories.",Being in love leads to good times together.,bert-large-uncased,S,yes,0.735493540763855,335141888
+Many a freshman helps the college of his choice by becoming a dropout.,"When a freshman fails, it always hurts the college.",bert-large-uncased,J,no,0.9162045121192932,335141888
+Many a freshman helps the college of his choice by becoming a member.,Joining a college doesn't make any difference.,bert-large-uncased,S,no,0.7745465636253357,335141888
+Many a man's idea of a vacation is to rest quietly in the shade of a blonde.,Men like to vacation alone.,bert-large-uncased,J,no,0.7137987613677979,335141888
+Many a man's idea of a vacation is to rest quietly in the shade of a palm.,Many men like a relaxing vacation in the tropics.,bert-large-uncased,S,yes,0.7595692276954651,335141888
+"Many things run in families, especially noses.",People often catch colds from other family members.,bert-large-uncased,J,yes,0.7076941132545471,335141888
+"Many things run in families, especially strength.",Muscle power comes only from exercise.,bert-large-uncased,S,no,0.8070492744445801,335141888
+Modern science is amazing: garbage is now being made into gasoline.,Fuel can be made from trash.,bert-large-uncased,S,yes,0.5775279998779297,335141888
+Modern science is amazing: garbage is now being made into movies.,There are a lot of really terrible movies nowadays.,bert-large-uncased,J,yes,0.725854218006134,335141888
+Most cats see very well at night.,Cats see well in the dark.,bert-large-uncased,E,yes,0.7612961530685425,335141888
+Most of the people running for office are not politicians; they're candidates.,You become a politician when you get elected.,bert-large-uncased,S,yes,0.856897234916687,335141888
+Most of the people running for office are not politicians; they're commuters.,These people are hurrying to get to work on time.,bert-large-uncased,J,yes,0.7991821765899658,335141888
+Mrs Martin told the bad student to stand in the corner.,Mrs Martin was unhappy with the student's behavior.,bert-large-uncased,E,yes,0.7226489186286926,335141888
+My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our drinks.,My brother-in-law fixed our plumbing.,bert-large-uncased,J,no,0.7650501132011414,335141888
+My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our stove.,He's a real handyman.,bert-large-uncased,S,yes,0.8181297779083252,335141888
+My church welcomes all denominations but prefers Mormons.,My church is strictly Catholic.,bert-large-uncased,S,no,0.8162814378738403,335141888
+My church welcomes all denominations but prefers twenties.,My church wants money.,bert-large-uncased,J,yes,0.7984593510627747,335141888
+My doctor has never violated his oath: the oath he took years ago to become a millionaire.,My doctor charges a lot of money.,bert-large-uncased,J,yes,0.7717050313949585,335141888
+My doctor has never violated his oath: the oath he took years ago to become a practitioner.,My doctor is very honorable.,bert-large-uncased,S,yes,0.7051812410354614,335141888
+My husband took the money we were saving to buy a new car and blew it all at the laundry.,We had saved a lot of money.,bert-large-uncased,J,no,0.7332937717437744,335141888
+My husband took the money we were saving to buy a new car and blew it all at the tables.,He gambled away our savings.,bert-large-uncased,S,yes,0.8412843942642212,335141888
+"My mechanic couldn't fix my brakes, so he fixed my clutch.",My clutch was also broken.,bert-large-uncased,S,yes,0.6777558326721191,335141888
+"My mechanic couldn't fix my brakes, so he fixed my horn.","He figures if I can't stop, I'll have to honk at people.",bert-large-uncased,J,yes,0.7565723061561584,335141888
+My wife did natural childbirth: no anesthetic.,She took drugs for the pain.,bert-large-uncased,S,no,0.7391161918640137,335141888
+My wife did natural childbirth: no makeup.,My wife didn't wear makeup when she had her baby.,bert-large-uncased,J,yes,0.7746205925941467,335141888
+"Nature has three ways of thinning the herd: drought, famine, and hunting.",Predatory hunting reduces the number of prey.,bert-large-uncased,S,yes,0.8940376043319702,335141888
+"Nature has three ways of thinning the herd: drought, famine, and primaries.",Politics is a lot like nature.,bert-large-uncased,J,yes,0.6402700543403625,335141888
+No patient should leave the hospital until he's strong enough to face the cashier.,Hospital bills are quite expensive.,bert-large-uncased,J,yes,0.7599676251411438,335141888
+No patient should leave the hospital until he's strong enough to face the outside.,Patients should be released as soon as possible.,bert-large-uncased,S,no,0.806249737739563,335141888
+None of his books made any sense.,His books were hard to understand.,bert-large-uncased,E,yes,0.7954269647598267,335141888
+Nothing ages a woman faster than hardships.,A difficult life can make you look old.,bert-large-uncased,S,yes,0.7520898580551147,335141888
+Nothing ages a woman faster than identification.,Many women lie about their age.,bert-large-uncased,J,yes,0.5547412037849426,335141888
+Nothing in the known universe travels faster than gossip.,Rumors get around quickly.,bert-large-uncased,J,yes,0.8028873205184937,335141888
+Nothing in the known universe travels faster than radiation.,Radiation travels at great speed.,bert-large-uncased,S,yes,0.8478316068649292,335141888
+Nothing you put in a banana split is as potentially fattening as the spoon.,Eating banana splits can make you fat.,bert-large-uncased,J,yes,0.8564844131469727,335141888
+Nothing you put in a banana split is as potentially fattening as the syrup.,Syrup has very few calories.,bert-large-uncased,S,no,0.8032705783843994,335141888
+"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their careers.",The divorce hadn't affected their work.,bert-large-uncased,S,no,0.6760433316230774,335141888
+"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their nuptials.",They are already married.,bert-large-uncased,J,no,0.6645535826683044,335141888
+"Once a week they hold a bingo game, and all the proceeds go to fight disease.",They are raising money to build a new church.,bert-large-uncased,S,no,0.8587989807128906,335141888
+"Once a week they hold a bingo game, and all the proceeds go to fight gambling.",They are raising money to help orphans.,bert-large-uncased,J,no,0.8548380732536316,335141888
+One good turn gets most of the blanket.,"If you do nice things, people will give you blankets.",bert-large-uncased,J,no,0.693731427192688,335141888
+One good turn gets most of the profit.,Doing something good can earn you money.,bert-large-uncased,S,yes,0.7803465127944946,335141888
+One good way to invest in the country is to buy a business.,Buying a business is bad for the economy.,bert-large-uncased,S,no,0.6682504415512085,335141888
+One good way to invest in the country is to buy a senator.,Politicians will do favors for money.,bert-large-uncased,J,yes,0.7261621952056885,335141888
+One person who sure makes a long story short is my aunt.,My aunt talks a lot.,bert-large-uncased,S,no,0.6044595837593079,335141888
+One person who sure makes a long story short is my editor.,My editor cuts out parts of my stories.,bert-large-uncased,J,yes,0.6569569706916809,335141888
+One thing that makes the world go round is detours.,Detours make people go around.,bert-large-uncased,J,yes,0.7236205339431763,335141888
+One thing that makes the world go round is greed.,Most people don't care about money.,bert-large-uncased,S,no,0.767217218875885,335141888
+One way to keep pornography away from teenagers is to put it in a cabinet.,Adult magazines should be put where adolescents won't get into them.,bert-large-uncased,S,yes,0.8685840368270874,335141888
+One way to keep pornography away from teenagers is to put it in a textbook.,Teenagers read their textbooks often.,bert-large-uncased,J,no,0.7906084656715393,335141888
+Our new green car blocked the narrow driveway.,The car was parked in the garage.,bert-large-uncased,E,no,0.8327450752258301,335141888
+Our son brought home a note from school saying they need a written excuse for his presence.,The son does very well in school.,bert-large-uncased,J,no,0.6169294118881226,335141888
+Our son brought home a note from school saying they need a written excuse for his tardiness.,He had been late for school.,bert-large-uncased,S,yes,0.7325319647789001,335141888
+"Parents support clubs for teenagers, especially when they lack other forms of diversion.",Parents want their teenagers to have appropriate forms of entertainment.,bert-large-uncased,S,yes,0.8691741824150085,335141888
+"Parents support clubs for teenagers, especially when they lack other forms of punishment.",Teenagers may need physical punishment.,bert-large-uncased,J,yes,0.866799533367157,335141888
+Paul heard a loud grinding noise when someone put a tin can right down the garbage disposal.,Paul broke the garbage disposal.,bert-large-uncased,E,no,0.623388946056366,335141888
+Politicians who are as American as apple pie still want their rewards.,Patriotic politicians don't care about personal glory.,bert-large-uncased,S,no,0.8697618842124939,335141888
+Politicians who are as American as apple pie still want their slice.,Politicians are happy to do something for nothing.,bert-large-uncased,J,no,0.9158685803413391,335141888
+Save the whales; start a coalition.,"To save an endangered species, it's best to act alone.",bert-large-uncased,S,no,0.6990892887115479,335141888
+Save the whales; start a collection.,It's important to protect endangered species in the wild.,bert-large-uncased,J,no,0.7323266267776489,335141888
+She always told girls not to look for a husband but just to date bachelors.,It's better to date a married man.,bert-large-uncased,J,no,0.624339759349823,335141888
+She always told girls not to look for a husband but just to date someone.,She thinks you should wait for the perfect man.,bert-large-uncased,S,no,0.790931224822998,335141888
+"She asked what state he was born in, and he said in the East.",He was a native Californian.,bert-large-uncased,S,no,0.5609445571899414,335141888
+"She asked what state he was born in, and he said in the nude.",He said he was born in the North.,bert-large-uncased,J,no,0.6737889647483826,335141888
+She bought her father a tasteful tie for his birthday.,She was giving her father a Christmas gift.,bert-large-uncased,E,no,0.7839334011077881,335141888
+She called her husband at his office.,Her husband worked at home.,bert-large-uncased,E,no,0.43533089756965637,335141888
+"She is so modest, she pulls down the shade to change her jacket.",She doesn't want people to see her change clothes.,bert-large-uncased,S,yes,0.8444646000862122,335141888
+"She is so modest, she pulls down the shade to change her mind.",She likes to show off in front of others.,bert-large-uncased,J,no,0.7325894832611084,335141888
+She puts something behind her ears to attract men; lately she's been using her ankles.,She's very prudish.,bert-large-uncased,J,no,0.6343165636062622,335141888
+She puts something behind her ears to attract men; lately she's been using her vanilla.,She wears vanilla as a perfume.,bert-large-uncased,S,yes,0.7812528610229492,335141888
+She read so much about the bad effects of cigarettes she decided to give up the habit.,She was going to quit smoking.,bert-large-uncased,S,yes,0.8403376936912537,335141888
+She read so much about the bad effects of cigarettes she decided to give up the reading.,She planned to quit smoking.,bert-large-uncased,J,no,0.8822557926177979,335141888
+She tied up her hair with a yellow ribbon.,She had very short hair.,bert-large-uncased,E,no,0.7026097774505615,335141888
+"She told him he looked like a million, and she meant every century.",She thought he looked quite young and handsome.,bert-large-uncased,J,no,0.6553375124931335,335141888
+"She told him he looked like a million, and she meant every syllable.",She thought he looked good.,bert-large-uncased,S,yes,0.7495808601379395,335141888
+She used a needle and a tweezers to pull out the splinter.,She needed a scalpel to remove the splinter.,bert-large-uncased,E,no,0.7460305094718933,335141888
+She was suddenly called back to New York and had to take a cab to the airport.,She was going to take a train.,bert-large-uncased,E,no,0.7469309568405151,335141888
+"She went on a fourteen day diet, but she only lost two ounces.",She didn't lose much weight.,bert-large-uncased,S,yes,0.8210746645927429,335141888
+"She went on a fourteen day diet, but she only lost two weeks.",She didn't lose any weight.,bert-large-uncased,J,yes,0.8093834519386292,335141888
+She's happy because she finally has a boyfriend who gets along with her father.,Her father really liked her previous boyfriends.,bert-large-uncased,S,no,0.7070133686065674,335141888
+She's happy because she finally has a boyfriend who gets along with her fiance.,She is dating more than one man.,bert-large-uncased,J,yes,0.6640691161155701,335141888
+"Some babies are born to rule, while others are male.",Males are born rulers.,bert-large-uncased,J,no,0.889411211013794,335141888
+"Some babies are born to rule, while others are weak.",Power starts at an early age.,bert-large-uncased,S,yes,0.5464175939559937,335141888
+"Some husbands are good providers, but only if you count children.",Some men don't take care of their families.,bert-large-uncased,J,yes,0.7697123885154724,335141888
+"Some husbands are good providers, but only if you count salary.",Some men give their families nothing but money.,bert-large-uncased,S,yes,0.8486183285713196,335141888
+Some people think courtship is the first in a series of steps leading to divorce.,One of those steps is marriage.,bert-large-uncased,J,yes,0.8057143688201904,335141888
+Some people think courtship is the first in a series of steps leading to romance.,Some people still believe in romantic courtship.,bert-large-uncased,S,yes,0.8990475535392761,335141888
+Some people's only culture is bacteria.,Everybody can appreciate the fine arts.,bert-large-uncased,J,no,0.6560292840003967,335141888
+Some people's only culture is radio.,Everyone watches television.,bert-large-uncased,S,no,0.7771790623664856,335141888
+"Statistics indicate that Americans spend eighty million a year on games of chance, mostly blackjack.",Americans like to gamble on card games.,bert-large-uncased,S,yes,0.8168005347251892,335141888
+"Statistics indicate that Americans spend eighty million a year on games of chance, mostly weddings.",Getting married is a risky thing to do.,bert-large-uncased,J,yes,0.7685025334358215,335141888
+Sunday is the day we bow our heads and putt.,We go to church on Sunday.,bert-large-uncased,J,no,0.78618323802948,335141888
+Sunday is the day we bow our heads and rest.,We work hard on Sunday.,bert-large-uncased,S,no,0.7108757495880127,335141888
+The accident injured his spinal cord and his legs are paralyzed.,He can move his legs.,bert-large-uncased,E,no,0.6884089708328247,335141888
+The art museum just acquired an early Rembrandt; it's done in charcoal.,This early work is an oil painting.,bert-large-uncased,S,no,0.6862512826919556,335141888
+The art museum just acquired an early Rembrandt; it's done in Crayola.,Rembrandt was a child when he completed the work.,bert-large-uncased,J,yes,0.7975674867630005,335141888
+The baby cried and upset her mother.,The mother was very calm.,bert-large-uncased,E,no,0.6479783058166504,335141888
+The bartender dropped two olives into the strong martini.,The bartender was preparing a drink.,bert-large-uncased,E,yes,0.8201790452003479,335141888
+The best bargain I ever got was when I went to a family garage sale and bought a grandma.,I bought a car at the garage sale.,bert-large-uncased,J,no,0.8208887577056885,335141888
+The best bargain I ever got was when I went to a family garage sale and bought a toaster.,I got a really good deal on a blender.,bert-large-uncased,S,no,0.783536434173584,335141888
+The best gift for the man who has everything is neckties.,A necktie always makes a good gift for a man.,bert-large-uncased,S,yes,0.8408132195472717,335141888
+The best gift for the man who has everything is penicillin.,This man has lots of diseases.,bert-large-uncased,J,yes,0.7521404027938843,335141888
+The best way to keep the milk from turning sour is to keep it in the cold.,Milk turns sour faster when it's warm.,bert-large-uncased,S,yes,0.7418330907821655,335141888
+The best way to keep the milk from turning sour is to keep it in the cow.,Milk stays fresh for a long time.,bert-large-uncased,J,no,0.7647765874862671,335141888
+The best way to remove coffee stains from a white blouse is with detergent.,Coffee stains are impossible to wash out.,bert-large-uncased,S,no,0.6565088033676147,335141888
+The best way to remove coffee stains from a white blouse is with scissors.,Coffee stains are easy to wash out.,bert-large-uncased,J,no,0.6488155126571655,335141888
+The best way to stop an elephant from charging is to cut off its credit.,Elephants should pay in cash.,bert-large-uncased,J,yes,0.8306513428688049,335141888
+The best way to stop an elephant from charging is to cut off its toes.,Elephants can run quickly even without toes.,bert-large-uncased,S,no,0.8512730598449707,335141888
+The bill was due at the end of the month.,He had to pay by the thirty-first.,bert-large-uncased,E,yes,0.7398549318313599,335141888
+The book that tells you where you can go on vacation is called a checkbook.,Where you go on vacation depends on how much you can afford.,bert-large-uncased,J,yes,0.715626060962677,335141888
+The book that tells you where you can go on vacation is called a guidebook.,Guidebooks aren't very useful for planning a trip.,bert-large-uncased,S,no,0.712162435054779,335141888
+The children held their hands and formed a circle.,The children were watching television.,bert-large-uncased,E,no,0.7281479835510254,335141888
+The choir sang hymns while the people listened.,The people joined in the singing.,bert-large-uncased,E,no,0.8100030422210693,335141888
+"The convict told his cellmate how he'd blown all the money he stole on wine, women, and crack.",The convict had been a drug user.,bert-large-uncased,S,yes,0.6971920728683472,335141888
+"The convict told his cellmate how he'd blown all the money he stole on wine, women, and lawyers.",Lawyers are expensive.,bert-large-uncased,J,yes,0.7576308250427246,335141888
+"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the admission.",The prisoner may have been forced into confessing.,bert-large-uncased,S,yes,0.7247995734214783,335141888
+"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the bathtub.",The prisoner had been dirty and needed to be washed.,bert-large-uncased,J,yes,0.6723669171333313,335141888
+The curse of heavy drinking is that afterwards you get a huge bartab.,Drinking a lot can be expensive.,bert-large-uncased,J,yes,0.5975173711776733,335141888
+The curse of heavy drinking is that afterwards you get a huge headache.,Drinking alcohol can lead to a hangover.,bert-large-uncased,S,yes,0.8157151937484741,335141888
+The difference between a dog and a fox is about five beers.,Drinking makes women appear more attractive.,bert-large-uncased,J,yes,0.4667438268661499,335141888
+The difference between a dog and a fox is about five degrees.,Dogs and foxes have the same body temperature.,bert-large-uncased,S,no,0.6940593123435974,335141888
+The difference between a good speaker and a bad one is often a nice diction.,It's important to speak clearly.,bert-large-uncased,S,yes,0.7659428119659424,335141888
+The difference between a good speaker and a bad one is often a nice nap.,Bad speakers can put you to sleep.,bert-large-uncased,J,yes,0.8202816247940063,335141888
+The doctor said he could have a stroke because his arteries were getting narrow and clogged.,He was in excellent health.,bert-large-uncased,E,no,0.4476497769355774,335141888
+The doctor told her not to scratch no matter how much it itched.,She had a heart condition.,bert-large-uncased,E,no,0.645842432975769,335141888
+The farmer put a new engine in his old tractor.,The farmer wanted to keep the tractor.,bert-large-uncased,E,yes,0.8577184081077576,335141888
+The first thing he does every morning is sit in the lotus position and meditate.,He starts every day with coffee and the morning news.,bert-large-uncased,E,no,0.6847618818283081,335141888
+The first two hundred story building opened in Chicago; it was a hotel.,Chicago has a skyscraper that's a hotel.,bert-large-uncased,S,yes,0.7102598547935486,335141888
+The first two hundred story building opened in Chicago; it was a library.,This building had lots of books.,bert-large-uncased,J,yes,0.7779493927955627,335141888
+The garment bag kept his suit from getting wrinkled.,His suit needed to be ironed.,bert-large-uncased,E,no,0.8531509041786194,335141888
+The husband who catches his wife in the act is probably on the snoop.,An unfaithful wife can get in trouble if her husband is on the lookout.,bert-large-uncased,S,yes,0.8582643270492554,335141888
+The husband who catches his wife in the act is probably on the trapeze.,His wife is cheating on him.,bert-large-uncased,J,no,0.5757542252540588,335141888
+The last time a guy in a mask took all my money I was in shock.,I had been mugged.,bert-large-uncased,S,yes,0.6966840028762817,335141888
+The last time a guy in a mask took all my money I was in surgery.,I had been mugged.,bert-large-uncased,J,no,0.7732042074203491,335141888
+The lawyer feared that his client was guilty.,The lawyer was a prosecutor.,bert-large-uncased,E,no,0.7182968854904175,335141888
+The luggage handler seemed to take great delight in tossing the boxes marked fragile.,The luggage handler was very careful.,bert-large-uncased,E,no,0.7829539775848389,335141888
+The mole lived in a hole in the ground.,The mole was kept in the house as a pet.,bert-large-uncased,E,no,0.7348219752311707,335141888
+The most popular instrument in a Scottish marching band is the bagpipe.,"In Scottish marching bands, people like bagpipes more than drums.",bert-large-uncased,E,yes,0.8918083906173706,335141888
+The most prevalent form of legalized gambling is betting.,Betting is not very common.,bert-large-uncased,S,no,0.8805235624313354,335141888
+The most prevalent form of legalized gambling is elections.,People are gambling when they vote for someone.,bert-large-uncased,J,yes,0.6524546146392822,335141888
+The movers put the sofa on the bare floor.,The house was fully carpeted.,bert-large-uncased,E,no,0.7953212261199951,335141888
+"The new tax forms are more realistic-- where your wife signs, it says: accomplice.",Your wife doesn't need to sign your tax form.,bert-large-uncased,J,no,0.8547869920730591,335141888
+"The new tax forms are more realistic-- where your wife signs, it says: partner.",Tax forms are very old-fashioned.,bert-large-uncased,S,no,0.8706380128860474,335141888
+The newspaper photo was so murky he couldn't figure out who it was until he read the caption.,He could see the person in the photo clearly.,bert-large-uncased,E,no,0.7790104150772095,335141888
+The nurse gave him detailed instructions about how to clean the wound and put on a fresh bandage.,He had been injured.,bert-large-uncased,E,yes,0.5242152810096741,335141888
+The old wealthy family lived in a twelve bedroom mansion.,They lived in a small home.,bert-large-uncased,E,no,0.8788391351699829,335141888
+The only crop that is grown in America and harvested abroad is the American tobacco.,Very few foreigners smoke American cigarettes.,bert-large-uncased,S,no,0.8500218987464905,335141888
+The only crop that is grown in America and harvested abroad is the American tourist.,Tourists spend a lot of money in other countries.,bert-large-uncased,J,yes,0.5531651377677917,335141888
+The only fishing through the ice that some men ever do is for the olive.,Some men fish; others just drink martinis.,bert-large-uncased,J,yes,0.570742130279541,335141888
+The only fishing through the ice that some men ever do is for the trout.,Some ice fishermen only want to catch trout.,bert-large-uncased,S,yes,0.7541031837463379,335141888
+The only ones who want me for my body are losers.,Everybody finds me very attractive.,bert-large-uncased,S,no,0.8210925459861755,335141888
+The only ones who want me for my body are mosquitoes.,People find me very sexy.,bert-large-uncased,J,no,0.7811140418052673,335141888
+The only person who sticks closer to you in adversity than a friend is a creditor.,People you owe money to don't hang around much.,bert-large-uncased,J,no,0.7655850648880005,335141888
+The only person who sticks closer to you in adversity than a friend is a spouse.,You just can't depend on a husband or wife.,bert-large-uncased,S,no,0.6061627864837646,335141888
+The only place where you can find people who spend all their time minding their own business is the bank.,People at banks are very nosy.,bert-large-uncased,S,no,0.7717046141624451,335141888
+The only place where you can find people who spend all their time minding their own business is the cemetery.,Everybody is nosy to some extent.,bert-large-uncased,J,yes,0.7677266597747803,335141888
+The only thing money can't buy is generosity.,Just because you have money doesn't mean you'll share it.,bert-large-uncased,S,yes,0.7620441317558289,335141888
+The only thing money can't buy is poverty.,Money can buy almost anything.,bert-large-uncased,J,yes,0.8654625415802002,335141888
+The only time my father ever raised a hand to his children was in discipline.,My father didn't believe in corporal punishment.,bert-large-uncased,S,no,0.8063751459121704,335141888
+The only time my father ever raised a hand to his children was in self-defense.,My father beat his children a lot.,bert-large-uncased,J,no,0.7641196250915527,335141888
+The paint turned out to be the wrong color.,They were putting up wallpaper.,bert-large-uncased,E,no,0.7280523777008057,335141888
+The painter used water-based paint for the interior of the house but enamel for the exterior.,He used the same paint both inside and outside the house.,bert-large-uncased,E,no,0.7627584338188171,335141888
+The penalty for dishonesty is the disgrace of dying rich.,Liars never win.,bert-large-uncased,J,no,0.5063120722770691,335141888
+The penalty for dishonesty is the disgrace of dying unloved.,People who lie don't have many friends.,bert-large-uncased,S,yes,0.7786734700202942,335141888
+The perfect companion to a vegetarian dinner is a salad.,A vegetarian meal doesn't need a salad.,bert-large-uncased,S,no,0.7544621229171753,335141888
+The perfect companion to a vegetarian dinner is a steak.,I don't believe in eating meat.,bert-large-uncased,J,no,0.6876042485237122,335141888
+The policeman saw him throw the bottle out the window and gave him a ticket for littering.,He got a ticket for speeding.,bert-large-uncased,E,no,0.7014002799987793,335141888
+The Republican candidate won the election by a landslide.,The election was very close.,bert-large-uncased,E,no,0.6405199766159058,335141888
+The rodeo champion was quite proud of his big silver belt buckle.,The rodeo champion didn't wear a belt.,bert-large-uncased,E,no,0.8383693695068359,335141888
+The show had one act that was really offbeat: the clowns.,The clowns were really out of the ordinary.,bert-large-uncased,S,yes,0.6913528442382812,335141888
+The show had one act that was really offbeat: the singer.,The singer had poor rhythm.,bert-large-uncased,J,yes,0.791684627532959,335141888
+The surgeon tried vainly to save his patient.,The patient died.,bert-large-uncased,E,yes,0.6499993801116943,335141888
+The teacher wrote the problem on the board.,The teacher was going to explain the problem.,bert-large-uncased,E,yes,0.7673807740211487,335141888
+The terrorists planted a bomb in the airport and four people were killed in the explosion.,The bomb squad was able to defuse the bomb.,bert-large-uncased,E,no,0.8004789352416992,335141888
+The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little finding.,Things are hard to find in this area.,bert-large-uncased,J,yes,0.6795494556427002,335141888
+The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little sightseeing.,There aren't many tourist sights in the area.,bert-large-uncased,S,yes,0.82305508852005,335141888
+The victim was rushed to the hospital in an ambulance.,The victim wasn't hurt in the accident.,bert-large-uncased,E,no,0.761850893497467,335141888
+The visitor stared at the grandfather clock and seemed almost hypnotized by the swinging of the pendulum.,The visitor could see the clock.,bert-large-uncased,E,yes,0.7225446701049805,335141888
+The whole town came to hear their mayor speak.,The people wanted to hear what the mayor would say.,bert-large-uncased,E,yes,0.8612580895423889,335141888
+The wind was so strong it blew out three fuses.,The wind affected the electrical system.,bert-large-uncased,J,yes,0.8129692077636719,335141888
+The wind was so strong it blew out three streetlights.,The storm didn't cause any damage.,bert-large-uncased,S,no,0.6608281135559082,335141888
+The woman in the grocery store was handing out free samples.,The samples cost ten cents each.,bert-large-uncased,E,no,0.6657005548477173,335141888
+The woman who has her husband eating out of her hand must save a lot of dishwashing.,The husband washes all the dishes.,bert-large-uncased,J,no,0.598396360874176,335141888
+The woman who has her husband eating out of her hand must save a lot of heartbreak.,She's happy because her husband does what she wants.,bert-large-uncased,S,yes,0.7605294585227966,335141888
+There were over a hundred trees in the apple orchard.,It was an extremely small orchard.,bert-large-uncased,E,no,0.7330727577209473,335141888
+They planned to dig a tunnel in order to escape.,They were being held prisoner.,bert-large-uncased,E,yes,0.6428952217102051,335141888
+They redecorated the bar with new drunks.,The bar has all new furniture.,bert-large-uncased,J,no,0.8155425786972046,335141888
+They redecorated the bar with new wood.,The bar is all chrome and glass.,bert-large-uncased,S,no,0.8907371759414673,335141888
+They went to Las Vegas and got married in one of those quickie wedding chapels.,They spent months planning a big wedding.,bert-large-uncased,E,no,0.8391808867454529,335141888
+This fall two things are turning yellow: trees and bushes.,The leaves are changing color.,bert-large-uncased,S,yes,0.7589874267578125,335141888
+This fall two things are turning yellow: trees and investors.,Investors are becoming scared.,bert-large-uncased,J,yes,0.7706296443939209,335141888
+"This house comes with a lot of extras, mostly termites.",The house is free of bugs.,bert-large-uncased,J,no,0.7541607618331909,335141888
+"This house comes with a lot of extras, mostly upgrades.",The house would be a good purchase.,bert-large-uncased,S,yes,0.6927064061164856,335141888
+"This new computer works so quickly, it comes complete with games.","If you use this computer, you'll have time left to play.",bert-large-uncased,S,yes,0.687939465045929,335141888
+"This new computer works so quickly, it comes complete with ulcers.",The computer feels no stress.,bert-large-uncased,J,no,0.5944544076919556,335141888
+"Though most people think it's Rome, the world's most beloved capital is actually dollars.",People love money.,bert-large-uncased,J,yes,0.6000767946243286,335141888
+"Though most people think it's Rome, the world's most beloved capital is actually Vienna.",Rome is more beloved than Vienna.,bert-large-uncased,S,no,0.6480475664138794,335141888
+Three people were killed in a major highway accident.,The accident had not been fatal.,bert-large-uncased,E,no,0.6373797059059143,335141888
+Tim threw a rock and broke the window.,Tim was playing baseball.,bert-large-uncased,E,no,0.6634796857833862,335141888
+"To clothe one soldier, it takes the wool from two sheep and the hides from three animals.",Military uniforms are made from natural materials.,bert-large-uncased,S,yes,0.7585390210151672,335141888
+"To clothe one soldier, it takes the wool from two sheep and the hides from three taxpayers.",Military uniforms are expensive.,bert-large-uncased,J,yes,0.7469629049301147,335141888
+"To get something done, a committee should consist of no more than three people, two of whom are dead.",Groups are more efficient than individuals.,bert-large-uncased,J,no,0.4178179204463959,335141888
+"To get something done, a committee should consist of no more than three people, two of whom are workers.",A committee works best with one leader.,bert-large-uncased,S,yes,0.7022797465324402,335141888
+To keep the dogs out of the yard he put up a fence.,He was worried his pet would escape.,bert-large-uncased,E,no,0.6353777647018433,335141888
+To pay for the car Al simply wrote a check.,Al paid with a credit card.,bert-large-uncased,E,no,0.8049893975257874,335141888
+Too many girls believe that the chief foundation for true love is a large fortune.,A lot of women marry for money.,bert-large-uncased,S,yes,0.7330133318901062,335141888
+Too many girls believe that the chief foundation for true love is a large stone.,Some girls just want a big diamond ring.,bert-large-uncased,J,yes,0.7180537581443787,335141888
+Two things are essential for success: wealth and fame.,Having money without celebrity is still success.,bert-large-uncased,S,no,0.6499943137168884,335141888
+Two things are essential for success: wealth and money.,You don't need much cash to succeed in business.,bert-large-uncased,J,no,0.7189852595329285,335141888
+We finally got a decent picture on the TV after an hour of adjusting the antenna.,The TV had poor reception.,bert-large-uncased,E,yes,0.7655270099639893,335141888
+We live in a lovely suburb; it's just two miles beyond our income.,We can't afford to live where we do.,bert-large-uncased,J,yes,0.8093297481536865,335141888
+We live in a lovely suburb; it's just two miles beyond our town.,The suburb is far from the city.,bert-large-uncased,S,no,0.8098750114440918,335141888
+"We used to have food on the table as soon as the customer was seated, but our new system requires more effort.",We have to work harder now.,bert-large-uncased,S,yes,0.7628877758979797,335141888
+"We used to have food on the table as soon as the customer was seated, but our new system requires more plates.",Our service is faster now.,bert-large-uncased,J,no,0.7622433304786682,335141888
+"When an irresistible force meets an immovable object, you get two very angry entities.","When one thing runs into another, both become unhappy.",bert-large-uncased,S,yes,0.7658585906028748,335141888
+"When an irresistible force meets an immovable object, you get two very angry women.",Women can be stubborn.,bert-large-uncased,J,yes,0.7279060482978821,335141888
+"When he stepped into the elevator, he knew Jennifer had just been there by the smell of her perfume.",Jennifer wore strong perfume.,bert-large-uncased,E,yes,0.7945202589035034,335141888
+"When I asked how long I should cook the noodles, he said at least ten inches.",The noodles should be at least ten inches long.,bert-large-uncased,J,yes,0.7229920029640198,335141888
+"When I asked how long I should cook the noodles, he said at least ten seconds.",They had already eaten.,bert-large-uncased,S,no,0.7151979804039001,335141888
+"When I asked the bartender for something cold and full of rum, he recommended his daiquiri.",The bartender recommended a drink.,bert-large-uncased,S,yes,0.8583171963691711,335141888
+"When I asked the bartender for something cold and full of rum, he recommended his wife.",The bartender was married.,bert-large-uncased,J,yes,0.7080720663070679,335141888
+"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the dressmaker.",The dressmaker had a lot of my money.,bert-large-uncased,J,yes,0.771300733089447,335141888
+"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the mistress.",I had been faithful to my wife.,bert-large-uncased,S,no,0.6094323396682739,335141888
+"When it comes to keeping warm, nothing beats a thermal brunette.",A down parka is the best way to keep warm.,bert-large-uncased,J,no,0.7230552434921265,335141888
+"When it comes to keeping warm, nothing beats a thermal parka.",A trenchcoat is the best way to keep warm.,bert-large-uncased,S,no,0.7900434136390686,335141888
+"When John bought a bulldog, it was no time at all before he had that dog eating out of his fingers.",He trained the dog well.,bert-large-uncased,S,yes,0.7529274821281433,335141888
+"When John bought a bulldog, it was no time at all before he had that dog eating out of his leg.",The dog was aggressive.,bert-large-uncased,J,yes,0.7142484188079834,335141888
+"When reviewing your notes for a test, the most important ones will be capitalized.",Pay more attention to the things in small print.,bert-large-uncased,S,no,0.7046225070953369,335141888
+"When reviewing your notes for a test, the most important ones will be illegible.",Important notes are written clearly so they stand out.,bert-large-uncased,J,no,0.8383303284645081,335141888
+"When the kid came into the store and asked for empty boxes, the owner gave him the crate.",The kid didn't get any boxes.,bert-large-uncased,S,no,0.5656875967979431,335141888
+"When the kid came into the store and asked for empty boxes, the owner gave him the register.",The store had made a lot of money.,bert-large-uncased,J,no,0.6016051769256592,335141888
+When they were in London they visited Buckingham Palace.,They made a trip to England.,bert-large-uncased,E,yes,0.7859426140785217,335141888
+"When we got divorced, my wife and I split the house; she got the inside.",I got the outside.,bert-large-uncased,J,yes,0.8679620027542114,335141888
+"When we got divorced, my wife and I split the house; she got the kitchen.",My wife gave me the kitchen items.,bert-large-uncased,S,no,0.8135346174240112,335141888
+"When we watch a sexy movie, my wife leans over and breathes on my collar.",She wants to get me excited.,bert-large-uncased,S,yes,0.6795733571052551,335141888
+"When we watch a sexy movie, my wife leans over and breathes on my glasses.",She wants me to see the movie.,bert-large-uncased,J,no,0.7376685738563538,335141888
+"When you go to bed, turn off the lights.",The lights are on.,bert-large-uncased,E,yes,0.7937332391738892,335141888
+"When you own an ice cream business, your favorite flavor is aspirin.",Running an ice cream business can give you a headache.,bert-large-uncased,J,yes,0.7527344226837158,335141888
+"When you own an ice cream business, your favorite flavor is everything.",You start to like all the flavors.,bert-large-uncased,S,yes,0.8431366682052612,335141888
+"Where I'm from, the two most common elements are hydrogen and nitrogen.",Phosphorus is the most common element in my hometown.,bert-large-uncased,S,no,0.7824902534484863,335141888
+"Where I'm from, the two most common elements are hydrogen and stupidity.",People in my hometown are very smart.,bert-large-uncased,J,no,0.743608832359314,335141888
+"Women don't dress to please men; if they did, they'd dress a lot faster.",Women take a long time to get dressed.,bert-large-uncased,J,yes,0.8899390697479248,335141888
+"Women don't dress to please men; if they did, they'd dress a lot scantier.",Men prefer women who wear a lot of clothes.,bert-large-uncased,S,no,0.7592639923095703,335141888
+Women were not allowed to vote until when Congress passed the nineteenth amendment to the constitution.,Women in 1900 could not vote.,bert-large-uncased,E,yes,0.8298062682151794,335141888
+Yesterday they canoed down the river.,They spent yesterday outdoors.,bert-large-uncased,E,yes,0.8135091066360474,335141888
+You can keep your kids out of hot water with dishes.,Kids like to wash dishes.,bert-large-uncased,J,no,0.871471643447876,335141888
+You can keep your kids out of hot water with rules.,Clear boundaries help keep kids out of trouble.,bert-large-uncased,S,yes,0.8353369235992432,335141888
+You could tell he had grown up in the South by his accent.,He talked like a Southerner.,bert-large-uncased,E,yes,0.8531877994537354,335141888
