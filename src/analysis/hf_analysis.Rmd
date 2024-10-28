@@ -1,0 +1,681 @@
+---
+title: "Analysis of HuggingFace Models"
+author: ""
+date: "July 19, 2023"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lmtest)
+library(forcats)
+library(broom)
+library(lme4)
+library(viridis)
+library(ggridges)
+library(lmerTest)
+library(ggcorrplot)
+
+all_colors <- viridis::viridis(10, option = "mako")
+my_colors <- all_colors[c(3, 5, 7)]  # Selecting specific colors from the palette
+```
+
+
+# Load surprisal data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis/")
+df_surprisals = read_csv("../../data/processed/results_gpt.csv") %>%
+  filter(model == "text-davinci-002") %>%
+  select(-model)
+```
+
+
+# Load HF data
+
+## Comprehension data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis/")
+directory_path <- "../../data/processed/hf_models/comprehension/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_hf_models_comprehension <- bind_rows(csv_list) %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    TRUE ~ "Non-joke"
+  ))  %>%
+  mutate(model = str_extract(model, "(?<=/).*"))
+
+table(df_hf_models_comprehension$model)
+
+```
+
+### Merge with GPT-3
+
+```{r}
+df_gpt3_comprehension = read_csv("../../data/processed/comprehension_probe_0shot.csv") %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    TRUE ~ "Non-joke"
+  )) %>%
+  select(-shots)
+
+df_gpt3_comprehension$is_joke = factor(df_gpt3_comprehension$is_joke, levels=c("Non-joke", "Joke"))
+
+df_merged_comprehension = df_hf_models_comprehension %>%
+  bind_rows(df_gpt3_comprehension)
+```
+
+
+## Classification data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis/")
+directory_path <- "../../data/processed/hf_models/classification/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_hf_models_classification <- bind_rows(csv_list)
+
+table(df_hf_models_classification$model)
+
+df_hf_models_classification = df_hf_models_classification %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    TRUE ~ "Non-joke"
+  )) %>%
+  mutate(model = str_extract(model, "(?<=/).*"))
+
+df_hf_models_classification$is_joke = factor(df_hf_models_classification$is_joke, levels=c("Non-joke", "Joke"))
+
+
+
+```
+
+### Merge with GPT-3
+
+```{r}
+df_gpt3_classification = read_csv("../../data/processed/llm_classification.csv") %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    TRUE ~ "Non-joke"
+  )) %>%
+  select(-shots)
+
+df_gpt3_classification$is_joke = factor(df_gpt3_classification$is_joke, levels=c("Non-joke", "Joke"))
+
+df_merged_classification = df_hf_models_classification %>%
+  bind_rows(df_gpt3_classification)
+```
+
+### Merge with surprisals
+
+```{r}
+df_merged_surprisal_classification = df_merged_classification %>%
+  left_join(df_surprisals)
+```
+
+### Merge with human data
+
+```{r}
+### TODO
+```
+
+
+## Appreciation data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis/")
+directory_path <- "../../data/processed/hf_models/appreciation/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_hf_models_appreciation <- bind_rows(csv_list) %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    TRUE ~ "Non-joke"
+  ))  %>%
+  mutate(model = str_extract(model, "(?<=/).*"))
+
+table(df_hf_models_appreciation$model)
+
+```
+
+### Merge with human data
+
+```{r}
+df_human_averages = read_csv("../../data/processed/human_item_averages.csv")
+
+df_merged_appreciation_human = df_hf_models_appreciation %>%
+  mutate(Sentence = sentence) %>%
+  left_join(df_human_averages)
+```
+
+
+# Comprehension analysis
+
+Run interaction.
+
+```{r}
+
+# Function to fit the model and extract coefficients
+run_model <- function(model_name) {
+  mod_full <- lm(data = filter(df_hf_models_comprehension, model == model_name),
+                 lp_ratio ~ condition * correct)
+  
+  # Extract tidy output for model coefficients, including p-values and estimates
+  tidy(mod_full) %>%
+    mutate(model = model_name)  # Add model name to each row
+}
+
+# Apply the function across all levels of the "model" variable and return results in a dataframe
+results <- df_hf_models_comprehension %>%
+  distinct(model) %>%                 # Get unique model names
+  pull(model) %>%                     # Extract as a vector
+  map_dfr(run_model)                  # Apply the model function to each model
+
+# View the results dataframe, including significance and parameter values
+results
+```
+
+Calculate accuracies.
+
+```{r comprehension_accuracy_llms}
+### Calculate accuracy
+df_merged_comprehension = df_merged_comprehension %>%
+  mutate(StimType = case_when(
+    condition == "J" ~ "joke",
+    condition == "E" ~ "expected",
+    condition == "S" ~ "straight"
+  )) %>%
+  mutate(Sentence = sentence,
+         ComprehensionQuestion = answer,
+         CorrectAnswer = correct
+         ) %>%
+  mutate(Match = case_when(
+    correct == "yes" & lp_ratio > 0 ~ 1,
+    correct == "no" & lp_ratio < 0 ~ 1,
+    correct == "yes" & lp_ratio < 0 ~ 0,
+    correct == "no" & lp_ratio > 0 ~ 0
+  ))
+
+
+df_merged_comprehension %>%
+  group_by(model, StimType) %>%
+  summarise(mean_accuracy = mean(Match, na.rm = TRUE))
+
+df_merged_comprehension %>%
+  group_by(model, is_joke) %>%
+  summarise(mean_accuracy = mean(Match, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(model, mean_accuracy),
+             y = mean_accuracy,
+             fill = is_joke)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "",
+       y = "Accuracy",
+       fill = "",
+       title = "Comprehension Accuracy") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted", size = 1.2) +
+    theme_minimal() +
+  coord_flip() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
+
+```
+
+
+
+## Predict human data
+
+### Merge with human data 
+
+First, we merge with the human data in two ways: by stakcing on top, and by combining horizontally.
+
+```{r}
+df_human_comprehension = read_csv("../../data/processed/human_data/comprehension_cleaned_final.csv") %>%
+  filter(StimType != "catch") %>%
+  mutate(model = "Human") %>%
+  mutate(Sentence = paste(Sentence, ".", sep = "")) %>%
+  mutate(is_joke = case_when(
+      StimType == "joke" ~ "Joke",
+      TRUE ~ "Non-joke"
+    )) %>%
+  select(Sentence, StimType, CorrectAnswer, Match, model, is_joke, ParticipantID, Response)
+  
+df_merged_comprehension_stacked = df_merged_comprehension %>%
+  select(Sentence, StimType, CorrectAnswer, Match, model, is_joke) %>%
+  bind_rows(df_human_comprehension)
+
+### Merge by joining so we can correlate them
+
+## First get subset
+df_merged_comprehension_subset = df_merged_comprehension %>%
+  select(Sentence, StimType, lp_ratio, model)
+
+### TODO: Correlate lp_ratio with *Response*, not match, right?
+df_merged_joined_comprehension = df_human_comprehension %>%
+  select(Sentence, StimType, CorrectAnswer, Response, ParticipantID) %>%
+  left_join(df_merged_comprehension_subset, by = c("Sentence", "StimType")) %>%
+  mutate(Response = factor(Response))
+
+nrow(df_merged_joined_comprehension)
+```
+
+
+
+### Accuracy
+
+```{r comprehension_accuracy_all}
+df_merged_comprehension_stacked %>%
+  group_by(model, is_joke) %>%
+  summarise(mean_accuracy = mean(Match, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(model, mean_accuracy),
+             y = mean_accuracy,
+             fill = is_joke)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "",
+       y = "Accuracy",
+       fill = "",
+       title = "Comprehension Accuracy") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted", size = 1.2) +
+    theme_minimal() +
+  coord_flip() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
+```
+
+### Correlation matrix
+
+Here, we plot joke correlations in comprehension success specifically.
+
+```{r corr_matrix_comprehension}
+df_comprehension_wide = df_merged_comprehension_stacked %>%
+  group_by(model, Sentence, is_joke) %>%
+  summarise(mean_accuracy = mean(Match)) %>%
+  select(Sentence, model,is_joke, mean_accuracy) %>%
+  pivot_wider(names_from = c(model),
+              values_from = mean_accuracy)
+
+cols = df_comprehension_wide %>%
+  filter(is_joke == "Joke") %>%
+  ungroup() %>%
+  select(-Sentence, -is_joke)
+cor_matrix <- cor(cols, use = "complete.obs")
+print(cor_matrix)
+
+p.mat <- cor_pmat(cor_matrix)
+
+# Plot the correlation matrix
+ggcorrplot(cor_matrix, 
+           hc.order = TRUE,
+           lab = TRUE,
+           method = "square" ,
+           # sig.level = .05,
+           # p.mat = p.mat,
+           title = "Correlation in Joke Comprehension"
+          )
+
+```
+
+### AIC
+
+Finally, we ask which LLM best predicts individual human responses using AIC.
+
+```{r comprehension_AIC}
+fit_model_and_extract_aic <- function(model_name, data) {
+  # Filter the data for the given model
+  data_model <- filter(data, model == model_name)
+  
+  # Fit the glmer model
+  mod <- glmer(Response ~ lp_ratio +
+                 (1 | ParticipantID) +
+                 (1 | Sentence),
+               data = data_model,
+               family = binomial(),
+               control = glmerControl(optimizer = "bobyqa"))
+  
+  # Return the AIC value
+  return(AIC(mod))
+}
+
+# Apply the function to each unique model in the dataframe
+results <- df_merged_joined_comprehension %>%
+  distinct(model) %>%  # Get the distinct levels of the model column
+  pull(model) %>%  # Extract as a vector
+  map_df(~ data.frame(model = .x, AIC = fit_model_and_extract_aic(.x, df_merged_joined_comprehension)))
+
+
+### construct baseline
+mod_condition_baseline = glmer(data = df_human_comprehension,
+                 factor(Response) ~ StimType * CorrectAnswer +
+                   (1 | ParticipantID) +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+# Create a new row as a dataframe
+new_row <- data.frame(model = "Condition * Answer", 
+                      AIC = AIC(mod_condition_baseline))
+
+# Add the new row to the results dataframe
+results <- bind_rows(results, new_row)
+
+
+# Display the results dataframe
+results
+
+
+# Rescale AIC
+results = results %>%
+  mutate(AIC_rescaled = AIC - min(AIC))
+
+
+### Plot
+results %>%
+  ggplot(aes(x = reorder(model, AIC_rescaled),
+             y = AIC_rescaled)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Predictor",
+     y = "Rescaled AIC") +
+  theme_minimal() +
+  coord_flip() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") 
+  
+
+### Plot without condition
+results %>%
+  filter(model != "Condition * Answer") %>%
+  ggplot(aes(x = reorder(model, AIC_rescaled),
+             y = AIC_rescaled)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Predictor",
+     y = "Rescaled AIC") +
+  theme_minimal() +
+  coord_flip() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") 
+
+```
+
+
+
+# Classification analysis
+
+
+```{r classification_accuracy}
+### Log-odds
+df_merged_surprisal_classification %>%
+  ggplot(aes(x = lp_ratio,
+             y = model,
+             fill = is_joke)) +
+  geom_density_ridges2(aes(height = ..density..), 
+                       color=gray(0.25), 
+                       alpha = .7, 
+                       scale=.85, 
+                       # size=1, 
+                       size = 0,
+                       stat="density") +
+  labs(x = "Log-odds (yes vs. no)",
+       y = "",
+       fill = "") +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom"
+  ) + 
+  theme(axis.title = element_text(size=rel(1.2)),
+        axis.text = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)),
+        legend.title = element_text(size = rel(1.2)),
+        strip.text.x = element_text(size = rel(1.2))) +
+  scale_fill_viridis(option = "mako", discrete=TRUE)
+
+### Accuracy
+df_merged_surprisal_classification = df_merged_surprisal_classification %>%
+  mutate(ResponseJoke = case_when(
+    lp_ratio > 0 ~ 1,
+    lp_ratio <= 0 ~ 0
+  )) %>%
+  mutate(Is_Joke = case_when(
+    is_joke == "Joke" ~ 1,
+    is_joke == "Non-joke" ~ 0
+  )) %>%
+  mutate(IsJokeResponseCorrect = Is_Joke == ResponseJoke)
+
+## Overall accuracy
+df_merged_surprisal_classification %>%
+  group_by(model) %>%
+  summarise(accuracy = mean(IsJokeResponseCorrect))
+
+### Accuracy per condition
+df_merged_surprisal_classification %>%
+  group_by(model, is_joke) %>%
+  summarise(accuracy = mean(IsJokeResponseCorrect))
+
+df_merged_surprisal_classification %>%
+  group_by(model, is_joke) %>%
+  summarise(mean_accuracy = mean(IsJokeResponseCorrect, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(model, mean_accuracy),
+             y = mean_accuracy,
+             fill = is_joke)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "",
+       y = "Accuracy",
+       fill = "",
+       title = "Classification Accuracy") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted", size = 1.2) +
+    theme_minimal() +
+  coord_flip() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
+
+```
+
+
+## Surprisal analysis
+
+```{r classification_surprisal}
+mod_full = lmer(data = filter(df_merged_surprisal_classification,
+                               model != "text-davinci-002"),
+                 lp_ratio ~ is_joke * surprisal + (1 | model) +
+                   (1 | sentence),
+                 REML = FALSE)
+
+summary(mod_full)
+
+df_merged_surprisal_classification %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "Low", "High")) %>%
+  ggplot(aes(x = surprisal_binned,
+             y = ResponseJoke,
+             fill = factor(is_joke))) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                position=position_dodge(width=0.95),
+                width = .2, alpha = .7) +
+  labs(x = "",
+       y = "P(Joke)",
+       fill = "") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE) +
+  facet_wrap(~model)
+```
+
+
+## Human data analysis
+
+Again, we merge the data in two ways.
+
+```{r}
+### First, stack them
+df_human_classification = read_csv("../../data/processed/human_data_appreciation/JokeFunniness_data_153Subs.csv") %>%
+  filter(StimType != "catch") %>%
+  mutate(model = "Human") %>%
+  mutate(is_joke = case_when(
+      StimType == "joke" ~ "Joke",
+      TRUE ~ "Non-joke"
+    )) %>%
+  select(Sentence, model, is_joke, Is_Joke, ParticipantID, ResponseJoke) %>%
+  mutate(IsJokeResponseCorrect = Is_Joke == ResponseJoke)
+
+### Merge with surprisal
+df_surprisals_td02 = df_surprisals %>%
+  mutate(Sentence = sentence) %>%
+  select(Sentence, surprisal)
+df_human_classification = df_human_classification %>%
+  left_join(df_surprisals_td02)
+  
+### Stack with LLMs
+df_merged_classification_stacked = df_merged_surprisal_classification %>%
+  mutate(Sentence = sentence) %>%
+  select(Sentence, model, is_joke, lp_ratio, 
+         ResponseJoke, IsJokeResponseCorrect, surprisal) %>%
+  bind_rows(df_human_classification)
+
+df_merged_classification_stacked$is_joke = factor(df_merged_classification_stacked$is_joke, levels = c("Non-joke", "Joke"))
+
+
+```
+
+
+### Accuracy comparison
+
+```{r classification_accuracy_humans}
+df_merged_classification_stacked %>%
+  group_by(model, is_joke) %>%
+  summarise(mean_accuracy = mean(IsJokeResponseCorrect, na.rm = TRUE)) 
+
+df_merged_classification_stacked %>%
+  group_by(model, is_joke) %>%
+  summarise(mean_accuracy = mean(IsJokeResponseCorrect, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(model, mean_accuracy),
+             y = mean_accuracy,
+             fill = is_joke)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "",
+       y = "Accuracy",
+       fill = "",
+       title = "Joke Detection Performance") +
+  scale_y_continuous(limits = c(0, 1)) +
+  geom_hline(yintercept = .5, linetype = "dotted", size = 1.2) +
+    theme_minimal() +
+  coord_flip() +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE)
+```
+
+### Surprisal analysis
+
+```{r classification_surprisal_humans}
+
+df_merged_classification_stacked = df_merged_classification_stacked %>%
+  mutate(Source = case_when(
+    model != "Human" ~ "LLM",
+    model == "Human" ~ "Human"
+  )) %>%
+  mutate(pid = case_when(
+    Source == "LLM" ~ model,
+    Source == "Human" ~ ParticipantID
+  ))
+
+mod_interaction = glmer(data = df_merged_classification_stacked,
+                 ResponseJoke ~ Source * surprisal +
+                   (1 | Sentence),
+                 family = binomial(),
+                 control=glmerControl(optimizer="bobyqa"))
+
+df_merged_classification_stacked %>%
+  mutate(surprisal_binned = ifelse(ntile(surprisal, 2) == 1, "Low", "High")) %>%
+  ggplot(aes(x = surprisal_binned,
+             y = ResponseJoke,
+             fill = factor(is_joke))) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "col",
+                position=position_dodge(width=0.95),
+                size = .5, alpha = .9) +
+  stat_summary (fun = function(x){mean(x)},
+                geom = "errorbar",
+                fun.min = function(x){mean(x) - 2*sd(x)/sqrt(length(x))},
+                fun.max = function(x){mean(x) + 2*sd(x)/sqrt(length(x))},
+                position=position_dodge(width=0.95),
+                width = .2, alpha = .7) +
+  labs(x = "",
+       y = "P(Joke)",
+       fill = "") +
+  # scale_y_continuous(limits = c(0, 1)) +
+  # geom_hline(yintercept = .5, linetype = "dotted") +
+    theme_minimal() +
+  theme(text = element_text(size = 15),
+        panel.spacing = unit(1, "lines"),
+        legend.position="bottom") +
+   scale_fill_viridis(option = "mako", discrete=TRUE) +
+  facet_wrap(~model, ncol = 3)
+```
+
+
+# Appreciation analysis
+
+Do any LLMs "appreciate" humor in a way correlated with humans?
+
+```{r}
+
+# Function to fit the model and extract coefficients
+run_model <- function(model_name) {
+  mod_full <- lm(data = filter(df_merged_appreciation_human, model == model_name),
+                 best_response ~ is_joke)
+  
+  # Extract tidy output for model coefficients, including p-values and estimates
+  tidy(mod_full) %>%
+    mutate(model = model_name)  # Add model name to each row
+}
+
+# Apply the function across all levels of the "model" variable and return results in a dataframe
+results <- df_merged_appreciation_human %>%
+  distinct(model) %>%                 # Get unique model names
+  pull(model) %>%                     # Extract as a vector
+  map_dfr(run_model)                  # Apply the model function to each model
+
+# View the results dataframe, including significance and parameter values
+results %>%
+  filter(term == "is_jokeNon-joke")
+
+
+### average response per condition
+df_merged_appreciation_human %>%
+  group_by(model, is_joke) %>%
+  summarise(mean_funniness = mean(best_response))
+
+### correlation with humans
+df_merged_appreciation_human %>%
+  group_by(model) %>%
+  summarise(cor_with_human = cor(best_response, ResponseFunny, 
+                                 method = "spearman"))
+```
+

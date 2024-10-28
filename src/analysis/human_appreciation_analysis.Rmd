@@ -3,14 +3,14 @@ title: "Comparison of human and LLM humor appreciation"
 author: "Drew Walker, Sean Trott, Seana Coulson"
 date: "September 7, 2023"
 output:
-  pdf_document: 
-      fig_caption: yes
-      keep_md: yes
-      keep_tex: yes
-  # html_document:
-  #   keep_md: yes
-  #   toc: yes
-  #  toc_float: yes
+  # pdf_document: 
+  #    fig_caption: yes
+  #    keep_md: yes
+  #    keep_tex: yes
+  html_document:
+     keep_md: yes
+     toc: yes
+     toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -261,7 +261,7 @@ df_class_cleaned_direct = df_class %>%
   )) %>%
   mutate(IsJokeResponseCorrect = Is_Joke == ResponseJoke) %>%
   select(Sentence, StimType, Is_Joke, ResponseJoke, IsJokeResponseCorrect, lp_ratio) %>%
-  mutate(Source = "LLM") %>%
+  mutate(Source = "text-davinci-002") %>%
   inner_join(df_surprisals_td02)
 
 mean(df_class_cleaned_direct$ResponseJoke)
@@ -292,7 +292,7 @@ df_app_cleaned_direct = df_app %>%
     is_joke == FALSE ~ 0
   )) %>%
   select(Sentence, StimType, Is_Joke, ResponseFunny) %>%
-  mutate(Source = "LLM") %>%
+  mutate(Source = "text-davinci-002") %>%
   inner_join(df_surprisals_td02)
 
 

@@ -1,0 +1,401 @@
+model,sentence,condition,log_prob,num_tokens,identified_token,surprisal,final_word
+meta-llama/Meta-Llama-3-8B,A committee keeps minutes and takes hours.,J,-4.3867188,1,hours,4.3867188,hours
+meta-llama/Meta-Llama-3-8B,A committee keeps minutes and takes votes.,S,-5.1679688,1,votes,5.1679688,votes
+meta-llama/Meta-Llama-3-8B,A device for finding furniture in the dark is a candle.,S,-6.8476562,1,candle,6.8476562,candle
+meta-llama/Meta-Llama-3-8B,A device for finding furniture in the dark is a shin.,J,-12.96875,1,shin,12.96875,shin
+meta-llama/Meta-Llama-3-8B,A good source of vitamin A is orange vegetables like carrots.,E,-0.49072266,1,carrots,0.49072266,carrots
+meta-llama/Meta-Llama-3-8B,A good way to blow your mind is to smoke gunpowder.,J,-10.2230176948,3,gunpowder,10.2230176948,gunpowder
+meta-llama/Meta-Llama-3-8B,A good way to blow your mind is to smoke heroin.,S,-7.7109375,1,heroin,7.7109375,heroin
+meta-llama/Meta-Llama-3-8B,A man who has lost ninety percent of his brain is called a widower.,J,-10.273574829,2,widower,10.273574829,widower
+meta-llama/Meta-Llama-3-8B,A man who has lost ninety percent of his brain is called a zombie.,S,-3.7402344,1,zombie,3.7402344,zombie
+meta-llama/Meta-Llama-3-8B,A problem drinker is one who never buys.,J,-6.5976562,1,buys,6.5976562,buys
+meta-llama/Meta-Llama-3-8B,A problem drinker is one who never quits.,S,-6.4101562,1,quits,6.4101562,quits
+meta-llama/Meta-Llama-3-8B,A replacement player hit a home run with my ball.,S,-5.71875,1,ball,5.71875,ball
+meta-llama/Meta-Llama-3-8B,A replacement player hit a home run with my girl.,J,-7.28125,1,girl,7.28125,girl
+meta-llama/Meta-Llama-3-8B,A thoughtful wife has pork chops ready when her husband comes home from fishing.,J,-4.734375,1,fishing,4.734375,fishing
+meta-llama/Meta-Llama-3-8B,A thoughtful wife has pork chops ready when her husband comes home from working.,S,-5.015625,1,working,5.015625,working
+meta-llama/Meta-Llama-3-8B,A vacation is the shortest distance between two locations.,S,-5.5507812,1,locations,5.5507812,locations
+meta-llama/Meta-Llama-3-8B,A vacation is the shortest distance between two paychecks.,J,-9.13134766,2,paychecks,9.13134766,paychecks
+meta-llama/Meta-Llama-3-8B,"After Olga tore her red dress, she went to the store for a needle and a spool of red thread.",E,-0.09100342,1,thread,0.09100342,thread
+meta-llama/Meta-Llama-3-8B,"All roads lead to Rome, and all detours lead to profanity.",J,-12.234375,2,profanity,12.234375,profanity
+meta-llama/Meta-Llama-3-8B,"All roads lead to Rome, and all detours lead to somewhere.",S,-6.5,1,somewhere,6.5,somewhere
+meta-llama/Meta-Llama-3-8B,All the plates were garnished with little sprigs of parsley.,E,-1.2724609,1,parsley,1.2724609,parsley
+meta-llama/Meta-Llama-3-8B,Another thing a small boy is constantly outgrowing is his allowance.,J,-7.2226562,1,allowance,7.2226562,allowance
+meta-llama/Meta-Llama-3-8B,Another thing a small boy is constantly outgrowing is his underwear.,S,-4.1757812,1,underwear,4.1757812,underwear
+meta-llama/Meta-Llama-3-8B,Another thing that has developed by leaps and bounds is the modern dance.,J,-6.96875,1,dance,6.96875,dance
+meta-llama/Meta-Llama-3-8B,Another thing that has developed by leaps and bounds is the modern science.,S,-5.1484375,1,science,5.1484375,science
+meta-llama/Meta-Llama-3-8B,Arguments between couples are healthy; sometimes they even prevent breakups.,S,-4.5258789,2,breakups,4.5258789,breakups
+meta-llama/Meta-Llama-3-8B,Arguments between couples are healthy; sometimes they even prevent marriage.,J,-5.0585938,1,marriage,5.0585938,marriage
+meta-llama/Meta-Llama-3-8B,Autobiography is an unrivaled vehicle for telling the truth about others.,J,-4.4101562,1,others,4.4101562,others
+meta-llama/Meta-Llama-3-8B,Autobiography is an unrivaled vehicle for telling the truth about somebody.,S,-7.6445312,1,somebody,7.6445312,somebody
+meta-llama/Meta-Llama-3-8B,Autumn is a good time to buy some new clothes.,E,-2.2578125,1,clothes,2.2578125,clothes
+meta-llama/Meta-Llama-3-8B,"Because of his diabetes, he had to take daily shots of insulin.",E,-0.08685303,1,insulin,0.08685303,insulin
+meta-llama/Meta-Llama-3-8B,"Before the outdoor concert, he packed a basket with wine and food for a picnic.",E,-0.46557617,1,picnic,0.46557617,picnic
+meta-llama/Meta-Llama-3-8B,Bill jumped in the lake and made a big splash.,E,-0.086242676,1,splash,0.086242676,splash
+meta-llama/Meta-Llama-3-8B,"By the time Mary had her fourteenth child, she'd run out of names to call her husband.",J,-2.4414062,1,husband,2.4414062,husband
+meta-llama/Meta-Llama-3-8B,"By the time Mary had her fourteenth child, she'd run out of names to call her offspring.",S,-2.6289062,1,offspring,2.6289062,offspring
+meta-llama/Meta-Llama-3-8B,"Charged with statutory rape, he told the judge he didn't know she was a statue.",J,-11.3828125,1,statue,11.3828125,statue
+meta-llama/Meta-Llama-3-8B,"Charged with statutory rape, he told the judge he didn't know she was a teenager.",S,-4.453125,1,teenager,4.453125,teenager
+meta-llama/Meta-Llama-3-8B,Cocktail lounges are usually half lit to match the patrons.,J,-7.7382812,1,patrons,7.7382812,patrons
+meta-llama/Meta-Llama-3-8B,Cocktail lounges are usually half lit to match the setting.,S,-5.5039062,1,setting,5.5039062,setting
+meta-llama/Meta-Llama-3-8B,"Congress taxes our income, our property, and our patience.",J,-8.3671875,1,patience,8.3671875,patience
+meta-llama/Meta-Llama-3-8B,"Congress taxes our income, our property, and our purchases.",S,-1.546875,1,purchases,1.546875,purchases
+meta-llama/Meta-Llama-3-8B,"Diamonds are produced by great pressure, usually provided by a girlfriend.",J,-13.6015625,1,girlfriend,13.6015625,girlfriend
+meta-llama/Meta-Llama-3-8B,"Diamonds are produced by great pressure, usually provided by a piston.",S,-9.6875,1,piston,9.6875,piston
+meta-llama/Meta-Llama-3-8B,Dogs crack open bones so they can eat the marrow.,E,-1.0380859,1,marrow,1.0380859,marrow
+meta-llama/Meta-Llama-3-8B,"During the worst part of the drought, people were encouraged to not always flush the toilet.",E,-0.03869629,1,toilet,0.03869629,toilet
+meta-llama/Meta-Llama-3-8B,Eva turned down the heat and left the sauce on the stove to simmer.,E,-0.92822266,1,simmer,0.92822266,simmer
+meta-llama/Meta-Llama-3-8B,Every introductory sailing class includes learning how to save a man drowning.,E,-10.5703125,1,drowning,10.5703125,drowning
+meta-llama/Meta-Llama-3-8B,"Every time I wear my spring coat in the rain, it damages the fabric.",S,-1.8310547,1,fabric,1.8310547,fabric
+meta-llama/Meta-Llama-3-8B,"Every time I wear my spring coat in the rain, it damages the springs.",J,-7.7695312,1,springs,7.7695312,springs
+meta-llama/Meta-Llama-3-8B,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little platform.,S,-4.78125,1,platform,4.78125,platform
+meta-llama/Meta-Llama-3-8B,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little water.,J,-3.7363281,1,water,3.7363281,water
+meta-llama/Meta-Llama-3-8B,"Except for not having a shell, slugs are a lot like snails.",E,-0.2501335194,2,snails,0.2501335194,snails
+meta-llama/Meta-Llama-3-8B,"Figures don't lie, except on the beaches.",J,-7.8554688,1,beaches,7.8554688,beaches
+meta-llama/Meta-Llama-3-8B,"Figures don't lie, except on the page.",S,-5.8125,1,page,5.8125,page
+meta-llama/Meta-Llama-3-8B,"For a great vacation, put the kids in the back seat, and take a cruise.",J,-3.7402344,1,cruise,3.7402344,cruise
+meta-llama/Meta-Llama-3-8B,"For a great vacation, put the kids in the back seat, and take a freeway.",S,-11.0390625,1,freeway,11.0390625,freeway
+meta-llama/Meta-Llama-3-8B,"For his thirtieth birthday, all his friends gathered to celebrate.",E,-1.2646484,1,celebrate,1.2646484,celebrate
+meta-llama/Meta-Llama-3-8B,For lunch he had an apple and a peanut butter sandwich.,E,-0.61035156,1,sandwich,0.61035156,sandwich
+meta-llama/Meta-Llama-3-8B,"Frequent naps prevent old age, especially when taken while driving.",J,-2.5761719,1,driving,2.5761719,driving
+meta-llama/Meta-Llama-3-8B,"Frequent naps prevent old age, especially when taken while relaxed.",S,-8.3515625,1,relaxed,8.3515625,relaxed
+meta-llama/Meta-Llama-3-8B,Good Friday commemorates the Last Supper that Jesus had with his twelve disciples.,E,-0.43041992,1,disciples,0.43041992,disciples
+meta-llama/Meta-Llama-3-8B,Hal wrote her a love letter.,E,-0.39990234,1,letter,0.39990234,letter
+meta-llama/Meta-Llama-3-8B,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough change.",S,-7.6445312,1,change,7.6445312,change
+meta-llama/Meta-Llama-3-8B,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough room.",J,-4.2382812,1,room,4.2382812,room
+meta-llama/Meta-Llama-3-8B,He drank so much that he eventually became a beverage.,J,-9.59375,1,beverage,9.59375,beverage
+meta-llama/Meta-Llama-3-8B,He drank so much that he eventually became a lush.,S,-5.9375,1,lush,5.9375,lush
+meta-llama/Meta-Llama-3-8B,He got a medal for bravery on the beach when he rescued a girl from a lifeguard.,J,-7.53259277,2,lifeguard,7.53259277,lifeguard
+meta-llama/Meta-Llama-3-8B,He got a medal for bravery on the beach when he rescued a girl from a shipwreck.,S,-6.0687828035999996,3,shipwreck,6.0687828035999996,shipwreck
+meta-llama/Meta-Llama-3-8B,He hung her coat in the closet.,E,-0.7807617,1,closet,0.7807617,closet
+meta-llama/Meta-Llama-3-8B,He is at the age when all the numbers in his little black book belong to doctors.,J,-8.34375,1,doctors,8.34375,doctors
+meta-llama/Meta-Llama-3-8B,He is at the age when all the numbers in his little black book belong to friends.,S,-6.1445312,1,friends,6.1445312,friends
+meta-llama/Meta-Llama-3-8B,"He is probably the best boxer in the country, but he always loses in the city.",J,-8.6015625,1,city,8.6015625,city
+meta-llama/Meta-Llama-3-8B,"He is probably the best boxer in the country, but he always loses in the competition.",S,-5.890625,1,competition,5.890625,competition
+meta-llama/Meta-Llama-3-8B,He likes to make things around the house; this week it's the maid.,J,-9.8515625,1,maid,9.8515625,maid
+meta-llama/Meta-Llama-3-8B,He likes to make things around the house; this week it's the shelves.,S,-5.3789062,1,shelves,5.3789062,shelves
+meta-llama/Meta-Llama-3-8B,"He owns stock in a company that pays quarterly dividends, so every three months they send him a quarter.",J,-9.34375,1,quarter,9.34375,quarter
+meta-llama/Meta-Llama-3-8B,"He owns stock in a company that pays quarterly dividends, so every three months they send him a statement.",S,-4.0546875,1,statement,4.0546875,statement
+meta-llama/Meta-Llama-3-8B,He says he doesn't like to drink because it makes him feel happy.,J,-6.6484375,1,happy,6.6484375,happy
+meta-llama/Meta-Llama-3-8B,He says he doesn't like to drink because it makes him feel sad.,S,-4.421875,1,sad,4.421875,sad
+meta-llama/Meta-Llama-3-8B,He spilled some of the quart of oil onto the engine because he didn't have a funnel.,E,-0.39379883,1,funnel,0.39379883,funnel
+meta-llama/Meta-Llama-3-8B,"He thought that he could turn from Grant onto Prince, but the two streets are parallel.",E,-3.7851562,1,parallel,3.7851562,parallel
+meta-llama/Meta-Llama-3-8B,"He told her he wasn't himself, and she said she'd noticed the improvement.",J,-8.03125,1,improvement,8.03125,improvement
+meta-llama/Meta-Llama-3-8B,"He told her he wasn't himself, and she said she'd noticed the problem.",S,-6.4960938,1,problem,6.4960938,problem
+meta-llama/Meta-Llama-3-8B,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a balloon.",J,-3.8339844,1,balloon,3.8339844,balloon
+meta-llama/Meta-Llama-3-8B,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a truck.",S,-2.6464844,1,truck,2.6464844,truck
+meta-llama/Meta-Llama-3-8B,"He told me he's not broke, just badly bent.",J,-5.5,1,bent,5.5,bent
+meta-llama/Meta-Llama-3-8B,"He told me he's not broke, just badly off.",S,-3.8125,1,off,3.8125,off
+meta-llama/Meta-Llama-3-8B,He was teaching his girlfriend how to swim when the lifeguard made them move to the lake.,J,-9.2890625,1,lake,9.2890625,lake
+meta-llama/Meta-Llama-3-8B,He was teaching his girlfriend how to swim when the lifeguard made them move to the shallows.,S,-4.79248044,2,shallows,4.79248044,shallows
+meta-llama/Meta-Llama-3-8B,He wondered if the storm had done much damage.,E,-0.14221191,1,damage,0.14221191,damage
+meta-llama/Meta-Llama-3-8B,"He's never given a girl a present, but he did give a few a pretty good reputation.",J,-7.4648438,1,reputation,7.4648438,reputation
+meta-llama/Meta-Llama-3-8B,"He's never given a girl a present, but he did give a few a pretty good surprise.",S,-5.2148438,1,surprise,5.2148438,surprise
+meta-llama/Meta-Llama-3-8B,He's planning an extended vacation: he hopes to spend three weeks on his couch.,J,-3.3691406,1,couch,3.3691406,couch
+meta-llama/Meta-Llama-3-8B,He's planning an extended vacation: he hopes to spend three weeks on his sailboat.,S,-3.8336791740000002,2,sailboat,3.8336791740000002,sailboat
+meta-llama/Meta-Llama-3-8B,Her press agent was operated on for an ingrown beeper.,J,-15.1210938,2,beeper,15.1210938,beeper
+meta-llama/Meta-Llama-3-8B,Her press agent was operated on for an ingrown eyelash.,S,-5.726501465,2,eyelash,5.726501465,eyelash
+meta-llama/Meta-Llama-3-8B,His doctor recommended he stay flat on his back ever since he was hit by a motorist.,S,-7.243164,2,motorist,7.243164,motorist
+meta-llama/Meta-Llama-3-8B,His doctor recommended he stay flat on his back ever since he was hit by a steamroller.,J,-9.47802734,2,steamroller,9.47802734,steamroller
+meta-llama/Meta-Llama-3-8B,His job was to keep the sidewalk clean.,E,-1.4648438,1,clean,1.4648438,clean
+meta-llama/Meta-Llama-3-8B,His sandwich came with chips and a dill pickle.,E,-0.047729492,1,pickle,0.047729492,pickle
+meta-llama/Meta-Llama-3-8B,His wife sued for divorce and asked for custody of the cash.,J,-12.640625,1,cash,12.640625,cash
+meta-llama/Meta-Llama-3-8B,His wife sued for divorce and asked for custody of the cat.,S,-8.734375,1,cat,8.734375,cat
+meta-llama/Meta-Llama-3-8B,"I appreciate the more expensive things in life: diamonds, caviar, and champagne.",S,-4.6054688,1,champagne,4.6054688,champagne
+meta-llama/Meta-Llama-3-8B,"I appreciate the more expensive things in life: diamonds, caviar, and postage.",J,-10.15625,1,postage,10.15625,postage
+meta-llama/Meta-Llama-3-8B,"I asked him if he started out as an editor, and he said that years ago he used to be a boy.",J,-8.34375,1,boy,8.34375,boy
+meta-llama/Meta-Llama-3-8B,"I asked him if he started out as an editor, and he said that years ago he used to be a journalist.",S,-3.1132812,1,journalist,3.1132812,journalist
+meta-llama/Meta-Llama-3-8B,"I asked the florist what I should give to my girlfriend, and he suggested his address.",J,-8.1171875,1,address,8.1171875,address
+meta-llama/Meta-Llama-3-8B,"I asked the florist what I should give to my girlfriend, and he suggested his tulips.",S,-7.82092285,2,tulips,7.82092285,tulips
+meta-llama/Meta-Llama-3-8B,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a dress.",J,-5.7148438,1,dress,5.7148438,dress
+meta-llama/Meta-Llama-3-8B,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a name.",S,-4.0976562,1,name,4.0976562,name
+meta-llama/Meta-Llama-3-8B,"I can walk on water, but I stagger on alcohol.",J,-7.7890625,1,alcohol,7.7890625,alcohol
+meta-llama/Meta-Llama-3-8B,"I can walk on water, but I stagger on concrete.",S,-6.0546875,1,concrete,6.0546875,concrete
+meta-llama/Meta-Llama-3-8B,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my pay.",S,-6.3828125,1,pay,6.3828125,pay
+meta-llama/Meta-Llama-3-8B,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my umbrella.",J,-8.3046875,1,umbrella,8.3046875,umbrella
+meta-llama/Meta-Llama-3-8B,"I got a car for my wife, and I thought it was a good choice.",S,-4.203125,1,choice,4.203125,choice
+meta-llama/Meta-Llama-3-8B,"I got a car for my wife, and I thought it was a good trade.",J,-5.1875,1,trade,5.1875,trade
+meta-llama/Meta-Llama-3-8B,"I hope this train stops at Grand Central because if it doesn't, there will be a crash.",J,-6.8828125,1,crash,6.8828125,crash
+meta-llama/Meta-Llama-3-8B,"I hope this train stops at Grand Central because if it doesn't, there will be a delay.",S,-4.6875,1,delay,4.6875,delay
+meta-llama/Meta-Llama-3-8B,I knew a streetwalker who was so exclusive she had an unlisted telephone booth.,J,-11.3046875,1,booth,11.3046875,booth
+meta-llama/Meta-Llama-3-8B,I knew a streetwalker who was so exclusive she had an unlisted telephone line.,S,-7.9335938,1,line,7.9335938,line
+meta-llama/Meta-Llama-3-8B,I know one couple who got divorced and had to leave the house to the attorney.,J,-10.1953125,1,attorney,10.1953125,attorney
+meta-llama/Meta-Llama-3-8B,I know one couple who got divorced and had to leave the house to the daughter.,S,-7.0976562,1,daughter,7.0976562,daughter
+meta-llama/Meta-Llama-3-8B,"I still miss my ex-wife, but I am improving my aim.",J,-7.3828125,1,aim,7.3828125,aim
+meta-llama/Meta-Llama-3-8B,"I still miss my ex-wife, but I am improving my ego.",S,-9.1640625,1,ego,9.1640625,ego
+meta-llama/Meta-Llama-3-8B,I went to a place that serves breakfast any time and ordered French toast in the nighttime.,S,-9.4453125,1,nighttime,9.4453125,nighttime
+meta-llama/Meta-Llama-3-8B,I went to a place that serves breakfast any time and ordered French toast in the Renaissance.,J,-14.1953125,1,Renaissance,14.1953125,Renaissance
+meta-llama/Meta-Llama-3-8B,"I've got Parkinson's disease, and he's got gout.",S,-7.61920171,2,gout,7.61920171,gout
+meta-llama/Meta-Llama-3-8B,"I've got Parkinson's disease, and he's got mine.",J,-6.0351562,1,mine,6.0351562,mine
+meta-llama/Meta-Llama-3-8B,"If there's one thing that counts in business, it's bookkeepers.",J,-16.0976562,2,bookkeepers,16.0976562,bookkeepers
+meta-llama/Meta-Llama-3-8B,"If there's one thing that counts in business, it's resources.",S,-8.921875,1,resources,8.921875,resources
+meta-llama/Meta-Llama-3-8B,"If you're filthy rich, sending your kids to college is a wonderful cleaner.",J,-18.625,1,cleaner,18.625,cleaner
+meta-llama/Meta-Llama-3-8B,"If you're filthy rich, sending your kids to college is a wonderful luxury.",S,-3.9277344,1,luxury,3.9277344,luxury
+meta-llama/Meta-Llama-3-8B,In some marriages the bride is given away by the family.,S,-4.6875,1,family,4.6875,family
+meta-llama/Meta-Llama-3-8B,In some marriages the bride is given away by the press.,J,-13.7578125,1,press,13.7578125,press
+meta-llama/Meta-Llama-3-8B,"In the game of golf, nothing counts as much as your drives.",S,-7.1210938,1,drives,7.1210938,drives
+meta-llama/Meta-Llama-3-8B,"In the game of golf, nothing counts as much as your opponent.",J,-7.4257812,1,opponent,7.4257812,opponent
+meta-llama/Meta-Llama-3-8B,"In the U.S. the five cent piece is made of nickel, while pennies are mainly made of copper.",E,-1.1679688,1,copper,1.1679688,copper
+meta-llama/Meta-Llama-3-8B,"It was so hot at Playboy, the centerfold took off her bikini.",S,-3.2773438,1,bikini,3.2773438,bikini
+meta-llama/Meta-Llama-3-8B,"It was so hot at Playboy, the centerfold took off her staple.",J,-12.1015625,1,staple,12.1015625,staple
+meta-llama/Meta-Llama-3-8B,It was too hot to sleep in a bed so he strung up a mesh hammock.,E,-0.44013976613000005,2,hammock,0.44013976613000005,hammock
+meta-llama/Meta-Llama-3-8B,"It's always nicer to give than to receive, especially when it's your opinion.",J,-8.6796875,1,opinion,8.6796875,opinion
+meta-llama/Meta-Llama-3-8B,"It's always nicer to give than to receive, especially when it's your parents.",S,-5.328125,1,parents,5.328125,parents
+meta-llama/Meta-Llama-3-8B,It's extraordinary what fine poker hand you get when you're playing bridge.,J,-7.359375,1,bridge,7.359375,bridge
+meta-llama/Meta-Llama-3-8B,It's extraordinary what fine poker hand you get when you're playing stud.,S,-6.84375,1,stud,6.84375,stud
+meta-llama/Meta-Llama-3-8B,It's hard to admit when one is wrong.,E,-0.42333984,1,wrong,0.42333984,wrong
+meta-llama/Meta-Llama-3-8B,"It's hard to raise a family nowadays, especially in the country.",S,-4.8085938,1,country,4.8085938,country
+meta-llama/Meta-Llama-3-8B,"It's hard to raise a family nowadays, especially in the morning.",J,-8.8125,1,morning,8.8125,morning
+meta-llama/Meta-Llama-3-8B,It's not hard to meet expenses; they're affordable.,S,-7.1523438,1,affordable,7.1523438,affordable
+meta-llama/Meta-Llama-3-8B,It's not hard to meet expenses; they're everywhere.,J,-3.5019531,1,everywhere,3.5019531,everywhere
+meta-llama/Meta-Llama-3-8B,Last Thanksgiving my wife spent all morning in the kitchen stuffing the bird.,S,-1.9453125,1,bird,1.9453125,bird
+meta-llama/Meta-Llama-3-8B,Last Thanksgiving my wife spent all morning in the kitchen stuffing the kids.,J,-5.984375,1,kids,5.984375,kids
+meta-llama/Meta-Llama-3-8B,"Love has its benefits, and they are usually called alimony.",J,-8.57177734,2,alimony,8.57177734,alimony
+meta-llama/Meta-Llama-3-8B,"Love has its benefits, and they are usually called memories.",S,-7.4765625,1,memories,7.4765625,memories
+meta-llama/Meta-Llama-3-8B,Many a freshman helps the college of his choice by becoming a dropout.,J,-10.0078125,1,dropout,10.0078125,dropout
+meta-llama/Meta-Llama-3-8B,Many a freshman helps the college of his choice by becoming a member.,S,-3.2597656,1,member,3.2597656,member
+meta-llama/Meta-Llama-3-8B,Many a man's idea of a vacation is to rest quietly in the shade of a blonde.,J,-15.296875,1,blonde,15.296875,blonde
+meta-llama/Meta-Llama-3-8B,Many a man's idea of a vacation is to rest quietly in the shade of a palm.,S,-1.4951172,1,palm,1.4951172,palm
+meta-llama/Meta-Llama-3-8B,"Many things run in families, especially noses.",J,-8.6015625,1,noses,8.6015625,noses
+meta-llama/Meta-Llama-3-8B,"Many things run in families, especially strength.",S,-9.9453125,1,strength,9.9453125,strength
+meta-llama/Meta-Llama-3-8B,Modern science is amazing: garbage is now being made into gasoline.,S,-4.1445312,1,gasoline,4.1445312,gasoline
+meta-llama/Meta-Llama-3-8B,Modern science is amazing: garbage is now being made into movies.,J,-9.9609375,1,movies,9.9609375,movies
+meta-llama/Meta-Llama-3-8B,Most cats see very well at night.,E,-0.15344238,1,night,0.15344238,night
+meta-llama/Meta-Llama-3-8B,Most of the people running for office are not politicians; they're candidates.,S,-5.3046875,1,candidates,5.3046875,candidates
+meta-llama/Meta-Llama-3-8B,Most of the people running for office are not politicians; they're commuters.,J,-10.71875,1,commuters,10.71875,commuters
+meta-llama/Meta-Llama-3-8B,Mrs Martin told the bad student to stand in the corner.,E,-0.2854004,1,corner,0.2854004,corner
+meta-llama/Meta-Llama-3-8B,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our drinks.,J,-10.96875,1,drinks,10.96875,drinks
+meta-llama/Meta-Llama-3-8B,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our stove.,S,-5.90625,1,stove,5.90625,stove
+meta-llama/Meta-Llama-3-8B,My church welcomes all denominations but prefers Mormons.,S,-7.6015625,1,Mormons,7.6015625,Mormons
+meta-llama/Meta-Llama-3-8B,My church welcomes all denominations but prefers twenties.,J,-17.046875,1,twenties,17.046875,twenties
+meta-llama/Meta-Llama-3-8B,My doctor has never violated his oath: the oath he took years ago to become a millionaire.,J,-13.0703125,1,millionaire,13.0703125,millionaire
+meta-llama/Meta-Llama-3-8B,My doctor has never violated his oath: the oath he took years ago to become a practitioner.,S,-7.0625,1,practitioner,7.0625,practitioner
+meta-llama/Meta-Llama-3-8B,My husband took the money we were saving to buy a new car and blew it all at the laundry.,J,-11.3984375,1,laundry,11.3984375,laundry
+meta-llama/Meta-Llama-3-8B,My husband took the money we were saving to buy a new car and blew it all at the tables.,S,-5.8359375,1,tables,5.8359375,tables
+meta-llama/Meta-Llama-3-8B,"My mechanic couldn't fix my brakes, so he fixed my clutch.",S,-7.6171875,1,clutch,7.6171875,clutch
+meta-llama/Meta-Llama-3-8B,"My mechanic couldn't fix my brakes, so he fixed my horn.",J,-0.74121094,1,horn,0.74121094,horn
+meta-llama/Meta-Llama-3-8B,My wife did natural childbirth: no anesthetic.,S,-5.5488281,2,anesthetic,5.5488281,anesthetic
+meta-llama/Meta-Llama-3-8B,My wife did natural childbirth: no makeup.,J,-12.6796875,1,makeup,12.6796875,makeup
+meta-llama/Meta-Llama-3-8B,"Nature has three ways of thinning the herd: drought, famine, and hunting.",S,-8.9609375,1,hunting,8.9609375,hunting
+meta-llama/Meta-Llama-3-8B,"Nature has three ways of thinning the herd: drought, famine, and primaries.",J,-19.125,1,primaries,19.125,primaries
+meta-llama/Meta-Llama-3-8B,No patient should leave the hospital until he's strong enough to face the cashier.,J,-14.3515625,1,cashier,14.3515625,cashier
+meta-llama/Meta-Llama-3-8B,No patient should leave the hospital until he's strong enough to face the outside.,S,-1.7226562,1,outside,1.7226562,outside
+meta-llama/Meta-Llama-3-8B,None of his books made any sense.,E,-2.3066406,1,sense,2.3066406,sense
+meta-llama/Meta-Llama-3-8B,Nothing ages a woman faster than hardships.,S,-13.8203125,1,hardships,13.8203125,hardships
+meta-llama/Meta-Llama-3-8B,Nothing ages a woman faster than identification.,J,-13.5703125,1,identification,13.5703125,identification
+meta-llama/Meta-Llama-3-8B,Nothing in the known universe travels faster than gossip.,J,-12.9453125,1,gossip,12.9453125,gossip
+meta-llama/Meta-Llama-3-8B,Nothing in the known universe travels faster than radiation.,S,-7.9648438,1,radiation,7.9648438,radiation
+meta-llama/Meta-Llama-3-8B,Nothing you put in a banana split is as potentially fattening as the spoon.,J,-7.3164062,1,spoon,7.3164062,spoon
+meta-llama/Meta-Llama-3-8B,Nothing you put in a banana split is as potentially fattening as the syrup.,S,-6.1992188,1,syrup,6.1992188,syrup
+meta-llama/Meta-Llama-3-8B,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their careers.",S,-6.9882812,1,careers,6.9882812,careers
+meta-llama/Meta-Llama-3-8B,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their nuptials.",J,-3.1704750308,3,nuptials,3.1704750308,nuptials
+meta-llama/Meta-Llama-3-8B,"Once a week they hold a bingo game, and all the proceeds go to fight disease.",S,-6.0664062,1,disease,6.0664062,disease
+meta-llama/Meta-Llama-3-8B,"Once a week they hold a bingo game, and all the proceeds go to fight gambling.",J,-8.515625,1,gambling,8.515625,gambling
+meta-llama/Meta-Llama-3-8B,One good turn gets most of the blanket.,J,-10.8046875,1,blanket,10.8046875,blanket
+meta-llama/Meta-Llama-3-8B,One good turn gets most of the profit.,S,-5.5898438,1,profit,5.5898438,profit
+meta-llama/Meta-Llama-3-8B,One good way to invest in the country is to buy a business.,S,-3.9023438,1,business,3.9023438,business
+meta-llama/Meta-Llama-3-8B,One good way to invest in the country is to buy a senator.,J,-13.859375,1,senator,13.859375,senator
+meta-llama/Meta-Llama-3-8B,One person who sure makes a long story short is my aunt.,S,-5.7304688,1,aunt,5.7304688,aunt
+meta-llama/Meta-Llama-3-8B,One person who sure makes a long story short is my editor.,J,-6.3632812,1,editor,6.3632812,editor
+meta-llama/Meta-Llama-3-8B,One thing that makes the world go round is detours.,J,-16.1621094,2,detours,16.1621094,detours
+meta-llama/Meta-Llama-3-8B,One thing that makes the world go round is greed.,S,-7.9726562,1,greed,7.9726562,greed
+meta-llama/Meta-Llama-3-8B,One way to keep pornography away from teenagers is to put it in a cabinet.,S,-5.4023438,1,cabinet,5.4023438,cabinet
+meta-llama/Meta-Llama-3-8B,One way to keep pornography away from teenagers is to put it in a textbook.,J,-8.3125,1,textbook,8.3125,textbook
+meta-llama/Meta-Llama-3-8B,Our new green car blocked the narrow driveway.,E,-2.375,1,driveway,2.375,driveway
+meta-llama/Meta-Llama-3-8B,Our son brought home a note from school saying they need a written excuse for his presence.,J,-7.0078125,1,presence,7.0078125,presence
+meta-llama/Meta-Llama-3-8B,Our son brought home a note from school saying they need a written excuse for his tardiness.,S,-4.0283203,2,tardiness,4.0283203,tardiness
+meta-llama/Meta-Llama-3-8B,"Parents support clubs for teenagers, especially when they lack other forms of diversion.",S,-5.8632812,1,diversion,5.8632812,diversion
+meta-llama/Meta-Llama-3-8B,"Parents support clubs for teenagers, especially when they lack other forms of punishment.",J,-13.640625,1,punishment,13.640625,punishment
+meta-llama/Meta-Llama-3-8B,Paul heard a loud grinding noise when someone put a tin can right down the garbage disposal.,E,-0.050811768,1,disposal,0.050811768,disposal
+meta-llama/Meta-Llama-3-8B,Politicians who are as American as apple pie still want their rewards.,S,-9.6171875,1,rewards,9.6171875,rewards
+meta-llama/Meta-Llama-3-8B,Politicians who are as American as apple pie still want their slice.,J,-2.5019531,1,slice,2.5019531,slice
+meta-llama/Meta-Llama-3-8B,Save the whales; start a coalition.,S,-7.8085938,1,coalition,7.8085938,coalition
+meta-llama/Meta-Llama-3-8B,Save the whales; start a collection.,J,-6.875,1,collection,6.875,collection
+meta-llama/Meta-Llama-3-8B,She always told girls not to look for a husband but just to date bachelors.,J,-10.8843078113,3,bachelors,10.8843078113,bachelors
+meta-llama/Meta-Llama-3-8B,She always told girls not to look for a husband but just to date someone.,S,-4.3164062,1,someone,4.3164062,someone
+meta-llama/Meta-Llama-3-8B,"She asked what state he was born in, and he said in the East.",S,-6.9375,1,East,6.9375,East
+meta-llama/Meta-Llama-3-8B,"She asked what state he was born in, and he said in the nude.",J,-9.0625,1,nude,9.0625,nude
+meta-llama/Meta-Llama-3-8B,She bought her father a tasteful tie for his birthday.,E,-0.22497559,1,birthday,0.22497559,birthday
+meta-llama/Meta-Llama-3-8B,She called her husband at his office.,E,-0.8730469,1,office,0.8730469,office
+meta-llama/Meta-Llama-3-8B,"She is so modest, she pulls down the shade to change her jacket.",S,-8.2421875,1,jacket,8.2421875,jacket
+meta-llama/Meta-Llama-3-8B,"She is so modest, she pulls down the shade to change her mind.",J,-5.125,1,mind,5.125,mind
+meta-llama/Meta-Llama-3-8B,She puts something behind her ears to attract men; lately she's been using her ankles.,J,-7.8085938,1,ankles,7.8085938,ankles
+meta-llama/Meta-Llama-3-8B,She puts something behind her ears to attract men; lately she's been using her vanilla.,S,-9.5078125,1,vanilla,9.5078125,vanilla
+meta-llama/Meta-Llama-3-8B,She read so much about the bad effects of cigarettes she decided to give up the habit.,S,-0.3449707,1,habit,0.3449707,habit
+meta-llama/Meta-Llama-3-8B,She read so much about the bad effects of cigarettes she decided to give up the reading.,J,-12.2578125,1,reading,12.2578125,reading
+meta-llama/Meta-Llama-3-8B,She tied up her hair with a yellow ribbon.,E,-0.53125,1,ribbon,0.53125,ribbon
+meta-llama/Meta-Llama-3-8B,"She told him he looked like a million, and she meant every century.",J,-11.5546875,1,century,11.5546875,century
+meta-llama/Meta-Llama-3-8B,"She told him he looked like a million, and she meant every syllable.",S,-5.4780073166,2,syllable,5.4780073166,syllable
+meta-llama/Meta-Llama-3-8B,She used a needle and a tweezers to pull out the splinter.,E,-3.90966792,2,splinter,3.90966792,splinter
+meta-llama/Meta-Llama-3-8B,She was suddenly called back to New York and had to take a cab to the airport.,E,-0.14477539,1,airport,0.14477539,airport
+meta-llama/Meta-Llama-3-8B,"She went on a fourteen day diet, but she only lost two ounces.",S,-6.125,1,ounces,6.125,ounces
+meta-llama/Meta-Llama-3-8B,"She went on a fourteen day diet, but she only lost two weeks.",J,-8.453125,1,weeks,8.453125,weeks
+meta-llama/Meta-Llama-3-8B,She's happy because she finally has a boyfriend who gets along with her father.,S,-3.3691406,1,father,3.3691406,father
+meta-llama/Meta-Llama-3-8B,She's happy because she finally has a boyfriend who gets along with her fiance.,J,-8.859375,1,fiance,8.859375,fiance
+meta-llama/Meta-Llama-3-8B,"Some babies are born to rule, while others are male.",J,-13.265625,1,male,13.265625,male
+meta-llama/Meta-Llama-3-8B,"Some babies are born to rule, while others are weak.",S,-11.0703125,1,weak,11.0703125,weak
+meta-llama/Meta-Llama-3-8B,"Some husbands are good providers, but only if you count children.",J,-8.125,1,children,8.125,children
+meta-llama/Meta-Llama-3-8B,"Some husbands are good providers, but only if you count salary.",S,-9.0,1,salary,9.0,salary
+meta-llama/Meta-Llama-3-8B,Some people think courtship is the first in a series of steps leading to divorce.,J,-6.9179688,1,divorce,6.9179688,divorce
+meta-llama/Meta-Llama-3-8B,Some people think courtship is the first in a series of steps leading to romance.,S,-6.1210938,1,romance,6.1210938,romance
+meta-llama/Meta-Llama-3-8B,Some people's only culture is bacteria.,J,-12.9609375,1,bacteria,12.9609375,bacteria
+meta-llama/Meta-Llama-3-8B,Some people's only culture is radio.,S,-8.4375,1,radio,8.4375,radio
+meta-llama/Meta-Llama-3-8B,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly blackjack.",S,-5.4179688,1,blackjack,5.4179688,blackjack
+meta-llama/Meta-Llama-3-8B,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly weddings.",J,-12.46875,1,weddings,12.46875,weddings
+meta-llama/Meta-Llama-3-8B,Sunday is the day we bow our heads and putt.,J,-15.1875,1,putt,15.1875,putt
+meta-llama/Meta-Llama-3-8B,Sunday is the day we bow our heads and rest.,S,-7.1601562,1,rest,7.1601562,rest
+meta-llama/Meta-Llama-3-8B,The accident injured his spinal cord and his legs are paralyzed.,E,-0.77734375,1,paralyzed,0.77734375,paralyzed
+meta-llama/Meta-Llama-3-8B,The art museum just acquired an early Rembrandt; it's done in charcoal.,S,-5.6835938,1,charcoal,5.6835938,charcoal
+meta-llama/Meta-Llama-3-8B,The art museum just acquired an early Rembrandt; it's done in Crayola.,J,-10.847534179999998,3,Crayola,10.847534179999998,Crayola
+meta-llama/Meta-Llama-3-8B,The baby cried and upset her mother.,E,-0.9433594,1,mother,0.9433594,mother
+meta-llama/Meta-Llama-3-8B,The bartender dropped two olives into the strong martini.,E,-2.7190742743,2,martini,2.7190742743,martini
+meta-llama/Meta-Llama-3-8B,The best bargain I ever got was when I went to a family garage sale and bought a grandma.,J,-10.7109375,1,grandma,10.7109375,grandma
+meta-llama/Meta-Llama-3-8B,The best bargain I ever got was when I went to a family garage sale and bought a toaster.,S,-6.7929688,1,toaster,6.7929688,toaster
+meta-llama/Meta-Llama-3-8B,The best gift for the man who has everything is neckties.,S,-14.1601562,2,neckties,14.1601562,neckties
+meta-llama/Meta-Llama-3-8B,The best gift for the man who has everything is penicillin.,J,-16.618881226,3,penicillin,16.618881226,penicillin
+meta-llama/Meta-Llama-3-8B,The best way to keep the milk from turning sour is to keep it in the cold.,S,-4.3984375,1,cold,4.3984375,cold
+meta-llama/Meta-Llama-3-8B,The best way to keep the milk from turning sour is to keep it in the cow.,J,-7.0546875,1,cow,7.0546875,cow
+meta-llama/Meta-Llama-3-8B,The best way to remove coffee stains from a white blouse is with detergent.,S,-6.3828125,1,detergent,6.3828125,detergent
+meta-llama/Meta-Llama-3-8B,The best way to remove coffee stains from a white blouse is with scissors.,J,-12.7734375,1,scissors,12.7734375,scissors
+meta-llama/Meta-Llama-3-8B,The best way to stop an elephant from charging is to cut off its credit.,J,-6.421875,1,credit,6.421875,credit
+meta-llama/Meta-Llama-3-8B,The best way to stop an elephant from charging is to cut off its toes.,S,-5.4453125,1,toes,5.4453125,toes
+meta-llama/Meta-Llama-3-8B,The bill was due at the end of the month.,E,-0.31347656,1,month,0.31347656,month
+meta-llama/Meta-Llama-3-8B,The book that tells you where you can go on vacation is called a checkbook.,J,-11.37109375,2,checkbook,11.37109375,checkbook
+meta-llama/Meta-Llama-3-8B,The book that tells you where you can go on vacation is called a guidebook.,S,-2.21118162,2,guidebook,2.21118162,guidebook
+meta-llama/Meta-Llama-3-8B,The children held their hands and formed a circle.,E,-0.80371094,1,circle,0.80371094,circle
+meta-llama/Meta-Llama-3-8B,The choir sang hymns while the people listened.,E,-3.3652344,1,listened,3.3652344,listened
+meta-llama/Meta-Llama-3-8B,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and crack.",S,-5.984375,1,crack,5.984375,crack
+meta-llama/Meta-Llama-3-8B,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and lawyers.",J,-10.8984375,1,lawyers,10.8984375,lawyers
+meta-llama/Meta-Llama-3-8B,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the admission.",S,-2.4179688,1,admission,2.4179688,admission
+meta-llama/Meta-Llama-3-8B,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the bathtub.",J,-10.9765625,1,bathtub,10.9765625,bathtub
+meta-llama/Meta-Llama-3-8B,The curse of heavy drinking is that afterwards you get a huge bartab.,J,-14.89196777,2,bartab,14.89196777,bartab
+meta-llama/Meta-Llama-3-8B,The curse of heavy drinking is that afterwards you get a huge headache.,S,-1.4121094,1,headache,1.4121094,headache
+meta-llama/Meta-Llama-3-8B,The difference between a dog and a fox is about five beers.,J,-9.0546875,1,beers,9.0546875,beers
+meta-llama/Meta-Llama-3-8B,The difference between a dog and a fox is about five degrees.,S,-5.4765625,1,degrees,5.4765625,degrees
+meta-llama/Meta-Llama-3-8B,The difference between a good speaker and a bad one is often a nice diction.,S,-8.2382813,2,diction,8.2382813,diction
+meta-llama/Meta-Llama-3-8B,The difference between a good speaker and a bad one is often a nice nap.,J,-10.0546875,1,nap,10.0546875,nap
+meta-llama/Meta-Llama-3-8B,The doctor said he could have a stroke because his arteries were getting narrow and clogged.,E,-2.390655518,2,clogged,2.390655518,clogged
+meta-llama/Meta-Llama-3-8B,The doctor told her not to scratch no matter how much it itched.,E,-0.32568359,2,itched,0.32568359,itched
+meta-llama/Meta-Llama-3-8B,The farmer put a new engine in his old tractor.,E,-0.92041016,1,tractor,0.92041016,tractor
+meta-llama/Meta-Llama-3-8B,The first thing he does every morning is sit in the lotus position and meditate.,E,-1.167770373,2,meditate,1.167770373,meditate
+meta-llama/Meta-Llama-3-8B,The first two hundred story building opened in Chicago; it was a hotel.,S,-3.4023438,1,hotel,3.4023438,hotel
+meta-llama/Meta-Llama-3-8B,The first two hundred story building opened in Chicago; it was a library.,J,-7.4101562,1,library,7.4101562,library
+meta-llama/Meta-Llama-3-8B,The garment bag kept his suit from getting wrinkled.,E,-0.63873293,2,wrinkled,0.63873293,wrinkled
+meta-llama/Meta-Llama-3-8B,The husband who catches his wife in the act is probably on the snoop.,S,-15.9414062,2,snoop,15.9414062,snoop
+meta-llama/Meta-Llama-3-8B,The husband who catches his wife in the act is probably on the trapeze.,J,-13.054229786,3,trapeze,13.054229786,trapeze
+meta-llama/Meta-Llama-3-8B,The last time a guy in a mask took all my money I was in shock.,S,-9.5859375,1,shock,9.5859375,shock
+meta-llama/Meta-Llama-3-8B,The last time a guy in a mask took all my money I was in surgery.,J,-11.1328125,1,surgery,11.1328125,surgery
+meta-llama/Meta-Llama-3-8B,The lawyer feared that his client was guilty.,E,-4.3476562,1,guilty,4.3476562,guilty
+meta-llama/Meta-Llama-3-8B,The luggage handler seemed to take great delight in tossing the boxes marked fragile.,E,-4.234375,1,fragile,4.234375,fragile
+meta-llama/Meta-Llama-3-8B,The mole lived in a hole in the ground.,E,-0.45996094,1,ground,0.45996094,ground
+meta-llama/Meta-Llama-3-8B,The most popular instrument in a Scottish marching band is the bagpipe.,E,-2.6103516,2,bagpipe,2.6103516,bagpipe
+meta-llama/Meta-Llama-3-8B,The most prevalent form of legalized gambling is betting.,S,-3.6796875,1,betting,3.6796875,betting
+meta-llama/Meta-Llama-3-8B,The most prevalent form of legalized gambling is elections.,J,-13.1875,1,elections,13.1875,elections
+meta-llama/Meta-Llama-3-8B,The movers put the sofa on the bare floor.,E,-0.95751953,1,floor,0.95751953,floor
+meta-llama/Meta-Llama-3-8B,"The new tax forms are more realistic-- where your wife signs, it says: accomplice.",J,-12.9933757782,2,accomplice,12.9933757782,accomplice
+meta-llama/Meta-Llama-3-8B,"The new tax forms are more realistic-- where your wife signs, it says: partner.",S,-10.03125,1,partner,10.03125,partner
+meta-llama/Meta-Llama-3-8B,The newspaper photo was so murky he couldn't figure out who it was until he read the caption.,E,-0.28076172,1,caption,0.28076172,caption
+meta-llama/Meta-Llama-3-8B,The nurse gave him detailed instructions about how to clean the wound and put on a fresh bandage.,E,-0.744079602,2,bandage,0.744079602,bandage
+meta-llama/Meta-Llama-3-8B,The old wealthy family lived in a twelve bedroom mansion.,E,-1.1904297,1,mansion,1.1904297,mansion
+meta-llama/Meta-Llama-3-8B,The only crop that is grown in America and harvested abroad is the American tobacco.,S,-5.28125,1,tobacco,5.28125,tobacco
+meta-llama/Meta-Llama-3-8B,The only crop that is grown in America and harvested abroad is the American tourist.,J,-7.1640625,1,tourist,7.1640625,tourist
+meta-llama/Meta-Llama-3-8B,The only fishing through the ice that some men ever do is for the olive.,J,-11.34375,1,olive,11.34375,olive
+meta-llama/Meta-Llama-3-8B,The only fishing through the ice that some men ever do is for the trout.,S,-4.3203125,1,trout,4.3203125,trout
+meta-llama/Meta-Llama-3-8B,The only ones who want me for my body are losers.,S,-7.0273438,1,losers,7.0273438,losers
+meta-llama/Meta-Llama-3-8B,The only ones who want me for my body are mosquitoes.,J,-10.671875,1,mosquitoes,10.671875,mosquitoes
+meta-llama/Meta-Llama-3-8B,The only person who sticks closer to you in adversity than a friend is a creditor.,J,-5.8125,1,creditor,5.8125,creditor
+meta-llama/Meta-Llama-3-8B,The only person who sticks closer to you in adversity than a friend is a spouse.,S,-4.46875,1,spouse,4.46875,spouse
+meta-llama/Meta-Llama-3-8B,The only place where you can find people who spend all their time minding their own business is the bank.,S,-6.0,1,bank,6.0,bank
+meta-llama/Meta-Llama-3-8B,The only place where you can find people who spend all their time minding their own business is the cemetery.,J,-2.140625,1,cemetery,2.140625,cemetery
+meta-llama/Meta-Llama-3-8B,The only thing money can't buy is generosity.,S,-9.1796875,1,generosity,9.1796875,generosity
+meta-llama/Meta-Llama-3-8B,The only thing money can't buy is poverty.,J,-2.2363281,1,poverty,2.2363281,poverty
+meta-llama/Meta-Llama-3-8B,The only time my father ever raised a hand to his children was in discipline.,S,-7.7890625,1,discipline,7.7890625,discipline
+meta-llama/Meta-Llama-3-8B,The only time my father ever raised a hand to his children was in self-defense.,J,-2.8659668,2,self-defense,2.8659668,self-defense
+meta-llama/Meta-Llama-3-8B,The paint turned out to be the wrong color.,E,-0.64990234,1,color,0.64990234,color
+meta-llama/Meta-Llama-3-8B,The painter used water-based paint for the interior of the house but enamel for the exterior.,E,-0.51171875,1,exterior,0.51171875,exterior
+meta-llama/Meta-Llama-3-8B,The penalty for dishonesty is the disgrace of dying rich.,J,-7.5703125,1,rich,7.5703125,rich
+meta-llama/Meta-Llama-3-8B,The penalty for dishonesty is the disgrace of dying unloved.,S,-10.038482666,3,unloved,10.038482666,unloved
+meta-llama/Meta-Llama-3-8B,The perfect companion to a vegetarian dinner is a salad.,S,-3.2460938,1,salad,3.2460938,salad
+meta-llama/Meta-Llama-3-8B,The perfect companion to a vegetarian dinner is a steak.,J,-7.9023438,1,steak,7.9023438,steak
+meta-llama/Meta-Llama-3-8B,The policeman saw him throw the bottle out the window and gave him a ticket for littering.,E,-0.26837921000000003,2,littering,0.26837921000000003,littering
+meta-llama/Meta-Llama-3-8B,The Republican candidate won the election by a landslide.,E,-1.8466797,1,landslide,1.8466797,landslide
+meta-llama/Meta-Llama-3-8B,The rodeo champion was quite proud of his big silver belt buckle.,E,-0.028182983,1,buckle,0.028182983,buckle
+meta-llama/Meta-Llama-3-8B,The show had one act that was really offbeat: the clowns.,S,-6.905517629999999,2,clowns,6.905517629999999,clowns
+meta-llama/Meta-Llama-3-8B,The show had one act that was really offbeat: the singer.,J,-5.6875,1,singer,5.6875,singer
+meta-llama/Meta-Llama-3-8B,The surgeon tried vainly to save his patient.,E,-1.9794922,1,patient,1.9794922,patient
+meta-llama/Meta-Llama-3-8B,The teacher wrote the problem on the board.,E,-0.48754883,1,board,0.48754883,board
+meta-llama/Meta-Llama-3-8B,The terrorists planted a bomb in the airport and four people were killed in the explosion.,E,-1.0410156,1,explosion,1.0410156,explosion
+meta-llama/Meta-Llama-3-8B,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little finding.,J,-9.359375,1,finding,9.359375,finding
+meta-llama/Meta-Llama-3-8B,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little sightseeing.,S,-6.04516597,2,sightseeing,6.04516597,sightseeing
+meta-llama/Meta-Llama-3-8B,The victim was rushed to the hospital in an ambulance.,E,-0.625,1,ambulance,0.625,ambulance
+meta-llama/Meta-Llama-3-8B,The visitor stared at the grandfather clock and seemed almost hypnotized by the swinging of the pendulum.,E,-0.138238909,2,pendulum,0.138238909,pendulum
+meta-llama/Meta-Llama-3-8B,The whole town came to hear their mayor speak.,E,-2.0703125,1,speak,2.0703125,speak
+meta-llama/Meta-Llama-3-8B,The wind was so strong it blew out three fuses.,J,-8.13360596,2,fuses,8.13360596,fuses
+meta-llama/Meta-Llama-3-8B,The wind was so strong it blew out three streetlights.,S,-6.524414,2,streetlights,6.524414,streetlights
+meta-llama/Meta-Llama-3-8B,The woman in the grocery store was handing out free samples.,E,-0.5810547,1,samples,0.5810547,samples
+meta-llama/Meta-Llama-3-8B,The woman who has her husband eating out of her hand must save a lot of dishwashing.,J,-6.3320313,2,dishwashing,6.3320313,dishwashing
+meta-llama/Meta-Llama-3-8B,The woman who has her husband eating out of her hand must save a lot of heartbreak.,S,-10.9492187,2,heartbreak,10.9492187,heartbreak
+meta-llama/Meta-Llama-3-8B,There were over a hundred trees in the apple orchard.,E,-0.18270873699999998,2,orchard,0.18270873699999998,orchard
+meta-llama/Meta-Llama-3-8B,They planned to dig a tunnel in order to escape.,E,-1.7177734,1,escape,1.7177734,escape
+meta-llama/Meta-Llama-3-8B,They redecorated the bar with new drunks.,J,-13.2695313,2,drunks,13.2695313,drunks
+meta-llama/Meta-Llama-3-8B,They redecorated the bar with new wood.,S,-4.0859375,1,wood,4.0859375,wood
+meta-llama/Meta-Llama-3-8B,They went to Las Vegas and got married in one of those quickie wedding chapels.,E,-0.15697479217,2,chapels,0.15697479217,chapels
+meta-llama/Meta-Llama-3-8B,This fall two things are turning yellow: trees and bushes.,S,-11.9140625,1,bushes,11.9140625,bushes
+meta-llama/Meta-Llama-3-8B,This fall two things are turning yellow: trees and investors.,J,-8.046875,1,investors,8.046875,investors
+meta-llama/Meta-Llama-3-8B,"This house comes with a lot of extras, mostly termites.",J,-11.7590332,2,termites,11.7590332,termites
+meta-llama/Meta-Llama-3-8B,"This house comes with a lot of extras, mostly upgrades.",S,-4.7460938,1,upgrades,4.7460938,upgrades
+meta-llama/Meta-Llama-3-8B,"This new computer works so quickly, it comes complete with games.",S,-10.0546875,1,games,10.0546875,games
+meta-llama/Meta-Llama-3-8B,"This new computer works so quickly, it comes complete with ulcers.",J,-13.14160156,2,ulcers,13.14160156,ulcers
+meta-llama/Meta-Llama-3-8B,"Though most people think it's Rome, the world's most beloved capital is actually dollars.",J,-17.03125,1,dollars,17.03125,dollars
+meta-llama/Meta-Llama-3-8B,"Though most people think it's Rome, the world's most beloved capital is actually Vienna.",S,-6.0859375,1,Vienna,6.0859375,Vienna
+meta-llama/Meta-Llama-3-8B,Three people were killed in a major highway accident.,E,-1.1357422,1,accident,1.1357422,accident
+meta-llama/Meta-Llama-3-8B,Tim threw a rock and broke the window.,E,-0.3408203,1,window,0.3408203,window
+meta-llama/Meta-Llama-3-8B,"To clothe one soldier, it takes the wool from two sheep and the hides from three animals.",S,-4.6367188,1,animals,4.6367188,animals
+meta-llama/Meta-Llama-3-8B,"To clothe one soldier, it takes the wool from two sheep and the hides from three taxpayers.",J,-15.34375,1,taxpayers,15.34375,taxpayers
+meta-llama/Meta-Llama-3-8B,"To get something done, a committee should consist of no more than three people, two of whom are dead.",J,-5.34375,1,dead,5.34375,dead
+meta-llama/Meta-Llama-3-8B,"To get something done, a committee should consist of no more than three people, two of whom are workers.",S,-17.015625,1,workers,17.015625,workers
+meta-llama/Meta-Llama-3-8B,To keep the dogs out of the yard he put up a fence.,E,-0.8959961,1,fence,0.8959961,fence
+meta-llama/Meta-Llama-3-8B,To pay for the car Al simply wrote a check.,E,-0.56689453,1,check,0.56689453,check
+meta-llama/Meta-Llama-3-8B,Too many girls believe that the chief foundation for true love is a large fortune.,S,-4.1953125,1,fortune,4.1953125,fortune
+meta-llama/Meta-Llama-3-8B,Too many girls believe that the chief foundation for true love is a large stone.,J,-8.96875,1,stone,8.96875,stone
+meta-llama/Meta-Llama-3-8B,Two things are essential for success: wealth and fame.,S,-4.1289062,1,fame,4.1289062,fame
+meta-llama/Meta-Llama-3-8B,Two things are essential for success: wealth and money.,J,-4.8710938,1,money,4.8710938,money
+meta-llama/Meta-Llama-3-8B,We finally got a decent picture on the TV after an hour of adjusting the antenna.,E,-2.0449219,1,antenna,2.0449219,antenna
+meta-llama/Meta-Llama-3-8B,We live in a lovely suburb; it's just two miles beyond our income.,J,-10.2265625,1,income,10.2265625,income
+meta-llama/Meta-Llama-3-8B,We live in a lovely suburb; it's just two miles beyond our town.,S,-2.4179688,1,town,2.4179688,town
+meta-llama/Meta-Llama-3-8B,"We used to have food on the table as soon as the customer was seated, but our new system requires more effort.",S,-4.9570312,1,effort,4.9570312,effort
+meta-llama/Meta-Llama-3-8B,"We used to have food on the table as soon as the customer was seated, but our new system requires more plates.",J,-7.9648438,1,plates,7.9648438,plates
+meta-llama/Meta-Llama-3-8B,"When an irresistible force meets an immovable object, you get two very angry entities.",S,-4.1679688,1,entities,4.1679688,entities
+meta-llama/Meta-Llama-3-8B,"When an irresistible force meets an immovable object, you get two very angry women.",J,-5.0507812,1,women,5.0507812,women
+meta-llama/Meta-Llama-3-8B,"When he stepped into the elevator, he knew Jennifer had just been there by the smell of her perfume.",E,-0.2709961,1,perfume,0.2709961,perfume
+meta-llama/Meta-Llama-3-8B,"When I asked how long I should cook the noodles, he said at least ten inches.",J,-11.640625,1,inches,11.640625,inches
+meta-llama/Meta-Llama-3-8B,"When I asked how long I should cook the noodles, he said at least ten seconds.",S,-5.015625,1,seconds,5.015625,seconds
+meta-llama/Meta-Llama-3-8B,"When I asked the bartender for something cold and full of rum, he recommended his daiquiri.",S,-6.37607193,3,daiquiri,6.37607193,daiquiri
+meta-llama/Meta-Llama-3-8B,"When I asked the bartender for something cold and full of rum, he recommended his wife.",J,-7.2109375,1,wife,7.2109375,wife
+meta-llama/Meta-Llama-3-8B,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the dressmaker.",J,-6.8964843,2,dressmaker,6.8964843,dressmaker
+meta-llama/Meta-Llama-3-8B,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the mistress.",S,-7.4101562,1,mistress,7.4101562,mistress
+meta-llama/Meta-Llama-3-8B,"When it comes to keeping warm, nothing beats a thermal brunette.",J,-15.4296875,1,brunette,15.4296875,brunette
+meta-llama/Meta-Llama-3-8B,"When it comes to keeping warm, nothing beats a thermal parka.",S,-6.71257782,2,parka,6.71257782,parka
+meta-llama/Meta-Llama-3-8B,"When John bought a bulldog, it was no time at all before he had that dog eating out of his fingers.",S,-7.21875,1,fingers,7.21875,fingers
+meta-llama/Meta-Llama-3-8B,"When John bought a bulldog, it was no time at all before he had that dog eating out of his leg.",J,-14.40625,1,leg,14.40625,leg
+meta-llama/Meta-Llama-3-8B,"When reviewing your notes for a test, the most important ones will be capitalized.",S,-8.453125,1,capitalized,8.453125,capitalized
+meta-llama/Meta-Llama-3-8B,"When reviewing your notes for a test, the most important ones will be illegible.",J,-11.098869324,2,illegible,11.098869324,illegible
+meta-llama/Meta-Llama-3-8B,"When the kid came into the store and asked for empty boxes, the owner gave him the crate.",S,-9.546875,1,crate,9.546875,crate
+meta-llama/Meta-Llama-3-8B,"When the kid came into the store and asked for empty boxes, the owner gave him the register.",J,-11.484375,1,register,11.484375,register
+meta-llama/Meta-Llama-3-8B,When they were in London they visited Buckingham Palace.,E,-0.07556152,1,Palace,0.07556152,Palace
+meta-llama/Meta-Llama-3-8B,"When we got divorced, my wife and I split the house; she got the inside.",J,-5.5429688,1,inside,5.5429688,inside
+meta-llama/Meta-Llama-3-8B,"When we got divorced, my wife and I split the house; she got the kitchen.",S,-3.4257812,1,kitchen,3.4257812,kitchen
+meta-llama/Meta-Llama-3-8B,"When we watch a sexy movie, my wife leans over and breathes on my collar.",S,-5.4960938,1,collar,5.4960938,collar
+meta-llama/Meta-Llama-3-8B,"When we watch a sexy movie, my wife leans over and breathes on my glasses.",J,-7.7070312,1,glasses,7.7070312,glasses
+meta-llama/Meta-Llama-3-8B,"When you go to bed, turn off the lights.",E,-1.3886719,1,lights,1.3886719,lights
+meta-llama/Meta-Llama-3-8B,"When you own an ice cream business, your favorite flavor is aspirin.",J,-14.8095703,2,aspirin,14.8095703,aspirin
+meta-llama/Meta-Llama-3-8B,"When you own an ice cream business, your favorite flavor is everything.",S,-5.8632812,1,everything,5.8632812,everything
+meta-llama/Meta-Llama-3-8B,"Where I'm from, the two most common elements are hydrogen and nitrogen.",S,-3.484375,1,nitrogen,3.484375,nitrogen
+meta-llama/Meta-Llama-3-8B,"Where I'm from, the two most common elements are hydrogen and stupidity.",J,-4.0859375,1,stupidity,4.0859375,stupidity
+meta-llama/Meta-Llama-3-8B,"Women don't dress to please men; if they did, they'd dress a lot faster.",J,-10.78125,1,faster,10.78125,faster
+meta-llama/Meta-Llama-3-8B,"Women don't dress to please men; if they did, they'd dress a lot scantier.",S,-12.3062696457,2,scantier,12.3062696457,scantier
+meta-llama/Meta-Llama-3-8B,Women were not allowed to vote until when Congress passed the nineteenth amendment to the constitution.,E,-1.1708984,1,constitution,1.1708984,constitution
+meta-llama/Meta-Llama-3-8B,Yesterday they canoed down the river.,E,-1.2939453,1,river,1.2939453,river
+meta-llama/Meta-Llama-3-8B,You can keep your kids out of hot water with dishes.,J,-9.1875,1,dishes,9.1875,dishes
+meta-llama/Meta-Llama-3-8B,You can keep your kids out of hot water with rules.,S,-8.5625,1,rules,8.5625,rules
+meta-llama/Meta-Llama-3-8B,You could tell he had grown up in the South by his accent.,E,-1.2001953,1,accent,1.2001953,accent

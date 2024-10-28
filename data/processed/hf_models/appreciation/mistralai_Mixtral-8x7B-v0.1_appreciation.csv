@@ -1,0 +1,401 @@
+model,sentence,answer,condition,best_response,best_response_lp,entropy,is_joke
+mistralai/Mixtral-8x7B-v0.1,A committee keeps minutes and takes hours.,Committees are very efficient.,J,1,-1.2177734,1.23408834729761,True
+mistralai/Mixtral-8x7B-v0.1,A committee keeps minutes and takes votes.,Committees keep records and make decisions.,S,1,-1.2285156,1.3188620112062233,False
+mistralai/Mixtral-8x7B-v0.1,A device for finding furniture in the dark is a candle.,The candle gives off light.,S,1,-1.2128906,1.237056502354151,False
+mistralai/Mixtral-8x7B-v0.1,A device for finding furniture in the dark is a shin.,People run into furniture when it's dark.,J,1,-1.1298828,1.150244975999125,True
+mistralai/Mixtral-8x7B-v0.1,A good source of vitamin A is orange vegetables like carrots.,Carrots contain vitamin A.,E,1,-1.1787109,1.290766646384248,False
+mistralai/Mixtral-8x7B-v0.1,A good way to blow your mind is to smoke gunpowder.,An explosion can blow your brains out.,J,1,-0.9243164,1.0546066416600526,True
+mistralai/Mixtral-8x7B-v0.1,A good way to blow your mind is to smoke heroin.,Heroin will affect your brain.,S,1,-1.0654297,1.2065366477096717,False
+mistralai/Mixtral-8x7B-v0.1,A man who has lost ninety percent of his brain is called a widower.,His wife wasn't very smart.,J,1,-1.1787109,1.1859590074009991,True
+mistralai/Mixtral-8x7B-v0.1,A man who has lost ninety percent of his brain is called a zombie.,A zombie still has an intact brain.,S,1,-1.1640625,1.2076810592140625,False
+mistralai/Mixtral-8x7B-v0.1,A problem drinker is one who never buys.,One should take turns paying for the drinks.,J,1,-1.0585938,1.0957589385884587,True
+mistralai/Mixtral-8x7B-v0.1,A problem drinker is one who never quits.,Non-stop drinking isn't much of a problem.,S,1,-1.1806641,1.184496452859741,False
+mistralai/Mixtral-8x7B-v0.1,A replacement player hit a home run with my ball.,The player was playing baseball.,S,1,-1.2802734,1.3064294597112698,False
+mistralai/Mixtral-8x7B-v0.1,A replacement player hit a home run with my girl.,Someone else slept with my girlfriend.,J,1,-1.1669922,1.2694285353178274,True
+mistralai/Mixtral-8x7B-v0.1,A thoughtful wife has pork chops ready when her husband comes home from fishing.,She thinks her husband will catch lots of fish.,J,1,-1.2255859,1.3184185350704007,True
+mistralai/Mixtral-8x7B-v0.1,A thoughtful wife has pork chops ready when her husband comes home from working.,A nice wife cooks dinner for her husband.,S,1,-1.2431641,1.3656878703454236,False
+mistralai/Mixtral-8x7B-v0.1,A vacation is the shortest distance between two locations.,A trip seems longer when you are on vacation.,S,1,-1.1660156,1.1862788729361031,False
+mistralai/Mixtral-8x7B-v0.1,A vacation is the shortest distance between two paychecks.,Vacations cost a lot of money.,J,1,-1.0898438,1.2581756936629107,True
+mistralai/Mixtral-8x7B-v0.1,"After Olga tore her red dress, she went to the store for a needle and a spool of red thread.",She planned to throw the dress away.,E,1,-1.1484375,1.2640115271919081,False
+mistralai/Mixtral-8x7B-v0.1,"All roads lead to Rome, and all detours lead to profanity.",People are frustrated by detours.,J,1,-1.1064453,1.1980409887930012,True
+mistralai/Mixtral-8x7B-v0.1,"All roads lead to Rome, and all detours lead to somewhere.",Detours never go anywhere.,S,1,-1.1035156,1.185884281471026,False
+mistralai/Mixtral-8x7B-v0.1,All the plates were garnished with little sprigs of parsley.,Each plate had some parsley on it.,E,1,-0.9223633,1.1620773974311764,False
+mistralai/Mixtral-8x7B-v0.1,Another thing a small boy is constantly outgrowing is his allowance.,Kids always want more money.,J,1,-1.1484375,1.16615998131605,True
+mistralai/Mixtral-8x7B-v0.1,Another thing a small boy is constantly outgrowing is his underwear.,Boys need new clothes often.,S,1,-1.2041016,1.2295316772435962,False
+mistralai/Mixtral-8x7B-v0.1,Another thing that has developed by leaps and bounds is the modern dance.,Dancing has changed a lot over the years.,J,1,-1.234375,1.2750257793214177,True
+mistralai/Mixtral-8x7B-v0.1,Another thing that has developed by leaps and bounds is the modern science.,Science has progressed at a snail's pace.,S,1,-1.1611328,1.2714892634632693,False
+mistralai/Mixtral-8x7B-v0.1,Arguments between couples are healthy; sometimes they even prevent breakups.,It's okay for couples to argue sometimes.,S,1,-1.0380859,1.2473962638465095,False
+mistralai/Mixtral-8x7B-v0.1,Arguments between couples are healthy; sometimes they even prevent marriage.,Marriage is a wonderful thing.,J,1,-1.0087891,1.143377374514035,True
+mistralai/Mixtral-8x7B-v0.1,Autobiography is an unrivaled vehicle for telling the truth about others.,Writing an autobiography can unmask your true self.,J,1,-1.2197266,1.2509312148158946,True
+mistralai/Mixtral-8x7B-v0.1,Autobiography is an unrivaled vehicle for telling the truth about somebody.,Autobiographies don't reveal much about a person.,S,1,-1.1591797,1.2447314306565158,False
+mistralai/Mixtral-8x7B-v0.1,Autumn is a good time to buy some new clothes.,It's good to buy clothes before the winter.,E,1,-1.1523438,1.2599976706264207,False
+mistralai/Mixtral-8x7B-v0.1,"Because of his diabetes, he had to take daily shots of insulin.",He took insulin once a week.,E,1,-1.1396484,1.269923788879237,False
+mistralai/Mixtral-8x7B-v0.1,"Before the outdoor concert, he packed a basket with wine and food for a picnic.",He was planning to eat outdoors.,E,1,-1.2109375,1.3584852121993323,False
+mistralai/Mixtral-8x7B-v0.1,Bill jumped in the lake and made a big splash.,Bill went for a swim.,E,1,-1.0371094,1.260145577879402,False
+mistralai/Mixtral-8x7B-v0.1,"By the time Mary had her fourteenth child, she'd run out of names to call her husband.",Mary was happy to have another child.,J,1,-1.0039062,1.1246747548055624,True
+mistralai/Mixtral-8x7B-v0.1,"By the time Mary had her fourteenth child, she'd run out of names to call her offspring.",Mary had no problem naming her new baby.,S,1,-1.0205078,1.1576558648702713,False
+mistralai/Mixtral-8x7B-v0.1,"Charged with statutory rape, he told the judge he didn't know she was a statue.",He was on trial for a sex-related crime.,J,1,-0.9873047,1.1547763808479825,True
+mistralai/Mixtral-8x7B-v0.1,"Charged with statutory rape, he told the judge he didn't know she was a teenager.",He had slept with a young woman.,S,1,-1.0449219,1.11598745110892,False
+mistralai/Mixtral-8x7B-v0.1,Cocktail lounges are usually half lit to match the patrons.,The people have often had a bit too much to drink.,J,1,-1.2470703,1.2375497339973454,True
+mistralai/Mixtral-8x7B-v0.1,Cocktail lounges are usually half lit to match the setting.,Bright lights can ruin the atmosphere in a cocktail lounge.,S,1,-1.3623047,1.2670512732258539,False
+mistralai/Mixtral-8x7B-v0.1,"Congress taxes our income, our property, and our patience.",We're very happy with Congress.,J,1,-1.1953125,1.2245563342086307,True
+mistralai/Mixtral-8x7B-v0.1,"Congress taxes our income, our property, and our purchases.",There are very few taxes.,S,1,-1.1113281,1.1584007707834136,False
+mistralai/Mixtral-8x7B-v0.1,"Diamonds are produced by great pressure, usually provided by a girlfriend.",Some men are reluctant to get engaged.,J,1,-1.1025391,1.0996950579183897,True
+mistralai/Mixtral-8x7B-v0.1,"Diamonds are produced by great pressure, usually provided by a piston.",Diamonds can be made by machine.,S,1,-1.0078125,1.1461650229557332,False
+mistralai/Mixtral-8x7B-v0.1,Dogs crack open bones so they can eat the marrow.,Dogs like to eat bone marrow.,E,1,-1.0019531,1.194620827463711,False
+mistralai/Mixtral-8x7B-v0.1,"During the worst part of the drought, people were encouraged to not always flush the toilet.",Water was in short supply.,E,1,-0.9223633,1.0981554827589715,False
+mistralai/Mixtral-8x7B-v0.1,Eva turned down the heat and left the sauce on the stove to simmer.,Eva was cooking.,E,1,-1.0898438,1.2438746841641042,False
+mistralai/Mixtral-8x7B-v0.1,Every introductory sailing class includes learning how to save a man drowning.,Beginning sailing classes emphasize safety.,E,1,-1.234375,1.2855940804323158,False
+mistralai/Mixtral-8x7B-v0.1,"Every time I wear my spring coat in the rain, it damages the fabric.",My coat is waterproof.,S,1,-1.1806641,1.2370704490779254,False
+mistralai/Mixtral-8x7B-v0.1,"Every time I wear my spring coat in the rain, it damages the springs.",Water isn't good for my coat.,J,1,-1.2080078,1.2328627807506902,True
+mistralai/Mixtral-8x7B-v0.1,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little platform.,The platform is for sunbathing.,S,1,-0.99658203,1.1135972010835458,False
+mistralai/Mixtral-8x7B-v0.1,Everyone had so much fun diving from the tree into the swimming pool we decided to put in a little water.,The pool was empty.,J,1,-0.9770508,1.1149429201034475,True
+mistralai/Mixtral-8x7B-v0.1,"Except for not having a shell, slugs are a lot like snails.",Slugs and snails are similar.,E,1,-0.94873047,1.1087206921045678,False
+mistralai/Mixtral-8x7B-v0.1,"Figures don't lie, except on the beaches.",People lie in the sand.,J,1,-1.0527344,1.171122722163864,True
+mistralai/Mixtral-8x7B-v0.1,"Figures don't lie, except on the page.",Statistics are completely reliable.,S,1,-1.4160156,1.235718854039284,False
+mistralai/Mixtral-8x7B-v0.1,"For a great vacation, put the kids in the back seat, and take a cruise.",A road trip with the kids can be a lot of fun.,J,1,-1.0322266,1.201576354208921,True
+mistralai/Mixtral-8x7B-v0.1,"For a great vacation, put the kids in the back seat, and take a freeway.",A road trip can be a fun vacation.,S,1,-1.1230469,1.1702338919495427,False
+mistralai/Mixtral-8x7B-v0.1,"For his thirtieth birthday, all his friends gathered to celebrate.",There was a party for his birthday.,E,1,-1.2998047,1.3561071883511762,False
+mistralai/Mixtral-8x7B-v0.1,For lunch he had an apple and a peanut butter sandwich.,He ate a cold lunch.,E,1,-1.2285156,1.3030933628272539,False
+mistralai/Mixtral-8x7B-v0.1,"Frequent naps prevent old age, especially when taken while driving.",Falling asleep while driving can kill you.,J,1,-0.93896484,1.0980674140972917,True
+mistralai/Mixtral-8x7B-v0.1,"Frequent naps prevent old age, especially when taken while relaxed.",It's best to nap when you are very stressed.,S,1,-1.0390625,1.1066612671927527,False
+mistralai/Mixtral-8x7B-v0.1,Good Friday commemorates the Last Supper that Jesus had with his twelve disciples.,Good Friday is a religious holiday.,E,1,-1.0927734,1.2725488242576872,False
+mistralai/Mixtral-8x7B-v0.1,Hal wrote her a love letter.,Hal didn't like her very much.,E,1,-1.1416016,1.3023787128238258,False
+mistralai/Mixtral-8x7B-v0.1,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough change.",We don't have enough money for soup.,S,1,-0.90234375,1.1065593772106683,False
+mistralai/Mixtral-8x7B-v0.1,"He asked if I'd join him in a bowl of soup, but I told him we didn't have enough room.",We can't afford the soup.,J,1,-0.8466797,1.0530374243136211,True
+mistralai/Mixtral-8x7B-v0.1,He drank so much that he eventually became a beverage.,He gave up drinking.,J,1,-1.2060547,1.2613734586017995,True
+mistralai/Mixtral-8x7B-v0.1,He drank so much that he eventually became a lush.,He became an alcoholic.,S,1,-1.1386719,1.2584060132485002,False
+mistralai/Mixtral-8x7B-v0.1,He got a medal for bravery on the beach when he rescued a girl from a lifeguard.,He saved the girl from drowning.,J,1,-1.0908203,1.2824448675306823,True
+mistralai/Mixtral-8x7B-v0.1,He got a medal for bravery on the beach when he rescued a girl from a shipwreck.,The girl had been on a ship.,S,1,-1.1933594,1.358098224993793,False
+mistralai/Mixtral-8x7B-v0.1,He hung her coat in the closet.,She had been wearing a coat.,E,1,-1.0722656,1.2654309989338732,False
+mistralai/Mixtral-8x7B-v0.1,He is at the age when all the numbers in his little black book belong to doctors.,He is getting old.,J,1,-1.2148438,1.2324614992791803,True
+mistralai/Mixtral-8x7B-v0.1,He is at the age when all the numbers in his little black book belong to friends.,He is a real playboy.,S,1,-1.2519531,1.267150918036351,False
+mistralai/Mixtral-8x7B-v0.1,"He is probably the best boxer in the country, but he always loses in the city.",He would win in Las Vegas.,J,1,-1.2236328,1.2579081298198425,True
+mistralai/Mixtral-8x7B-v0.1,"He is probably the best boxer in the country, but he always loses in the competition.",He always wins the championship.,S,1,-1.1435547,1.2698779893470262,False
+mistralai/Mixtral-8x7B-v0.1,He likes to make things around the house; this week it's the maid.,He's having an affair with a member of the household staff.,J,1,-1.1552734,1.2372177229779138,True
+mistralai/Mixtral-8x7B-v0.1,He likes to make things around the house; this week it's the shelves.,He isn't very good with his hands.,S,1,-1.3125,1.3242657443476893,False
+mistralai/Mixtral-8x7B-v0.1,"He owns stock in a company that pays quarterly dividends, so every three months they send him a quarter.",His dividends are quite large.,J,1,-1.1914062,1.210751218899337,True
+mistralai/Mixtral-8x7B-v0.1,"He owns stock in a company that pays quarterly dividends, so every three months they send him a statement.",He never hears from the company.,S,1,-1.0820312,1.1669326663039976,False
+mistralai/Mixtral-8x7B-v0.1,He says he doesn't like to drink because it makes him feel happy.,Drinking makes him feel depressed.,J,1,-1.0976562,1.24730756063158,True
+mistralai/Mixtral-8x7B-v0.1,He says he doesn't like to drink because it makes him feel sad.,Alcohol depresses him.,S,1,-1.0390625,1.2673837045744676,False
+mistralai/Mixtral-8x7B-v0.1,He spilled some of the quart of oil onto the engine because he didn't have a funnel.,He was pouring oil into the car.,E,1,-1.2861328,1.3439809481381415,False
+mistralai/Mixtral-8x7B-v0.1,"He thought that he could turn from Grant onto Prince, but the two streets are parallel.",He was at the corner of Grant and Prince.,E,1,-0.98828125,1.2030331809898895,False
+mistralai/Mixtral-8x7B-v0.1,"He told her he wasn't himself, and she said she'd noticed the improvement.",She liked him better when he wasn't himself.,J,1,-0.9848633,1.1604473417182737,True
+mistralai/Mixtral-8x7B-v0.1,"He told her he wasn't himself, and she said she'd noticed the problem.",He was behaving normally.,S,1,-1.0185547,1.1920429954832525,False
+mistralai/Mixtral-8x7B-v0.1,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a balloon.",He got the tires for free.,J,1,-0.90966797,1.1083497436484295,True
+mistralai/Mixtral-8x7B-v0.1,"He told me he just bought a set of balloon tires, and I told him I didn't even know he owned a truck.",He bought new tires for his truck.,S,1,-0.91845703,1.141068087259052,False
+mistralai/Mixtral-8x7B-v0.1,"He told me he's not broke, just badly bent.",He's doing quite well.,J,1,-0.9291992,1.1433487365155681,True
+mistralai/Mixtral-8x7B-v0.1,"He told me he's not broke, just badly off.",He has lots of money.,S,1,-1.1357422,1.242074519978777,False
+mistralai/Mixtral-8x7B-v0.1,He was teaching his girlfriend how to swim when the lifeguard made them move to the lake.,They were in the water.,J,1,-1.25,1.309583256382122,True
+mistralai/Mixtral-8x7B-v0.1,He was teaching his girlfriend how to swim when the lifeguard made them move to the shallows.,They were in deep water.,S,1,-1.1494141,1.2643086858884096,False
+mistralai/Mixtral-8x7B-v0.1,He wondered if the storm had done much damage.,It had been a terrible storm.,E,1,-1.0390625,1.169858599772752,False
+mistralai/Mixtral-8x7B-v0.1,"He's never given a girl a present, but he did give a few a pretty good reputation.",He never gets girls into trouble.,J,1,-0.9482422,1.211862632112344,True
+mistralai/Mixtral-8x7B-v0.1,"He's never given a girl a present, but he did give a few a pretty good surprise.",He buys his girlfriends lavish gifts.,S,1,-1.0615234,1.2866898435100673,False
+mistralai/Mixtral-8x7B-v0.1,He's planning an extended vacation: he hopes to spend three weeks on his couch.,He's going to sleep a lot.,J,1,-1.0605469,1.2970324701517586,True
+mistralai/Mixtral-8x7B-v0.1,He's planning an extended vacation: he hopes to spend three weeks on his sailboat.,He's going sailing for three weeks.,S,1,-1.0820312,1.295841140769448,False
+mistralai/Mixtral-8x7B-v0.1,Her press agent was operated on for an ingrown beeper.,Her press agent needed actual medical surgery.,J,1,-0.9526367,1.1605788359455076,True
+mistralai/Mixtral-8x7B-v0.1,Her press agent was operated on for an ingrown eyelash.,She needed medical surgery.,S,1,-1.0273438,1.2016109021421342,False
+mistralai/Mixtral-8x7B-v0.1,His doctor recommended he stay flat on his back ever since he was hit by a motorist.,He got run over by a car.,S,1,-1.1669922,1.2215438109106953,False
+mistralai/Mixtral-8x7B-v0.1,His doctor recommended he stay flat on his back ever since he was hit by a steamroller.,He should get out of bed as soon as possible.,J,1,-1.125,1.1973312778161493,True
+mistralai/Mixtral-8x7B-v0.1,His job was to keep the sidewalk clean.,He was a doctor.,E,1,-1.1064453,1.2622630873138891,False
+mistralai/Mixtral-8x7B-v0.1,His sandwich came with chips and a dill pickle.,He was about to eat.,E,1,-1.171875,1.2858079333903891,False
+mistralai/Mixtral-8x7B-v0.1,His wife sued for divorce and asked for custody of the cash.,She wanted to keep the money.,J,1,-1.1621094,1.3047839553245124,True
+mistralai/Mixtral-8x7B-v0.1,His wife sued for divorce and asked for custody of the cat.,She was very fond of her pet.,S,1,-1.1601562,1.3029337743540756,False
+mistralai/Mixtral-8x7B-v0.1,"I appreciate the more expensive things in life: diamonds, caviar, and champagne.","I prefer a simple, country life.",S,1,-1.1494141,1.2687729581967797,False
+mistralai/Mixtral-8x7B-v0.1,"I appreciate the more expensive things in life: diamonds, caviar, and postage.",It's expensive to mail things nowadays.,J,1,-1.2246094,1.2375999583798665,True
+mistralai/Mixtral-8x7B-v0.1,"I asked him if he started out as an editor, and he said that years ago he used to be a boy.",He wasn't an editor when he was young.,J,1,-0.953125,1.1646652017000072,True
+mistralai/Mixtral-8x7B-v0.1,"I asked him if he started out as an editor, and he said that years ago he used to be a journalist.",He was never a reporter.,S,1,-1.1484375,1.1811931797523607,False
+mistralai/Mixtral-8x7B-v0.1,"I asked the florist what I should give to my girlfriend, and he suggested his address.",The florist would like to meet the girlfriend.,J,1,-0.72265625,0.9612829593737723,True
+mistralai/Mixtral-8x7B-v0.1,"I asked the florist what I should give to my girlfriend, and he suggested his tulips.",The florist thought I should give her roses.,S,1,-0.8378906,1.0854182253716498,False
+mistralai/Mixtral-8x7B-v0.1,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a dress.",The woman notices what clothes people wear.,J,1,-0.7368164,0.8785040963039491,True
+mistralai/Mixtral-8x7B-v0.1,"I asked the woman at the party if she remembered me from last year, and she said she never forgets a name.",She didn't remember my name.,S,1,-0.6669922,0.8433183399826277,False
+mistralai/Mixtral-8x7B-v0.1,"I can walk on water, but I stagger on alcohol.",I can walk just fine even when I'm drunk.,J,1,-1.2255859,1.2041904221914494,True
+mistralai/Mixtral-8x7B-v0.1,"I can walk on water, but I stagger on concrete.",I have no trouble walking on hard surfaces.,S,1,-1.1181641,1.1437107745165458,False
+mistralai/Mixtral-8x7B-v0.1,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my pay.",I'm saving money in case I need it later.,S,1,-0.88916016,1.094607150188563,False
+mistralai/Mixtral-8x7B-v0.1,"I decided to start saving for a rainy day, so I went to a savings and loan and deposited my umbrella.",I put a lot of money in the bank in case of emergency.,J,1,-0.93310547,1.1047962746529492,True
+mistralai/Mixtral-8x7B-v0.1,"I got a car for my wife, and I thought it was a good choice.",I thought my wife would like the car.,S,1,-1.28125,1.3907062306132247,False
+mistralai/Mixtral-8x7B-v0.1,"I got a car for my wife, and I thought it was a good trade.",I like the car more than my wife.,J,1,-1.2431641,1.3745992750135307,True
+mistralai/Mixtral-8x7B-v0.1,"I hope this train stops at Grand Central because if it doesn't, there will be a crash.",Grand Central is the end of the line.,J,1,-0.7705078,1.050123395002013,True
+mistralai/Mixtral-8x7B-v0.1,"I hope this train stops at Grand Central because if it doesn't, there will be a delay.",I'm afraid I will fall behind schedule.,S,1,-0.9863281,1.1743263436608178,False
+mistralai/Mixtral-8x7B-v0.1,I knew a streetwalker who was so exclusive she had an unlisted telephone booth.,She was easy to reach by phone.,J,1,-1.0380859,1.1705333183973132,True
+mistralai/Mixtral-8x7B-v0.1,I knew a streetwalker who was so exclusive she had an unlisted telephone line.,Her phone number was in the telephone book.,S,1,-1.1025391,1.1962583775846547,False
+mistralai/Mixtral-8x7B-v0.1,I know one couple who got divorced and had to leave the house to the attorney.,The divorce was expensive.,J,1,-1.1328125,1.2874056039273667,True
+mistralai/Mixtral-8x7B-v0.1,I know one couple who got divorced and had to leave the house to the daughter.,The house stayed in the family.,S,1,-1.1757812,1.3210230373124796,False
+mistralai/Mixtral-8x7B-v0.1,"I still miss my ex-wife, but I am improving my aim.",I am shooting at my ex-wife.,J,1,-1.1103516,1.1945910506180613,True
+mistralai/Mixtral-8x7B-v0.1,"I still miss my ex-wife, but I am improving my ego.",I'm starting to feel better about myself.,S,1,-1.1552734,1.2264870379476929,False
+mistralai/Mixtral-8x7B-v0.1,I went to a place that serves breakfast any time and ordered French toast in the nighttime.,I had breakfast at night.,S,1,-1.1318359,1.2520677208714381,False
+mistralai/Mixtral-8x7B-v0.1,I went to a place that serves breakfast any time and ordered French toast in the Renaissance.,I wanted to eat an unusual breakfast.,J,1,-1.0654297,1.207029895197908,True
+mistralai/Mixtral-8x7B-v0.1,"I've got Parkinson's disease, and he's got gout.",We have the same disease.,S,1,-1.1191406,1.2249956026922844,False
+mistralai/Mixtral-8x7B-v0.1,"I've got Parkinson's disease, and he's got mine.",At least one of us is in good health.,J,1,-0.90478516,1.1171105804224724,True
+mistralai/Mixtral-8x7B-v0.1,"If there's one thing that counts in business, it's bookkeepers.",Bookkeepers keep track of things.,J,1,-0.90234375,1.0962451446424613,True
+mistralai/Mixtral-8x7B-v0.1,"If there's one thing that counts in business, it's resources.",It's hard to succeed if you start with nothing.,S,1,-0.8232422,1.0813989760431444,False
+mistralai/Mixtral-8x7B-v0.1,"If you're filthy rich, sending your kids to college is a wonderful cleaner.",Colleges are very expensive.,J,1,-1.0693359,1.2588836539053938,True
+mistralai/Mixtral-8x7B-v0.1,"If you're filthy rich, sending your kids to college is a wonderful luxury.",It's good to be able to afford to send your children to the university.,S,1,-1.0019531,1.202114050181418,False
+mistralai/Mixtral-8x7B-v0.1,In some marriages the bride is given away by the family.,It's always the father who gives the bride away.,S,1,-1.1601562,1.2487223556445115,False
+mistralai/Mixtral-8x7B-v0.1,In some marriages the bride is given away by the press.,The newspapers reveal something about the bride's past.,J,1,-1.0683594,1.1849458520268004,True
+mistralai/Mixtral-8x7B-v0.1,"In the game of golf, nothing counts as much as your drives.",The most important part of your golf game is your putting.,S,1,-0.94140625,1.124371726390832,False
+mistralai/Mixtral-8x7B-v0.1,"In the game of golf, nothing counts as much as your opponent.",The other guy always keeps track of your score.,J,1,-0.86376953,1.046765614607596,True
+mistralai/Mixtral-8x7B-v0.1,"In the U.S. the five cent piece is made of nickel, while pennies are mainly made of copper.",Both coins are made from the same metal.,E,1,-1.2041016,1.283246480307272,False
+mistralai/Mixtral-8x7B-v0.1,"It was so hot at Playboy, the centerfold took off her bikini.",She had been wearing a swimsuit.,S,1,-1.0664062,1.2573014866415964,False
+mistralai/Mixtral-8x7B-v0.1,"It was so hot at Playboy, the centerfold took off her staple.",She wasn't wearing any clothes.,J,1,-0.9975586,1.1756973293132356,True
+mistralai/Mixtral-8x7B-v0.1,It was too hot to sleep in a bed so he strung up a mesh hammock.,He was going to sleep in the hammock.,E,1,-1.0332031,1.2531840737425015,False
+mistralai/Mixtral-8x7B-v0.1,"It's always nicer to give than to receive, especially when it's your opinion.",People like giving advice more than taking it.,J,1,-1.0605469,1.2231382466162133,True
+mistralai/Mixtral-8x7B-v0.1,"It's always nicer to give than to receive, especially when it's your parents.",Giving gifts can be fun.,S,1,-0.81347656,1.062504067566969,False
+mistralai/Mixtral-8x7B-v0.1,It's extraordinary what fine poker hand you get when you're playing bridge.,You always get the best hand just when you need it.,J,1,-0.6220703,0.8010962190128109,True
+mistralai/Mixtral-8x7B-v0.1,It's extraordinary what fine poker hand you get when you're playing stud.,You never get a decent hand in a poker game.,S,1,-0.7050781,0.9923230501679827,False
+mistralai/Mixtral-8x7B-v0.1,It's hard to admit when one is wrong.,Most people don't mind being wrong.,E,1,-1.1494141,1.1941080287012629,False
+mistralai/Mixtral-8x7B-v0.1,"It's hard to raise a family nowadays, especially in the country.",It's easy to raise children outside the city.,S,1,-0.9746094,1.199537634723647,False
+mistralai/Mixtral-8x7B-v0.1,"It's hard to raise a family nowadays, especially in the morning.",The kids don't want to get up in the morning.,J,1,-1.0966797,1.273141573744391,True
+mistralai/Mixtral-8x7B-v0.1,It's not hard to meet expenses; they're affordable.,You should be able to pay all your bills.,S,1,-1.0722656,1.2104559392429455,False
+mistralai/Mixtral-8x7B-v0.1,It's not hard to meet expenses; they're everywhere.,It's easy to pay the bills.,J,1,-0.8017578,0.9603356416482847,True
+mistralai/Mixtral-8x7B-v0.1,Last Thanksgiving my wife spent all morning in the kitchen stuffing the bird.,She was preparing the turkey.,S,1,-1.0019531,1.1960090020682805,False
+mistralai/Mixtral-8x7B-v0.1,Last Thanksgiving my wife spent all morning in the kitchen stuffing the kids.,The kids didn't get enough to eat.,J,1,-1.0478516,1.1352444925286982,True
+mistralai/Mixtral-8x7B-v0.1,"Love has its benefits, and they are usually called alimony.",Divorce can get you some money.,J,1,-0.96435547,1.0412974443837195,True
+mistralai/Mixtral-8x7B-v0.1,"Love has its benefits, and they are usually called memories.",Being in love leads to good times together.,S,1,-1.2080078,1.246841101105529,False
+mistralai/Mixtral-8x7B-v0.1,Many a freshman helps the college of his choice by becoming a dropout.,"When a freshman fails, it always hurts the college.",J,1,-1.1416016,1.221065527896968,True
+mistralai/Mixtral-8x7B-v0.1,Many a freshman helps the college of his choice by becoming a member.,Joining a college doesn't make any difference.,S,1,-1.0224609,1.1258709833593599,False
+mistralai/Mixtral-8x7B-v0.1,Many a man's idea of a vacation is to rest quietly in the shade of a blonde.,Men like to vacation alone.,J,1,-1.0292969,1.135222777347318,True
+mistralai/Mixtral-8x7B-v0.1,Many a man's idea of a vacation is to rest quietly in the shade of a palm.,Many men like a relaxing vacation in the tropics.,S,1,-1.15625,1.2499380358028935,False
+mistralai/Mixtral-8x7B-v0.1,"Many things run in families, especially noses.",People often catch colds from other family members.,J,1,-1.0097656,1.1592337120244438,True
+mistralai/Mixtral-8x7B-v0.1,"Many things run in families, especially strength.",Muscle power comes only from exercise.,S,1,-0.9433594,1.1303035593497093,False
+mistralai/Mixtral-8x7B-v0.1,Modern science is amazing: garbage is now being made into gasoline.,Fuel can be made from trash.,S,1,-0.9941406,1.255349731311302,False
+mistralai/Mixtral-8x7B-v0.1,Modern science is amazing: garbage is now being made into movies.,There are a lot of really terrible movies nowadays.,J,1,-1.0068359,1.2281574336461247,True
+mistralai/Mixtral-8x7B-v0.1,Most cats see very well at night.,Cats see well in the dark.,E,1,-1.1435547,1.303225939050891,False
+mistralai/Mixtral-8x7B-v0.1,Most of the people running for office are not politicians; they're candidates.,You become a politician when you get elected.,S,1,-0.8881836,1.0038942957372288,False
+mistralai/Mixtral-8x7B-v0.1,Most of the people running for office are not politicians; they're commuters.,These people are hurrying to get to work on time.,J,1,-1.0224609,1.128831230402477,True
+mistralai/Mixtral-8x7B-v0.1,Mrs Martin told the bad student to stand in the corner.,Mrs Martin was unhappy with the student's behavior.,E,1,-1.1367188,1.2424401716408264,False
+mistralai/Mixtral-8x7B-v0.1,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our drinks.,My brother-in-law fixed our plumbing.,J,1,-1.2177734,1.2981667579897198,True
+mistralai/Mixtral-8x7B-v0.1,My brother-in-law enjoys fixing things around the house so much he spent an hour last night just fixing our stove.,He's a real handyman.,S,1,-1.2646484,1.3277014950160408,False
+mistralai/Mixtral-8x7B-v0.1,My church welcomes all denominations but prefers Mormons.,My church is strictly Catholic.,S,1,-1.1308594,1.2429211673302372,False
+mistralai/Mixtral-8x7B-v0.1,My church welcomes all denominations but prefers twenties.,My church wants money.,J,1,-1.2275391,1.2916165373824606,True
+mistralai/Mixtral-8x7B-v0.1,My doctor has never violated his oath: the oath he took years ago to become a millionaire.,My doctor charges a lot of money.,J,1,-1.1767578,1.268704026884722,True
+mistralai/Mixtral-8x7B-v0.1,My doctor has never violated his oath: the oath he took years ago to become a practitioner.,My doctor is very honorable.,S,1,-1.0791016,1.2375153405022439,False
+mistralai/Mixtral-8x7B-v0.1,My husband took the money we were saving to buy a new car and blew it all at the laundry.,We had saved a lot of money.,J,1,-1.0761719,1.192617939525534,True
+mistralai/Mixtral-8x7B-v0.1,My husband took the money we were saving to buy a new car and blew it all at the tables.,He gambled away our savings.,S,1,-1.0996094,1.2195149125301328,False
+mistralai/Mixtral-8x7B-v0.1,"My mechanic couldn't fix my brakes, so he fixed my clutch.",My clutch was also broken.,S,1,-1.40625,1.3819466431038663,False
+mistralai/Mixtral-8x7B-v0.1,"My mechanic couldn't fix my brakes, so he fixed my horn.","He figures if I can't stop, I'll have to honk at people.",J,1,-1.296875,1.3490439460061918,True
+mistralai/Mixtral-8x7B-v0.1,My wife did natural childbirth: no anesthetic.,She took drugs for the pain.,S,1,-1.21875,1.3474512388543616,False
+mistralai/Mixtral-8x7B-v0.1,My wife did natural childbirth: no makeup.,My wife didn't wear makeup when she had her baby.,J,1,-1.25,1.3265455795261727,True
+mistralai/Mixtral-8x7B-v0.1,"Nature has three ways of thinning the herd: drought, famine, and hunting.",Predatory hunting reduces the number of prey.,S,1,-1.0517578,1.1847797377674392,False
+mistralai/Mixtral-8x7B-v0.1,"Nature has three ways of thinning the herd: drought, famine, and primaries.",Politics is a lot like nature.,J,1,-1.0302734,1.1263503583874852,True
+mistralai/Mixtral-8x7B-v0.1,No patient should leave the hospital until he's strong enough to face the cashier.,Hospital bills are quite expensive.,J,1,-0.9873047,1.1329647183675489,True
+mistralai/Mixtral-8x7B-v0.1,No patient should leave the hospital until he's strong enough to face the outside.,Patients should be released as soon as possible.,S,1,-0.9663086,1.1358077485019034,False
+mistralai/Mixtral-8x7B-v0.1,None of his books made any sense.,His books were hard to understand.,E,1,-1.0078125,1.2350825207041054,False
+mistralai/Mixtral-8x7B-v0.1,Nothing ages a woman faster than hardships.,A difficult life can make you look old.,S,1,-0.94433594,1.1545852732047215,False
+mistralai/Mixtral-8x7B-v0.1,Nothing ages a woman faster than identification.,Many women lie about their age.,J,1,-1.1494141,1.2139427416831376,True
+mistralai/Mixtral-8x7B-v0.1,Nothing in the known universe travels faster than gossip.,Rumors get around quickly.,J,1,-1.1191406,1.170124826882369,True
+mistralai/Mixtral-8x7B-v0.1,Nothing in the known universe travels faster than radiation.,Radiation travels at great speed.,S,1,-1.1367188,1.206895023669383,False
+mistralai/Mixtral-8x7B-v0.1,Nothing you put in a banana split is as potentially fattening as the spoon.,Eating banana splits can make you fat.,J,1,-1.1757812,1.1430538757320066,True
+mistralai/Mixtral-8x7B-v0.1,Nothing you put in a banana split is as potentially fattening as the syrup.,Syrup has very few calories.,S,1,-1.2802734,1.195702015828263,False
+mistralai/Mixtral-8x7B-v0.1,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their careers.",The divorce hadn't affected their work.,S,1,-1.1582031,1.3328579846431095,False
+mistralai/Mixtral-8x7B-v0.1,"Now that the Hollywood couple has ironed out the divorce settlement, they can finally go ahead with their nuptials.",They are already married.,J,1,-1.0986328,1.3079850266013202,True
+mistralai/Mixtral-8x7B-v0.1,"Once a week they hold a bingo game, and all the proceeds go to fight disease.",They are raising money to build a new church.,S,1,-1.0263672,1.1663666391353635,False
+mistralai/Mixtral-8x7B-v0.1,"Once a week they hold a bingo game, and all the proceeds go to fight gambling.",They are raising money to help orphans.,J,1,-1.0410156,1.1876204774690164,True
+mistralai/Mixtral-8x7B-v0.1,One good turn gets most of the blanket.,"If you do nice things, people will give you blankets.",J,1,-0.9628906,1.1410296226382082,True
+mistralai/Mixtral-8x7B-v0.1,One good turn gets most of the profit.,Doing something good can earn you money.,S,1,-0.96533203,1.0872553462427765,False
+mistralai/Mixtral-8x7B-v0.1,One good way to invest in the country is to buy a business.,Buying a business is bad for the economy.,S,1,-1.0908203,1.1689730853768228,False
+mistralai/Mixtral-8x7B-v0.1,One good way to invest in the country is to buy a senator.,Politicians will do favors for money.,J,1,-0.8613281,1.029123995012068,True
+mistralai/Mixtral-8x7B-v0.1,One person who sure makes a long story short is my aunt.,My aunt talks a lot.,S,1,-0.9902344,1.107316294802334,False
+mistralai/Mixtral-8x7B-v0.1,One person who sure makes a long story short is my editor.,My editor cuts out parts of my stories.,J,1,-1.1777344,1.3303795594969279,True
+mistralai/Mixtral-8x7B-v0.1,One thing that makes the world go round is detours.,Detours make people go around.,J,1,-1.2080078,1.2661695528997026,True
+mistralai/Mixtral-8x7B-v0.1,One thing that makes the world go round is greed.,Most people don't care about money.,S,1,-1.2109375,1.2361057541884186,False
+mistralai/Mixtral-8x7B-v0.1,One way to keep pornography away from teenagers is to put it in a cabinet.,Adult magazines should be put where adolescents won't get into them.,S,1,-0.8774414,1.081940602410021,False
+mistralai/Mixtral-8x7B-v0.1,One way to keep pornography away from teenagers is to put it in a textbook.,Teenagers read their textbooks often.,J,1,-0.9008789,1.0821556579148868,True
+mistralai/Mixtral-8x7B-v0.1,Our new green car blocked the narrow driveway.,The car was parked in the garage.,E,1,-1.0742188,1.224488466951433,False
+mistralai/Mixtral-8x7B-v0.1,Our son brought home a note from school saying they need a written excuse for his presence.,The son does very well in school.,J,1,-1.0205078,1.1397186508697916,True
+mistralai/Mixtral-8x7B-v0.1,Our son brought home a note from school saying they need a written excuse for his tardiness.,He had been late for school.,S,1,-1.0585938,1.1080266946654749,False
+mistralai/Mixtral-8x7B-v0.1,"Parents support clubs for teenagers, especially when they lack other forms of diversion.",Parents want their teenagers to have appropriate forms of entertainment.,S,1,-0.9165039,1.0907299725685953,False
+mistralai/Mixtral-8x7B-v0.1,"Parents support clubs for teenagers, especially when they lack other forms of punishment.",Teenagers may need physical punishment.,J,1,-0.93408203,1.0898492633780859,True
+mistralai/Mixtral-8x7B-v0.1,Paul heard a loud grinding noise when someone put a tin can right down the garbage disposal.,Paul broke the garbage disposal.,E,1,-1.1943359,1.264348127119276,False
+mistralai/Mixtral-8x7B-v0.1,Politicians who are as American as apple pie still want their rewards.,Patriotic politicians don't care about personal glory.,S,1,-1.0537109,1.1293795151598878,False
+mistralai/Mixtral-8x7B-v0.1,Politicians who are as American as apple pie still want their slice.,Politicians are happy to do something for nothing.,J,1,-1.0488281,1.163926192977692,True
+mistralai/Mixtral-8x7B-v0.1,Save the whales; start a coalition.,"To save an endangered species, it's best to act alone.",S,1,-0.9458008,1.145579038782333,False
+mistralai/Mixtral-8x7B-v0.1,Save the whales; start a collection.,It's important to protect endangered species in the wild.,J,1,-0.96484375,1.0188931309397655,True
+mistralai/Mixtral-8x7B-v0.1,She always told girls not to look for a husband but just to date bachelors.,It's better to date a married man.,J,1,-1.1132812,1.2570727583000785,True
+mistralai/Mixtral-8x7B-v0.1,She always told girls not to look for a husband but just to date someone.,She thinks you should wait for the perfect man.,S,1,-1.0751953,1.2529737272979349,False
+mistralai/Mixtral-8x7B-v0.1,"She asked what state he was born in, and he said in the East.",He was a native Californian.,S,1,-0.84375,0.9974563587916038,False
+mistralai/Mixtral-8x7B-v0.1,"She asked what state he was born in, and he said in the nude.",He said he was born in the North.,J,1,-0.80810547,1.1017015993157329,True
+mistralai/Mixtral-8x7B-v0.1,She bought her father a tasteful tie for his birthday.,She was giving her father a Christmas gift.,E,1,-1.1015625,1.2924493516496756,False
+mistralai/Mixtral-8x7B-v0.1,She called her husband at his office.,Her husband worked at home.,E,1,-1.09375,1.2612274552558667,False
+mistralai/Mixtral-8x7B-v0.1,"She is so modest, she pulls down the shade to change her jacket.",She doesn't want people to see her change clothes.,S,1,-1.0273438,1.1568572186244879,False
+mistralai/Mixtral-8x7B-v0.1,"She is so modest, she pulls down the shade to change her mind.",She likes to show off in front of others.,J,1,-0.9746094,1.1291511977022612,True
+mistralai/Mixtral-8x7B-v0.1,She puts something behind her ears to attract men; lately she's been using her ankles.,She's very prudish.,J,1,-1.0332031,1.1936818157144633,True
+mistralai/Mixtral-8x7B-v0.1,She puts something behind her ears to attract men; lately she's been using her vanilla.,She wears vanilla as a perfume.,S,1,-1.0449219,1.1807568049081107,False
+mistralai/Mixtral-8x7B-v0.1,She read so much about the bad effects of cigarettes she decided to give up the habit.,She was going to quit smoking.,S,1,-1.2216797,1.3055355532897561,False
+mistralai/Mixtral-8x7B-v0.1,She read so much about the bad effects of cigarettes she decided to give up the reading.,She planned to quit smoking.,J,1,-1.1601562,1.236134889180382,True
+mistralai/Mixtral-8x7B-v0.1,She tied up her hair with a yellow ribbon.,She had very short hair.,E,1,-1.1064453,1.2149661453059108,False
+mistralai/Mixtral-8x7B-v0.1,"She told him he looked like a million, and she meant every century.",She thought he looked quite young and handsome.,J,1,-0.94433594,1.130558292034121,True
+mistralai/Mixtral-8x7B-v0.1,"She told him he looked like a million, and she meant every syllable.",She thought he looked good.,S,1,-1.0175781,1.2046573466632373,False
+mistralai/Mixtral-8x7B-v0.1,She used a needle and a tweezers to pull out the splinter.,She needed a scalpel to remove the splinter.,E,1,-1.0839844,1.2445386505994729,False
+mistralai/Mixtral-8x7B-v0.1,She was suddenly called back to New York and had to take a cab to the airport.,She was going to take a train.,E,1,-1.1152344,1.2485011864901654,False
+mistralai/Mixtral-8x7B-v0.1,"She went on a fourteen day diet, but she only lost two ounces.",She didn't lose much weight.,S,1,-1.1611328,1.22755367072628,False
+mistralai/Mixtral-8x7B-v0.1,"She went on a fourteen day diet, but she only lost two weeks.",She didn't lose any weight.,J,1,-1.0917969,1.182178353080084,True
+mistralai/Mixtral-8x7B-v0.1,She's happy because she finally has a boyfriend who gets along with her father.,Her father really liked her previous boyfriends.,S,1,-1.0253906,1.2647499022430528,False
+mistralai/Mixtral-8x7B-v0.1,She's happy because she finally has a boyfriend who gets along with her fiance.,She is dating more than one man.,J,1,-1.1210938,1.2838471131714715,True
+mistralai/Mixtral-8x7B-v0.1,"Some babies are born to rule, while others are male.",Males are born rulers.,J,1,-1.0761719,1.1867846057660072,True
+mistralai/Mixtral-8x7B-v0.1,"Some babies are born to rule, while others are weak.",Power starts at an early age.,S,1,-0.97216797,1.1469275938687424,False
+mistralai/Mixtral-8x7B-v0.1,"Some husbands are good providers, but only if you count children.",Some men don't take care of their families.,J,1,-1.1064453,1.2144978547932874,True
+mistralai/Mixtral-8x7B-v0.1,"Some husbands are good providers, but only if you count salary.",Some men give their families nothing but money.,S,1,-1.3144531,1.260590946461188,False
+mistralai/Mixtral-8x7B-v0.1,Some people think courtship is the first in a series of steps leading to divorce.,One of those steps is marriage.,J,1,-1.1025391,1.2008144886751297,True
+mistralai/Mixtral-8x7B-v0.1,Some people think courtship is the first in a series of steps leading to romance.,Some people still believe in romantic courtship.,S,1,-1.0878906,1.1665619317426117,False
+mistralai/Mixtral-8x7B-v0.1,Some people's only culture is bacteria.,Everybody can appreciate the fine arts.,J,1,-0.80029297,1.1208870027605609,True
+mistralai/Mixtral-8x7B-v0.1,Some people's only culture is radio.,Everyone watches television.,S,1,-1.1240234,1.2272094534628477,False
+mistralai/Mixtral-8x7B-v0.1,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly blackjack.",Americans like to gamble on card games.,S,1,-1.1660156,1.0623031898286097,False
+mistralai/Mixtral-8x7B-v0.1,"Statistics indicate that Americans spend eighty million a year on games of chance, mostly weddings.",Getting married is a risky thing to do.,J,1,-1.0976562,1.1325029646425002,True
+mistralai/Mixtral-8x7B-v0.1,Sunday is the day we bow our heads and putt.,We go to church on Sunday.,J,1,-0.79541016,0.9236548512839887,True
+mistralai/Mixtral-8x7B-v0.1,Sunday is the day we bow our heads and rest.,We work hard on Sunday.,S,1,-0.80371094,0.996205147501846,False
+mistralai/Mixtral-8x7B-v0.1,The accident injured his spinal cord and his legs are paralyzed.,He can move his legs.,E,1,-1.0908203,1.2580556151701403,False
+mistralai/Mixtral-8x7B-v0.1,The art museum just acquired an early Rembrandt; it's done in charcoal.,This early work is an oil painting.,S,1,-1.1826172,1.2907387022431185,False
+mistralai/Mixtral-8x7B-v0.1,The art museum just acquired an early Rembrandt; it's done in Crayola.,Rembrandt was a child when he completed the work.,J,1,-1.0820312,1.2132291364560694,True
+mistralai/Mixtral-8x7B-v0.1,The baby cried and upset her mother.,The mother was very calm.,E,1,-0.96777344,1.180124212860984,False
+mistralai/Mixtral-8x7B-v0.1,The bartender dropped two olives into the strong martini.,The bartender was preparing a drink.,E,1,-1.1894531,1.3103911378515747,False
+mistralai/Mixtral-8x7B-v0.1,The best bargain I ever got was when I went to a family garage sale and bought a grandma.,I bought a car at the garage sale.,J,1,-0.90185547,1.0833690910098057,True
+mistralai/Mixtral-8x7B-v0.1,The best bargain I ever got was when I went to a family garage sale and bought a toaster.,I got a really good deal on a blender.,S,1,-1.0527344,1.1840542582014317,False
+mistralai/Mixtral-8x7B-v0.1,The best gift for the man who has everything is neckties.,A necktie always makes a good gift for a man.,S,1,-0.9970703,1.180196678049936,False
+mistralai/Mixtral-8x7B-v0.1,The best gift for the man who has everything is penicillin.,This man has lots of diseases.,J,1,-0.859375,1.092024342800098,True
+mistralai/Mixtral-8x7B-v0.1,The best way to keep the milk from turning sour is to keep it in the cold.,Milk turns sour faster when it's warm.,S,1,-0.984375,1.1190740032814221,False
+mistralai/Mixtral-8x7B-v0.1,The best way to keep the milk from turning sour is to keep it in the cow.,Milk stays fresh for a long time.,J,1,-0.7963867,0.924252505573752,True
+mistralai/Mixtral-8x7B-v0.1,The best way to remove coffee stains from a white blouse is with detergent.,Coffee stains are impossible to wash out.,S,1,-0.9916992,1.1990833298145407,False
+mistralai/Mixtral-8x7B-v0.1,The best way to remove coffee stains from a white blouse is with scissors.,Coffee stains are easy to wash out.,J,1,-0.9116211,1.0763244592782328,True
+mistralai/Mixtral-8x7B-v0.1,The best way to stop an elephant from charging is to cut off its credit.,Elephants should pay in cash.,J,1,-0.81933594,1.0115412558939763,True
+mistralai/Mixtral-8x7B-v0.1,The best way to stop an elephant from charging is to cut off its toes.,Elephants can run quickly even without toes.,S,1,-0.9086914,1.0208018814692912,False
+mistralai/Mixtral-8x7B-v0.1,The bill was due at the end of the month.,He had to pay by the thirty-first.,E,1,-1.1962891,1.3275310203719795,False
+mistralai/Mixtral-8x7B-v0.1,The book that tells you where you can go on vacation is called a checkbook.,Where you go on vacation depends on how much you can afford.,J,1,-0.87402344,0.9176038004489004,True
+mistralai/Mixtral-8x7B-v0.1,The book that tells you where you can go on vacation is called a guidebook.,Guidebooks aren't very useful for planning a trip.,S,1,-1.1279297,1.1446664996861238,False
+mistralai/Mixtral-8x7B-v0.1,The children held their hands and formed a circle.,The children were watching television.,E,1,-1.1640625,1.2660115737970952,False
+mistralai/Mixtral-8x7B-v0.1,The choir sang hymns while the people listened.,The people joined in the singing.,E,1,-1.0117188,1.139077096130551,False
+mistralai/Mixtral-8x7B-v0.1,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and crack.",The convict had been a drug user.,S,1,-1.0546875,1.2442236894769563,False
+mistralai/Mixtral-8x7B-v0.1,"The convict told his cellmate how he'd blown all the money he stole on wine, women, and lawyers.",Lawyers are expensive.,J,1,-1.0957031,1.247783263154138,True
+mistralai/Mixtral-8x7B-v0.1,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the admission.",The prisoner may have been forced into confessing.,S,1,-1.0185547,1.1923118565571678,False
+mistralai/Mixtral-8x7B-v0.1,"The cops claimed that the prisoner just decided to come clean, but most people think he was forced into the bathtub.",The prisoner had been dirty and needed to be washed.,J,1,-1.0664062,1.2587861138979366,True
+mistralai/Mixtral-8x7B-v0.1,The curse of heavy drinking is that afterwards you get a huge bartab.,Drinking a lot can be expensive.,J,1,-1.0019531,1.1912130717093763,True
+mistralai/Mixtral-8x7B-v0.1,The curse of heavy drinking is that afterwards you get a huge headache.,Drinking alcohol can lead to a hangover.,S,1,-1.2021484,1.2438493379712436,False
+mistralai/Mixtral-8x7B-v0.1,The difference between a dog and a fox is about five beers.,Drinking makes women appear more attractive.,J,1,-1.3369141,1.3292410966231367,True
+mistralai/Mixtral-8x7B-v0.1,The difference between a dog and a fox is about five degrees.,Dogs and foxes have the same body temperature.,S,1,-1.2607422,1.2406585511566401,False
+mistralai/Mixtral-8x7B-v0.1,The difference between a good speaker and a bad one is often a nice diction.,It's important to speak clearly.,S,1,-0.95996094,1.0505774071482872,False
+mistralai/Mixtral-8x7B-v0.1,The difference between a good speaker and a bad one is often a nice nap.,Bad speakers can put you to sleep.,J,1,-1.1972656,1.153722866327119,True
+mistralai/Mixtral-8x7B-v0.1,The doctor said he could have a stroke because his arteries were getting narrow and clogged.,He was in excellent health.,E,1,-1.0625,1.2016083771082735,False
+mistralai/Mixtral-8x7B-v0.1,The doctor told her not to scratch no matter how much it itched.,She had a heart condition.,E,1,-0.9902344,1.0739613791052214,False
+mistralai/Mixtral-8x7B-v0.1,The farmer put a new engine in his old tractor.,The farmer wanted to keep the tractor.,E,1,-1.140625,1.262668826460765,False
+mistralai/Mixtral-8x7B-v0.1,The first thing he does every morning is sit in the lotus position and meditate.,He starts every day with coffee and the morning news.,E,1,-1.0869141,1.2267707834197623,False
+mistralai/Mixtral-8x7B-v0.1,The first two hundred story building opened in Chicago; it was a hotel.,Chicago has a skyscraper that's a hotel.,S,1,-1.0791016,1.2568620463545508,False
+mistralai/Mixtral-8x7B-v0.1,The first two hundred story building opened in Chicago; it was a library.,This building had lots of books.,J,1,-1.1210938,1.2855835184876614,True
+mistralai/Mixtral-8x7B-v0.1,The garment bag kept his suit from getting wrinkled.,His suit needed to be ironed.,E,1,-1.1650391,1.2675501105333922,False
+mistralai/Mixtral-8x7B-v0.1,The husband who catches his wife in the act is probably on the snoop.,An unfaithful wife can get in trouble if her husband is on the lookout.,S,1,-1.0449219,1.2018664605366696,False
+mistralai/Mixtral-8x7B-v0.1,The husband who catches his wife in the act is probably on the trapeze.,His wife is cheating on him.,J,1,-1.1171875,1.2136178428891056,True
+mistralai/Mixtral-8x7B-v0.1,The last time a guy in a mask took all my money I was in shock.,I had been mugged.,S,1,-0.97265625,1.129708958741229,False
+mistralai/Mixtral-8x7B-v0.1,The last time a guy in a mask took all my money I was in surgery.,I had been mugged.,J,1,-1.1884766,1.2233571601878535,True
+mistralai/Mixtral-8x7B-v0.1,The lawyer feared that his client was guilty.,The lawyer was a prosecutor.,E,1,-1.1230469,1.2456053031751217,False
+mistralai/Mixtral-8x7B-v0.1,The luggage handler seemed to take great delight in tossing the boxes marked fragile.,The luggage handler was very careful.,E,1,-1.1035156,1.1810696864780432,False
+mistralai/Mixtral-8x7B-v0.1,The mole lived in a hole in the ground.,The mole was kept in the house as a pet.,E,1,-1.1113281,1.2944519713999445,False
+mistralai/Mixtral-8x7B-v0.1,The most popular instrument in a Scottish marching band is the bagpipe.,"In Scottish marching bands, people like bagpipes more than drums.",E,1,-1.1611328,1.226936041481289,False
+mistralai/Mixtral-8x7B-v0.1,The most prevalent form of legalized gambling is betting.,Betting is not very common.,S,1,-1.1933594,1.180549345649051,False
+mistralai/Mixtral-8x7B-v0.1,The most prevalent form of legalized gambling is elections.,People are gambling when they vote for someone.,J,1,-1.0341797,1.0937542837461607,True
+mistralai/Mixtral-8x7B-v0.1,The movers put the sofa on the bare floor.,The house was fully carpeted.,E,1,-1.1220703,1.23672631229074,False
+mistralai/Mixtral-8x7B-v0.1,"The new tax forms are more realistic-- where your wife signs, it says: accomplice.",Your wife doesn't need to sign your tax form.,J,1,-0.87890625,1.1103068519655441,True
+mistralai/Mixtral-8x7B-v0.1,"The new tax forms are more realistic-- where your wife signs, it says: partner.",Tax forms are very old-fashioned.,S,1,-0.83496094,1.0851286663520159,False
+mistralai/Mixtral-8x7B-v0.1,The newspaper photo was so murky he couldn't figure out who it was until he read the caption.,He could see the person in the photo clearly.,E,1,-1.0019531,1.0867234815077937,False
+mistralai/Mixtral-8x7B-v0.1,The nurse gave him detailed instructions about how to clean the wound and put on a fresh bandage.,He had been injured.,E,1,-0.9628906,1.1618179505690958,False
+mistralai/Mixtral-8x7B-v0.1,The old wealthy family lived in a twelve bedroom mansion.,They lived in a small home.,E,1,-1.2304688,1.3046616903000787,False
+mistralai/Mixtral-8x7B-v0.1,The only crop that is grown in America and harvested abroad is the American tobacco.,Very few foreigners smoke American cigarettes.,S,1,-1.0664062,1.205424532223551,False
+mistralai/Mixtral-8x7B-v0.1,The only crop that is grown in America and harvested abroad is the American tourist.,Tourists spend a lot of money in other countries.,J,1,-1.15625,1.2418616849471444,True
+mistralai/Mixtral-8x7B-v0.1,The only fishing through the ice that some men ever do is for the olive.,Some men fish; others just drink martinis.,J,1,-1.0488281,1.1773878085073601,True
+mistralai/Mixtral-8x7B-v0.1,The only fishing through the ice that some men ever do is for the trout.,Some ice fishermen only want to catch trout.,S,1,-1.0693359,1.1435405819220095,False
+mistralai/Mixtral-8x7B-v0.1,The only ones who want me for my body are losers.,Everybody finds me very attractive.,S,1,-1.0146484,1.1854471945562746,False
+mistralai/Mixtral-8x7B-v0.1,The only ones who want me for my body are mosquitoes.,People find me very sexy.,J,1,-0.984375,1.1310669178362869,True
+mistralai/Mixtral-8x7B-v0.1,The only person who sticks closer to you in adversity than a friend is a creditor.,People you owe money to don't hang around much.,J,1,-1.0751953,1.1490609710789976,True
+mistralai/Mixtral-8x7B-v0.1,The only person who sticks closer to you in adversity than a friend is a spouse.,You just can't depend on a husband or wife.,S,1,-1.1542969,1.1848673977787942,False
+mistralai/Mixtral-8x7B-v0.1,The only place where you can find people who spend all their time minding their own business is the bank.,People at banks are very nosy.,S,1,-1.0830078,1.199929195584241,False
+mistralai/Mixtral-8x7B-v0.1,The only place where you can find people who spend all their time minding their own business is the cemetery.,Everybody is nosy to some extent.,J,1,-0.921875,1.042906568672836,True
+mistralai/Mixtral-8x7B-v0.1,The only thing money can't buy is generosity.,Just because you have money doesn't mean you'll share it.,S,1,-1.0322266,1.156326499017189,False
+mistralai/Mixtral-8x7B-v0.1,The only thing money can't buy is poverty.,Money can buy almost anything.,J,1,-0.90722656,1.0818788584667967,True
+mistralai/Mixtral-8x7B-v0.1,The only time my father ever raised a hand to his children was in discipline.,My father didn't believe in corporal punishment.,S,1,-0.79541016,0.9665404996951815,False
+mistralai/Mixtral-8x7B-v0.1,The only time my father ever raised a hand to his children was in self-defense.,My father beat his children a lot.,J,1,-0.9042969,1.0774345423377762,True
+mistralai/Mixtral-8x7B-v0.1,The paint turned out to be the wrong color.,They were putting up wallpaper.,E,1,-1.0146484,1.1829258842625914,False
+mistralai/Mixtral-8x7B-v0.1,The painter used water-based paint for the interior of the house but enamel for the exterior.,He used the same paint both inside and outside the house.,E,1,-1.1474609,1.2310284835511354,False
+mistralai/Mixtral-8x7B-v0.1,The penalty for dishonesty is the disgrace of dying rich.,Liars never win.,J,1,-0.890625,1.0472877418179105,True
+mistralai/Mixtral-8x7B-v0.1,The penalty for dishonesty is the disgrace of dying unloved.,People who lie don't have many friends.,S,1,-1.0615234,1.2160459726044648,False
+mistralai/Mixtral-8x7B-v0.1,The perfect companion to a vegetarian dinner is a salad.,A vegetarian meal doesn't need a salad.,S,1,-1.1445312,1.316191529877996,False
+mistralai/Mixtral-8x7B-v0.1,The perfect companion to a vegetarian dinner is a steak.,I don't believe in eating meat.,J,1,-1.0117188,1.2185889573460331,True
+mistralai/Mixtral-8x7B-v0.1,The policeman saw him throw the bottle out the window and gave him a ticket for littering.,He got a ticket for speeding.,E,1,-1.1201172,1.2631330364095503,False
+mistralai/Mixtral-8x7B-v0.1,The Republican candidate won the election by a landslide.,The election was very close.,E,1,-0.89160156,1.1268496256487546,False
+mistralai/Mixtral-8x7B-v0.1,The rodeo champion was quite proud of his big silver belt buckle.,The rodeo champion didn't wear a belt.,E,1,-1.0800781,1.1997928008661727,False
+mistralai/Mixtral-8x7B-v0.1,The show had one act that was really offbeat: the clowns.,The clowns were really out of the ordinary.,S,1,-0.9692383,1.142533218629365,False
+mistralai/Mixtral-8x7B-v0.1,The show had one act that was really offbeat: the singer.,The singer had poor rhythm.,J,1,-0.9584961,1.1959692159390218,True
+mistralai/Mixtral-8x7B-v0.1,The surgeon tried vainly to save his patient.,The patient died.,E,1,-1.1757812,1.2584822805217237,False
+mistralai/Mixtral-8x7B-v0.1,The teacher wrote the problem on the board.,The teacher was going to explain the problem.,E,1,-1.9931641,1.1736653852266001,False
+mistralai/Mixtral-8x7B-v0.1,The terrorists planted a bomb in the airport and four people were killed in the explosion.,The bomb squad was able to defuse the bomb.,E,1,-1.0273438,1.221095744712817,False
+mistralai/Mixtral-8x7B-v0.1,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little finding.,Things are hard to find in this area.,J,1,-1.0195312,1.118919738223782,True
+mistralai/Mixtral-8x7B-v0.1,The tourist bureau told the visitors there was plenty of hunting in this part of the country but very little sightseeing.,There aren't many tourist sights in the area.,S,1,-0.9355469,1.124277808040225,False
+mistralai/Mixtral-8x7B-v0.1,The victim was rushed to the hospital in an ambulance.,The victim wasn't hurt in the accident.,E,1,-1.1103516,1.2773136578331705,False
+mistralai/Mixtral-8x7B-v0.1,The visitor stared at the grandfather clock and seemed almost hypnotized by the swinging of the pendulum.,The visitor could see the clock.,E,1,-0.9946289,1.1287514776254974,False
+mistralai/Mixtral-8x7B-v0.1,The whole town came to hear their mayor speak.,The people wanted to hear what the mayor would say.,E,1,-1.1982422,1.274785041253095,False
+mistralai/Mixtral-8x7B-v0.1,The wind was so strong it blew out three fuses.,The wind affected the electrical system.,J,1,-1.1171875,1.230107039095538,True
+mistralai/Mixtral-8x7B-v0.1,The wind was so strong it blew out three streetlights.,The storm didn't cause any damage.,S,1,-1.1552734,1.2463913610133508,False
+mistralai/Mixtral-8x7B-v0.1,The woman in the grocery store was handing out free samples.,The samples cost ten cents each.,E,1,-1.1416016,1.2595908282578638,False
+mistralai/Mixtral-8x7B-v0.1,The woman who has her husband eating out of her hand must save a lot of dishwashing.,The husband washes all the dishes.,J,1,-1.0976562,1.2193462251436837,True
+mistralai/Mixtral-8x7B-v0.1,The woman who has her husband eating out of her hand must save a lot of heartbreak.,She's happy because her husband does what she wants.,S,1,-1.1601562,1.2757288796982698,False
+mistralai/Mixtral-8x7B-v0.1,There were over a hundred trees in the apple orchard.,It was an extremely small orchard.,E,1,-1.2265625,1.275719380049807,False
+mistralai/Mixtral-8x7B-v0.1,They planned to dig a tunnel in order to escape.,They were being held prisoner.,E,1,-1.1025391,1.2687537620813085,False
+mistralai/Mixtral-8x7B-v0.1,They redecorated the bar with new drunks.,The bar has all new furniture.,J,1,-0.97753906,1.1519334193580075,True
+mistralai/Mixtral-8x7B-v0.1,They redecorated the bar with new wood.,The bar is all chrome and glass.,S,1,-1.0439453,1.2271914248353926,False
+mistralai/Mixtral-8x7B-v0.1,They went to Las Vegas and got married in one of those quickie wedding chapels.,They spent months planning a big wedding.,E,1,-1.03125,1.2140502709041214,False
+mistralai/Mixtral-8x7B-v0.1,This fall two things are turning yellow: trees and bushes.,The leaves are changing color.,S,1,-1.0654297,1.1632566860447333,False
+mistralai/Mixtral-8x7B-v0.1,This fall two things are turning yellow: trees and investors.,Investors are becoming scared.,J,1,-1.2509766,1.2407734635340073,True
+mistralai/Mixtral-8x7B-v0.1,"This house comes with a lot of extras, mostly termites.",The house is free of bugs.,J,1,-0.96533203,1.131083372447539,True
+mistralai/Mixtral-8x7B-v0.1,"This house comes with a lot of extras, mostly upgrades.",The house would be a good purchase.,S,1,-1.1708984,1.2926407137018014,False
+mistralai/Mixtral-8x7B-v0.1,"This new computer works so quickly, it comes complete with games.","If you use this computer, you'll have time left to play.",S,1,-1.2333984,1.2629132865499773,False
+mistralai/Mixtral-8x7B-v0.1,"This new computer works so quickly, it comes complete with ulcers.",The computer feels no stress.,J,1,-0.8925781,1.04469655381171,True
+mistralai/Mixtral-8x7B-v0.1,"Though most people think it's Rome, the world's most beloved capital is actually dollars.",People love money.,J,1,-1.1357422,1.2593960600382783,True
+mistralai/Mixtral-8x7B-v0.1,"Though most people think it's Rome, the world's most beloved capital is actually Vienna.",Rome is more beloved than Vienna.,S,1,-1.1035156,1.2553576840447949,False
+mistralai/Mixtral-8x7B-v0.1,Three people were killed in a major highway accident.,The accident had not been fatal.,E,1,-0.9243164,1.1647423301675264,False
+mistralai/Mixtral-8x7B-v0.1,Tim threw a rock and broke the window.,Tim was playing baseball.,E,1,-1.1230469,1.2727993868255376,False
+mistralai/Mixtral-8x7B-v0.1,"To clothe one soldier, it takes the wool from two sheep and the hides from three animals.",Military uniforms are made from natural materials.,S,1,-1.1933594,1.2269091527206308,False
+mistralai/Mixtral-8x7B-v0.1,"To clothe one soldier, it takes the wool from two sheep and the hides from three taxpayers.",Military uniforms are expensive.,J,1,-1.0859375,1.175781872249919,True
+mistralai/Mixtral-8x7B-v0.1,"To get something done, a committee should consist of no more than three people, two of whom are dead.",Groups are more efficient than individuals.,J,1,-0.8959961,0.9244204579935811,True
+mistralai/Mixtral-8x7B-v0.1,"To get something done, a committee should consist of no more than three people, two of whom are workers.",A committee works best with one leader.,S,1,-1.0966797,1.1408130174178008,False
+mistralai/Mixtral-8x7B-v0.1,To keep the dogs out of the yard he put up a fence.,He was worried his pet would escape.,E,1,-1.1962891,1.2949226413308952,False
+mistralai/Mixtral-8x7B-v0.1,To pay for the car Al simply wrote a check.,Al paid with a credit card.,E,1,-1.0410156,1.25807247805529,False
+mistralai/Mixtral-8x7B-v0.1,Too many girls believe that the chief foundation for true love is a large fortune.,A lot of women marry for money.,S,1,-0.9501953,1.1586045540172067,False
+mistralai/Mixtral-8x7B-v0.1,Too many girls believe that the chief foundation for true love is a large stone.,Some girls just want a big diamond ring.,J,1,-1.0292969,1.2017774189875767,True
+mistralai/Mixtral-8x7B-v0.1,Two things are essential for success: wealth and fame.,Having money without celebrity is still success.,S,1,-0.9995117,1.2132343975341415,False
+mistralai/Mixtral-8x7B-v0.1,Two things are essential for success: wealth and money.,You don't need much cash to succeed in business.,J,1,-0.9140625,1.121016552765294,True
+mistralai/Mixtral-8x7B-v0.1,We finally got a decent picture on the TV after an hour of adjusting the antenna.,The TV had poor reception.,E,1,-0.83496094,1.0661750171948186,False
+mistralai/Mixtral-8x7B-v0.1,We live in a lovely suburb; it's just two miles beyond our income.,We can't afford to live where we do.,J,1,-1.2783203,1.2529016741503525,True
+mistralai/Mixtral-8x7B-v0.1,We live in a lovely suburb; it's just two miles beyond our town.,The suburb is far from the city.,S,1,-1.2011719,1.2576842993240696,False
+mistralai/Mixtral-8x7B-v0.1,"We used to have food on the table as soon as the customer was seated, but our new system requires more effort.",We have to work harder now.,S,1,-1.0322266,1.1829577774816937,False
+mistralai/Mixtral-8x7B-v0.1,"We used to have food on the table as soon as the customer was seated, but our new system requires more plates.",Our service is faster now.,J,1,-1.1123047,1.2389935858859198,True
+mistralai/Mixtral-8x7B-v0.1,"When an irresistible force meets an immovable object, you get two very angry entities.","When one thing runs into another, both become unhappy.",S,1,-1.2890625,1.2961725148019032,False
+mistralai/Mixtral-8x7B-v0.1,"When an irresistible force meets an immovable object, you get two very angry women.",Women can be stubborn.,J,1,-1.2314453,1.2599703304821015,True
+mistralai/Mixtral-8x7B-v0.1,"When he stepped into the elevator, he knew Jennifer had just been there by the smell of her perfume.",Jennifer wore strong perfume.,E,1,-1.1826172,1.2320609504173634,False
+mistralai/Mixtral-8x7B-v0.1,"When I asked how long I should cook the noodles, he said at least ten inches.",The noodles should be at least ten inches long.,J,1,-0.7246094,0.9328868034834464,True
+mistralai/Mixtral-8x7B-v0.1,"When I asked how long I should cook the noodles, he said at least ten seconds.",They had already eaten.,S,1,-0.8647461,0.9933000917911762,False
+mistralai/Mixtral-8x7B-v0.1,"When I asked the bartender for something cold and full of rum, he recommended his daiquiri.",The bartender recommended a drink.,S,1,-1.0253906,1.2362645575352489,False
+mistralai/Mixtral-8x7B-v0.1,"When I asked the bartender for something cold and full of rum, he recommended his wife.",The bartender was married.,J,1,-0.87353516,1.046994382101812,True
+mistralai/Mixtral-8x7B-v0.1,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the dressmaker.",The dressmaker had a lot of my money.,J,1,-0.95654297,1.1565733822133917,True
+mistralai/Mixtral-8x7B-v0.1,"When I found out how much my wife spent on dresses last year, I dumped her and proposed to the mistress.",I had been faithful to my wife.,S,1,-0.9223633,1.178552016198065,False
+mistralai/Mixtral-8x7B-v0.1,"When it comes to keeping warm, nothing beats a thermal brunette.",A down parka is the best way to keep warm.,J,1,-1.0898438,1.1975840187093503,True
+mistralai/Mixtral-8x7B-v0.1,"When it comes to keeping warm, nothing beats a thermal parka.",A trenchcoat is the best way to keep warm.,S,1,-1.0976562,1.236188263579915,False
+mistralai/Mixtral-8x7B-v0.1,"When John bought a bulldog, it was no time at all before he had that dog eating out of his fingers.",He trained the dog well.,S,1,-1.1445312,1.251395743322728,False
+mistralai/Mixtral-8x7B-v0.1,"When John bought a bulldog, it was no time at all before he had that dog eating out of his leg.",The dog was aggressive.,J,1,-1.1220703,1.2528777730149117,True
+mistralai/Mixtral-8x7B-v0.1,"When reviewing your notes for a test, the most important ones will be capitalized.",Pay more attention to the things in small print.,S,1,-1.0644531,1.2240032900640667,False
+mistralai/Mixtral-8x7B-v0.1,"When reviewing your notes for a test, the most important ones will be illegible.",Important notes are written clearly so they stand out.,J,1,-1.4882812,1.3599605104902053,True
+mistralai/Mixtral-8x7B-v0.1,"When the kid came into the store and asked for empty boxes, the owner gave him the crate.",The kid didn't get any boxes.,S,1,-1.0576172,1.1816320631837034,False
+mistralai/Mixtral-8x7B-v0.1,"When the kid came into the store and asked for empty boxes, the owner gave him the register.",The store had made a lot of money.,J,1,-1.1230469,1.238561784636515,True
+mistralai/Mixtral-8x7B-v0.1,When they were in London they visited Buckingham Palace.,They made a trip to England.,E,1,-1.0908203,1.3088295647157868,False
+mistralai/Mixtral-8x7B-v0.1,"When we got divorced, my wife and I split the house; she got the inside.",I got the outside.,J,1,-1.1210938,1.1907074046299146,True
+mistralai/Mixtral-8x7B-v0.1,"When we got divorced, my wife and I split the house; she got the kitchen.",My wife gave me the kitchen items.,S,1,-1.1162109,1.2037318848453713,False
+mistralai/Mixtral-8x7B-v0.1,"When we watch a sexy movie, my wife leans over and breathes on my collar.",She wants to get me excited.,S,1,-1.1386719,1.2579676009388152,False
+mistralai/Mixtral-8x7B-v0.1,"When we watch a sexy movie, my wife leans over and breathes on my glasses.",She wants me to see the movie.,J,1,-1.0585938,1.1877531064954665,True
+mistralai/Mixtral-8x7B-v0.1,"When you go to bed, turn off the lights.",The lights are on.,E,1,-1.1425781,1.2518589987223059,False
+mistralai/Mixtral-8x7B-v0.1,"When you own an ice cream business, your favorite flavor is aspirin.",Running an ice cream business can give you a headache.,J,1,-1.0029297,1.1719935724289687,True
+mistralai/Mixtral-8x7B-v0.1,"When you own an ice cream business, your favorite flavor is everything.",You start to like all the flavors.,S,1,-1.1552734,1.259896579625467,False
+mistralai/Mixtral-8x7B-v0.1,"Where I'm from, the two most common elements are hydrogen and nitrogen.",Phosphorus is the most common element in my hometown.,S,1,-0.9716797,1.0508964323919996,False
+mistralai/Mixtral-8x7B-v0.1,"Where I'm from, the two most common elements are hydrogen and stupidity.",People in my hometown are very smart.,J,1,-1.1210938,1.1719748634495477,True
+mistralai/Mixtral-8x7B-v0.1,"Women don't dress to please men; if they did, they'd dress a lot faster.",Women take a long time to get dressed.,J,1,-1.1513672,1.205303549682776,True
+mistralai/Mixtral-8x7B-v0.1,"Women don't dress to please men; if they did, they'd dress a lot scantier.",Men prefer women who wear a lot of clothes.,S,1,-1.1806641,1.2351468938286982,False
+mistralai/Mixtral-8x7B-v0.1,Women were not allowed to vote until when Congress passed the nineteenth amendment to the constitution.,Women in 1900 could not vote.,E,1,-0.66845703,1.0656154206171853,False
+mistralai/Mixtral-8x7B-v0.1,Yesterday they canoed down the river.,They spent yesterday outdoors.,E,1,-1.2080078,1.2874735923976963,False
+mistralai/Mixtral-8x7B-v0.1,You can keep your kids out of hot water with dishes.,Kids like to wash dishes.,J,1,-1.0166016,1.1956166855361603,True
+mistralai/Mixtral-8x7B-v0.1,You can keep your kids out of hot water with rules.,Clear boundaries help keep kids out of trouble.,S,1,-1.0429688,0.9615802161966436,False
+mistralai/Mixtral-8x7B-v0.1,You could tell he had grown up in the South by his accent.,He talked like a Southerner.,E,1,-0.7832031,1.008759107737794,False

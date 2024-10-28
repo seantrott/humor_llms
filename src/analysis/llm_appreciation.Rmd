@@ -123,7 +123,7 @@ df_class_merged %>%
         legend.text = element_text(size = rel(2)),
         legend.title = element_text(size = rel(2)),
         strip.text.x = element_text(size = rel(2))) +
-  scale_fill_viridis(option = "turbo", discrete=TRUE)
+  scale_fill_viridis(option = "mako", discrete=TRUE)
 
 
 ```
