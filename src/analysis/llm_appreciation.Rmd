@@ -207,6 +207,12 @@ df_app_merged %>%
 mod_full = lm(data = df_class_merged, lp_ratio ~ is_joke * surprisal)
 summary(mod_full)
 
+df_class_merged = df_class_merged %>%
+  mutate(surprisal_normed = surprisal / max(surprisal))
+
+mod_full = lm(data = df_class_merged, lp_ratio ~ is_joke * surprisal_normed)
+summary(mod_full)
+
 
 df_class_merged %>%
   ggplot(aes(x = surprisal, y = lp_ratio, color = is_joke)) +
@@ -226,6 +232,8 @@ df_class_merged %>%
 ## `Entropy ~ Is Joke + Surprisal`
 
 ```{r}
+
+
 mod_full = lm(data = df_app_merged, entropy ~ is_joke * surprisal)
 summary(mod_full)
 

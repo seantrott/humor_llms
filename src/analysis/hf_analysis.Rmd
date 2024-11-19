@@ -215,6 +215,8 @@ df_merged_comprehension %>%
   group_by(model, StimType) %>%
   summarise(mean_accuracy = mean(Match, na.rm = TRUE))
 
+df_merged_comprehension$is_joke = factor(df_merged_comprehension$is_joke, levels = c("Non-joke", "Joke"))
+
 df_merged_comprehension %>%
   group_by(model, is_joke) %>%
   summarise(mean_accuracy = mean(Match, na.rm = TRUE)) %>%
@@ -279,6 +281,8 @@ nrow(df_merged_joined_comprehension)
 ### Accuracy
 
 ```{r comprehension_accuracy_all}
+df_merged_comprehension_stacked$is_joke = factor(df_merged_comprehension_stacked$is_joke, levels = c("Non-joke", "Joke"))
+
 df_merged_comprehension_stacked %>%
   group_by(model, is_joke) %>%
   summarise(mean_accuracy = mean(Match, na.rm = TRUE)) %>%
@@ -530,8 +534,6 @@ df_merged_surprisal_classification %>%
 
 ## Human data analysis
 
-Again, we merge the data in two ways.
-
 ```{r}
 ### First, stack them
 df_human_classification = read_csv("../../data/processed/human_data_appreciation/JokeFunniness_data_153Subs.csv") %>%
@@ -561,6 +563,50 @@ df_merged_classification_stacked = df_merged_surprisal_classification %>%
 df_merged_classification_stacked$is_joke = factor(df_merged_classification_stacked$is_joke, levels = c("Non-joke", "Joke"))
 
 
+```
+
+### Log odds comparison
+
+```{r}
+df_human_log_odds = df_human_classification %>%
+  group_by(is_joke, Sentence) %>%
+  summarise(prob_joke = mean(ResponseJoke)) %>%
+  mutate(joke_odds = prob_joke / (1 - prob_joke),
+         lp_ratio = log(joke_odds)) %>%
+  mutate(model = "Human")
+
+df_merged_lo = df_human_log_odds %>%
+  bind_rows(df_merged_surprisal_classification)
+
+# df_merged_lo$model = factor(df_merged_lo$model, levels = c("Human", "Joke"))
+df_merged_lo$is_joke = factor(df_merged_lo$is_joke, levels = c("Non-joke", "Joke"))
+
+
+df_merged_lo %>%
+  ggplot(aes(x = lp_ratio,
+             y = reorder(model, lp_ratio),
+             fill = is_joke)) +
+  geom_density_ridges2(aes(height = ..density..), 
+                       color=gray(0.25), 
+                       alpha = .7, 
+                       scale=.85, 
+                       # size=1, 
+                       size = 0,
+                       stat="density") +
+  labs(x = "Log-odds (yes vs. no)",
+       y = "",
+       fill = "") +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom"
+  ) + 
+  theme(axis.title = element_text(size=rel(1.2)),
+        axis.text = element_text(size = rel(1.2)),
+        legend.text = element_text(size = rel(1.2)),
+        legend.title = element_text(size = rel(1.2)),
+        strip.text.x = element_text(size = rel(1.2))) +
+  scale_fill_viridis(option = "mako", discrete=TRUE)
 ```
 
 
@@ -599,11 +645,7 @@ df_merged_classification_stacked = df_merged_classification_stacked %>%
   mutate(Source = case_when(
     model != "Human" ~ "LLM",
     model == "Human" ~ "Human"
-  )) %>%
-  mutate(pid = case_when(
-    Source == "LLM" ~ model,
-    Source == "Human" ~ ParticipantID
-  ))
+  )) 
 
 mod_interaction = glmer(data = df_merged_classification_stacked,
                  ResponseJoke ~ Source * surprisal +

@@ -1,0 +1,435 @@
+---
+title: "Analysis of Open Models"
+author: "Sean Trott"
+date: "August 23, 2024"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lmtest)
+library(forcats)
+library(broom)
+library(lme4)
+library(ggridges)
+library(lmerTest)
+library(ggrepel)
+library(viridis)
+```
+
+
+# Analysis 1: Surprisal
+
+Here, we replicate the main finding that final-word surprisal varies by condition.
+
+## Load data
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+
+
+### Get files
+csv_files <- list.files(path = "../../data/processed/supplementary/surprisals/",
+                        pattern = "*.csv", full.names = TRUE)
+### Read into R
+data_list <- map(csv_files, read_csv)
+### Combine into .csv
+combined_data <- bind_rows(data_list)
+
+## Exclude Expected
+combined_data_critical = combined_data %>%
+  filter(condition != "E")
+
+combined_data_critical = combined_data_critical %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    condition == "S" ~ "Non-joke"
+  ))
+combined_data_critical$is_joke = factor(combined_data_critical$is_joke, levels=c("Non-joke", "Joke"))
+```
+
+## Manipulation check: is "expected" more expected?
+
+**Answer**: Yes, much lower surprisal.
+
+```{r}
+combined_data = combined_data %>%
+  mutate(expected = condition == "E")
+
+combined_data %>%
+  group_by(model, expected) %>%
+  summarise(mean_surprisal = mean(surprisal),
+            sd_surprisal = sd(surprisal))
+  
+
+m_full = lmer(data = combined_data,
+              surprisal ~ expected + 
+                (1 + expected | model) +
+                (1 | final_word),
+              REML = FALSE)
+
+m_reduced = lmer(data = combined_data,
+              surprisal ~ # expected + 
+                (1 + expected | model) +
+                (1 | final_word),
+              REML = FALSE)
+
+summary(m_full)
+anova(m_full, m_reduced)
+```
+
+## Effect of condition on surprisal?
+
+**Answer**: Yes, surprisal is consistently lower in `S` than `J`.
+
+```{r}
+
+
+combined_data_critical %>%
+  group_by(model, condition) %>%
+  summarise(mean_surprisal = mean(surprisal),
+            sd_surprisal = sd(surprisal))
+
+m_full = lmer(data = combined_data_critical,
+              surprisal ~ condition +
+                (1 + condition | model),
+              REML = FALSE)
+
+m_reduced = lmer(data = combined_data_critical,
+              surprisal ~ # condition + 
+                (1 + condition | model),
+              REML = FALSE)
+
+summary(m_full)
+anova(m_full, m_reduced)
+```
+
+
+Visualization:
+
+```{r}
+g = combined_data_critical %>%
+  separate(model, into = c("org", "model_name"), sep = "/") %>%
+  ggplot(aes(x = surprisal,
+             y = reorder(model_name, n_params),
+             fill = condition)) +
+  geom_density_ridges2(aes(height = ..density..), 
+                       color=gray(0.25), 
+                       alpha = 0.5, 
+                       scale=0.85, 
+                       size=.9, 
+                       stat="density") +
+  labs(x = "Surprisal (Final Word)",
+       y = "Model",
+       fill = "Condition") +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  theme_minimal() +
+  # scale_fill_viridis_d() +
+  theme(
+    legend.position = "bottom"
+  ) + 
+  theme(axis.title = element_text(size=rel(1.5)),
+        axis.text = element_text(size = rel(1.5)),
+        legend.text = element_text(size = rel(1.5)),
+        legend.title = element_text(size = rel(1.5)),
+        strip.text.x = element_text(size = rel(1.5)))
+
+g
+
+ggsave("../../Figures/paper/supplementary/open_models/surprisals_density_pythia.png", g, dpi = 300)
+
+```
+
+## Scaling?
+
+```{r}
+combined_data_critical = combined_data_critical %>%
+  mutate(log_params = log10(n_params))
+
+m_full = lmer(data = combined_data_critical,
+              surprisal ~ is_joke * log_params +
+                (1 + is_joke | model),
+              REML = FALSE)
+
+summary(m_full)
+
+# Summarize the data to get mean and standard error for each condition
+summary_data <- combined_data_critical %>%
+  group_by(is_joke, model) %>%
+  summarize(
+    mean_surprisal = mean(surprisal, na.rm = TRUE),
+    se_surprisal = sd(surprisal, na.rm = TRUE) / sqrt(n()),
+    mean_params = mean(n_params, na.rm = TRUE)
+  )
+
+# Create the plot
+ggplot(summary_data, 
+       aes(x = mean_params, 
+           y = mean_surprisal, 
+           color = is_joke)) +
+  geom_point(size = 2, alpha = .8) +
+  geom_errorbar(aes(ymin = mean_surprisal - se_surprisal, 
+                     ymax = mean_surprisal + se_surprisal), 
+                width = 0.1, size = 1) +
+  scale_x_log10() +
+  labs(x = "Number of Parameters",
+       y = "Surprisal",
+       title = "Surprisal by Pythia model scale",
+       color = "") +
+  geom_line(size = 1) +
+  theme_minimal() +
+  # guides(color="none") +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  scale_color_viridis(option = "mako", discrete=TRUE)
+
+
+
+ggsave("../../Figures/paper/supplementary/open_models/surprisals_pythia_scaling.png", g, dpi = 300)
+```
+
+
+# Analysis 2: Comprehension probe (v1)
+
+## Load data
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+
+
+### Get files
+csv_files <- list.files(path = "../../data/processed/supplementary/comprehension-probe/",
+                        pattern = "*.csv", full.names = TRUE)
+### Read into R
+data_list <- map(csv_files, read_csv)
+### Combine into .csv
+combined_data <- bind_rows(data_list)
+
+## Exclude Expected
+combined_data_critical = combined_data %>%
+  filter(condition != "E")
+
+combined_data_critical = combined_data_critical %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    condition == "S" ~ "Non-joke"
+  ))
+combined_data_critical$is_joke = factor(combined_data_critical$is_joke, levels=c("Non-joke", "Joke"))
+
+combined_data_critical = combined_data_critical %>%
+  mutate(log_params = log10(n_params))
+```
+
+
+## Is LR sensitive to correct answer?
+
+```{r}
+combined_data_critical %>%
+  separate(model, into = c("org", "model_name"), sep = "/") %>%
+  ggplot(aes(x = lr, fill = correct, 
+             y = reorder(model_name, n_params))) +
+  geom_density_ridges2(aes(height = ..density..), color=gray(0.25), 
+                       alpha = 0.5, scale=.85, 
+                       size=1, 
+                       stat="density") +
+  geom_vline(xintercept = 0, linetype = "dotted")+
+  scale_fill_viridis(option = "mako", discrete=TRUE) +
+  labs(x = "Log Odds (Yes vs. No)",
+       y = "Model Name",
+       fill = "Correct Response") +
+  theme_minimal() +
+  theme(text = element_text(size = 15)) 
+
+
+### Are log-ratios sensitive to correct answer? (They should be, if correct)
+mod_full = lmer(data = combined_data_critical,
+                lr ~ correct + (1 | model),
+                REML = FALSE)
+
+### Are log-ratios sensitive to correct answer? (They should be, if correct)
+mod_with_condition = lmer(data = combined_data_critical,
+                lr ~ correct * is_joke + (1 | model),
+                REML = FALSE)
+
+
+## Now calculate accuracy
+combined_data_critical = combined_data_critical %>%
+  mutate(accuracy = case_when(
+    correct == "yes" & lr > 0 ~ 1,
+    correct == "no" & lr < 0 ~ 1,
+    correct == "yes" & lr < 0 ~ 0,
+    correct == "no" & lr > 0 ~ 0
+  ))
+
+combined_data_critical %>%
+  group_by(is_joke, model) %>%
+  summarise(mean_accuracy = mean(accuracy))
+
+### Different perspective: Is accuracy different from chance overall?
+mod_basic = glmer(data = combined_data_critical,
+                 accuracy ~ (1| model),
+                 family = binomial())
+
+summary(mod_basic)
+```
+
+
+## Scaling?
+
+```{r}
+
+### Does accuracy increase with number of parameters?
+mod_scaling = glmer(data = combined_data_critical,
+                 accuracy ~ log_params + (1| model) + (1 | sentence),
+                 family = binomial())
+
+summary(mod_scaling)
+
+
+# Summarize the data to get mean and standard error for each condition
+summary_data <- combined_data_critical %>%
+  group_by(is_joke, model) %>%
+  summarize(
+    mean_accuracy = mean(accuracy, na.rm = TRUE),
+    se_accuracy = sd(accuracy, na.rm = TRUE) / sqrt(n()),
+    mean_params = mean(n_params, na.rm = TRUE)
+  )
+
+### Alternative scaling analysis
+summary(lm(data = summary_data, mean_accuracy ~ log10(mean_params)))
+
+# Create the plot
+ggplot(summary_data, 
+       aes(x = mean_params, 
+           y = mean_accuracy, 
+           color = is_joke)) +
+  geom_point(size = 3, alpha = .8) +
+  geom_errorbar(aes(ymin = mean_accuracy - se_accuracy, 
+                    ymax = mean_accuracy + se_accuracy), 
+                width = 0.1, size = 1) +
+  scale_x_log10() +
+  labs(x = "Number of Parameters",
+       y = "Accuracy",
+       title = "Accuracy by Pythia model scale",
+       color = "") +
+  geom_line(size = 1) +
+  geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal() +
+  # guides(color="none") +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  scale_color_viridis(option = "mako", discrete=TRUE) +
+  facet_wrap(~is_joke)
+
+
+# Summarize the data to get mean and standard error for each condition
+summary_data <- combined_data_critical %>%
+  group_by(is_joke, model, correct) %>%
+  summarize(
+    mean_lr = mean(lr, na.rm = TRUE),
+    se_lr = sd(lr, na.rm = TRUE) / sqrt(n()),
+    mean_params = mean(n_params, na.rm = TRUE)
+  )
+
+# Create the plot
+ggplot(summary_data, 
+       aes(x = mean_params, 
+           y = mean_lr, 
+           color = is_joke)) +
+  geom_point(size = 3, alpha = .8) +
+  geom_errorbar(aes(ymin = mean_lr - se_lr, 
+                    ymax = mean_lr + se_lr), 
+                width = 0.1, size = 1) +
+  scale_x_log10() +
+  labs(x = "Number of Parameters",
+       y = "Log Ratios (Yes vs. Now)",
+       title = "Log Ratios by Pythia model scale",
+       color = "") +
+  geom_line(size = 1) +
+  geom_hline(yintercept = .5, linetype = "dotted") +
+  theme_minimal() +
+  # guides(color="none") +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  scale_color_viridis(option = "mako", discrete=TRUE) +
+  facet_wrap(~correct)
+
+```
+
+# Analysis 3: Comprehension probe (v2)
+
+## Load data
+
+```{r}
+## setwd("/Users/seantrott/Dropbox/UCSD/Research/NLMs/humor_llms/src/analysis")
+
+
+### Get files
+csv_files <- list.files(path = "../../data/processed/supplementary/cls-token//",
+                        pattern = "*.csv", full.names = TRUE)
+### Read into R
+data_list <- map(csv_files, read_csv)
+### Combine into .csv
+combined_data <- bind_rows(data_list)
+
+## Exclude Expected
+combined_data_critical = combined_data %>%
+  filter(condition != "E")
+
+combined_data_critical = combined_data_critical %>%
+  mutate(is_joke = case_when(
+    condition == "J" ~ "Joke",
+    condition == "S" ~ "Non-joke"
+  ))
+combined_data_critical$is_joke = factor(combined_data_critical$is_joke, levels=c("Non-joke", "Joke"))
+
+combined_data_critical = combined_data_critical %>%
+  mutate(log_params = log10(n_params))
+```
+
+
+## Is cosine similarity sensitive to correct answer?
+
+```{r}
+combined_data_critical %>%
+  ggplot(aes(x = cosine_similarity, fill = correct, 
+             y = reorder(model, n_params))) +
+  geom_density_ridges2(aes(height = ..density..), color=gray(0.25), 
+                       alpha = 0.5, scale=.85, 
+                       size=1, 
+                       stat="density") +
+  scale_fill_viridis(option = "mako", discrete=TRUE) +
+  labs(x = "Cosine Similarity (Critical vs. Probe)",
+       y = "Model Name",
+       fill = "Correct Response") +
+  theme_minimal() +
+  theme(text = element_text(size = 15))
+
+### Are cosine similarities sensitive to correct answer? (They should be, if correct)
+mod_full = lmer(data = combined_data_critical,
+                cosine_similarity ~ correct + (1 | model),
+                REML = FALSE)
+
+summary(mod_full)
+
+### Are cosine similarities sensitive to correct answer? (They should be, if correct)
+mod_with_condition = lmer(data = combined_data_critical,
+                cosine_similarity ~ correct * is_joke + (1 | model),
+                REML = FALSE)
+
+summary(mod_with_condition)
+
+```
+
+
+
+
