@@ -2,7 +2,7 @@
 
 This repository contains data and analysis code for the paper:
 
-> Trott, S., Walker, D. E., Taylor, S., & Coulson, S. (Under Review). Turing Jest: Do Large Language Models have a Sense of Humor?
+> Trott, S., Walker, D. E., Taylor, S. M., & Coulson, S. (2025). Turing Jest: Distributional Semantics and One‐Line Jokes. Cognitive Science, 49(5), e70066. [[Link]](https://onlinelibrary.wiley.com/doi/10.1111/cogs.70066?af=R)
 
 ## `data`
 
